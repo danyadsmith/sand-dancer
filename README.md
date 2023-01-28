@@ -12,3 +12,26 @@ of the language's syntax remains the same, there have been changes that render
 some source text obsolete. The evolution and deprecation of extensions popular
 at the time of publication create additional hurdles for readers working
 through the book while attempting to use the most current version of Inform.
+
+## About this Repository
+
+This repository includes a `notes` directory that includes my personal notes
+and observations. The focus of these notes is to catalogue hyperlinks and a few
+highlighted passages for future reference.
+
+### Notes by Chapter
+
+* [Chapter 01 - Understanding Interactive Fiction](notes/01.md)
+* Chapter 02 - Introducing the Inform Application
+* Chapter 03 - Creating a Story World
+* Chapter 04 - Describing the Story World
+* Chapter 05 - Making Things Happen
+* Chapter 06 - Understanding the Player
+* Chapter 07 - Logic and Control
+* Chapter 08 - Time, Scenes, and Pacing
+* Chapter 09 - Creating Characters
+* Chapter 10 - Challenging Assumptions
+* Chapter 11 - Finishing
+* Chapter 12 - Further Pursuits
+* Appendix A - A Thought Experiment
+* Appendix B - Interactive Fictions Cites
