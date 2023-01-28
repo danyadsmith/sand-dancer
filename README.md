@@ -21,8 +21,8 @@ highlighted passages for future reference.
 
 ### Notes by Chapter
 
-* [Chapter 01 - Understanding Interactive Fiction](notes/01.md)
-* Chapter 02 - Introducing the Inform Application
+* [Chapter 01 - Understanding Interactive Fiction](notes/chapter-01.md)
+* [Chapter 02 - Introducing the Inform Application](notes/chapter-02.md)
 * Chapter 03 - Creating a Story World
 * Chapter 04 - Describing the Story World
 * Chapter 05 - Making Things Happen
@@ -34,4 +34,4 @@ highlighted passages for future reference.
 * Chapter 11 - Finishing
 * Chapter 12 - Further Pursuits
 * Appendix A - A Thought Experiment
-* Appendix B - Interactive Fictions Cites
+* Appendix B - Interactive Fictions Cited
