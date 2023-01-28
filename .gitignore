@@ -1,0 +1,4 @@
+*.inform/*.*
+*.inform/Build
+*.inform/Index
+*.materials
