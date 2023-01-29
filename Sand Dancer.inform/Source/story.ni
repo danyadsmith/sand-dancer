@@ -86,8 +86,19 @@ Foreman's Office is north of Staging Area.
 Chapter 1 - Foreman's Office Props
 
 A withered cactus is in Foreman's Office.
+
 A half-collapsed desk is a supporter in Foreman's Office. 
 On the desk is a rusted key.
+
+An overturned wastepaper basket is in Foreman's Office.
+
+A rusted filing cabinet is a container in Foreman's Office. It is fixed in place. 
+	A top drawer, a middle drawer, and a bottom drawer are in the rusted filing cabinet. The top drawer, middle drawer, and bottom drawer are undescribed openable closed fixed in place containers.
+	There is an unmarked folder in the bottom drawer.
+		The unmarked folder is closed and openable.
+		The unmarked folder contains several papers. 
+		The unmarked folder contains a job application. 
+		The unmarked folder contains a note.
 
 Part 3 - Break Room
 
@@ -96,7 +107,6 @@ Break Room is east of Staging Area.
 Chapter 1 - Break Room Props
 
 Some scattered newspapers are in Break Room.
-
 A wire mesh cage is in Break Room. In it is an emergency blanket.
 The cage is transparent and fixed in place.
 
@@ -117,3 +127,5 @@ Part 1 - Testing Chapter 3 (Creating the Story World)
 Chapter 1 - Navigation
 
 Test navigation with "south / north / north / in / north / south / east / north / up / down / south / west / out / east / northwest / north / south / south / south".
+
+Test filing-cabinet with "north / in / north / x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
