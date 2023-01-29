@@ -1,6 +1,15 @@
 "Sand Dancer" by "Danya D. Smith"
 
-VOLUME 1 - THE STORY WORLD
+VOLUME 1 - CHARACTERS
+
+BOOK 1 - THE PROTAGONIST
+
+Part 1 - Inventory
+
+The player wears a denim jacket.
+The player carries a pack of cigarettes and a lighter.
+
+VOLUME 2 - THE STORY WORLD
 
 BOOK 1 - REGIONS
 
@@ -21,7 +30,7 @@ Part 3 - Tower Vicinity
 Tower Vicinity is a region.
 Around the Tower and Office Interior are in Tower Vicinity.
 
-VOLUME 2 - SETTING
+VOLUME 3 - SETTING
 
 BOOK 1 - AROUND THE TOWER
 
@@ -77,6 +86,8 @@ Foreman's Office is north of Staging Area.
 Chapter 1 - Foreman's Office Props
 
 A withered cactus is in Foreman's Office.
+A half-collapsed desk is a supporter in Foreman's Office. 
+On the desk is a rusted key.
 
 Part 3 - Break Room
 
@@ -86,6 +97,9 @@ Chapter 1 - Break Room Props
 
 Some scattered newspapers are in Break Room.
 
+A wire mesh cage is in Break Room. In it is an emergency blanket.
+The cage is transparent and fixed in place.
+
 Part 4 - Storage Room
 
 Storage Room is north of Break Room.
@@ -94,7 +108,7 @@ Part 5 - Roof
 
 Roof is above Storage Room.
 
-VOLUME 3 - TESTING
+VOLUME 4 - TESTING
 
 BOOK 1 - TEST SCRIPTS
 
