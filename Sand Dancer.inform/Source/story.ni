@@ -93,3 +93,13 @@ Storage Room is north of Break Room.
 Part 5 - Roof
 
 Roof is above Storage Room.
+
+VOLUME 3 - TESTING
+
+BOOK 1 - TEST SCRIPTS
+
+Part 1 - Testing Chapter 3 (Creating the Story World)
+
+Chapter 1 - Navigation
+
+Test navigation with "south / north / north / in / north / south / east / north / up / down / south / west / out / east / northwest / north / south / south / south".
