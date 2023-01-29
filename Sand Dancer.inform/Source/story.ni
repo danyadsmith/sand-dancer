@@ -14,7 +14,7 @@ Part 2 - Office Interior
 
 Office Interior is a region.
 
-Staging Area, Foreman's Office, Break Room, and and Storage Room are in Office Interior.
+Staging Area, Foreman's Office, Break Room, and Storage Room are in Office Interior.
 
 Part 3 - Tower Vicinity
 
@@ -58,7 +58,11 @@ Some yellowing weeds are fixed in place and undescribed in Weed-strewn Rust.
 
 Part 5 - Backtraking
 
-Backtracking is south of Middle of Nowhere
+Backtracking is south of Middle of Nowhere.
+
+Part 6 - Against the Fence
+
+Against the Fence is north of Base of the Tower.
 
 BOOK 2 - OFFICE INTERIOR
 
@@ -70,9 +74,17 @@ Part 2 - Foreman's Office
 
 Foreman's Office is north of Staging Area.
 
+Chapter 1 - Foreman's Office Props
+
+A withered cactus is in Foreman's Office.
+
 Part 3 - Break Room
 
 Break Room is east of Staging Area.
+
+Chapter 1 - Break Room Props
+
+Some scattered newspapers are in Break Room.
 
 Part 4 - Storage Room
 
