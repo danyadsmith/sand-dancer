@@ -1,6 +1,17 @@
 "Sand Dancer" by "Danya D. Smith"
 
-VOLUME 1 - CHARACTERS
+VOLUME 1 - CONFIGURATION
+
+BOOK 1 - CUSTOM KINDS
+
+Part 1 - Windows
+
+A window is a kind of thing.
+A window can be open. A window is usually closed.
+A window can be openable. A window is usually openable.
+A window is always fixed in place.
+
+VOLUME 2 - CHARACTERS
 
 BOOK 1 - THE PROTAGONIST
 
@@ -9,7 +20,17 @@ Part 1 - Inventory
 The player wears a denim jacket.
 The player carries a pack of cigarettes and a lighter.
 
-VOLUME 2 - THE STORY WORLD
+VOLUME 3 - MECHANICS
+
+BOOK 1 - MEMORIES
+
+Part 1 - Memory
+
+A memory is a kind of thing.
+A memory can be retrieved or buried.
+A memory is usually buried.
+
+VOLUME 4 - THE STORY WORLD
 
 BOOK 1 - REGIONS
 
@@ -30,7 +51,7 @@ Part 3 - Tower Vicinity
 Tower Vicinity is a region.
 Around the Tower and Office Interior are in Tower Vicinity.
 
-VOLUME 3 - SETTING
+VOLUME 4 - SETTING
 
 BOOK 1 - AROUND THE TOWER
 
@@ -79,6 +100,10 @@ Part 1 - Staging Area
 
 Staging Area is inside from Crumbling Concrete.
 
+Chapter 1 - Staging Area Props
+
+A pane of cracked glass is a window in Staging Area.
+
 Part 2 - Foreman's Office
 
 Foreman's Office is north of Staging Area.
@@ -99,6 +124,8 @@ A rusted filing cabinet is a container in Foreman's Office. It is fixed in place
 		The unmarked folder contains several papers. 
 		The unmarked folder contains a job application. 
 		The unmarked folder contains a note.
+		
+A dust-covered window is a window in Foreman's Office.
 
 Part 3 - Break Room
 
@@ -110,6 +137,10 @@ Some scattered newspapers are in Break Room.
 A wire mesh cage is in Break Room. In it is an emergency blanket.
 The cage is transparent and fixed in place.
 
+A tiny frosted window is a window in Break Room.
+The tiny frosted window is open. 
+The tiny frosted window is unopenable.
+
 Part 4 - Storage Room
 
 Storage Room is north of Break Room.
@@ -118,7 +149,7 @@ Part 5 - Roof
 
 Roof is above Storage Room.
 
-VOLUME 4 - TESTING
+VOLUME 5 - TESTING
 
 BOOK 1 - TEST SCRIPTS
 
