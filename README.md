@@ -35,3 +35,7 @@ highlighted passages for future reference.
 * Chapter 12 - Further Pursuits
 * Appendix A - A Thought Experiment
 * Appendix B - Interactive Fictions Cited
+
+### The Concept Document
+
+Each chapter in the book advances the implementation of the plot and story elements outlined in [The Concept Document](notes/concept-document.md). 
