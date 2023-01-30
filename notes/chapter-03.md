@@ -65,13 +65,14 @@ Use the syntax `a ___ is a kind of thing. A ___ can be ___ or ___` to create a k
 
 > A **relation** defines one way in which rooms, things, or properties in your story world connect to each other.
 
-The syntax `___ relates various ___ to one ___` creates a **many to one** relationship (_fealty_).
-The syntax `___ relates various ___ to various ___` creates a **many to many** relationship (_mutual admiration_).
-The syntax `___ relates one ___ to various ___` creates a **one to many** relationship (_fatherhood_).
-The syntax `___ relates one ___ to one ___` creates a non-reciprocal **one to one** relationship (_apprenticeship_).
-The syntax `___ relates one ___ to another` creates a reciprocal **one to one** relationship (_marriage_).
-The syntax `___ relates ___s to each other` creates a **various to various** relationship (_meeting_).
-
+| Syntax                                   | Relationship                  | Example               |
+| ----------                               | -----------                   | -------               |
+| `___ relates various ___ to one ___`     | **many to one**               | (_fealty_)            |
+| `___ relates various ___ to various ___` | **many to many**              | (_mutual admiration_) |
+| `___ relates one ___ to various ___`     | **one to many**               | (_fatherhood_)        |
+| `___ relates one ___ to one ___`         | non-reciprocal **one to one** | (_apprenticeship_)    |
+| `___ relates one ___ to another`         | reciprocal **one to one**     | (_marriage_)          |
+| `___ relates ___s to each other`         | **various to various**        | (_meeting_)           |
 
 > Whenever we declare a new relation verb we need to spell out the conjugation in each of the five forms likely to be used by you or Inform when discussing that relation.
 
