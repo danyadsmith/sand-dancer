@@ -11,9 +11,19 @@ A window can be open. A window is usually closed.
 A window can be openable. A window is usually openable.
 A window is always fixed in place.
 
+Part 2 - Plants
+
+A plant is a kind of thing.
+A plant can be dead or living. A plant is usually living.
+A plant can be portable or fixed in place. A plant is usually fixed in place.
+A plant can be flowering or bloomless. A plant is usually flowering.
+A plant can be annual or perennial. A plant is usually annual.
+A plant can be poisonous or curative. A plant is usually curative.
+A plant can be decorative or dull. A plant is usually decorative.
+
 VOLUME 2 - CHARACTERS
 
-BOOK 1 - THE PROTAGONIST
+BOOK 1 - THE PROTAGONIST 
 
 Part 1 - Inventory
 
@@ -61,7 +71,7 @@ Middle of Nowhere is a room.
 
 Chapter 1 - Middle of Nowhere Props
 
-A tall Saguaro is in Middle of Nowhere. It is fixed in place.
+A tall Saguaro is a flowering, perennial plant in Middle of Nowhere. 
 [Saguaros are large, tree-like columnar cacti that develop branches (or arms) as they age. They grow slowly but can reach a height of between 40-60 feet. A fully-hydrated saguaro can weigh between 3200 and 4800 pounds and may have upwards of 25 arms. The saguaro is the tallest cactus in the United States.]
 
 Part 2 - Crumbling Concrete
@@ -74,7 +84,8 @@ Base of the Tower is north of Crumbling Concrete.
 
 Chapter 1 - Base of the Tower Props
 
-A tumbleweed and a rusty tin can are in Base of the Tower.
+A tumbleweed is a dead, bloomless, dull plant in Base of the Tower.
+a rusty tin can is in Base of the Tower.
 
 A huge electrical tower is in Base of the Tower. It is undescribed and fixed in place.
 
@@ -84,7 +95,8 @@ A room called Weed-strewn Rust is east of Crumbling Concrete and southeast of Ba
 
 Chapter 1 - Weed-strewn Rust Props
 
-Some yellowing weeds are fixed in place and undescribed in Weed-strewn Rust.
+Some yellowing weeds are a dead, bloomless, dull plant in Weed-strewn Rust.
+Some yellowing weeds are undescribed.
 
 Part 5 - Backtraking
 
@@ -93,6 +105,10 @@ Backtracking is south of Middle of Nowhere.
 Part 6 - Against the Fence
 
 Against the Fence is north of Base of the Tower.
+
+Chapter 1 - Against the Fence Scenery
+
+A solidary desert primrose is a plant in Against the Fence. It is living, flowering, annual, curative, and decorative.
 
 BOOK 2 - OFFICE INTERIOR
 
@@ -110,7 +126,7 @@ Foreman's Office is north of Staging Area.
 
 Chapter 1 - Foreman's Office Props
 
-A withered cactus is in Foreman's Office.
+A withered cactus is a dead, flowering, annual, dull plant in Foreman's Office.
 
 A half-collapsed desk is a supporter in Foreman's Office. 
 On the desk is a rusted key.
