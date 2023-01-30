@@ -40,6 +40,33 @@ A memory is a kind of thing.
 A memory can be retrieved or buried.
 A memory is usually buried.
 
+Part 2 - Suggestion
+
+Suggestion relates various things to one memory.
+The verb suggest (he suggests, they suggest, he suggested, it is suggested, he is suggesting) implies the suggestion relation.
+
+Part 3 - The Protagonist's Memories
+
+The last day of high school is a memory. It is suggested by the tumbleweed.
+
+BOOK 2 - PLANS
+
+Part 1 - Plan
+
+A plan is a kind of thing.
+
+Part 2 - Requirement
+
+Requirement relates one plan to various things.
+The verb to require (he requires, they require, he required, it is required, he is requiring) implies the requirement relation.
+
+Part 3 - The Protagonist's Plans
+
+Staying the night is a plan.
+Staying the night requires the emergency blanket and the canned oranges.
+
+The roll of duct tape and the gas can are required by a plan called fixing the truck.
+
 VOLUME 4 - THE STORY WORLD
 
 BOOK 1 - REGIONS
@@ -85,7 +112,7 @@ Base of the Tower is north of Crumbling Concrete.
 Chapter 1 - Base of the Tower Props
 
 A tumbleweed is a dead, bloomless, dull plant in Base of the Tower.
-a rusty tin can is in Base of the Tower.
+A rusty tin can is in Base of the Tower.
 
 A huge electrical tower is in Base of the Tower. It is undescribed and fixed in place.
 
@@ -163,7 +190,7 @@ Storage Room is north of Break Room.
 
 Part 5 - Roof
 
-Roof is above Storage Room.
+Roof is above Storage Room. Roof is regionally in Around the Tower.
 
 VOLUME 5 - TESTING
 
