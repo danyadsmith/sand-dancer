@@ -158,7 +158,8 @@ A withered cactus is a dead, flowering, annual, dull plant in Foreman's Office.
 A half-collapsed desk is a supporter in Foreman's Office. 
 On the desk is a rusted key.
 
-An overturned wastepaper basket is in Foreman's Office.
+A wastepaper basket is an open unopenable fixed in place container.
+It is in Foreman's Office.
 
 A rusted filing cabinet is a container in Foreman's Office. It is fixed in place. 
 	A top drawer, a middle drawer, and a bottom drawer are in the rusted filing cabinet. The top drawer, middle drawer, and bottom drawer are undescribed openable closed fixed in place containers.
