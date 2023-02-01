@@ -109,12 +109,22 @@ Part 3 - Base of the Tower
 
 Base of the Tower is north of Crumbling Concrete.
 
-Chapter 1 - Base of the Tower Props
+Chapter 1 - Base of the Tower Description
 
-A tumbleweed is a dead, bloomless, dull plant in Base of the Tower.
+The description of Base of the Tower is "Behind the building a [steel girder] rises from the sand, one of three legs of the [huge electrical tower] looming like some gargantuan spider into blackness above you. A [tumbleweed] drifts lazily against the rusted metal among [scrawny weeds] and [bits of trash]. The desert stretches in all directions except back south towards the building."
+
+Chapter 2 - Base of the Tower Props
+
 A rusty tin can is in Base of the Tower.
 
 A huge electrical tower is in Base of the Tower. It is undescribed and fixed in place.
+
+Chapter 3 - Base of the Tower Scenery
+
+A tumbleweed is a dead, bloomless, dull plant in Base of the Tower.
+The tumbleweed is scenery.
+
+A steel girder, some scrawny weeds, and some bits of trash are scenery in Base of the Tower.
 
 Part 4 - Weed-strewn Rust
 
