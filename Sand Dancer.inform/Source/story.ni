@@ -133,7 +133,7 @@ Chapter 3 - Base of the Tower Scenery
 A tumbleweed is a dead, bloomless, dull plant in Base of the Tower.
 The tumbleweed is scenery.
 
-A steel girder, some scrawny weeds, and some bits of trash are scenery in Base of the Tower.
+A steel girder, some scrawny weeds, and some bits of trash are scenery in Base of the Tower. The description of bits of trash is "Worthless and forgotten, drifting against snags like non-biodegradeable snow."
 
 Part 4 - Weed-strewn Rust
 
