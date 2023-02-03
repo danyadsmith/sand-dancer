@@ -21,6 +21,15 @@ A plant can be annual or perennial. A plant is usually annual.
 A plant can be poisonous or curative. A plant is usually curative.
 A plant can be decorative or dull. A plant is usually decorative.
 
+Part 3 - Boxes
+
+A box is a kind of container. 
+A box can be open. A box is usually closed.
+A box can be openable. A box is usually openable.
+A box can be transparent. A box is usually opaque.
+A box can be fixed in place. A box is usually portable.
+
+
 VOLUME 2 - CHARACTERS
 
 BOOK 1 - THE PROTAGONIST 
@@ -143,9 +152,30 @@ Part 6 - Against the Fence
 
 Against the Fence is north of Base of the Tower.
 
-Chapter 1 - Against the Fence Scenery
+Chapter 1 - Against the Fence Description
 
-A solidary desert primrose is a plant in Against the Fence. It is living, flowering, annual, curative, and decorative.
+The description of Against the Fence is "In its prime, the building was enclosed and secured by a fifteen-foot [chain-link fence] topped with [coils of barbed wire]. What remains is a stretch to the north, which is mostly intact. You walk alongside it, noticing several bent [fence poles] and [assorted boxes] stacked nearby, including a [rusted metal crate], a [locked trunk], and a [cardboard box]. A solitary desert primrose adds a splash of yellow to the otherwise dismal surroundings.
+
+You pause to examine a gap in the fence. Someone cut an egress to mitigate the lack of a gate. The opening is approximately four feet tall and has been stretched open to accommodate a person of modest size." [You might have to crouch but could pass through it safely."]
+
+Chapter 2 - Against the Fence Props
+
+The rusted metal crate is a box in Against the Fence. 
+The locked trunk is a box in Against the Fence. 
+A cardboard box is a box in Against the Fence. 
+
+The gap is north of Against the Fence and south of Desolate Desert. 
+	The gap is a door. It is undescribed.
+	Understand "gap in the fence" as the gap.
+
+Chapter 3 - Against the Fence Scenery
+
+The chain-link fence is scenery in Against the Fence. It is fixed in place.
+The fence poles and coils of barbed wire are scenery in Against the Fence.
+
+A solidary desert primrose is a plant in Against the Fence. It is living, flowering, annual, curative, and decorative. It is undescribed.
+
+Some assorted boxes are scenery in Against the Fence.
 
 BOOK 2 - OFFICE INTERIOR
 
