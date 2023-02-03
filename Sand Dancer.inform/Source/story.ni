@@ -120,13 +120,14 @@ Base of the Tower is north of Crumbling Concrete.
 
 Chapter 1 - Base of the Tower Description
 
-The description of Base of the Tower is "Behind the building a [steel girder] rises from the sand, one of three legs of the [huge electrical tower] looming like some gargantuan spider into blackness above you. A [tumbleweed] drifts lazily against the rusted metal among [scrawny weeds] and [bits of trash]. The desert stretches in all directions except back south towards the building."
+[The description below demonstrates the BENT (Bracket Every Notable Thing) method. This will trigger an error if the source text does not instantiate something bracketed. It also helps catch errors that may occur when objects are renamed.]
+The description of Base of the Tower is "Behind the building a [steel girder] rises from the sand, one of three legs of the [huge electrical tower] looming like some gargantuan spider into blackness above you. A [tumbleweed] drifts lazily against the rusted metal among [scrawny weeds], a [rusty tin can], and other [bits of trash]. The desert stretches in all directions except back south towards the building."
 
 Chapter 2 - Base of the Tower Props
 
-A rusty tin can is in Base of the Tower.
+A rusty tin can is in Base of the Tower. The description of a rusty tin can is "The medium-sized can is missing a label and the ridges around the can are flecked with rust. It might not be the best choice for food, but it's as solid as a rock."
 
-A huge electrical tower is in Base of the Tower. It is undescribed and fixed in place.
+A huge electrical tower is in Base of the Tower. It is undescribed and fixed in place. The description of the huge electrical tower is "The base of the tower has a thick wire frame connected by thinner support beams that travel up the structure, creating a web of triangular shapes. It appears almost sculptural until your eyes reach the top where several thick electrical lines hang suspended.".
 
 Chapter 3 - Base of the Tower Scenery
 
@@ -142,7 +143,7 @@ A room called Weed-strewn Rust is east of Crumbling Concrete and southeast of Ba
 Chapter 1 - Weed-strewn Rust Props
 
 Some yellowing weeds are a dead, bloomless, dull plant in Weed-strewn Rust.
-Some yellowing weeds are undescribed.
+Some yellowing weeds are undescribed. 
 
 Part 5 - Backtraking
 
@@ -156,16 +157,21 @@ Chapter 1 - Against the Fence Description
 
 The description of Against the Fence is "In its prime, the building was enclosed and secured by a fifteen-foot [chain-link fence] topped with [coils of barbed wire]. What remains is a stretch to the north, which is mostly intact. You walk alongside it, noticing several bent [fence poles] and [assorted boxes] stacked nearby, including a [rusted metal crate], a [locked trunk], and a [cardboard box]. A solitary desert primrose adds a splash of yellow to the otherwise dismal surroundings.
 
-You pause to examine a gap in the fence. Someone cut an egress to mitigate the lack of a gate. The opening is approximately four feet tall and has been stretched open to accommodate a person of modest size." [You might have to crouch but could pass through it safely."]
+You pause to examine a [gap in the fence]. Someone cut an egress to mitigate the lack of a gate. The opening is approximately four feet tall and has been stretched open to accommodate a person of modest size." [You might have to crouch but could pass through it safely."]
 
 Chapter 2 - Against the Fence Props
 
 The rusted metal crate is a box in Against the Fence. 
-The locked trunk is a box in Against the Fence. 
-A cardboard box is a box in Against the Fence. 
+The description of rusted metal crate is "You turn your attention to the boxes. A rusted metal crate roughly the size of a milk carton could be useful."
 
-The gap is north of Against the Fence and south of Desolate Desert. 
-	The gap is a door. It is undescribed.
+The locked trunk is a box in Against the Fence. 
+The description  of the locked trunk is "A trunk appears to be airtight and waterproof, though the lock is covered in flecks of golden brown rust."
+
+A cardboard box is a box in Against the Fence.
+The description of the cardboard box is "The logo for Shiftman Industrial Supplies is faded but still readable on one side of the cardboard box. You have seen the logo many times, most notably on your father's uniforms. He worked for the company for most of his life."
+
+The gap in the fence is north of Against the Fence and south of Desolate Desert. 
+	The gap in the fence is a door. The description is "Someone appears to have cut open an entryway through the gate. The gap is approximately five feet tall. It has been stretched open to accommodate a person of modest size. You might have to crouch but could pass through it safely."
 	Understand "gap in the fence" as the gap.
 
 Chapter 3 - Against the Fence Scenery
