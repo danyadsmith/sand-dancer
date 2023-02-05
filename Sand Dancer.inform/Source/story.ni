@@ -6,6 +6,26 @@ BOOK 1 - SETTINGS
 
 Use serial comma.
 
+BOOK 2 - INSTALLED EXTENSIONS (by Author)
+
+Part 1 - Emily Short
+
+Chapter 1 - Plurality
+
+[The Plurality extension is now deprecated.]
+
+[According to a few posts on the Interactive Fiction Community Forum:	
+Chapter 14: Adaptive Text and Responses 
+Discusses all of the built-in phrases that now cover what Plurality did (and quite a bit more). 
+
+PLURALITY EXAMPLE:
+Instead of eating something inedible, say “[The noun] do[es]n’t seem likely to agree with you at all. You’d be wiser to leave [it-them] alone.”
+Instead of touching something: say “[That-those of noun] [is-are] all prickly.”
+
+INFORM7 EXAMPLE:
+Instead of eating something inedible, say “[The noun] [don’t] seem likely to agree with [us] at all. [We][’]d be wiser to leave [regarding the noun][them] alone.”
+Instead of touching something: say “[regarding the noun][Those] [are] all prickly.”]
+
 BOOK 2 - CUSTOM KINDS
 
 Part 1 - Windows
@@ -39,7 +59,13 @@ The pickup truck is an enterable openable transparent closed fixed in place cont
 
 Some headlights are part of the pickup truck. 
 
-The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air."
+A map of the State of Arizona is in the pickup truck. It is undescribed.
+A pair of aviator sunglasses is inside the pickup truck. It is undescribed.
+The pair of aviator sunglasses is wearable.
+Some loose change is inside the pickup truck. It is undescribed.
+empty cups are inside the pickup truck. They are undescribed.
+
+The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air. [paragraph break]In the cabin, you can see [a list of things in truck]."
 
 
 VOLUME 2 - CHARACTERS
