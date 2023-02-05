@@ -155,7 +155,11 @@ Some whiffs of evaporating gasoline are scenery in Middle of Nowhere.
 
 Part 2 - Crumbling Concrete
 
-Crumbling Concrete is north of Middle of Nowhere.
+Crumbling Concrete is north of Middle of Nowhere. 
+
+Chapter 1 - Crumbling Concrete Description
+
+The description of Crumbling Concrete is "The building is nondescript, with [the number of windows] windows."
 
 Part 3 - Base of the Tower
 
@@ -294,12 +298,12 @@ Part 1 - Testing Chapter 3 (Creating the Story World)
 
 Chapter 1 - Navigation
 
-Test navigation with "south / north / north / in / north / south / east / north / up / down / south / west / out / east / northwest / north / south / south / south."
+Test navigation with "south / north / north / in / north / south / east / north / up / down / south / west / out / east / northwest / north / south / south / south".
 
 Chapter 2 - Filing Cabinet
 
-Test filing-cabinet with "north / in / north / x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory."
+Test filing-cabinet with "north / in / north / x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
 
 Chapter 3 - Tin Can
 
-Test tin-can with "north / north / take tin can / north / south / north / drop can / south / north / take can / south / south / drop can / look / examine can."
+Test tin-can with "north / north / take tin can / north / south / north / drop can / south / north / take can / south / south / drop can / look / examine can".
