@@ -163,7 +163,7 @@ Crumbling Concrete is north of Middle of Nowhere.
 
 Chapter 1 - Crumbling Concrete Description
 
-The description of Crumbling Concrete is "The building is nondescript, with [the list of windows in Office Interior]."
+The description of Crumbling Concrete is "The building is nondescript, with [a list of windows in Office Interior]."
 
 Part 3 - Base of the Tower
 
