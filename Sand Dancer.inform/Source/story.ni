@@ -164,11 +164,11 @@ Base of the Tower is north of Crumbling Concrete.
 Chapter 1 - Base of the Tower Description
 
 [The description below demonstrates the BENT (Bracket Every Notable Thing) method. This will trigger an error if the source text does not instantiate something bracketed. It also helps catch errors that may occur when objects are renamed.]
-The description of Base of the Tower is "Behind the building a [steel girder] rises from the sand, one of three legs of the [huge electrical tower] looming like some gargantuan spider into blackness above you. A [tumbleweed] drifts lazily against the rusted metal among [scrawny weeds], a [rusty tin can], and other [bits of trash]. The desert stretches in all directions except back south towards the building."
+The description of Base of the Tower is "Behind the building a [steel girder] rises from the sand, one of three legs of the [huge electrical tower] looming like some gargantuan spider into blackness above you. A [tumbleweed] drifts lazily against the rusted metal among [scrawny weeds], and other [bits of trash]. The desert stretches in all directions except back south towards the building."
 
 Chapter 2 - Base of the Tower Props
 
-A rusty tin can is in Base of the Tower. The description of a rusty tin can is "The medium-sized can is missing a label and the ridges around the can are flecked with rust. It might not be the best choice for food, but it's as solid as a rock."
+A rusty tin can is in Base of the Tower. The initial appearance of a rusty tin can is "A medium-sized can captures your attention as you scan through the refuse. It is missing a label, and the ridges around the can are flecked with rust. It might not be the best choice for food, but it's as solid as a rock."
 
 A huge electrical tower is in Base of the Tower. It is undescribed and fixed in place. The description of the huge electrical tower is "The base of the tower has a thick steel frame connected by thinner support beams that travel up the structure, creating a web of triangular shapes. It appears almost sculptural until your eyes reach the top where several thick electrical lines hang suspended like tightropes.".
 
@@ -294,6 +294,12 @@ Part 1 - Testing Chapter 3 (Creating the Story World)
 
 Chapter 1 - Navigation
 
-Test navigation with "south / north / north / in / north / south / east / north / up / down / south / west / out / east / northwest / north / south / south / south".
+Test navigation with "south / north / north / in / north / south / east / north / up / down / south / west / out / east / northwest / north / south / south / south."
 
-Test filing-cabinet with "north / in / north / x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
+Chapter 2 - Filing Cabinet
+
+Test filing-cabinet with "north / in / north / x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory."
+
+Chapter 3 - Tin Can
+
+Test tin-can with "north / north / take tin can / north / south / north / drop can / south / north / take can / south / south / drop can / look / examine can."
