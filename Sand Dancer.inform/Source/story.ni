@@ -2,7 +2,11 @@
 
 VOLUME 1 - CONFIGURATION
 
-BOOK 1 - CUSTOM KINDS
+BOOK 1 - SETTINGS
+
+Use serial comma.
+
+BOOK 2 - CUSTOM KINDS
 
 Part 1 - Windows
 
@@ -139,7 +143,7 @@ Middle of Nowhere is a room.
 
 Chapter 1 - Middle of Nowhere Description
 
-The description of Middle of Nowhere is "The [tire tracks] from the south stop abruptly here, but where the hell are you? You've smashed your truck against [a tall saguaro]. The [desert sand] and clumps of pale [sagebrush] are all your dimming [headlights] reveal before barely reaching the [concrete building] to the north."
+The description of Middle of Nowhere is "The [tire tracks] from the south stop abruptly here, but where the hell are you? The [desert sand] and clumps of pale [sagebrush] are all your dimming [headlights] reveal before barely reaching the [concrete building] to the north."
 
 Chapter 2 - Middle of Nowhere Props
 
@@ -159,7 +163,7 @@ Crumbling Concrete is north of Middle of Nowhere.
 
 Chapter 1 - Crumbling Concrete Description
 
-The description of Crumbling Concrete is "The building is nondescript, with [the number of windows in words] windows."
+The description of Crumbling Concrete is "The building is nondescript, with [the list of windows in Office Interior]."
 
 Part 3 - Base of the Tower
 
