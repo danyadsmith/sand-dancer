@@ -29,6 +29,14 @@ A box can be openable. A box is usually openable.
 A box can be transparent. A box is usually opaque.
 A box can be fixed in place. A box is usually portable.
 
+Part 4 - The Pickup Truck
+
+The pickup truck is an enterable openable transparent closed fixed in place container.  
+
+Some headlights are part of the pickup truck. 
+
+The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air."
+
 
 VOLUME 2 - CHARACTERS
 
@@ -38,6 +46,10 @@ Part 1 - Inventory
 
 The player wears a denim jacket.
 The player carries a pack of cigarettes and a lighter.
+
+Part 2 - Location
+
+The player is in Middle of Nowhere.
 
 VOLUME 3 - MECHANICS
 
@@ -97,6 +109,26 @@ Part 3 - Tower Vicinity
 Tower Vicinity is a region.
 Around the Tower and Office Interior are in Tower Vicinity.
 
+BOOK 2 - BACKDROPS
+
+Part 1 - Tire Tracks
+
+Some tire tracks are a backdrop. 
+They are in Middle of Nowhere and Backtracking. 
+
+Part 2 - Desert Sand
+
+The desert sand, some sagebrush, and the concrete building are backdrops. 
+The desert sand is in Around the Tower.
+
+Part 3 - Sagebrush
+
+The sagebrush is in Around the Tower.
+
+Part 4 - Concrete Building
+
+The concrete building is in Around the Tower.
+
 VOLUME 4 - SETTING
 
 BOOK 1 - AROUND THE TOWER
@@ -105,10 +137,21 @@ Part 1 - Middle of Nowhere
 
 Middle of Nowhere is a room.
 
-Chapter 1 - Middle of Nowhere Props
+Chapter 1 - Middle of Nowhere Description
+
+The description of Middle of Nowhere is "The [tire tracks] from the south stop abruptly here, but where the hell are you? You've smashed your truck against [a tall saguaro]. The [desert sand] and clumps of pale [sagebrush] are all your dimming [headlights] reveal before barely reaching the [concrete building] to the north."
+
+Chapter 2 - Middle of Nowhere Props
 
 A tall Saguaro is a flowering, perennial plant in Middle of Nowhere. 
 [Saguaros are large, tree-like columnar cacti that develop branches (or arms) as they age. They grow slowly but can reach a height of between 40-60 feet. A fully-hydrated saguaro can weigh between 3200 and 4800 pounds and may have upwards of 25 arms. The saguaro is the tallest cactus in the United States.]
+
+The pickup truck is in Middle of Nowhere.
+
+Chapter 3 - Middle of Nowhere Scenery
+
+Some whiffs of evaporating gasoline are scenery in Middle of Nowhere. 
+
 
 Part 2 - Crumbling Concrete
 
@@ -127,7 +170,7 @@ Chapter 2 - Base of the Tower Props
 
 A rusty tin can is in Base of the Tower. The description of a rusty tin can is "The medium-sized can is missing a label and the ridges around the can are flecked with rust. It might not be the best choice for food, but it's as solid as a rock."
 
-A huge electrical tower is in Base of the Tower. It is undescribed and fixed in place. The description of the huge electrical tower is "The base of the tower has a thick wire frame connected by thinner support beams that travel up the structure, creating a web of triangular shapes. It appears almost sculptural until your eyes reach the top where several thick electrical lines hang suspended.".
+A huge electrical tower is in Base of the Tower. It is undescribed and fixed in place. The description of the huge electrical tower is "The base of the tower has a thick steel frame connected by thinner support beams that travel up the structure, creating a web of triangular shapes. It appears almost sculptural until your eyes reach the top where several thick electrical lines hang suspended like tightropes.".
 
 Chapter 3 - Base of the Tower Scenery
 
@@ -148,6 +191,10 @@ Some yellowing weeds are undescribed.
 Part 5 - Backtraking
 
 Backtracking is south of Middle of Nowhere.
+
+Chapter 1 - Backtracking Description
+
+The description of Backtracking is "The black desert night bleeds into this quiet, shadowed expanse. Your [tire tracks] are barely visible in the [desert sand],  and you can scarcely follow the way back to your truck."
 
 Part 6 - Against the Fence
 
