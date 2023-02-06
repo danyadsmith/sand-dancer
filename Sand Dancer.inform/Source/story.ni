@@ -69,7 +69,7 @@ The initial appearance of the truck is "Your poor old [pickup truck] ticks and g
 
 Part 5 - Flashlight
 
-The flashlight is a portable device.
+The flashlight is a portable device. The description of flashlight is "[if flashlight is switched on]Emitting a good, strong beam: thank god it works[otherwise]Cold blue metal, and hefty[end if]."
 
 Part 6 - Emergency Lights
 
