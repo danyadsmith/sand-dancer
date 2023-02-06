@@ -296,7 +296,7 @@ A rusted filing cabinet is a container in Foreman's Office. It is fixed in place
 		The unmarked folder contains a job application. 
 		The unmarked folder contains a note.
 		
-A dust-covered window is a window in Foreman's Office.
+A dust-covered window is a window in Foreman's Office. The initial appearance of a dust-covered window is "The dust-covered window casts a reflection of [the random thing in Foreman's Office]."
 
 Part 3 - Break Room
 
