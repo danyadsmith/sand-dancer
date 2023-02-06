@@ -57,7 +57,7 @@ Part 4 - The Pickup Truck
 
 The pickup truck is an enterable openable transparent closed fixed in place container.  
 
-Some headlights are part of the pickup truck. 
+Some headlights are part of the pickup truck. The headlights are a device. They are switched on.
 
 A map of the State of Arizona is in the pickup truck. It is undescribed.
 A pair of aviator sunglasses is inside the pickup truck. It is undescribed.
@@ -67,6 +67,13 @@ empty cups are inside the pickup truck. They are undescribed.
 
 The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air. [paragraph break]In the cabin, you can see [a list of things in truck]."
 
+Part 5 - Flashlight
+
+The flashlight is a portable device.
+
+Part 6 - Emergency Lights
+
+The emergency lights are a fixed in place device.
 
 VOLUME 2 - CHARACTERS
 
@@ -83,7 +90,23 @@ The player is in Middle of Nowhere.
 
 VOLUME 3 - MECHANICS
 
-BOOK 1 - MEMORIES
+BOOK 1 - LIGHTING CONDITIONS	
+
+Part 1 - Lit Brightly
+
+Definition: a room is lit brightly if it is regionally in Tower Vicinity and emergency lights are switched on.
+
+Part 2 - Lit by Headlights
+
+Definition: a room is within range of headlights if it is Middle of Nowhere or it is Backtracking or it is Crumbling Concrete or it is Base of the Tower.
+
+Definition: a room is lit by headlights if it is not lit brightly and it is within range of headlights and headlights are switched on.
+
+Part 3 - Lit by Flashlight
+
+Definition: a room is lit by flashlight if it is not lit brightly and it is not lit by headlights and flashlight is enclosed by it and flashlight is switched on.
+
+BOOK 2- MEMORIES
 
 Part 1 - Memory
 
@@ -100,7 +123,7 @@ Part 3 - The Protagonist's Memories
 
 The last day of high school is a memory. It is suggested by the tumbleweed.
 
-BOOK 2 - PLANS
+BOOK 3 - PLANS
 
 Part 1 - Plan
 
@@ -280,6 +303,8 @@ Foreman's Office is north of Staging Area.
 
 Chapter 1 - Foreman's Office Props
 
+The flashlight is in Foreman's office.
+
 A withered cactus is a dead, flowering, annual, dull plant in Foreman's Office.
 
 A half-collapsed desk is a supporter in Foreman's Office. 
@@ -315,6 +340,10 @@ The tiny frosted window is unopenable.
 Part 4 - Storage Room
 
 Storage Room is north of Break Room.
+
+Chapter 1 - Storage Room Props
+
+The emergency lights are in Storage Room.
 
 Part 5 - Roof
 
