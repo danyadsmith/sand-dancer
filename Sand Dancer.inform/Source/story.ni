@@ -189,7 +189,7 @@ Crumbling Concrete is north of Middle of Nowhere.
 
 Chapter 1 - Crumbling Concrete Description
 
-The description of Crumbling Concrete is "Your headlights illuminate [a random window in Office Interior] on the building."
+The description of Crumbling Concrete is "Mostly nondescript, but your eyes linger for a moment on [one of]the peeling paint[or]a half-collapsed wall[or]the dusty windows[at random]."
 
 Part 3 - Base of the Tower
 
