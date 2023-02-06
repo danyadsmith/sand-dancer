@@ -106,7 +106,17 @@ Part 3 - Lit by Flashlight
 
 Definition: a room is lit by flashlight if it is not lit brightly and it is not lit by headlights and flashlight is enclosed by it and flashlight is switched on.
 
-BOOK 2- MEMORIES
+BOOK 2 - LOCATIONS
+
+Part 1 - Recognized Locations
+
+Definition: a room is recognized if it is adjacent to location and it is visited.
+
+Part 2 - Unfamiliar Locations
+
+Definition: a room is unfamiliar if it is adjacent to location and it is not visited.
+
+BOOK 3- MEMORIES
 
 Part 1 - Memory
 
@@ -123,7 +133,7 @@ Part 3 - The Protagonist's Memories
 
 The last day of high school is a memory. It is suggested by the tumbleweed.
 
-BOOK 3 - PLANS
+BOOK 4 - PLANS
 
 Part 1 - Plan
 
