@@ -26,7 +26,7 @@ INFORM7 EXAMPLE:
 Instead of eating something inedible, say “[The noun] [don’t] seem likely to agree with [us] at all. [We][’]d be wiser to leave [regarding the noun][them] alone.”
 Instead of touching something: say “[regarding the noun][Those] [are] all prickly.”]
 
-BOOK 2 - CUSTOM KINDS
+BOOK 3 - CUSTOM KINDS
 
 Part 1 - Windows
 
@@ -75,6 +75,11 @@ Part 6 - Emergency Lights
 
 The emergency lights are a fixed in place device.
 
+Part 7 - Guidebook
+
+A weather-worn guidebook is a thing. The description is "Most of the pages are faded beyond readability, but you can see that it once served as a comprehensive guide to local fauna. You haven't seen much out here besides that solitary lizard swinging from the Saguaro, but if curiosity overtakes you, you could try to look up various animals in it."
+
+
 VOLUME 2 - CHARACTERS
 
 BOOK 1 - THE PROTAGONIST 
@@ -82,7 +87,8 @@ BOOK 1 - THE PROTAGONIST
 Part 1 - Inventory
 
 The player wears a denim jacket.
-The player carries a pack of cigarettes and a lighter.
+
+The player carries a pack of cigarettes and a lighter. The description of lighter is "You pat your pockets in search of your lighter [if number of unfamiliar rooms > 0]but you know that darkness is falling and you only have so much time to figure out how to leave this deserted place or find enough supplies to survive the night[otherwise] and find it in your right pocket. You light a cigarette and take a long slow drag[end if]."
 
 Part 2 - Location
 
@@ -202,7 +208,7 @@ Middle of Nowhere is a room.
 
 Chapter 1 - Middle of Nowhere Description
 
-The description of Middle of Nowhere is "The [tire tracks] from the south stop abruptly here, but where the hell are you? The [desert sand] and clumps of pale [sagebrush] are all your dimming [headlights] reveal before barely reaching the [concrete building] to the north."
+The description of Middle of Nowhere is "The [tire tracks] from the south stop abruptly here, but where the hell are you? The [desert sand] and clumps of pale [sagebrush] are all [if lit by headlights]your dimming [headlights] reveal before barely reaching [otherwise if lit by flashlight]your flashlight picks out, other than[otherwise]you can see in the glow of[end if] the [concrete building] to the north."
 
 Chapter 2 - Middle of Nowhere Props
 
@@ -222,7 +228,13 @@ Crumbling Concrete is north of Middle of Nowhere.
 
 Chapter 1 - Crumbling Concrete Description
 
-The description of Crumbling Concrete is "Mostly nondescript, but your eyes linger for a moment on [one of]the peeling paint[or]a half-collapsed wall[or]the dusty windows[at random]."
+The description of Crumbling Concrete is "This building must have been a utility structure for [the huge electrical tower] to the north. Now abandoned, [if lit by headlights][fragments of glass] sparkle faintly in the beam of your headlights[otherwise if lit by flashlight]: it seems dead and alone in the dusty beam of your flashlight[end if]. Tendrils of [sand] spill through the empty doorframe leading in to a [if lit brightly]brightly lit[otherwise]dark[end if]interior; you could also walk around to the east or head south back to your truck."
+
+Chapter 2 - Crumbling Concrete Props
+
+Chapter 3 - Crumbling Concrete Scenery
+
+Some fragments of glass are scenery in Crumbling Concrete.
 
 Part 3 - Base of the Tower
 
@@ -231,7 +243,7 @@ Base of the Tower is north of Crumbling Concrete.
 Chapter 1 - Base of the Tower Description
 
 [The description below demonstrates the BENT (Bracket Every Notable Thing) method. This will trigger an error if the source text does not instantiate something bracketed. It also helps catch errors that may occur when objects are renamed.]
-The description of Base of the Tower is "Behind the building a [steel girder] rises from the sand, one of three legs of the [huge electrical tower] looming like some gargantuan spider into blackness above you. A [tumbleweed] drifts lazily against the rusted metal among [scrawny weeds], and other [bits of trash]. The desert stretches in all directions except back south towards the building."
+The description of Base of the Tower is "Behind the building a [steel girder] rises from the sand[if lit by flashlight]; you shine your flashlight up towards the tower looming above you[otherwise if lit by headlights], one of three legs of the [huge electrical tower] looming like some gargantuan spider into blackness above you[otherwise]; far above you a [red warning light] blinks on and off[end if]. A [tumbleweed] drifts lazily against the rusted metal among [scrawny weeds], and [trash]. The desert stretches in all directions except back south towards the[if lit brightly] glow of the[end if] building."
 
 Chapter 2 - Base of the Tower Props
 
@@ -246,14 +258,31 @@ The tumbleweed is scenery.
 
 A steel girder, some scrawny weeds, and some bits of trash are scenery in Base of the Tower. The description of bits of trash is "Worthless and forgotten, drifting against snags like non-biodegradeable snow."
 
+A red warning light is scenery in Base of the Tower.
+
 Part 4 - Weed-strewn Rust
 
 A room called Weed-strewn Rust is east of Crumbling Concrete and southeast of Base of the Tower
 
-Chapter 1 - Weed-strewn Rust Props
+Chapter 1 - Weed-strewn Rust Description
+
+The description of Weed-strewn Rust is "Behind the rather small [building] is nothing but a scraggly patch of [yellowing weeds] and dirt near [a leaking pipe], littered by a [collection of rusted barrels]. Desert stretches in all directions; back west is the front of the building."
+
+Chapter 2 - Weed-strewn Rust Props
+
+An overturned barrel is a fixed in place supporter in Weed-strewn Rust. A weather-worn guidebook is on barrel. 
+
+The initial appearance of barrel is "[if the number of things on barrel is at least 1]Atop one [overturned barrel] [are] [a list of things on barrel].[else]The top of the [overturned barrel] is stained with rust.[end if]".
+
+Chapter 2 - Weed-strewn Rust Scenery
 
 Some yellowing weeds are a dead, bloomless, dull plant in Weed-strewn Rust.
-Some yellowing weeds are undescribed. 
+Some yellowing weeds are undescribed. They are scenery.
+
+A collection of rusted barrels is scenery in Weed-strewn Rust.
+
+The leaking pipe is scenery in Weed-strewn Rust.
+
 
 Part 5 - Backtraking
 
@@ -261,7 +290,7 @@ Backtracking is south of Middle of Nowhere.
 
 Chapter 1 - Backtracking Description
 
-The description of Backtracking is "The black desert night bleeds into this quiet, shadowed expanse. Your [tire tracks] are barely visible in the [desert sand],  and you can scarcely follow the way back to your truck."
+The description of Backtracking is "The black desert night bleeds into this quiet, shadowed expanse. Your [tire tracks]are barely visible in the [desert sand],  and you can scarcely follow the way back to your truck."
 
 Part 6 - Against the Fence
 
