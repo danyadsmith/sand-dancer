@@ -26,6 +26,12 @@ INFORM7 EXAMPLE:
 Instead of eating something inedible, say “[The noun] [don’t] seem likely to agree with [us] at all. [We][’]d be wiser to leave [regarding the noun][them] alone.”
 Instead of touching something: say “[regarding the noun][Those] [are] all prickly.”]
 
+Part 1 - Matthew Fletcher
+
+Chapter 1 - Exit Descriptions
+
+Include Exit Descriptions by Matthew Fletcher.
+
 BOOK 3 - CUSTOM KINDS
 
 Part 1 - Windows
