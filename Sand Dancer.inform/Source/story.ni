@@ -26,7 +26,14 @@ INFORM7 EXAMPLE:
 Instead of eating something inedible, say “[The noun] [don’t] seem likely to agree with [us] at all. [We][’]d be wiser to leave [regarding the noun][them] alone.”
 Instead of touching something: say “[regarding the noun][Those] [are] all prickly.”]
 
-Part 1 - Matthew Fletcher
+Part 1 - Eric Eve
+
+Chapter 1 - Exit Lister
+
+Include Exit Lister by Eric Eve.
+[Exit Lister includes most of the information provided by Exit Descriptions, but it places it in the Status Line instead of embedding it into the narrative text. The directions to visited rooms are displayed in lowercase, while the directions to unvisited rooms display in UPPERCASE.]
+
+Part 2 - Matthew Fletcher
 
 Chapter 1 - Exit Descriptions
 
