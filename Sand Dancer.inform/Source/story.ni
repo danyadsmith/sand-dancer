@@ -8,20 +8,26 @@ Use serial comma.
 
 BOOK 2 - INSTALLED EXTENSIONS (by Author)
 
-Part 1 - Eric Eve
+Part 1 - Aaron Reed
+
+Chapter 1 - Keyword Interface
+
+Include Keyword Interface by Aaron Reed.
+
+Part 2 - Eric Eve
 
 Chapter 1 - Exit Lister
 
 Include Exit Lister by Eric Eve.
 [Exit Lister includes most of the information provided by Exit Descriptions, but it places it in the Status Line instead of embedding it into the narrative text. The directions to visited rooms are displayed in lowercase, while the directions to unvisited rooms display in UPPERCASE.]
 
-Part 2 - Matthew Fletcher
+Part 3 - Matthew Fletcher
 
 Chapter 1 - Exit Descriptions
 
 Include Exit Descriptions by Matthew Fletcher.
 
-Part 3 - Emily Short
+Part 4 - Emily Short
 
 Chapter 1 - Plurality
 
@@ -47,7 +53,7 @@ Chapter 3 - Tailored Room Description
 
 Include Tailored Room Description by Emily Short.
 
-Part 4 - Mark Tilford
+Part 5 - Mark Tilford
 
 Chapter 1 - Automap
 
