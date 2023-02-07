@@ -24,7 +24,7 @@ highlighted passages for future reference.
 * [Chapter 01 - Understanding Interactive Fiction](notes/chapter-01.md)
 * [Chapter 02 - Introducing the Inform Application](notes/chapter-02.md)
 * [Chapter 03 - Creating a Story World](notes/chapter-03.md)
-* Chapter 04 - Describing the Story World
+* [Chapter 04 - Describing the Story World](notes/chapter-04.md)
 * Chapter 05 - Making Things Happen
 * Chapter 06 - Understanding the Player
 * Chapter 07 - Logic and Control
