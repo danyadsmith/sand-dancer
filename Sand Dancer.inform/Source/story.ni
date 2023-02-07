@@ -58,7 +58,7 @@ Part 5 - Mark Tilford
 Chapter 1 - Automap
 
 [Include Automap by Mark Tilford.]
-[There isn't a version of Automap that works in version 10 of Inform. The version I downloaded and tested requires the Z-code story format (configured in Settings).]
+[There isn't a version of Automap that works in version 10 of Inform using Glulx story format. The version I downloaded and tested requires the Z-code story format (configured in Settings).]
 
 BOOK 3 - CUSTOM KINDS
 
