@@ -8,7 +8,20 @@ Use serial comma.
 
 BOOK 2 - INSTALLED EXTENSIONS (by Author)
 
-Part 1 - Emily Short
+Part 1 - Eric Eve
+
+Chapter 1 - Exit Lister
+
+Include Exit Lister by Eric Eve.
+[Exit Lister includes most of the information provided by Exit Descriptions, but it places it in the Status Line instead of embedding it into the narrative text. The directions to visited rooms are displayed in lowercase, while the directions to unvisited rooms display in UPPERCASE.]
+
+Part 2 - Matthew Fletcher
+
+Chapter 1 - Exit Descriptions
+
+Include Exit Descriptions by Matthew Fletcher.
+
+Part 3 - Emily Short
 
 Chapter 1 - Plurality
 
@@ -26,20 +39,15 @@ INFORM7 EXAMPLE:
 Instead of eating something inedible, say “[The noun] [don’t] seem likely to agree with [us] at all. [We][’]d be wiser to leave [regarding the noun][them] alone.”
 Instead of touching something: say “[regarding the noun][Those] [are] all prickly.”]
 
-Part 1 - Eric Eve
+Chapter 2 - Room Description Control
 
-Chapter 1 - Exit Lister
+Include Room Description Control by Emily Short.
 
-Include Exit Lister by Eric Eve.
-[Exit Lister includes most of the information provided by Exit Descriptions, but it places it in the Status Line instead of embedding it into the narrative text. The directions to visited rooms are displayed in lowercase, while the directions to unvisited rooms display in UPPERCASE.]
+Chapter 3 - Tailored Room Description
 
-Part 2 - Matthew Fletcher
+Include Tailored Room Description by Emily Short.
 
-Chapter 1 - Exit Descriptions
-
-Include Exit Descriptions by Matthew Fletcher.
-
-Part 3 - Mark Tilford
+Part 4 - Mark Tilford
 
 Chapter 1 - Automap
 
