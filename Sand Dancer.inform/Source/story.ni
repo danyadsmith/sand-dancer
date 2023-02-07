@@ -39,6 +39,13 @@ Chapter 1 - Exit Descriptions
 
 Include Exit Descriptions by Matthew Fletcher.
 
+Part 3 - Mark Tilford
+
+Chapter 1 - Automap
+
+[Include Automap by Mark Tilford.]
+[There isn't a version of Automap that works in version 10 of Inform. The version I downloaded and tested requires the Z-code story format (configured in Settings).]
+
 BOOK 3 - CUSTOM KINDS
 
 Part 1 - Windows
