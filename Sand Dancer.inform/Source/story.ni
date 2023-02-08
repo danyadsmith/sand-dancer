@@ -113,6 +113,36 @@ Part 7 - Guidebook
 
 A weather-worn guidebook is a thing. The description is "Most of the pages are faded beyond readability, but you can see that it once served as a comprehensive guide to local fauna. You haven't seen much out here besides that solitary lizard swinging from the Saguaro, but if curiosity overtakes you, you could try to look up various animals in it."
 
+Part 8 - Shoes and Socks
+
+[Exercise 5.1]
+A pair of shoes is a kind of thing. A pair of shoes is wearable and inedible.
+A pair of socks is a kind of thing. A pair of socks is wearable and inedible.
+
+A pair of shoes is either men's or women's.
+A pair of shoes is either small or large.
+
+A person is either small-footed or large-footed.
+
+Instead of wearing a small pair of shoes when player is large-footed: say "It doesn't matter how long you try to cram your foot into that shoe. It is too small. It will not fit."
+
+Instead of wearing a large pair of shoes when player is small-footed : say "You can slide your foot into that shoe but don't expect to walk around. It is too big. Your foot will slide right out."
+
+Instead of wearing a women's pair of shoes when the player is male: say "A women's shoe will not conform to the shape of your feet."
+
+Instead of wearing a men's pair of shoes when the player is female: say "A men's shoe will not conform to the shape of your feet."
+
+Instead of wearing a pair of shoes when player is not wearing a pair of socks: say "You'll want to put on your socks first."
+
+Check wearing a pair of shoes when player is wearing a pair of shoes: say "You'll have to take off your shoes first."
+
+Instead of taking off a pair of socks when player is wearing a pair of shoes: say "You'll have to take off your shoes first."
+
+The pair of warm wooly socks are a pair of socks.
+The pair of tennis shoes is a pair of shoes. It is men's and small.
+The pair of ankle boots is a pair of shoes. It is women's and small.
+The pair of work boots is a pair of shoes. It is men's and large.
+
 
 VOLUME 2 - CHARACTERS
 
@@ -121,6 +151,8 @@ BOOK 1 - THE PROTAGONIST
 Part 1 - Inventory
 
 The player wears a denim jacket.
+The player is male.
+The player is large-footed.
 
 The player carries a pack of cigarettes and a lighter. The description of lighter is "You pat your pockets in search of your lighter [if number of unfamiliar rooms > 0]but you know that darkness is falling and you only have so much time to figure out how to leave this deserted place or find enough supplies to survive the night[otherwise] and find it in your right pocket. You light a cigarette and take a long slow drag[end if]."
 
@@ -386,8 +418,9 @@ On the desk is a rusted key.
 A wastepaper basket is an open unopenable fixed in place container.
 It is in Foreman's Office.
 
-A rusted filing cabinet is a container in Foreman's Office. It is fixed in place. 
+A rusted filing cabinet is a container in Foreman's Office. It is fixed in place. The description is "The rusted old metal filing cabinet is one of the tall, three-drawered varieties common to many office spaces. It has a [top drawer], a [middle drawer], and a [bottom drawer]."
 	A top drawer, a middle drawer, and a bottom drawer are in the rusted filing cabinet. The top drawer, middle drawer, and bottom drawer are undescribed openable closed fixed in place containers.
+	The warm wooly socks are in the middle drawer.
 	There is an unmarked folder in the bottom drawer.
 		The unmarked folder is closed and openable.
 		The unmarked folder contains several papers. 
@@ -395,6 +428,8 @@ A rusted filing cabinet is a container in Foreman's Office. It is fixed in place
 		The unmarked folder contains a note.
 		
 A dust-covered window is a window in Foreman's Office. The initial appearance of a dust-covered window is "The dust-covered window casts a reflection of [the random thing in Foreman's Office]."
+
+The ankle boots are in Foreman's Office.
 
 Part 3 - Break Room
 
@@ -409,6 +444,8 @@ The cage is transparent and fixed in place.
 A tiny frosted window is a window in Break Room.
 The tiny frosted window is open. 
 The tiny frosted window is unopenable.
+
+The tennis shoes and work boots are in Break Room.
 
 Part 4 - Storage Room
 
@@ -439,3 +476,10 @@ Test filing-cabinet with "north / in / north / x filing cabinet / open top drawe
 Chapter 3 - Tin Can
 
 Test tin-can with "north / north / take tin can / north / south / north / drop can / south / north / take can / south / south / drop can / look / examine can".
+
+Chapter 4 - Shoes and Socks
+
+Test shoes with "north / in / north / x filing cabinet / open middle drawer / x socks / take socks / wear socks / south / east / wear tennis shoes / wear boots / inventory / drop tennis shoes / inventory / take off socks / take off boots / take off socks".
+
+
+
