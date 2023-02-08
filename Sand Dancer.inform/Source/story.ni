@@ -69,6 +69,8 @@ A window can be open. A window is usually closed.
 A window can be openable. A window is usually openable.
 A window is always fixed in place.
 
+Instead of opening a window: say "It looks like these windows have been rusted shut for years."
+
 Part 2 - Plants
 
 A plant is a kind of thing.
@@ -321,6 +323,7 @@ Chapter 3 - Base of the Tower Scenery
 
 A tumbleweed is a dead, bloomless, dull plant in Base of the Tower.
 The tumbleweed is scenery.
+Instead of taking the tumbleweed: say "Let it blow on. Wherever it's going is bound to be better than here."
 
 A steel girder, some scrawny weeds, and some bits of trash are scenery in Base of the Tower. The description of bits of trash is "Worthless and forgotten, drifting against snags like non-biodegradeable snow."
 
