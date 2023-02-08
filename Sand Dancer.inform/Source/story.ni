@@ -166,6 +166,134 @@ The pair of tennis shoes is a pair of shoes. It is men's and small.
 The pair of ankle boots is a pair of shoes. It is women's and small.
 The pair of work boots is a pair of shoes. It is men's and large.
 
+Part 9 - Aspirin
+
+An aspirin is a kind of thing. The plural of aspirin is aspirin.
+An aspirin is always edible. 
+
+Instead of drinking an aspirin: 
+	try silently taking a random aspirin; 
+	say "It would go down better with a glass of water. [run paragraph on]";
+	try eating a random aspirin.
+
+After eating an aspirin: say "It leaves a chalky taste in your mouth.". 
+
+Part 10 - Bandaids
+
+A bandaid is a kind of thing. The plural of bandaid is bandaids.
+A bandaid is always wearable.
+
+After wearing a bandaid: say "You peel open the wrapper and remove the bandaid. You carefully peel away the protective seals covering the adhesive, then apply it to your skin."
+
+Part 11 - Fluid Containers
+
+[See §15.19. Arithmetic with units]
+[Most of this section was pulled from the Example titled Lemonade]
+
+A volume is a kind of value. 15.9 fl oz specifies a volume with parts ounces and tenths (optional, preamble optional).
+
+A fluid container is a kind of container. A fluid container has a volume called a fluid capacity. A fluid container has a volume called current volume. A fluid container is openable. A fluid container is usually closed. A fluid container is inedible.
+
+Liquid is a kind of value. The liquids are water, gasoline, and isoprophyl alcohol.
+
+A fluid container has a liquid.
+
+Instead of examining a fluid container: 
+    if the noun is empty, 
+        say "You catch just a hint of [the liquid of the noun] at the bottom."; 
+    otherwise 
+        say "[The noun] contains [current volume of the noun in rough terms] of [liquid of the noun]."
+
+To say (amount - a volume) in rough terms: 
+	if the amount is less than 0.5 fl oz: 
+		say "a drop or two"; 
+	otherwise if tenths part of amount is greater than 3 and tenths part of amount is less than 7: 
+		let estimate be ounces part of amount; 
+		say "[estimate in words] or [estimate plus 1 in words] fluid ounces"; 
+	otherwise: 
+		if tenths part of amount is greater than 6, increase amount by 1.0 fl oz; 
+		say "about [ounces part of amount in words] fluid ounce[s]".
+
+Before printing the name of a fluid container (called the target) while not drinking: 
+	if the target is empty: 
+		say "empty "; 
+	otherwise: 
+		do nothing.
+
+After printing the name of a fluid container (called the target) while not examining: 
+	unless the target is empty: 
+		say " containing [liquid of the target]"; 
+	omit contents in listing.
+
+Instead of inserting something (called the item) into a fluid container: 
+	if the item is an aspirin:
+		say "That would be a waste.";
+	otherwise:
+		say "[The second noun] has too narrow a mouth to accept anything but liquids.".
+
+Definition: a fluid container is empty if the current volume of it is 0.0 fl oz. Definition: a fluid container is full if the current volume of it is the fluid capacity of it.
+
+Understand "drink from [fluid container]" as drinking.
+
+Understand the command "fill" as something new.
+
+Understand "pour [fluid container] in/into/on/onto [fluid container]" as pouring it into. 
+
+Understand "empty [fluid container] into [fluid container]" as pouring it into. 
+
+Understand "fill [fluid container] with/from [fluid container]" as pouring it into (with nouns reversed).
+
+Understand "pour [something] in/into/on/onto [something]" as pouring it into. 
+
+Understand "put [something] in/into/on/onto [fluid container]" as pouring it into. 
+
+Understand "empty [something] into [something]" as pouring it into. 
+
+Understand "fill [something] with/from [something]" as pouring it into (with nouns reversed).
+
+Pouring it into is an action applying to two things.
+
+Check pouring it into: 
+	if the noun is not a fluid container, say "You can't pour [the noun]." instead; 
+	if the second noun is not a fluid container, say "You can't pour liquids into [the second noun]." instead; 
+	if the noun is the second noun, say "You can hardly pour [the noun] into itself." instead; 
+	if the liquid of the noun is not the liquid of the second noun: 
+		if the second noun is empty, now the liquid of the second noun is the liquid of the noun; 
+		otherwise say "Mixing [the liquid of the noun] with [the liquid of the second noun] would give unsavory results." instead; 
+	if the noun is empty, say "No more [liquid of the noun] remains in [the noun]." instead; 
+	if the second noun is full, say "[The second noun] cannot contain any more than it already holds." instead.
+
+Carry out pouring it into: 
+	let available capacity be the fluid capacity of the second noun minus the current volume of the second noun; 
+	if the available capacity is greater than the current volume of the noun, now the available capacity is the current volume of the noun; 
+		increase the current volume of the second noun by available capacity; 
+		decrease the current volume of the noun by available capacity.
+
+Report pouring it into: 
+    say "[if the noun is empty][The noun] is now empty;[otherwise][The noun] now contains [current volume of the noun in rough terms] of [liquid of the noun]; [end if]"; 
+    say "[the second noun] contains [current volume of the second noun in rough terms] of [liquid of the second noun][if the second noun is full], and is now full[end if]."
+
+Part 11 - First Aid Kit
+
+An expired first aid kit is a box.
+	In it is a bottle of pills, an ace bandage, a box of bandaids, and a bottle of rubbing alcohol.
+
+The box of bandaids is a box. 
+	flesh-colored bandaid is a bandaid.
+	The flesh-colored bandaid is in the box of bandaids.
+	large square bandaid is a bandaid.
+	The large square bandaid is in the box of bandaids.
+	fingertip bandaid is a bandaid.
+	The fingertip bandaid is in the box of bandaids. 
+
+The bottle of pills is a transparent openable container.
+	The bottle of pills is closed.
+	The carrying capacity of the bottle of pills is 50.
+	Ten aspirin are in the bottle of pills.
+ 
+The rubbing alcohol is a fluid container. The printed name is "bottle of rubbing alcohol". The current volume is 4.0 fl oz.  The liquid is isopropyl alcohol. 
+
+Instead of drinking rubbing alcohol: say "It's not the kind of alcohol you want and you know it."
 
 VOLUME 2 - CHARACTERS
 
@@ -511,6 +639,8 @@ The description of Break Room is "It was never designed for comfort. A few utili
 
 Chapter 2 - Break Room Props
 
+The expired first aid kit is in Break Room.
+
 Section 1 - Scattered Newspapers
 
 Some scattered newspapers are in Break Room.
@@ -589,5 +719,7 @@ Chapter 4 - Shoes and Socks
 
 Test shoes with "north / in / north / x filing cabinet / open middle drawer / x socks / take socks / wear socks / south / east / wear tennis shoes / wear boots / inventory / drop tennis shoes / inventory / take off socks / take off boots / take off socks".
 
+Chapter 5 - First Aid Kit
 
+Test kit with "north / in / east / take first aid kit / open kit / x kit / open pills / take aspirin / eat aspirin / take aspirin / open box of bandaids / wear fingertip bandaid / open bottle of alcohol / drink rubbing alcohol / put aspirin in bottle of alcohol / close box of bandaids / put aspirin in bottle of pills / close bottle of pills / inventory / take aspirin / open bottle of pills / take aspirin / swallow aspirin / eat aspirin / eat aspirin / inventory"
 
