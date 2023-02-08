@@ -4,7 +4,13 @@ VOLUME 1 - CONFIGURATION
 
 BOOK 1 - SETTINGS
 
+Part 1 - Style
+
 Use serial comma.
+
+Part 2 - Scoring
+
+Use no scoring.
 
 BOOK 2 - INSTALLED EXTENSIONS (by Author)
 
@@ -68,8 +74,9 @@ A window is a kind of thing.
 A window can be open. A window is usually closed.
 A window can be openable. A window is usually openable.
 A window is always fixed in place.
+A window is usually undescribed.
 
-Instead of opening a window: say "It looks like these windows have been rusted shut for years."
+Instead of opening or closing a closed window: say "It looks like these windows have been rusted shut for years."
 
 Part 2 - Plants
 
@@ -103,17 +110,31 @@ empty cups are inside the pickup truck. They are undescribed.
 
 The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air. [paragraph break]In the cabin, you can see [a list of things in truck]."
 
+After opening the pickup truck: say "The door creaks open with difficulty rusted joints straining."
+
+After closing the truck: say "You slam the door shut."
+
+Before entering truck when truck is closed: try opening the truck.
+	
+Before exiting when player is in truck and truck is closed: try opening the truck.
+
 Part 5 - Flashlight
 
 The flashlight is a portable device. The description of flashlight is "[if flashlight is switched on]Emitting a good, strong beam: thank god it works[otherwise]Cold blue metal, and hefty[end if]."
+
+Instead of attacking the flashlight: say "You're really in a mood, aren't you? Go take your frustrations out on something else."
 
 Part 6 - Emergency Lights
 
 The emergency lights are a fixed in place device.
 
+Instead of attacking the emergency lights: say "You're frustrated and feel like lashing out at something, but you know that would only make things worse."
+
 Part 7 - Guidebook
 
-A weather-worn guidebook is a thing. The description is "Most of the pages are faded beyond readability, but you can see that it once served as a comprehensive guide to local fauna. You haven't seen much out here besides that solitary lizard swinging from the Saguaro, but if curiosity overtakes you, you could try to look up various animals in it."
+A weather-worn guidebook is a thing. The description is "Many of the pages are faded, but you can see that it once served as a comprehensive guide to local fauna. You haven't seen much out here besides that solitary lizard swinging from the Saguaro, but if curiosity or necessity arises, you can try to look up various animals in it."
+
+Instead of burning the weather-worn guidebook: say "It may seem useless right now, but it won't cast much warmth, and there are other things around you can use for kindling."
 
 Part 8 - Shoes and Socks
 
@@ -162,6 +183,10 @@ Part 2 - Location
 
 The player is in Middle of Nowhere.
 
+Part 3 - Actions
+
+Instead of sleeping: say "You're tired. There's no denying that. But you have to deal with the matter at hand. There will be time to sleep later."
+
 VOLUME 3 - MECHANICS
 
 BOOK 1 - LIGHTING CONDITIONS	
@@ -207,7 +232,13 @@ Part 3 - The Protagonist's Memories
 
 The last day of high school is a memory. It is suggested by the tumbleweed.
 
-BOOK 4 - PLANS
+BOOK 4 - TALENTS
+
+A talent is a kind of thing.
+strength, courage, luck, scent, honor, spirit, and freedom are talents.
+[Note the uncapitalized "strength": we don't want the talents to have articles, but we also don't want them to be capitalized like proper nouns.]
+
+BOOK 5 - PLANS
 
 Part 1 - Plan
 
@@ -235,6 +266,8 @@ Around the Tower is a region.
 
 Middle of Nowhere, Backtracking, Crumbling Concrete, Base of the Tower, Against the Fence, and Weed-strewn Rust are in Around the Tower.
 
+Roof is regionally in Around the Tower.
+
 Part 2 - Office Interior 
 
 Office Interior is a region.
@@ -255,16 +288,19 @@ They are in Middle of Nowhere and Backtracking.
 
 Part 2 - Desert Sand
 
-The desert sand, some sagebrush, and the concrete building are backdrops. 
-The desert sand is in Around the Tower.
+The desert sand is a backdrop in Around the Tower.
 
 Part 3 - Sagebrush
 
-The sagebrush is in Around the Tower.
+The sagebrush is a backdrop in Around the Tower.
 
 Part 4 - Concrete Building
 
-The concrete building is in Around the Tower.
+The concrete building is a backdrop in Around the Tower.
+
+Part 5 - Layers of Sand
+
+Some layers of sand are a backdrop. They are in Office Interior.
 
 VOLUME 4 - SETTING
 
@@ -283,11 +319,15 @@ Chapter 2 - Middle of Nowhere Props
 A tall Saguaro is a flowering, perennial plant in Middle of Nowhere. 
 [Saguaros are large, tree-like columnar cacti that develop branches (or arms) as they age. They grow slowly but can reach a height of between 40-60 feet. A fully-hydrated saguaro can weigh between 3200 and 4800 pounds and may have upwards of 25 arms. The saguaro is the tallest cactus in the United States.]
 
+Instead of touching the Saguaro: say "Yeah, you did that once as a kid, on accident. Not happening again." Instead of taking the Saguaro: try touching the Saguaro.
+
 The pickup truck is in Middle of Nowhere.
 
 Chapter 3 - Middle of Nowhere Scenery
 
-Some whiffs of evaporating gasoline are scenery in Middle of Nowhere. 
+Some whiffs of evaporating gasoline are scenery in Middle of Nowhere.
+
+Instead of doing anything to whiffs of evaporating gasoline: say "Fading away in the chill night air, but enough to tell you something on your truck's busted bad." 
 
 
 Part 2 - Crumbling Concrete
@@ -401,15 +441,42 @@ Part 1 - Staging Area
 
 Staging Area is inside from Crumbling Concrete.
 
-Chapter 1 - Staging Area Props
+Chapter 1 - Staging Area Description
+
+The description of Staging Area is "[if location is not lit by flashlight and location is not lit brightly]Faint [shafts of light] from your dimming headlights seep through a boarded-up [pane of cracked glass], but you can barely make out anything of the interior[otherwise]It's obvious this place has been abandoned for years. Cold night air breathes through [holes in the roof] and everything is strewn with [sand] and [patches of mold]. Other rooms lie north and east[end if]."
+
+Chapter 2 - Staging Area Props
 
 A pane of cracked glass is a window in Staging Area.
+
+A hole in the floor is a fixed in place open unopenable container in Staging Area. The hole in the floor is undescribed. "The floor has half-collapsed near one corner[if duct tape is in the hole], revealing a hole crisscrossed with [cobwebs][end if]."
+
+Instead of taking something enclosed by the hole when player does not hold courage: say "[one of]You reach your hand towards the hole, then pull back with a start as a thick nest of cobwebs clings to your fingers. Nightmare visions of fat black spiders shudder through your imagination. No way you are reaching in there.[or]Yeah, sorry, but you aren't putting your hand in there.[stopping]".
+
+Instead of inserting anything into the hole: say "Sounds like a good way to lose something forever."
+
+Some cobwebs are in the hole.
+Instead of taking cobwebs when player holds courage: say "You impatiently brush the cobwebs away."; now cobwebs are off-stage.
+
+A roll of duct tape is in the hole.
+After taking the duct tape: say "[one of]You reach down into the hole[if cobwebs are on-stage], brushing the cobwebs away impatiently,[end if] and pull out the duct tape.[or]Taken.[stopping]"; now cobwebs are off-stage.
+
+[For testing purposes only]
+The courage is in Staging Area.
+
+Chapter 3 - Staging Area Scenery
+
+Some shafts of light, some holes in the roof, and some patches of mold are scenery in Staging Area. 
 
 Part 2 - Foreman's Office
 
 Foreman's Office is north of Staging Area.
 
-Chapter 1 - Foreman's Office Props
+Chapter 1 - Foreman's Office Description
+
+The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights emblazon[end if] this tiny office, probably where the boss once sat under a [dust-covered window]. Through the window, you can see the metal infrastructure of the tower's base."
+
+Chapter 2 - Foreman's Office Props
 
 The flashlight is in Foreman's office.
 
@@ -438,11 +505,37 @@ Part 3 - Break Room
 
 Break Room is east of Staging Area.
 
-Chapter 1 - Break Room Props
+Chapter 1 - Break Room Description
+
+The description of Break Room is "It was never designed for comfort. A few utilitarian picnic tables and basic supplies provided a cramped space for workers to take a lunch break or tend to an injury before returning to work. The tiny frosted window provided no scenic escape. All anyone could see gazing through that window was a weed-strewn wasteland."
+
+Chapter 2 - Break Room Props
+
+Section 1 - Scattered Newspapers
 
 Some scattered newspapers are in Break Room.
-A wire mesh cage is in Break Room. In it is an emergency blanket.
+
+Section 2 - Wire Mesh Cage
+
+A wire mesh cage is in Break Room. 
+
 The cage is transparent and fixed in place.
+
+The cage is locked.
+
+Instead of unlocking cage with rusted key: say "You slide the key into the lock, but as you turn it, the rusted metal snaps in two. The blade jams in the lock as the crumbling fragments of the bow fall to the ground. You slam your fist against the wire mesh in frustration. This is not your day."; now the rusted key is off-stage.
+
+Instead of attacking closed cage when player holds strength: say "You grip the mesh in one hand and pull, and realize it's so rusted you can easily pull it back. The door rips free, and you drop it to the floor."; now cage is open; now cage is not lockable.
+
+Instead of attacking closed cage: say "You try to get a grip on the mesh to rip it open, but you can't find the strength."
+
+Instead of attacking open cage: say "You've already ripped it open. No point in going mental."
+
+Section 3 - Emergency Blanket
+	
+An emergency blanket is in the wire mesh cage.
+
+Section 4 - Tiny Frosted Window
 
 A tiny frosted window is a window in Break Room.
 The tiny frosted window is open. 
@@ -450,17 +543,29 @@ The tiny frosted window is unopenable.
 
 The tennis shoes and work boots are in Break Room.
 
+Chapter 3 - Break Room Scenery
+
+Some utilitarian picnic tables and some crumbling trash are scenery in Break Room.
+
 Part 4 - Storage Room
 
 Storage Room is north of Break Room.
 
-Chapter 1 - Storage Room Props
+Chapter 1 - Storage Room Description
+
+The description of Storage Room is "The walls are lined with [bare metal shelves], [if location is lit by flashlight]casting strange patterns of shadow as you sweep your flashlight beam around[else]rusting away[end if]. The break room lies back to the south and a [utility ladder] climbs through [a broken skylight] to the roof."
+
+Chapter 2 - Storage Room Props
 
 The emergency lights are in Storage Room.
 
+Chapter 3 - Storage Room Scenery
+
+Some bare metal shelves, a utility ladder and a broken skylight are scenery in Storage Room.
+
 Part 5 - Roof
 
-Roof is above Storage Room. Roof is regionally in Around the Tower.
+Roof is a room above Storage Room. 
 
 VOLUME 5 - TESTING
 
