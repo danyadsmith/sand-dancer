@@ -35,7 +35,11 @@ Include Exit Descriptions by Matthew Fletcher.
 
 Part 4 - Emily Short
 
-Chapter 1 - Plurality
+Chapter 1 - Approaches
+
+Include Approaches by Emily Short.
+
+Chapter 2 - Plurality
 
 [The Plurality extension is now deprecated.]
 
@@ -51,11 +55,11 @@ INFORM7 EXAMPLE:
 Instead of eating something inedible, say “[The noun] [don’t] seem likely to agree with [us] at all. [We][’]d be wiser to leave [regarding the noun][them] alone.”
 Instead of touching something: say “[regarding the noun][Those] [are] all prickly.”]
 
-Chapter 2 - Room Description Control
+Chapter 3 - Room Description Control
 
 Include Room Description Control by Emily Short.
 
-Chapter 3 - Tailored Room Description
+Chapter 4 - Tailored Room Description
 
 Include Tailored Room Description by Emily Short.
 
@@ -402,6 +406,8 @@ Office Interior is a region.
 
 Staging Area, Foreman's Office, Break Room, and Storage Room are in Office Interior.
 
+Storage Room is down from Roof.
+
 Part 3 - Tower Vicinity
 
 Tower Vicinity is a region.
@@ -705,21 +711,33 @@ Part 1 - Testing Chapter 3 (Creating the Story World)
 
 Chapter 1 - Navigation
 
-Test navigation with "south / north / north / in / north / south / east / north / up / down / south / west / out / east / northwest / north / south / south / south".
+Test navigation with "south / north / north / east / northwest / north / north / south / south / south / south / test tour".
 
-Chapter 2 - Filing Cabinet
+Chapter 2 - Enter Building
 
-Test filing-cabinet with "north / in / north / x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
+Test enter with "north / in ".
 
-Chapter 3 - Tin Can
+Chapter 3 - Tour the Building
 
-Test tin-can with "north / north / take tin can / north / south / north / drop can / south / north / take can / south / south / drop can / look / examine can".
+Test tour with "north / in / north / south / east / north / up / down / south / west / out".
+
+Chapter 4 - Filing Cabinet
+
+Test cabinet with "test enter / north / x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / take socks / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
+
+Chapter 5 - Tin Can
+
+Test can with "north / north / take tin can / north / south / north / drop can / south / north / take can / south / south / drop can / look / examine can".
 
 Chapter 4 - Shoes and Socks
 
-Test shoes with "north / in / north / x filing cabinet / open middle drawer / x socks / take socks / wear socks / south / east / wear tennis shoes / wear boots / inventory / drop tennis shoes / inventory / take off socks / take off boots / take off socks".
+Test shoes with "test enter/ north / x filing cabinet / open middle drawer / x socks / take socks / wear socks / south / east / wear tennis shoes / wear boots / inventory / drop tennis shoes / inventory / take off socks / take off boots / take off socks".
 
 Chapter 5 - First Aid Kit
 
-Test kit with "north / in / east / take first aid kit / open kit / x kit / open pills / take aspirin / eat aspirin / take aspirin / open box of bandaids / wear fingertip bandaid / open bottle of alcohol / drink rubbing alcohol / put aspirin in bottle of alcohol / close box of bandaids / put aspirin in bottle of pills / close bottle of pills / inventory / take aspirin / open bottle of pills / take aspirin / swallow aspirin / eat aspirin / eat aspirin / inventory"
+Test kit with "test enter/ east / take first aid kit / open kit / x kit / open pills / take aspirin / eat aspirin / take aspirin / open box of bandaids / wear fingertip bandaid / open bottle of alcohol / drink rubbing alcohol / put aspirin in bottle of alcohol / close box of bandaids / put aspirin in bottle of pills / close bottle of pills / inventory / take aspirin / open bottle of pills / take aspirin / swallow aspirin / eat aspirin / eat aspirin / inventory"
+
+Chapter 6 - Investigate Actions
+
+Test investigate-actions with "ACTIONS / put down cigarettes / go to truck / north / in / out / i"
 
