@@ -134,6 +134,8 @@ Part 5 - Flashlight
 
 The flashlight is a portable device. The description of flashlight is "[if flashlight is switched on]Emitting a good, strong beam: thank god it works[otherwise]Cold blue metal, and hefty[end if]."
 
+Understand "beam/cold/blue/metal/hefty/flash/light" as the flashlight.
+
 Carry out switching on flashlight: now flashlight is lit.
 Carry out switching off flashlight: now flashlight is unlit.
 
@@ -928,7 +930,9 @@ Test enter with "north / in ".
 
 Chapter 3 - Flashlight
 
-Test flashlight with "north / touch desk / open drawer / take flashlight / switch on flashlight".
+Test flashlight with "test enter / touch desk / open drawer / take flashlight / switch on flashlight".
+
+Test synonyms with "test flashlight / x beam / x cold / x blue / x hefty / x flash / x light / x flashlight".
 
 Chapter 4 - Explore the Building
 
