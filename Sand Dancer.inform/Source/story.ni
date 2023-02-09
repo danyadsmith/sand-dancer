@@ -20,6 +20,10 @@ Chapter 1 - Keyword Interface
 
 Include Keyword Interface by Aaron Reed.
 
+Chapter 2 - Small Kindnesses
+
+Include Small Kindnesses by Aaron Reed.
+
 Part 2 - Eric Eve
 
 Chapter 1 - Exit Lister
@@ -106,6 +110,10 @@ The pickup truck is an enterable openable transparent closed fixed in place cont
 
 Some headlights are part of the pickup truck. The headlights are a device. They are switched on.
 
+	After switching on the headlights: now every within range of headlights room is lighted; say "The desert shadows dissolve in the glow of your headlights."
+
+	After switching off the headlights: if emergency lights are switched off, now every within range of headlights room is dark; say "You click the headlights off[if emergency lights are switched off and flashlight is switched off]and blackness swallows you up.[otherwise if emergency lights are switched off and flashlight is switched on and flashlight is visible], leaving only the ghostly beam of your flashlight[end if]."
+
 A map of the State of Arizona is in the pickup truck. It is undescribed.
 A pair of aviator sunglasses is inside the pickup truck. It is undescribed.
 The pair of aviator sunglasses is wearable.
@@ -126,11 +134,36 @@ Part 5 - Flashlight
 
 The flashlight is a portable device. The description of flashlight is "[if flashlight is switched on]Emitting a good, strong beam: thank god it works[otherwise]Cold blue metal, and hefty[end if]."
 
+Carry out switching on flashlight: now flashlight is lit.
+Carry out switching off flashlight: now flashlight is unlit.
+
+Before switching on flashlight in dim Staging Area: 
+	now metal desk is described; 
+	now hole in the floor is described; 
+	now Staging Area is bright.
+
+After switching on flashlight: say "Your surroundings are no longer shrouded in total darkness."; try looking.
+
+After taking flashlight in dim Staging Area: say "Yeah, its a flashlight all right. You grip it in sudden relief, turning it in your hands till your finger finds the switch."
+
+Before switching on the flashlight when Staging Area is dim: 
+	now metal desk is described; 
+	now hole in the floor is described; 
+	now Staging Area is bright.
+
+After switching on the flashlight: say "The flashlight casts your surroundings into stark relief."; try looking.
+
 Instead of attacking the flashlight: say "You're really in a mood, aren't you? Go take your frustrations out on something else."
 
 Part 6 - Emergency Lights
 
 The emergency lights are a fixed in place device.
+
+The initial appearance of the emergency lights is "Mounted to the wall is a control panel for the building's emergency lights. They are switched [if emergency lights are switched on]on[otherwise]off[end if]."
+
+After switching on the emergency lights: now every room regionally in Tower Vicinity is lighted; say "With a sharp buzz, a whiff of static, and an electrical groan, bare light bulbs flicker on throughout the building."
+
+After switching off the emergency lights: now every room regionally in Tower Vicinity is dark; if headlights are switched on, now every within range of headlights room is lighted; say "The lights flicker out and die."
 
 Instead of attacking the emergency lights: say "You're frustrated and feel like lashing out at something, but you know that would only make things worse."
 
@@ -323,6 +356,8 @@ VOLUME 3 - MECHANICS
 
 BOOK 1 - LIGHTING CONDITIONS	
 
+A room is usually dark. Middle of Nowhere, Backtracking, Crumbling Concrete, Staging Area, and Base of the Tower are lighted.
+
 Part 1 - Lit Brightly
 
 Definition: a room is lit brightly if it is regionally in Tower Vicinity and emergency lights are switched on.
@@ -392,26 +427,41 @@ VOLUME 4 - THE STORY WORLD
 
 BOOK 1 - REGIONS
 
-Part 1 - Around the Tower
+Tower Vicinity is a region.
+ 
+Around the Tower is a region. 
 
-Around the Tower is a region.
+Office Interior is a region.
+
+Surrounding Desert is a region.
+
+Vast Desert is a region.
+
+Part 2 - Around the Tower
 
 Middle of Nowhere, Backtracking, Crumbling Concrete, Base of the Tower, Against the Fence, and Weed-strewn Rust are in Around the Tower.
 
 Roof is regionally in Around the Tower.
 
-Part 2 - Office Interior 
-
-Office Interior is a region.
+Part 3 - Office Interior
 
 Staging Area, Foreman's Office, Break Room, and Storage Room are in Office Interior.
 
-Storage Room is down from Roof.
+ Part 4 - Tower Vicinity
 
-Part 3 - Tower Vicinity
-
-Tower Vicinity is a region.
 Around the Tower and Office Interior are in Tower Vicinity.
+
+Part 5 - Surrounding Desert
+
+Desolate Desert, Flowering Desert, Vacant Desert, Cool Desert, Stark Desert, Sandy Desert, Cactus-filled Desert, Gloomy Desert, and Desert Expanse are in Surrounding Desert.
+
+Instead of going to a room regionally in Surrounding Desert when location is lit by headlights and flashlight is not held and flashlight is not switched on: say "Outside the wavering glow of your headlights, it's pitch black. A storm must have rolled in; there are no stars above, and nothing but darkness surrounds you. The darkness seems to thicken at every turn. Only the smell of the desert tells you it is still out there."
+
+Instead of going to a room regionally in Surrounding Desert when flashlight is held and flashlight is switched on and emergency lights are switched off: say "You heft your flashlight, but decide not to head out into the desert just yet. [if headlights are switched on]Your truck lights are already starting to dim, and with[otherwise]With[end if]how dark it is, you're not sure you could find your way back."
+
+Part 6 - Vast Desert Region
+
+The Open Desert is in Vast Desert.
 
 BOOK 2 - BACKDROPS
 
@@ -478,7 +528,71 @@ Chapter 3 - Crumbling Concrete Scenery
 
 Some fragments of glass are scenery in Crumbling Concrete.
 
-Part 3 - Base of the Tower
+Part 2 - Roof
+
+Chapter 1 - Roof Description
+
+The description of Roof is "From the roof of the building, you can see [the huge electrical tower] rising in front of you. At your feet is the way back down."
+
+Chapter 2 - Roof Props
+
+Section 1 - Metal Rungs
+
+Some metal rungs are a fixed in place thing in Roof. "Some [metal rungs] once led to a control room higher up the tower, but the lowest ones are well above your head. You'd have to jump out into space and grab the bottom rung. You could also go back down."
+
+Section 2 - Metal Barrel
+
+A huge metal barrel is a fixed in place supporter in roof. The description of the huge metal barrel is "[A huge metal barrel] stands upright and intact nearby, [if placed correctly]directly underneath the bottom rungs[otherwise]large enough you could climb on top of it[end if]."
+
+The huge metal barrel can be placed correctly.
+
+It is not placed correctly.
+
+Instead of entering or climbing the placed correctly huge metal barrel: try going up.
+
+Instead of entering or climbing the huge metal barrel: say "Yeah, you could get on top of it but while it's over hear you couldn't reach the metal rungs that lead up to the control room."
+
+Instead of pushing the not placed correctly huge metal barrel when the player does not hold strength: say "You push against the side, but you're not strong enough to move the barrel."
+
+Instead of pushing the not placed correctly huge metal barrel when player holds strength: now huge metal barrel is placed correctly; say "Heaving, you push against the barrel, and with a horrible grating noise, it slides across the roof till it rests underneath the metal rungs."
+
+Report going up from Roof when huge metal barrel is placed correctly: say "You climb up on the barrel, grab the bottom rungs, and pull yourself up."
+
+Instead of pushing the placed correctly huge metal barrel: say "Push it any more and it will fall off the roof. Keep it here and you can get to the rungs."
+
+Chapter 3 - Roof Scenery
+
+Chapter 4 - Roof Implementation
+
+Instead of jumping when location is Roof: try going up.
+
+Instead of climbing or entering metal rungs: try going up.
+
+Instead of going nowhere when location is Roof: say "It's quite a drop on all sides. The last thing you need is to take that kind of fall and have a broken limb to contend with, or worse."
+
+Part 3 - Control Center
+
+The Control Center is up from Roof. Control Center is regionally in Office Interior. 
+
+Chapter 1 - Control Center Description
+
+The description of Control Center is "Some kind of electrical monitoring must have happened here once, but it's totally trashed now. Broken [equipment], [piles of trash], and [junk] are everywhere." 
+	
+Chapter 2 - Control Center Props
+
+Chapter 3 - Control Center Scenery
+
+Some piles of trash are scenery in Control Center. 
+Some broken equipment is scenery in Control Center.
+Some junk is scenery in Control Center.	
+
+Chapter 4 - Control Center Implementation
+
+Instead of going up from Roof when player does not hold courage and huge metal barrel is not placed correctly: say "The metal rungs have rusted away and crumbled; the lowest are well above your head. You don't have the courage to make the jump."
+
+Report going up from Roof when player holds courage: say "[first time]You gather your courage and leap off the edge of the roof. Your hands grasp the metal of the bottom-most rung, scraping and sliding, but holding.[only]You pull yourself up the rungs into the control center. Hey, it wasn't that hard after all."
+
+Part 4 - Base of the Tower
 
 Base of the Tower is north of Crumbling Concrete.
 
@@ -503,9 +617,9 @@ A steel girder, some scrawny weeds, and some bits of trash are scenery in Base o
 
 A red warning light is scenery in Base of the Tower.
 
-Part 4 - Weed-strewn Rust
+Part 5 - Weed-strewn Rust
 
-A room called Weed-strewn Rust is east of Crumbling Concrete and southeast of Base of the Tower
+A room called Weed-strewn Rust is east of Crumbling Concrete and southeast of Base of the Tower and west of Desert Expanse.
 
 Chapter 1 - Weed-strewn Rust Description
 
@@ -527,15 +641,19 @@ A collection of rusted barrels is scenery in Weed-strewn Rust.
 The leaking pipe is scenery in Weed-strewn Rust.
 
 
-Part 5 - Backtraking
+Part 6 - Backtraking
 
-Backtracking is south of Middle of Nowhere.
+Backtracking is south of Middle of Nowhere and west of Cactus-filled Desert.
 
 Chapter 1 - Backtracking Description
 
 The description of Backtracking is "The black desert night bleeds into this quiet, shadowed expanse. Your [tire tracks]are barely visible in the [desert sand],  and you can scarcely follow the way back to your truck."
 
-Part 6 - Against the Fence
+Chapter 2 - Backtracking Implementation
+
+Before going south in Backtracking: say "[first time]You trace the path of your tire tracks uneasily. Here the path clearly runs north toward that unfortunate Saguaro, but further south the tracks blend and vanish into a maze of ATV tracks, coyote trails, rocky outcrops, and shadows before being swallowed by the blackness on the horizon. There is no distant sweep of headlights, no sound of trucks shifting through gears. Nothing. [only]You're way off the road, and there's no chance of finding it again in this demon dark.." instead.
+
+Part 7 - Against the Fence
 
 Against the Fence is north of Base of the Tower.
 
@@ -581,7 +699,11 @@ The description of Staging Area is "[if location is not lit by flashlight and lo
 
 Chapter 2 - Staging Area Props
 
+Section 1 - Window
+
 A pane of cracked glass is a window in Staging Area.
+
+Section 2 - Hole in the Floor
 
 A hole in the floor is a fixed in place open unopenable container in Staging Area. The hole in the floor is undescribed. "The floor has half-collapsed near one corner[if duct tape is in the hole], revealing a hole crisscrossed with [cobwebs][end if]."
 
@@ -589,11 +711,31 @@ Instead of taking something enclosed by the hole when player does not hold coura
 
 Instead of inserting anything into the hole: say "Sounds like a good way to lose something forever."
 
+Section 3 - Cobwebs
+
 Some cobwebs are in the hole.
+
 Instead of taking cobwebs when player holds courage: say "You impatiently brush the cobwebs away."; now cobwebs are off-stage.
 
+Section 4 - Duct Tape
+
 A roll of duct tape is in the hole.
+
 After taking the duct tape: say "[one of]You reach down into the hole[if cobwebs are on-stage], brushing the cobwebs away impatiently,[end if] and pull out the duct tape.[or]Taken.[stopping]"; now cobwebs are off-stage.
+
+Section 5 - Metal Desk
+
+A metal desk is a fixed in place undescribed supporter in Staging Area. 
+
+A drawer is an openable closed container. It is part of metal desk.
+
+The flashlight is in the drawer.
+
+After touching desk in dim Staging Area: say "You feel around the edge of the desk, and find that it has a drawer."
+
+Instead of opening desk: try opening drawer.
+
+After opening drawer in dim Staging Area: say "You slide the drawer open and feel around inside the dark interior. Something large and solid rolls around inside. As you grasp for it, you're almost certain it is a flashlight."
 
 [For testing purposes only]
 The courage is in Staging Area.
@@ -601,6 +743,18 @@ The courage is in Staging Area.
 Chapter 3 - Staging Area Scenery
 
 Some shafts of light, some holes in the roof, and some patches of mold are scenery in Staging Area. 
+
+Chapter 4 - Staging Area Implementation
+
+Staging Area is either dim or bright. Staging area is dim.
+
+Instead of going to a room regionally in Office Interior from dim Staging Area: say "You take a step and crack your shin against what feels like a sturdy metal desk. Ouch."
+
+Instead of going nowhere from dim Staging Area: try going north.
+
+Instead of examining anything in dim Staging Area: say "You can hardly see anything in here. You may have to rely on your other senses."
+
+
 
 Part 2 - Foreman's Office
 
@@ -611,8 +765,6 @@ Chapter 1 - Foreman's Office Description
 The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights emblazon[end if] this tiny office, probably where the boss once sat under a [dust-covered window]. Through the window, you can see the metal infrastructure of the tower's base."
 
 Chapter 2 - Foreman's Office Props
-
-The flashlight is in Foreman's office.
 
 A withered cactus is a dead, flowering, annual, dull plant in Foreman's Office.
 
@@ -703,6 +855,63 @@ Part 5 - Roof
 
 Roof is a room above Storage Room. 
 
+BOOK 3 - SURROUNDING DESERT
+
+Part 1 - Flowering Desert
+
+The Flowering Desert is a room. The Flowering Desert is east of Middle of Nowhere, southeast of Crumbling Concrete, south of Weed-strewn Rust, and northeast of Backtracking.
+
+The description of Flowering Desert is "You can't see the vivid colors of the desert flowers in this blackness, but you can smell them. Most of them are strangely sweet but subtle, like a well-worn perfume."
+
+Part 2 - Desolate Desert
+
+Desolate Desert is a room.
+
+The description of Desolate Desert is "The blackness adds a heaviness around your shoulders, causing them to sink as your thoughts turn more desolate and desperate."
+	
+Part 3 - Vacant Desert
+
+Vacant Desert is a room. Vacant Desert is west of Middle of Nowhere, southwest of Crumbling Concrete,  and northwest of Backtracking.
+
+The description of Vacant Desert is "In daylight, the desert is a landscape of immense beauty. At night, without the grace of a full moon, everything is shrouded in darkness."
+	
+Part 4 - Cool Desert
+
+Cool Desert is a room. Cool Desert is  north of Vacant Desert, west of Crumbling Concrete, northwest of Middle of Nowhere, and southwest of Base of the Tower.
+
+The description of Cool Desert is "You stumble through the cool desert night air, mindful of your direction so you can retrace your steps in the darkness."
+	
+Part 5 - Gloomy Desert
+
+Gloomy Desert is a room. Gloomy Desert is north of Cool Desert, west of Base of the Tower, northwest of Crumbling Concrete, and southwest of Against the Fence.
+
+The description of Gloomy Desert is "Alone in the dark, the night sky casts a fraught and gloomy mood over everything it touches. It matches your mood tonight. You have important matters to attend to and nothing is helped by being stuck out here."
+	
+Part 6 - Stark Desert
+
+Stark Desert is a room. Stark Desert is north of Gloomy Desert, west of Against the Fence, southwest of Desolate Desert, and northwest of Base of the Tower.
+
+The description of Stark Desert is "As you walk through the night air, with the sliver of a moon above you and the sounds of insects chirping and flapping about, you realize how good it is to have moments like this; moments away from work and other distractions when you can be alone with your thoughts."
+	
+Part 7 - Sandy Desert
+
+Sandy Desert is a room. Sandy Desert is east of Against the Fence, southeast of Desolate Desert, and northeast of Base of the Tower.
+
+The description of Sandy Desert is "You are grateful for your sturdy work boots in this sandy desert."
+	
+Part 8 - Cactus-filled Desert
+
+Cactus-filled Desert is a room east of Base of the Tower, south of Sandy Desert, north of Weed-strewn Rust, and southeast of Against the Fence.
+
+The description of Cactus-filled Desert is "Despite the soundtrack of nature that surrounds you, there is a deep quiet in this place that brings about a meditative pause in a rather hectic and long day."
+	
+Part 9 - Desert Expanse
+
+Desert Expanse is a room east of Weed-strewn Rust, northeast of Flowering Desert, and southeast of Cactus-filled Desert.
+
+The description of Desert Expanse is "You've walked far enough to realize there is nothing around for miles. There are no city lights in the distance, no sounds of vehicles traversing a nearby highway. You'd best turn back. There is no help for you here."
+
+
 VOLUME 5 - TESTING
 
 BOOK 1 - TEST SCRIPTS
@@ -717,27 +926,37 @@ Chapter 2 - Enter Building
 
 Test enter with "north / in ".
 
-Chapter 3 - Tour the Building
+Chapter 3 - Flashlight
 
-Test tour with "north / in / north / south / east / north / up / down / south / west / out".
+Test flashlight with "north / touch desk / open drawer / take flashlight / switch on flashlight".
 
-Chapter 4 - Filing Cabinet
+Chapter 4 - Explore the Building
 
-Test cabinet with "test enter / north / x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / take socks / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
+Test explore with "north / in / north / south / east / north / up / down / south / west / out".
 
-Chapter 5 - Tin Can
+Chapter 5 - Tour the Building
+
+Test tour with " test enter / test flashlight / test explore".
+
+Chapter 6 - Filing Cabinet
+
+Test cabinet with "test enter / test flashlight / north / x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / take socks / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
+
+Chapter 7 - Tin Can
 
 Test can with "north / north / take tin can / north / south / north / drop can / south / north / take can / south / south / drop can / look / examine can".
 
-Chapter 4 - Shoes and Socks
+Part 2 - Testing Chapter 5 (Making Things Happen)
+
+Chapter 1 - Shoes and Socks
 
 Test shoes with "test enter/ north / x filing cabinet / open middle drawer / x socks / take socks / wear socks / south / east / wear tennis shoes / wear boots / inventory / drop tennis shoes / inventory / take off socks / take off boots / take off socks".
 
-Chapter 5 - First Aid Kit
+Chapter 2 - First Aid Kit
 
 Test kit with "test enter/ east / take first aid kit / open kit / x kit / open pills / take aspirin / eat aspirin / take aspirin / open box of bandaids / wear fingertip bandaid / open bottle of alcohol / drink rubbing alcohol / put aspirin in bottle of alcohol / close box of bandaids / put aspirin in bottle of pills / close bottle of pills / inventory / take aspirin / open bottle of pills / take aspirin / swallow aspirin / eat aspirin / eat aspirin / inventory"
 
-Chapter 6 - Investigate Actions
+Chapter 3 - Investigate Actions
 
 Test investigate-actions with "ACTIONS / put down cigarettes / go to truck / north / in / out / i"
 
