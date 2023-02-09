@@ -28,14 +28,14 @@ Part 2 - Eric Eve
 
 Chapter 1 - Exit Lister
 
-Include Exit Lister by Eric Eve.
+[Include Exit Lister by Eric Eve.]
 [Exit Lister includes most of the information provided by Exit Descriptions, but it places it in the Status Line instead of embedding it into the narrative text. The directions to visited rooms are displayed in lowercase, while the directions to unvisited rooms display in UPPERCASE.]
 
 Part 3 - Matthew Fletcher
 
 Chapter 1 - Exit Descriptions
 
-Include Exit Descriptions by Matthew Fletcher.
+[Include Exit Descriptions by Matthew Fletcher.]
 
 Part 4 - Emily Short
 
