@@ -126,6 +126,8 @@ Part 2 - Plants
 
 A plant is a kind of thing.
 A plant can be dead or living. A plant is usually living.
+Understand "plant" as a plant.
+Understand the dead property as describing a plant.
 A plant can be portable or fixed in place. A plant is usually fixed in place.
 A plant can be flowering or bloomless. A plant is usually flowering.
 A plant can be annual or perennial. A plant is usually annual.
