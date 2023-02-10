@@ -7,6 +7,7 @@ BOOK 1 - SETTINGS
 Part 1 - Style
 
 Use serial comma.
+Use American dialect.
 
 Part 2 - Scoring
 
@@ -74,12 +75,47 @@ Chapter 1 - Automap
 [Include Automap by Mark Tilford.]
 [There isn't a version of Automap that works in version 10 of Inform using Glulx story format. The version I downloaded and tested requires the Z-code story format (configured in Settings).]
 
+
+
+
+
+VOLUME 2 - MECHANICS
+
+BOOK 1 - LIGHTING CONDITIONS	
+
+A room is usually dark. Middle of Nowhere, Backtracking, Crumbling Concrete, Staging Area, and Base of the Tower are lighted.
+
+Part 1 - Lit Brightly
+
+Definition: a room is lit brightly if it is regionally in Tower Vicinity and emergency lights are switched on.
+
+Part 2 - Lit by Headlights
+
+Definition: a room is within range of headlights if it is Middle of Nowhere or it is Backtracking or it is Crumbling Concrete or it is Base of the Tower.
+
+Definition: a room is lit by headlights if it is not lit brightly and it is within range of headlights and headlights are switched on.
+
+Part 3 - Lit by Flashlight
+
+Definition: a room is lit by flashlight if it is not lit brightly and it is not lit by headlights and flashlight is enclosed by it and flashlight is switched on.
+
+BOOK 2 - LOCATIONS
+
+Part 1 - Recognized Locations
+
+Definition: a room is recognized if it is adjacent to location and it is visited.
+
+Part 2 - Unfamiliar Locations
+
+Definition: a room is unfamiliar if it is adjacent to location and it is not visited.
+
 BOOK 3 - CUSTOM KINDS
 
 Part 1 - Windows
 
 A window is a kind of thing.
 A window can be open. A window is usually closed.
+Understand the open property as describing a window.
 A window can be openable. A window is usually openable.
 A window is always fixed in place.
 A window is usually undescribed.
@@ -104,9 +140,15 @@ A box can be openable. A box is usually openable.
 A box can be transparent. A box is usually opaque.
 A box can be fixed in place. A box is usually portable.
 
-Part 4 - The Pickup Truck
+Part 4 - Pickup Truck
 
 The pickup truck is an enterable openable transparent closed fixed in place container.  
+
+A glove box is part of the pickup truck.
+	It is an openable closed opaque box.
+	The pack of smokes is in the glove box.
+	An owner's manual is inside the glove box.
+	A pack of gum is inside the glove box.
 
 Some headlights are part of the pickup truck. The headlights are a device. They are switched on.
 
@@ -124,7 +166,7 @@ Some loose change is inside the pickup truck. It is undescribed.
 
 empty cups are inside the pickup truck. They are undescribed.
 
-The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air. [paragraph break]In the cabin, you can see [a list of things in truck]."
+The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air.[paragraph break]In the cabin, you can see [a list of things in truck]."
 
 After opening the pickup truck: say "The door creaks open with difficulty rusted joints straining."
 
@@ -133,6 +175,9 @@ After closing the truck: say "You slam the door shut."
 Before entering truck when truck is closed: try opening the truck.
 	
 Before exiting when player is in truck and truck is closed: try opening the truck.
+
+Understand "drive" or "drive [pickup]" or "start [pickup]" or "turn on [pickup]" or "turn key" or "switch on [pickup]" or "shift" or "steer" or "brake" as a mistake ("Your truck's not going anywhere in this condition.").
+
 
 Part 5 - Flashlight
 
@@ -340,62 +385,84 @@ The rubbing alcohol is a fluid container. The printed name is "bottle of rubbing
 
 Instead of drinking rubbing alcohol: say "It's not the kind of alcohol you want and you know it."
 
-VOLUME 2 - CHARACTERS
+Part 12 - Can Opener
 
-BOOK 1 - THE PROTAGONIST 
+A can opener is in Control Center. 
 
-Part 1 - Inventory
+The can opener is privately-named. Understand "opener" or "can opener" as the can opener.
 
-The player wears a denim jacket.
-The player is male.
-The player is large-footed.
+Part 13 - Cigarettes
 
-The player carries a pack of cigarettes and a lighter. The description of lighter is "You pat your pockets in search of your lighter [if number of unfamiliar rooms > 0]but you know that darkness is falling and you only have so much time to figure out how to leave this deserted place or find enough supplies to survive the night[otherwise] and find it in your right pocket. You light a cigarette and take a long slow drag[end if]."
+A cigarette is a kind of thing.
+A cigarette is inedible.
 
-Part 2 - Location
+The pack of smokes is an opaque, portable container. 
+Understand "pack of smokes" or "pack" or "pack of cigarettes" as the pack of smokes.
+The carrying capacity of the pack of smokes is 20.
+Ten cigarettes are in the pack of smokes.
 
-The player is in Middle of Nowhere.
+The crumpled box is an opaque, portable container.
+Understand "crumpled box" or "crumpled carton" or "crumpled pack" or "discarded pack" or "carton" as the crumpled box.
+the carrying capacity of the crumpled box is 20.
+3 cigarettes are in the crumpled box.
 
-Part 3 - Actions
+Check inserting something into in the pack of smokes:
+	if the noun is not a cigarette, say "There is nothing magical about the pack of smokes. You can't put that in there.".
 
-Instead of sleeping: say "You're tired. There's no denying that. But you have to deal with the matter at hand. There will be time to sleep later."
+Check inserting something into in the crumpled box:
+	if the noun is not a cigarette, say "There is nothing magical about the crumpled carton. You can't put that in there.".
 
-VOLUME 3 - MECHANICS
+There is a number variable called original cigarette count. Original cigarette count is 10.
 
-BOOK 1 - LIGHTING CONDITIONS	
+[There is a number variable called cigarettes on hand. ]
 
-A room is usually dark. Middle of Nowhere, Backtracking, Crumbling Concrete, Staging Area, and Base of the Tower are lighted.
+BOOK 4 - CUSTOM COMMANDS
 
-Part 1 - Lit Brightly
+Part 1 - Verbs to Remove
 
-Definition: a room is lit brightly if it is regionally in Tower Vicinity and emergency lights are switched on.
+Understand the command "rub" as something new.
 
-Part 2 - Lit by Headlights
+Part 2 - Smoking
 
-Definition: a room is within range of headlights if it is Middle of Nowhere or it is Backtracking or it is Crumbling Concrete or it is Base of the Tower.
+Smoking is an action applying to one thing.
 
-Definition: a room is lit by headlights if it is not lit brightly and it is within range of headlights and headlights are switched on.
+Understand "smoke [something]" as smoking.
 
-Part 3 - Lit by Flashlight
+Check smoking when noun is not cigarette: instead say "Sounds like something your high school buddies would try."
 
-Definition: a room is lit by flashlight if it is not lit brightly and it is not lit by headlights and flashlight is enclosed by it and flashlight is switched on.
+Check smoking when lighter is not held: instead say "You pat your pockets, but can't seem to find your lighter."
 
-BOOK 2 - LOCATIONS
+Before smoking when lighter is not held and lighter is visible: say "(first taking the lighter)"; try silently taking lighter. 
 
-Part 1 - Recognized Locations
+Before smoking when pack of smokes is not held and pack of smokes is visible: say "(first taking the pack of smokes)"; try silently taking pack of smokes.
 
-Definition: a room is recognized if it is adjacent to location and it is visited.
+Before smoking when pack of smokes is not held and pack of smokes is visible: say "(first taking the pack of smokes)"; try silently taking pack of smokes.
 
-Part 2 - Unfamiliar Locations
+Before smoking when crumpled box is not held and crumpled box is visible: say "(first taking the crumpled box)"; try silently taking crumpled box.
 
-Definition: a room is unfamiliar if it is adjacent to location and it is not visited.
+First report smoking: say "You pull out a cigarette and light the tip. The familiar smell of lighted tobacco calms you."
 
-BOOK 3- MEMORIES
+Report smoking: say "Well, you're still stuck here. [run paragraph on]."
+	
+Last report smoking: say "[paragraph break][if player is in pickup truck]You extinguish the butt in one of the empty cups[otherwise]You crush the butt under your heel[end if] and wonder where to go next."
+
+Report smoking: say "[if location is lit brightly]You've finally lit the place up[otherwise if location is lit by headlights]It's dark outside the beam of your headlights[otherwise if location is lit by flashlight]Everything outside the beam of your flashlight is shrouded in shadows[otherwise]It's darker than a starless sky on a moonless night[end if]. [run paragraph on]."
+
+Report smoking: if the player holds a talent, say "Some weird shit went down in the desert, but you do feel like you have more [list of talents held by player]. [run paragraph on]".
+
+Report smoking: if there is an in progress plan, say "You've found the [list of handled things which are required by a plan], but [if the number of in progress plans is 2]you can't see how they're going to be helpful together[otherwise]you still need something else if you're going to finish [a random in progress plan][end if]. [run paragraph on]".
+
+
+BOOK 5- MEMORIES
 
 Part 1 - Memory
 
 A memory is a kind of thing.
+
+Understand "memory/memories" as a memory.
+
 A memory can be retrieved or buried.
+
 A memory is usually buried.
 
 Part 2 - Suggestion
@@ -407,17 +474,21 @@ Part 3 - The Protagonist's Memories
 
 The last day of high school is a memory. It is suggested by the tumbleweed.
 
-BOOK 4 - TALENTS
+BOOK 6 - TALENTS
 
 A talent is a kind of thing.
 strength, courage, luck, scent, honor, spirit, and freedom are talents.
 [Note the uncapitalized "strength": we don't want the talents to have articles, but we also don't want them to be capitalized like proper nouns.]
 
-BOOK 5 - PLANS
+BOOK 7 - PLANS
 
 Part 1 - Plan
 
 A plan is a kind of thing.
+
+Definition: a plan is in progress if a handled thing is required by it.
+
+Definition: a plan is complete if two handled things are required by it.
 
 Part 2 - Requirement
 
@@ -426,10 +497,40 @@ The verb to require (he requires, they require, he required, it is required, he 
 
 Part 3 - The Protagonist's Plans
 
+Chapter 1 - Staying the Night
+
 Staying the night is a plan.
+
+The printed name of staying the night is "spending the night here".
+
 Staying the night requires the emergency blanket and the canned oranges.
 
+Chapter 2 - Fixing the Truck
+
 The roll of duct tape and the gas can are required by a plan called fixing the truck.
+
+The printed name of fixing the truck is "fixing your truck and getting out of here". 
+
+
+VOLUME 3 - CHARACTERS
+
+BOOK 1 - THE PROTAGONIST 
+
+Part 1 - Inventory
+
+The player wears a denim jacket.
+The player is male.
+The player is large-footed.
+
+The player carries a lighter. The description of lighter is "You pat your pockets in search of your lighter [if number of unfamiliar rooms > 0]but you know that darkness is falling and you only have so much time to figure out how to leave this deserted place or find enough supplies to survive the night[otherwise] and find it in your right pocket. You light a cigarette and take a long slow drag[end if]."
+
+Part 2 - Location
+
+The player is [in the pickup truck]in Middle of Nowhere.
+
+Part 3 - Actions
+
+Instead of sleeping: say "You're tired. There's no denying that. But you have to deal with the matter at hand. There will be time to sleep later."
 
 VOLUME 4 - THE STORY WORLD
 
@@ -494,7 +595,7 @@ Part 5 - Layers of Sand
 
 Some layers of sand are a backdrop. They are in Office Interior.
 
-VOLUME 4 - SETTING
+VOLUME 5 - SETTING
 
 BOOK 1 - AROUND THE TOWER
 
@@ -922,7 +1023,7 @@ Desert Expanse is a room east of Weed-strewn Rust, northeast of Flowering Desert
 The description of Desert Expanse is "You've walked far enough to realize there is nothing around for miles. There are no city lights in the distance, no sounds of vehicles traversing a nearby highway. You'd best turn back. There is no help for you here."
 
 
-VOLUME 5 - TESTING
+VOLUME 6 - TESTING
 
 BOOK 1 - TEST SCRIPTS
 
