@@ -110,14 +110,18 @@ The pickup truck is an enterable openable transparent closed fixed in place cont
 
 Some headlights are part of the pickup truck. The headlights are a device. They are switched on.
 
-	After switching on the headlights: now every within range of headlights room is lighted; say "The desert shadows dissolve in the glow of your headlights."
+After switching on the headlights: now every within range of headlights room is lighted; say "The desert shadows dissolve in the glow of your headlights."
 
 	After switching off the headlights: if emergency lights are switched off, now every within range of headlights room is dark; say "You click the headlights off[if emergency lights are switched off and flashlight is switched off]and blackness swallows you up.[otherwise if emergency lights are switched off and flashlight is switched on and flashlight is visible], leaving only the ghostly beam of your flashlight[end if]."
 
-A map of the State of Arizona is in the pickup truck. It is undescribed.
+A map of the State of New Mexico with keyword "map" is in the pickup truck. It is undescribed.
+Understand "map/State/New Nexico/state map" as map of the State of New Mexico.
+
 A pair of aviator sunglasses is inside the pickup truck. It is undescribed.
 The pair of aviator sunglasses is wearable.
+
 Some loose change is inside the pickup truck. It is undescribed.
+
 empty cups are inside the pickup truck. They are undescribed.
 
 The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air. [paragraph break]In the cabin, you can see [a list of things in truck]."
@@ -159,7 +163,9 @@ Instead of attacking the flashlight: say "You're really in a mood, aren't you? G
 
 Part 6 - Emergency Lights
 
-The emergency lights are a fixed in place device.
+The emergency lights are a fixed in place device. 
+
+Understand "control/panel/control panel/emergency/lights" as the emergency lights.
 
 The initial appearance of the emergency lights is "Mounted to the wall is a control panel for the building's emergency lights. They are switched [if emergency lights are switched on]on[otherwise]off[end if]."
 
@@ -541,6 +547,8 @@ Chapter 2 - Roof Props
 Section 1 - Metal Rungs
 
 Some metal rungs are a fixed in place thing in Roof. "Some [metal rungs] once led to a control room higher up the tower, but the lowest ones are well above your head. You'd have to jump out into space and grab the bottom rung. You could also go back down."
+
+Understand "rungs/ladder" as metal rungs.
 
 Section 2 - Metal Barrel
 
@@ -932,8 +940,6 @@ Chapter 3 - Flashlight
 
 Test flashlight with "test enter / touch desk / open drawer / take flashlight / switch on flashlight".
 
-Test synonyms with "test flashlight / x beam / x cold / x blue / x hefty / x flash / x light / x flashlight".
-
 Chapter 4 - Explore the Building
 
 Test explore with "north / in / north / south / east / north / up / down / south / west / out".
@@ -964,3 +970,8 @@ Chapter 3 - Investigate Actions
 
 Test investigate-actions with "ACTIONS / put down cigarettes / go to truck / north / in / out / i"
 
+Part 3 - Testing Chapter 6 (Understanding the Player)
+
+Chapter 1 - Flashlight
+
+Test synonyms with "test flashlight / x beam / x cold / x blue / x hefty / x flash / x light / x flashlight".
