@@ -68,15 +68,17 @@ Chapter 4 - Tailored Room Description
 
 Include Tailored Room Description by Emily Short.
 
+Chapter 6 - Tutorial Mode
+
+[NOTE: The testing commands do not work when Tutorial Mode is enabled]
+Include Tutorial Mode by Emily Short.
+
 Part 5 - Mark Tilford
 
 Chapter 1 - Automap
 
 [Include Automap by Mark Tilford.]
 [There isn't a version of Automap that works in version 10 of Inform using Glulx story format. The version I downloaded and tested requires the Z-code story format (configured in Settings).]
-
-
-
 
 
 VOLUME 2 - MECHANICS
@@ -444,15 +446,17 @@ Before smoking when crumpled box is not held and crumpled box is visible: say "(
 
 First report smoking: say "You pull out a cigarette and light the tip. The familiar smell of lighted tobacco calms you."
 
-Report smoking: say "Well, you're still stuck here. [run paragraph on]."
+Report smoking: say "Well, you're still stuck here. [run paragraph on]"
 	
 Last report smoking: say "[paragraph break][if player is in pickup truck]You extinguish the butt in one of the empty cups[otherwise]You crush the butt under your heel[end if] and wonder where to go next."
 
-Report smoking: say "[if location is lit brightly]You've finally lit the place up[otherwise if location is lit by headlights]It's dark outside the beam of your headlights[otherwise if location is lit by flashlight]Everything outside the beam of your flashlight is shrouded in shadows[otherwise]It's darker than a starless sky on a moonless night[end if]. [run paragraph on]."
+Report smoking: say "[if location is lit brightly]You've finally lit the place up[otherwise if location is lit by headlights]It's dark outside the beam of your headlights[otherwise if location is lit by flashlight]Everything outside the beam of your flashlight is shrouded in shadows[otherwise]It's darker than a starless sky on a moonless night[end if]. [run paragraph on]"
 
 Report smoking: if the player holds a talent, say "Some weird shit went down in the desert, but you do feel like you have more [list of talents held by player]. [run paragraph on]".
 
 Report smoking: if there is an in progress plan, say "You've found the [list of handled things which are required by a plan], but [if the number of in progress plans is 2]you can't see how they're going to be helpful together[otherwise]you still need something else if you're going to finish [a random in progress plan][end if]. [run paragraph on]".
+
+Carry out smoking: now the noun is nowhere.
 
 
 BOOK 5- MEMORIES
