@@ -29,6 +29,10 @@ Chapter 3 - Poor Man's Mistype
 
 Include Poor Man's Mistype by Aaron Reed.
 
+Chapter 4 - Smarter Parser
+
+Include Smarter Parser by Aaron Reed.
+
 Part 2 - Eric Eve
 
 Chapter 1 - Exit Lister
