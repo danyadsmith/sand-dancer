@@ -285,11 +285,13 @@ An aspirin is a kind of thing. The plural of aspirin is aspirin.
 An aspirin is always edible. 
 
 Instead of drinking an aspirin: 
-	try silently taking a random aspirin; 
-	say "It would go down better with a glass of water. [run paragraph on]";
 	try eating a random aspirin.
 
-After eating an aspirin: say "It leaves a chalky taste in your mouth.". 
+After taking an aspirin:
+	say "You tip the bottle and shake an aspirin into your hand."
+
+After eating an aspirin: 
+	say "You swallow it with a grimace. It leaves a chalky taste in your mouth.". 
 
 Part 10 - Bandaids
 
