@@ -309,7 +309,9 @@ A volume is a kind of value. 15.9 fl oz specifies a volume with parts ounces and
 
 A fluid container is a kind of container. A fluid container has a volume called a fluid capacity. A fluid container has a volume called current volume. A fluid container is openable. A fluid container is usually closed. A fluid container is inedible.
 
-Liquid is a kind of value. The liquids are water, gasoline, and isoprophyl alcohol.
+Liquid is a kind of value. 
+
+The liquids are water, gasoline, and isopropyl alcohol.
 
 A fluid container has a liquid.
 
@@ -406,7 +408,7 @@ The bottle of pills is a transparent openable container.
 	The carrying capacity of the bottle of pills is 50.
 	Ten aspirin are in the bottle of pills.
  
-The rubbing alcohol is a fluid container. The printed name is "bottle of rubbing alcohol". The current volume is 4.0 fl oz.  The liquid is isopropyl alcohol. 
+The rubbing alcohol is a fluid container. The printed name is "bottle of rubbing alcohol". The current volume is 4.0 fl oz.  The liquid of the rubbing alcohol is isopropyl alcohol. 
 
 Instead of drinking rubbing alcohol: say "It's not the kind of alcohol you want and you know it."
 
