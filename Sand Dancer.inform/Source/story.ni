@@ -13,50 +13,57 @@ Part 2 - Scoring
 
 Use no scoring.
 
-BOOK 2 - INSTALLED EXTENSIONS (by Author)
+BOOK 2 - EXTENSIONS  BY AUTHOR (with state)
 
-Part 1 - Aaron Reed
+Part 1 - Eric Eve
 
-Chapter 1 - Keyword Interface
-
-Include Keyword Interface by Aaron Reed.
-
-Chapter 2 - Small Kindnesses
-
-Include Small Kindnesses by Aaron Reed.
-
-Chapter 3 - Poor Man's Mistype
-
-Include Poor Man's Mistype by Aaron Reed.
-
-Chapter 4 - Smarter Parser
-
-Include Smarter Parser by Aaron Reed.
-
-Part 2 - Eric Eve
-
-Chapter 1 - Exit Lister
+Chapter 1 - Exit Lister (Not Installed)
 
 [Include Exit Lister by Eric Eve.]
 [Exit Lister includes most of the information provided by Exit Descriptions, but it places it in the Status Line instead of embedding it into the narrative text. The directions to visited rooms are displayed in lowercase, while the directions to unvisited rooms display in UPPERCASE.]
 
-Chapter 2 - Limited Implicit Actions
+Chapter 2 - Limited Implicit Actions (Installed)
 
 Include Limited Implicit Actions by Eric Eve.
 
-Part 3 - Matthew Fletcher
+Part 2 - Matthew Fletcher
 
-Chapter 1 - Exit Descriptions
+Chapter 1 - Exit Descriptions (Not Installed)
 
 [Include Exit Descriptions by Matthew Fletcher.]
 
-Part 4 - Emily Short
+Part 3 - Jon Ingold
 
-Chapter 1 - Approaches
+Chapter 1 - Disambiguation Control  (Incompatible)
+
+[TODO: Create or find an upgraded version. Disambiguation Control does not compile in Inform 10.1.2]
+[Include Disambiguation Control by Jon Ingold.]
+
+Part 4 - Aaron Reed
+
+Chapter 1 - Keyword Interface (Installed)
+
+Include Keyword Interface by Aaron Reed.
+
+Chapter 2 - Small Kindnesses (Not Installed)
+
+[Include Small Kindnesses by Aaron Reed.]
+
+Chapter 3 - Poor Man's Mistype (Not Installed)
+
+[Include Poor Man's Mistype by Aaron Reed.]
+
+Chapter 4 - Smarter Parser (Not Installed)
+
+[Include Smarter Parser by Aaron Reed.]
+
+Part 5 - Emily Short
+
+Chapter 1 - Approaches (Installed)
 
 Include Approaches by Emily Short.
 
-Chapter 2 - Plurality
+Chapter 2 - Plurality (Deprecated)
 
 [The Plurality extension is now deprecated.]
 
@@ -72,22 +79,22 @@ INFORM7 EXAMPLE:
 Instead of eating something inedible, say “[The noun] [don’t] seem likely to agree with [us] at all. [We][’]d be wiser to leave [regarding the noun][them] alone.”
 Instead of touching something: say “[regarding the noun][Those] [are] all prickly.”]
 
-Chapter 3 - Room Description Control
+Chapter 3 - Room Description Control (Installed)
 
 Include Room Description Control by Emily Short.
 
-Chapter 4 - Tailored Room Description
+Chapter 4 - Tailored Room Description (Installed)
 
 Include Tailored Room Description by Emily Short.
 
-Chapter 6 - Tutorial Mode
+Chapter 6 - Tutorial Mode (Not Installed)
 
 [NOTE: The testing commands do not work when Tutorial Mode is enabled]
-Include Tutorial Mode by Emily Short.
+[Include Tutorial Mode by Emily Short.]
 
-Part 5 - Mark Tilford
+Part 6 - Mark Tilford
 
-Chapter 1 - Automap
+Chapter 1 - Automap (Not Installed)
 
 [Include Automap by Mark Tilford.]
 [There isn't a version of Automap that works in version 10 of Inform using Glulx story format. The version I downloaded and tested requires the Z-code story format (configured in Settings).]
