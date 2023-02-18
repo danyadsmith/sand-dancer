@@ -977,7 +977,7 @@ Some utilitarian picnic tables and some crumbling trash are scenery in Break Roo
 
 Part 4 - Storage Room
 
-Storage Room is north of Break Room.
+Storage Room is north of Break Room and down from Roof.
 
 Chapter 1 - Storage Room Description
 
