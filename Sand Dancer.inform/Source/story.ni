@@ -1060,7 +1060,7 @@ Part 1 - Testing Chapter 3 (Creating the Story World)
 
 Chapter 1 - Navigation
 
-Test navigation with "south / north / north / east / northwest / north / north / south / south / south / south / test tour".
+Test map with "south / north / north / east / northwest / north / north / south / south / south / south / test tour".
 
 Chapter 2 - Enter Building
 
@@ -1072,11 +1072,11 @@ Test flashlight with "test enter / touch desk / open drawer / take flashlight / 
 
 Chapter 4 - Explore the Building
 
-Test explore with "north / in / north / south / east / north / up / down / south / west / out".
+Test explore with "test enter / north / south / east / north / up / north / down / south / west / out".
 
 Chapter 5 - Tour the Building
 
-Test tour with " test enter / test flashlight / test explore".
+Test tour with " test flashlight / test explore".
 
 Chapter 6 - Filing Cabinet
 
@@ -1084,17 +1084,17 @@ Test cabinet with "test enter / test flashlight / north / x filing cabinet / ope
 
 Chapter 7 - Tin Can
 
-Test can with "north / north / take tin can / north / south / north / drop can / south / north / take can / south / south / drop can / look / examine can".
+Test can with "north / north / take tin can / south / drop can / look / examine can".
 
 Part 2 - Testing Chapter 5 (Making Things Happen)
 
 Chapter 1 - Shoes and Socks
 
-Test shoes with "test enter/ north / x filing cabinet / open middle drawer / x socks / take socks / wear socks / south / east / wear tennis shoes / wear boots / inventory / drop tennis shoes / inventory / take off socks / take off boots / take off socks".
+Test shoes with "test flashlight / north / x filing cabinet / open middle drawer / x socks / take socks / wear socks / south / east / wear tennis shoes / wear boots / inventory / drop tennis shoes / inventory / take off socks / take off boots / take off socks".
 
 Chapter 2 - First Aid Kit
 
-Test kit with "test enter/ east / take first aid kit / open kit / x kit / open pills / take aspirin / eat aspirin / take aspirin / open box of bandaids / wear fingertip bandaid / open bottle of alcohol / drink rubbing alcohol / put aspirin in bottle of alcohol / close box of bandaids / put aspirin in bottle of pills / close bottle of pills / inventory / take aspirin / open bottle of pills / take aspirin / swallow aspirin / eat aspirin / eat aspirin / inventory"
+Test kit with "test flashlight/ east / take first aid kit / open kit / x kit / open pills / inventory / take aspirin / inventory / eat aspirin / inventory / take aspirin / inventory / open box of bandaids / wear fingertip bandaid / open bottle of alcohol / drink rubbing alcohol / put aspirin in bottle of alcohol / close box of bandaids / put aspirin in bottle of pills / close bottle of pills / inventory / take aspirin / inventory / take aspirin / inventory / swallow aspirin / inventory / eat aspirin / inventory /eat aspirin / inventory"
 
 Chapter 3 - Investigate Actions
 
