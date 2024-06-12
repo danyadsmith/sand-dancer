@@ -1,4 +1,5 @@
 "Sand Dancer" by "Danya D. Smith"
+[GitHub Version]
 
 VOLUME 1 - CONFIGURATION
 
@@ -443,6 +444,12 @@ There is a number variable called original cigarette count. Original cigarette c
 
 [There is a number variable called cigarettes on hand. ]
 
+Part 14 - Wallet
+	
+The wallet is closed and openable. In the wallet is a driver's license and a receipt from Big Jimmy's. 
+
+The description of driver's license is "When the highway patrol pulls you over they see your kind of crazy uncombed hair, your brown name (Nakaibito Morales) and brown skin (actually more tan than brown), your D.O.B. (eighteen years ago just barely) and tribal affiliation card (expired) and assume you're either some native eco-terrorist, illegal drug-running border jumper, or delinquent high school dropout (all lies except for the last one which is kinda true). Unless it's Jimmy Kay who pulled you over since he usually wants to buy you a beer and talk about your dad, which is weird but better than getting a ticket."
+
 BOOK 4 - CUSTOM COMMANDS
 
 Part 1 - Verbs to Remove
@@ -494,6 +501,8 @@ A memory can be retrieved or buried.
 
 A memory is usually buried.
 
+Does the player mean doing something to a memory: it is unlikely.
+
 Part 2 - Suggestion
 
 Suggestion relates various things to one memory.
@@ -501,7 +510,51 @@ The verb suggest (he suggests, they suggest, he suggested, it is suggested, he i
 
 Part 3 - The Protagonist's Memories
 
-The last day of high school is a memory. It is suggested by the tumbleweed.
+last day of high school is a memory. It is suggested by the pack of smokes. The description is "You didn't expect it was going to be your last day. But that morning you got called into the principal's office and fat bald Mr. Cox and pissy old Mrs. Borke were there, and they looked kind of like strong animals stalking weak animals, and you knew something bad was up.
+
+Cox and I have here, Mr. Morales (a bad start since you hate that name) a test you took last week in Mrs. Burke's sophomore English class. Questions have been raised (he looked up at Mrs. Burke like he was trying to pass the buck) questions have been raised about the quality of your essay, and whether a student with your academic and behavioral record (he scratched his bloated nose meaningfully) could have plausibly produced such an essay, and you get the idea. They thought you cheated.
+
+No. They knew you cheated, deep in their smug empty hearts. They wanted you to admit it, say you were a cheater and a liar. But you weren't. You wrote that essay, every god damn word, because you really really liked the book for once and wanted to show Mrs. Burke that maybe if they gave people better books to read kids would actually learn something. But they wanted a confession. They wanted a thieving example they could parade in front of the school. Someone of your academic and behavioral and economic and racial background and yeah, screw this shit. So you got up and left and never came back. Drop out, hell. You walked out and you'd do it again."
+
+Your shit job is a memory. It is suggested by the receipt from Big Jimmy's. The description is "Juza straddles the 371 like a drunk at last call, smelly and without a plan for the future. Shiny cars whiz by at ninety once in a while, only stopping for gas or directions (hint: not this way). No one ever stops for the stalls selling food and jewelry and blankets and cheap t-shirts that cluster around the dirt turn-off onto the rez. At least, no one buying anything.
+
+Big Jimmy shook his head when he heard you lived in Oro Oeste. Hell of a drive, kid, he said, popping up his Lumberjacks cap to scratch the straw pate underneath. You should get a place in Hoo-zuh. Little Jimmy'll set you up in that trailer across the road for almost nothin['].
+
+Almost nothing. Yeah, exactly what you'd turn into on the cold day in hell you move to Juza. But on the other hand, that was before you met Ocean. Now the road back to Oro Oeste seems longer and longer every night."
+
+stories grandma told is a memory. It is suggested by the piece of jade. The description of stories grandma told is "There are dark spirits who roam the earth, little Knock. Grandma used to say that, holding you tight and stroking your hair. There are dark spirits who roam the earth, but you're not alone. Oh, no. I'm here. (She'd kiss your head and you'd squeeze her back.) But others are watching out for you too. You have three animal guardians, hmm? Spirits who are always watching over you. Oh, you can't always trust them to know what's best. Remember that, Knock. But when you need help, they'll protect you from the worst things in the world.
+
+Mom would yell at Grandma a lot for filling your head with that new-age bullshit. Grandma grew up white and midwestern and Baptist, but had started wearing things with feathers and playing the pan flute by the time you were born. She seemed to really like having a son-in-law who was Native American or American Indian or Indigenous Peoples or whatever she'd decided the term was that week, and she was pretty pissed when mom left him. Anyway. Her stories were mostly BS, you guess, but some of them stuck with you. When it's dark you still wonder if your spirit animals are out there somewhere, and what the hell is taking them so long to find you."
+Understand "grandma's stories/grandmas stories/grandma stories/stories" as stories grandma told.
+
+The rusted key suggests a memory called meeting Ocean. The description of meeting Ocean is "She was buying a Fresca at Big Jimmy's when your shift ended. You had spent the day in the storage room taking inventory but just clocked out, and you stood behind her waiting to get some cigs almost too tired to notice how cute she was but still noticing, yeah, still noticing.
+
+She turned around and caught you noticing and you were pretty embarassed and covered in sweat and grease from the garage, so you stepped up and bought some Camels and were pretty surprised she was still there when you turned around.
+
+She told you her name was Ocean Running Deer and she lived on the rez and you told her your name was Nakaibito Morales and you lived in Oro Oeste. She said isn't Nakaibito the name of a town way off west and you told her your mom had picked it off a map because it sounded like a good Indian name. You never tell anyone that story but for some reason you told her. She laughed, sweetly though, and said maybe the two of you should go there sometime and see what it was like. Somehow two weeks later you were dating although you never ended up going to Nakaibito.
+
+And now... no, you can't think about that yet."
+
+Part 4 - Emotional Baggage
+
+The player carries an open transparent unopenable container called emotional baggage. The description of emotional baggage is "Your guidance counselor used to say you're always carrying it with you, and that memories associated with intense feelings (from euphoric to downright traumatic) have more weight than others. [if emotional baggage contains nothing]Lately, you've been working so much you barely have time to think.[end if]"
+
+Instead of doing anything other than examining when noun is emotional baggage or second noun is emotional baggage: say "It's not real, bro."
+
+Part 4 - Brooding
+
+Brooding is an action applying to one thing.
+
+Understand "brood about/on/over [something]" or "brood [something]" or "think about [something]" or "reflect on [something]" as brooding.
+
+Check brooding when noun is not a memory: instead say "Eh. You can't really reflect on that when it's this damn cold."
+
+Carry out brooding: say "[description of noun][line break]"; now the noun is retrieved. 
+[We defined earlier that memories can either be buried (not yet brooded about) or retrieved.]
+
+Instead of doing anything other than brooding to a memory: say "As if. All you can really do is BROOD ABOUT it."
+
+Instead of thinking: say "Most of the thinking you do nowadays comes from either smoking or brooding." [Thinking is a standard action which we'll use to hint the player towards better options.]
 
 BOOK 6 - TALENTS
 
@@ -1072,7 +1125,7 @@ Test flashlight with "test enter / touch desk / open drawer / take flashlight / 
 
 Chapter 4 - Explore the Building
 
-Test explore with "test enter / north / south / east / north / up / north / down / south / west / out".
+Test explore with "test flashlight / north / south / east / north / up / north / down / south / west / out".
 
 Chapter 5 - Tour the Building
 
