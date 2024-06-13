@@ -42,9 +42,9 @@ Chapter 1 - Disambiguation Control  (Incompatible)
 
 Part 4 - Aaron Reed
 
-Chapter 1 - Keyword Interface (Installed)
+Chapter 1 - Keyword Interface (Not Installed)
 
-Include Keyword Interface by Aaron Reed.
+[Include Keyword Interface by Aaron Reed.]
 
 Chapter 2 - Small Kindnesses (Not Installed)
 
@@ -168,7 +168,7 @@ Part 4 - Pickup Truck
 
 The pickup truck is an enterable openable transparent closed fixed in place container.  
 
-A glove box is part of the pickup truck.
+A glove box is part of the pickup truck. Understand "glove compartment/box/compartment" as glove box.
 	It is an openable closed opaque box.
 	The pack of smokes is in the glove box.
 	An owner's manual is inside the glove box.
@@ -180,8 +180,8 @@ After switching on the headlights: now every within range of headlights room is 
 
 	After switching off the headlights: if emergency lights are switched off, now every within range of headlights room is dark; say "You click the headlights off[if emergency lights are switched off and flashlight is switched off]and blackness swallows you up.[otherwise if emergency lights are switched off and flashlight is switched on and flashlight is visible], leaving only the ghostly beam of your flashlight[end if]."
 
-A map of the State of New Mexico with keyword "map" is in the pickup truck. It is undescribed.
-Understand "map/State/New Nexico/state map" as map of the State of New Mexico.
+A state map of New Mexico is in the pickup truck. It is undescribed.
+Understand "New Nexico/state map" as state map of New Mexico.
 
 A pair of aviator sunglasses is inside the pickup truck. It is undescribed.
 The pair of aviator sunglasses is wearable.
@@ -190,9 +190,13 @@ Some loose change is inside the pickup truck. It is undescribed.
 
 empty cups are inside the pickup truck. They are undescribed.
 
-The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air.[paragraph break]In the cabin, you can see [a list of things in truck]."
+The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air. In the cabin, you can see [a list of things in truck]."
 
 After opening the pickup truck: say "The door creaks open with difficulty rusted joints straining."
+
+The description of the pickup truck is "You can see [a list of things in truck]."
+
+After examining the open pickup truck: say "[if glove box is closed] There are scratches around the lock for the glove compartment."
 
 After closing the truck: say "You slam the door shut."
 
@@ -240,7 +244,7 @@ The initial appearance of the emergency lights is "Mounted to the wall is a cont
 
 After switching on the emergency lights: now every room regionally in Tower Vicinity is lighted; say "With a sharp buzz, a whiff of static, and an electrical groan, bare light bulbs flicker on throughout the building."
 
-After switching off the emergency lights: now every room regionally in Tower Vicinity is dark; if headlights are switched on, now every within range of headlights room is lighted; say "The lights flicker out and die."
+After switching off the emergency lights: now every room regionally in Tower Vicinity is dark; if headlights are switched on, now every within range of headlights room is lighted; say "The lightsdie out, except for a ghostly glow from outside that must be your headlights."
 
 Instead of attacking the emergency lights: say "You're frustrated and feel like lashing out at something, but you know that would only make things worse."
 
@@ -489,7 +493,7 @@ Report smoking: if there is an in progress plan, say "You've found the [list of 
 Carry out smoking: now the noun is nowhere.
 
 
-BOOK 5- MEMORIES
+BOOK 5 - MEMORIES
 
 Part 1 - Memory
 
@@ -606,6 +610,8 @@ The player is large-footed.
 
 The player carries a lighter. The description of lighter is "You pat your pockets in search of your lighter [if number of unfamiliar rooms > 0]but you know that darkness is falling and you only have so much time to figure out how to leave this deserted place or find enough supplies to survive the night[otherwise] and find it in your right pocket. You light a cigarette and take a long slow drag[end if]."
 
+The player carries a wallet.
+
 Part 2 - Location
 
 The player is [in the pickup truck]in Middle of Nowhere.
@@ -711,7 +717,7 @@ Crumbling Concrete is north of Middle of Nowhere.
 
 Chapter 1 - Crumbling Concrete Description
 
-The description of Crumbling Concrete is "This building must have been a utility structure for [the huge electrical tower] to the north. Now abandoned, [if lit by headlights][fragments of glass] sparkle faintly in the beam of your headlights[otherwise if lit by flashlight]: it seems dead and alone in the dusty beam of your flashlight[end if]. Tendrils of [sand] spill through the empty doorframe leading in to a [if lit brightly]brightly lit[otherwise]dark[end if]interior; you could also walk around to the east or head south back to your truck."
+The description of Crumbling Concrete is "This building must have been a utility structure for [the huge electrical tower] to the north. Now abandoned, [if lit by headlights][fragments of glass] sparkle faintly in the beam of your headlights[otherwise if lit by flashlight]: it seems dead and alone in the dusty beam of your flashlight[end if]. Tendrils of [sand] spill through the empty doorframe leading in to a [if lit brightly]brightly lit[otherwise]dark[end if] interior; you could also walk around to the east or head south back to your truck."
 
 Chapter 2 - Crumbling Concrete Props
 
@@ -772,6 +778,8 @@ Chapter 1 - Control Center Description
 The description of Control Center is "Some kind of electrical monitoring must have happened here once, but it's totally trashed now. Broken [equipment], [piles of trash], and [junk] are everywhere." 
 	
 Chapter 2 - Control Center Props
+
+The initial appearance of can opener is "But hey, on one pile here's a perfectly good can opener."
 
 Chapter 3 - Control Center Scenery
 
@@ -1039,6 +1047,20 @@ The description of Storage Room is "The walls are lined with [bare metal shelves
 Chapter 2 - Storage Room Props
 
 The emergency lights are in Storage Room.
+
+Some rows of crumbling shelving are a fixed in place supporter in Storage Room. "Rows of crumbling shelves support hundreds of [cans of food], the labels long since aged away."
+
+Some cans of food are on the shelving. The cans of food are fixed in place. Understand "can/hundreds" as cans of food.
+
+Instead of taking cans of food: say "You grab one and turn it over in your hand, but water has soaked and crumbled away the label, and you don't have any way to get it open. Your stomach growls a little as you put it back on the shelf."
+
+Instead of opening or eating cans of food: try taking cans of food.
+
+Instead of taking cans of food when player holds can opener: say "You pull down a can from the shelf, grip if with the rusty can opener, and peel open the lid. Yuck: [one of]moldy peas[or]rotten condensed milk[or]black and mold-covered mushrooms[or]something nasty-smelling and green[as decreasingly likely outcomes]. [one of]Just your luck.[or]Nor your lucky day.[or]Some of these should still be good, right?[as decreasingly likely outcomes]".
+
+The canned oranges are a thing. Instead of taking cans of food when player holds can opener and player holds luck and canned oranges are not handled: say "You run your fingers along the cans, waiting until one feels right. There's nothing, nothing, but then... yeah. That's the one. You snag it down, twist it open, and boom: mandarin oranges, unspoiled and delicious. You scarf them down, picking them out segment by segment with your chilly fingers. By the time you've polished them off, you're a lot less hungry. You grab the next can down for later."; move canned oranges to player.
+
+Instead of taking cans of food when canned oranges are handled: say "You won't be hungry again till morning."
 
 Chapter 3 - Storage Room Scenery
 
