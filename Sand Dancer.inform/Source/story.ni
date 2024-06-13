@@ -211,7 +211,7 @@ Part 5 - Flashlight
 
 The flashlight is a portable device. The description of flashlight is "[if flashlight is switched on]Emitting a good, strong beam: thank god it works[otherwise]Cold blue metal, and hefty[end if]."
 
-Understand "beam/cold/blue/metal/hefty/flash/light" as the flashlight.
+Understand "flashlight/flash/light" as the flashlight.
 
 Carry out switching on flashlight: now flashlight is lit.
 Carry out switching off flashlight: now flashlight is unlit.
@@ -789,11 +789,27 @@ Chapter 2 - Control Center Props
 
 The initial appearance of can opener is "But hey, on one pile here's a perfectly good can opener."
 
+The smell of gasoline is fixed in place in Control Center. "[if player holds scent]You can clearly smell gasoline coming from under that [sheet of corrugated metal][otherwise]You catch a faint whiff of gasoline coming from somewhere[end if]."
+	Understand "faint/whiff" as smell of gasoline.
+	Understand "gasoline" as smell of gasoline when gas can is not visible.
+	Instead of doing anything to smell of gasoline, say "[if player holds scent]It's coming from beneath that [sheet of corrugated metal][else]You can't tell where the smell is coming from[end if]."
+	Instead of smelling Control Center, try smelling smell of gasoline.
+
+A gas can is a closed openable container. The description is "It's full of gas." 
+Instead of opening gas can: say "You don't want to spill it."
+
+A sheet of corrugated metal is in Control Center. Understand "metal/sheet metal/sheet/corrugated metal" as sheet of corrugated metal.
+  	Instead of looking under sheet of corrugated metal, try looking under piles of trash.
+
 Chapter 3 - Control Center Scenery
 
 Some piles of trash are scenery in Control Center. 
+	Instead of searching or taking piles of trash: try looking under piles of trash. 
+	Instead of looking under piles of trash: say "You root around in the trash hopelesly, but there's a lot of it. You don't turn up anything useful."
+	Instead of looking under piles of trash when player holds scent: say "Your sense of smell leads you straight to a [sheet of corrugated metal]. You lift it [if player holds strength]effortlessly [end if]and throw it aside, revealing a gas can."; move gas can to location; now smell of gasoline is off-stage.
 Some broken equipment is scenery in Control Center.
 Some junk is scenery in Control Center.	
+Understand "broken/equipment/junk/sheet of metal/metal" as piles of trash.
 
 Chapter 4 - Control Center Implementation
 
@@ -947,7 +963,10 @@ Instead of opening desk: try opening drawer.
 After opening drawer in dim Staging Area: say "You slide the drawer open and feel around inside the dark interior. Something large and solid rolls around inside. As you grasp for it, you're almost certain it is a flashlight."
 
 [For testing purposes only]
-[The courage is in Staging Area.]
+The courage is in Staging Area.
+The strength is in Staging Area.
+The luck is in Staging Area.
+The scent is in Staging Area.
 
 Chapter 3 - Staging Area Scenery
 
@@ -1187,4 +1206,8 @@ Part 3 - Testing Chapter 6 (Understanding the Player)
 
 Chapter 1 - Flashlight
 
-Test synonyms with "test flashlight / x beam / x cold / x blue / x hefty / x flash / x light / x flashlight".
+Test synonyms with "test flashlight / x flash / x light / x flashlight".
+
+Chapter 2 - Gas Can
+
+Test gasoline with "ABSTRACT scent to me / ABSTRACT strength to me / test enter / test flashlight / east / north / turn on emergency lights / up / move barrel / up / look under metal / take gas can"
