@@ -194,7 +194,7 @@ The initial appearance of the truck is "Your poor old [pickup truck] ticks and g
 
 After opening the pickup truck: say "The door creaks open with difficulty rusted joints straining."
 
-The description of the pickup truck is "You can see [a list of things in truck]."
+The description of the pickup truck is "You can see [a list of things in truck] in the cabin."
 
 After examining the open pickup truck: say "[if glove box is closed] There are scratches around the lock for the glove compartment."
 
@@ -498,12 +498,18 @@ BOOK 5 - MEMORIES
 Part 1 - Memory
 
 A memory is a kind of thing.
-
+A memory can be retrieved or buried. A memory is usually buried.
+A memory can be forgotten or remembered. A memory is usually forgotten.
 Understand "memory/memories" as a memory.
 
-A memory can be retrieved or buried.
+Trigger relates various things to one memory (called the triggered memory).
+The verb to trigger (he triggers, they trigger, he triggered, it is triggered, he is triggering) implies the trigger relation.
 
-A memory is usually buried.
+Definition: a thing is charged if it triggers a forgotten memory.
+Definition: a memory is forgotten if it is not in emotional baggage.
+
+A thing can be examined or unexamined. A thing is usually unexamined.
+Carry out examining something: now the noun is examined.
 
 Does the player mean doing something to a memory: it is unlikely.
 
@@ -518,26 +524,28 @@ last day of high school is a memory. It is suggested by the pack of smokes. The 
 
 Cox and I have here, Mr. Morales (a bad start since you hate that name) a test you took last week in Mrs. Burke's sophomore English class. Questions have been raised (he looked up at Mrs. Burke like he was trying to pass the buck) questions have been raised about the quality of your essay, and whether a student with your academic and behavioral record (he scratched his bloated nose meaningfully) could have plausibly produced such an essay, and you get the idea. They thought you cheated.
 
-No. They knew you cheated, deep in their smug empty hearts. They wanted you to admit it, say you were a cheater and a liar. But you weren't. You wrote that essay, every god damn word, because you really really liked the book for once and wanted to show Mrs. Burke that maybe if they gave people better books to read kids would actually learn something. But they wanted a confession. They wanted a thieving example they could parade in front of the school. Someone of your academic and behavioral and economic and racial background and yeah, screw this shit. So you got up and left and never came back. Drop out, hell. You walked out and you'd do it again."
+No. They knew you cheated, deep in their smug empty hearts. They wanted you to admit it, say you were a cheater and a liar. But you weren't. You wrote that essay, every goddamn word because you really really liked the book for once and wanted to show Mrs. Burke that maybe if they gave people better books to read, kids would actually learn something. But they wanted a confession. They wanted a thieving example they could parade in front of the school. Someone of your academic and behavioral and economic and racial background and yeah, screw this shit. So you got up and left and never came back. Drop out, hell. You walked out, and you'd do it again."
 
 Your shit job is a memory. It is suggested by the receipt from Big Jimmy's. The description is "Juza straddles the 371 like a drunk at last call, smelly and without a plan for the future. Shiny cars whiz by at ninety once in a while, only stopping for gas or directions (hint: not this way). No one ever stops for the stalls selling food and jewelry and blankets and cheap t-shirts that cluster around the dirt turn-off onto the rez. At least, no one buying anything.
 
 Big Jimmy shook his head when he heard you lived in Oro Oeste. Hell of a drive, kid, he said, popping up his Lumberjacks cap to scratch the straw pate underneath. You should get a place in Hoo-zuh. Little Jimmy'll set you up in that trailer across the road for almost nothin['].
 
-Almost nothing. Yeah, exactly what you'd turn into on the cold day in hell you move to Juza. But on the other hand, that was before you met Ocean. Now the road back to Oro Oeste seems longer and longer every night."
+Almost nothing. Yeah, exactly what you'd turn into on the cold day in hell you moved to Juza. But on the other hand, that was before you met Ocean. Now the road back to Oro Oeste seems longer and longer every night."
 
 stories grandma told is a memory. It is suggested by the piece of jade. The description of stories grandma told is "There are dark spirits who roam the earth, little Knock. Grandma used to say that, holding you tight and stroking your hair. There are dark spirits who roam the earth, but you're not alone. Oh, no. I'm here. (She'd kiss your head and you'd squeeze her back.) But others are watching out for you too. You have three animal guardians, hmm? Spirits who are always watching over you. Oh, you can't always trust them to know what's best. Remember that, Knock. But when you need help, they'll protect you from the worst things in the world.
 
-Mom would yell at Grandma a lot for filling your head with that new-age bullshit. Grandma grew up white and midwestern and Baptist, but had started wearing things with feathers and playing the pan flute by the time you were born. She seemed to really like having a son-in-law who was Native American or American Indian or Indigenous Peoples or whatever she'd decided the term was that week, and she was pretty pissed when mom left him. Anyway. Her stories were mostly BS, you guess, but some of them stuck with you. When it's dark you still wonder if your spirit animals are out there somewhere, and what the hell is taking them so long to find you."
+Mom would yell at Grandma a lot for filling your head with that new-age bullshit. Grandma grew up white and midwestern and Baptist but had started wearing things with feathers and playing the pan flute by the time you were born. She seemed to really like having a son-in-law who was Native American or American Indian or Indigenous Peoples or whatever she'd decided the term was that week, and she was pretty pissed when Mom left him. Anyway. Her stories were mostly BS, you guessed, but some of them stuck with you. When it's dark you still wonder if your spirit animals are out there somewhere, and what the hell is taking them so long to find you."
 Understand "grandma's stories/grandmas stories/grandma stories/stories" as stories grandma told.
 
 The rusted key suggests a memory called meeting Ocean. The description of meeting Ocean is "She was buying a Fresca at Big Jimmy's when your shift ended. You had spent the day in the storage room taking inventory but just clocked out, and you stood behind her waiting to get some cigs almost too tired to notice how cute she was but still noticing, yeah, still noticing.
 
-She turned around and caught you noticing and you were pretty embarassed and covered in sweat and grease from the garage, so you stepped up and bought some Camels and were pretty surprised she was still there when you turned around.
+She turned around and caught you noticing and you were pretty embarrassed and covered in sweat and grease from the garage, so you stepped up and bought some Camels and were pretty surprised she was still there when you turned around.
 
-She told you her name was Ocean Running Deer and she lived on the rez and you told her your name was Nakaibito Morales and you lived in Oro Oeste. She said isn't Nakaibito the name of a town way off west and you told her your mom had picked it off a map because it sounded like a good Indian name. You never tell anyone that story but for some reason you told her. She laughed, sweetly though, and said maybe the two of you should go there sometime and see what it was like. Somehow two weeks later you were dating although you never ended up going to Nakaibito.
+She told you her name was Ocean Running Deer, and she lived on the rez, and you told her your name was Nakaibito Morales, and you lived in Oro Oeste. She said isn't Nakaibito the name of a town way off west and you told her your mom had picked it off a map because it sounded like a good Indian name. You never tell anyone that story, but for some reason, you told her. She laughed, sweetly though, and said maybe the two of you should go there sometime and see what it was like. Somehow, two weeks later, you were dating, although you never ended up going to Nakaibito.
 
 And now... no, you can't think about that yet."
+
+The handled canned oranges trigger a memory called Ocean's favorite hobby. The description of Ocean's favorite hobby is "It was the first indication you had that while Ocean lived simply, she had expensive taste. You thought about cutting your losses then. It was before your first kiss, before she let you see her naked that night under the light of the full moon, the night she said yes for the first time. You were sitting in her trailer and noticed how sweet and crisp the air seemed. It wasn't her shampoo or the soap she used. Those had a creamy scent that reminded you of sweetened milk. No, this came from a tiny device that sent puffs of air into the room on timed intervals. When you asked her about it, she said something like, [quotation mark]Oh, that's just aromatherapy. When I feel stressed, I reach for the citrus scents, like oranges.[quotation mark] When you asked what she was so stressed out about, she looked down and fixed her gaze on nothing at all, staring into a physical void where a million thoughts were present, all kept secret from you. That's when you knew that she would always retain some aspects of herself, her life, her past, and keep them from you. You wondered if there would ever be a time when there were no secrets left between you. It made you feel frustrated and somewhat sad, because in the space of several months you had told her everything there was to tell. You left her that day feeling empty for the first time. It wasn't the last time."
 
 Part 4 - Emotional Baggage
 
@@ -920,7 +928,7 @@ Instead of taking cobwebs when player holds courage: say "You impatiently brush 
 
 Section 4 - Duct Tape
 
-A roll of duct tape is in the hole.
+A roll of duct tape is in the hole. The roll of duct tape is undescribed.
 
 After taking the duct tape: say "[one of]You reach down into the hole[if cobwebs are on-stage], brushing the cobwebs away impatiently,[end if] and pull out the duct tape.[or]Taken.[stopping]"; now cobwebs are off-stage.
 
@@ -939,7 +947,7 @@ Instead of opening desk: try opening drawer.
 After opening drawer in dim Staging Area: say "You slide the drawer open and feel around inside the dark interior. Something large and solid rolls around inside. As you grasp for it, you're almost certain it is a flashlight."
 
 [For testing purposes only]
-The courage is in Staging Area.
+[The courage is in Staging Area.]
 
 Chapter 3 - Staging Area Scenery
 
