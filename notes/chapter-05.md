@@ -26,7 +26,7 @@ This chapter introduces the syntax required to:
 * When dealing with actions, the special word `noun` means the direct object of the player’s most recent command
 * There is also a special word named `second noun` that becomes available in commands with an indirect object
 * An **action out of world** happens outside of the flow of gameplay (e.g., saving, restoring)
-* Each of [Inform’s Actions](notes/default-verbs.md) comes with a set of six rulebooks that govern their behavior
+* Each of [Inform’s Actions](default-verbs.md) comes with a set of six rulebooks that govern their behavior
 
 ### Exploring Rulebooks
 
