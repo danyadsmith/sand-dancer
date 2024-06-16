@@ -242,11 +242,26 @@ Understand "control/panel/control panel/emergency/lights" as the emergency light
 
 The initial appearance of the emergency lights is "Mounted to the wall is a control panel for the building's emergency lights. They are switched [if emergency lights are switched on]on[otherwise]off[end if]."
 
-After switching on the emergency lights: now every room regionally in Tower Vicinity is lighted; say "With a sharp buzz, a whiff of static, and an electrical groan, bare light bulbs flicker on throughout the building."
+After switching on the emergency lights: 
+	now every room regionally in Tower Vicinity is lighted; 
+	say "With a sharp buzz, a whiff of static, and an electrical groan, bare light bulbs flicker on throughout the building."
 
-After switching off the emergency lights: now every room regionally in Tower Vicinity is dark; if headlights are switched on, now every within range of headlights room is lighted; say "The lightsdie out, except for a ghostly glow from outside that must be your headlights."
-
-Instead of attacking the emergency lights: say "You're frustrated and feel like lashing out at something, but you know that would only make things worse."
+After switching off the emergency lights: 
+	now every room regionally in Tower Vicinity is dark; 
+	if headlights are switched on: 
+		now every within range of headlights room is lighted; 
+		say "The lights die out except for a ghostly glow from outside that must be your headlights.";
+	otherwise if flashlight is switched on and flashlight is visible:
+		say "The lights die out, leaving only the beam of your flashlight.";
+	otherwise:
+		say "The lights flicker and die out";
+		if player holds courage:
+			say ", but you are not afraid";
+		say ".";
+	say "[line break]The generator whines as it powers off, slowly falling silent."
+	
+Instead of attacking the emergency lights: 
+	say "You're frustrated and feel like lashing out at something, but you know that would only make things worse."
 
 Part 7 - Guidebook
 
@@ -512,6 +527,8 @@ A thing can be examined or unexamined. A thing is usually unexamined.
 Carry out examining something: now the noun is examined.
 
 Does the player mean doing something to a memory: it is unlikely.
+
+Instead of waiting: let selection be a random thing in emotional baggage; if nothing is in emotional baggage, now selection is a random memory; say "Nah, man, better keep busy or else you'll continue to brood about [the selection]."
 
 Part 2 - Suggestion
 
@@ -1210,4 +1227,6 @@ Test synonyms with "test flashlight / x flash / x light / x flashlight".
 
 Chapter 2 - Gas Can
 
-Test gasoline with "ABSTRACT scent to me / ABSTRACT strength to me / test enter / test flashlight / east / north / turn on emergency lights / up / move barrel / up / look under metal / take gas can"
+Test emergency with "test flashlight / east / north / turn on emergency lights / turn off emergency lights".
+
+Test gasoline with "test enter / test flashlight / east / north / turn on emergency lights / ABSTRACT scent to me / ABSTRACT strength to me / up / move barrel / up / look under metal / take gas can"
