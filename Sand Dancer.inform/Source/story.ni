@@ -10,14 +10,6 @@ Part 1 - Style
 Use serial comma.
 Use American dialect.
 
-Part 2 - Scoring
-
-Use no scoring.
-
-Part 3 - Rules
-
-The can't go through undescribed doors rule is not listed in the check going rulebook.
-
 BOOK 2 - EXTENSIONS  BY AUTHOR (with state)
 
 Part 1 - Eric Eve
@@ -103,6 +95,24 @@ Chapter 1 - Automap (Not Installed)
 
 [Include Automap by Mark Tilford.]
 [There isn't a version of Automap that works in version 10 of Inform using Glulx story format. The version I downloaded and tested requires the Z-code story format (configured in Settings).]
+
+BOOK 3 - SCORING
+
+Use no scoring.
+
+BOOK 4 - RULES
+
+The can't go through undescribed doors rule is not listed in the check going rulebook.
+
+BOOK 5 - CUSTOMIZATIONS
+
+Part 1 - Values
+
+Liquid is a kind of value. 
+
+A liquid level is a kind of value. The liquid levels are completely full, mostly full, half full, mostly empty, and completely empty.
+
+A volume is a kind of value. 15.9 fl oz specifies a volume with parts ounces and tenths (optional, preamble optional).
 
 
 VOLUME 2 - MECHANICS
@@ -200,6 +210,8 @@ A glove box is part of the pickup truck. Understand "glove compartment/box/compa
 	A pack of gum is inside the glove box.
 
 Some headlights are part of the pickup truck. The headlights are a device. They are switched on.
+
+A gas tank is part of the pickup truck. The gas tank has a liquid level. The gas tank is mostly empty.
 
 After switching on the headlights: now every within range of headlights room is lighted; say "The desert shadows dissolve in the glow of your headlights."
 
@@ -351,11 +363,9 @@ Part 11 - Fluid Containers
 [See §15.19. Arithmetic with units]
 [Most of this section was pulled from the Example titled Lemonade]
 
-A volume is a kind of value. 15.9 fl oz specifies a volume with parts ounces and tenths (optional, preamble optional).
 
 A fluid container is a kind of container. A fluid container has a volume called a fluid capacity. A fluid container has a volume called current volume. A fluid container is openable. A fluid container is usually closed. A fluid container is inedible.
 
-Liquid is a kind of value. 
 
 The liquids are water, gasoline, and isopropyl alcohol.
 
@@ -1229,7 +1239,7 @@ Test tour with " test flashlight / test explore".
 
 Chapter 6 - Filing Cabinet
 
-Test cabinet with "test enter / test flashlight / north / x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / take socks / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
+Test cabinet with "test flashlight / north / x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / take socks / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
 
 Chapter 7 - Tin Can
 
@@ -1259,4 +1269,4 @@ Chapter 2 - Gas Can
 
 Test emergency with "test flashlight / east / north / turn on emergency lights / turn off emergency lights".
 
-Test gasoline with "test enter / test flashlight / east / north / turn on emergency lights / ABSTRACT scent to me / ABSTRACT strength to me / up / move barrel / up / look under metal / take gas can"
+Test gasoline with "test flashlight / east / north / turn on emergency lights / ABSTRACT scent to me / ABSTRACT strength to me / up / move barrel / up / look under metal / take gas can"
