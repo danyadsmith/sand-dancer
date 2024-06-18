@@ -8,6 +8,8 @@ This chapter introduces the syntax required to:
 * Use **variables** to simplify logic
 * Unlist a rule to resolve a bug
 * Create kinds of value and access `the value before` and `the value after`
+* Create named phrases and phrases to decide
+* Create phrases with variable inputs
 
 ### Lessons Learned
 

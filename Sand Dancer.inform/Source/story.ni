@@ -106,7 +106,39 @@ The can't go through undescribed doors rule is not listed in the check going rul
 
 BOOK 5 - CUSTOMIZATIONS
 
-Part 1 - Values
+Part 1 - Hints
+
+To decide which text is best course of action:
+	if player is in truck:
+		decide on "you should get out of this truck";
+	otherwise if Crumbling Concrete is unvisited:
+		decide on "you could look around the area to find a phone or something";
+	otherwise if pane of cracked glass is closed:
+		decide on "you could break open an window to get inside that building";
+	otherwise if flashlight is not handled:
+		decide on "you could explore the building using the sense of touch, since it's so dark";
+	otherwise if Storage Room is unvisited:
+		decide on "you should poke around the building more and see what else there is to find";
+	otherwise if emergency lights are switched off:
+		decide on "you should switch on those emergency lights in the storage room so you can get a better look at things";
+	otherwise if Open Desert is unvisited:
+		decide on "you should see if the open desert has anything to offer";
+	otherwise if strength is held and emergency blanket is not handled:
+		decide on "you're strong enough now to bust open that mesh cage with the blanket inside";
+	otherwise if courage is held and duct tape is not handled:
+		decide on "you're brave enough to reach for that duct tape in the floor now";
+	otherwise if duct tape is not handled:
+		decide on "you should investigate that hole in the floor of the staging area";
+	otherwise if luck is held and canned oranges are not handled:
+		decide on "you just might be lucky enough to find something to eat in the storage room";
+	otherwise if scent is held and Control Center is unvisited:
+		decide on "you should try to get up that ladder above the roof";
+	otherwise if scent is held and gas can is not handled:
+		decide on "you should try to sniff out that gas now";
+	otherwise:
+		decide on "".
+
+Part 2 - Values
 
 Liquid is a kind of value. 
 
@@ -201,7 +233,8 @@ A box can be fixed in place. A box is usually portable.
 
 Part 4 - Pickup Truck
 
-The pickup truck is an enterable openable transparent closed fixed in place container.  
+The pickup truck is an enterable openable transparent closed fixed in place container. 
+Understand "pickup truck/truck/pickup" as the pickup truck.
 
 A glove box is part of the pickup truck. Understand "glove compartment/box/compartment" as glove box.
 	It is an openable closed opaque box.
@@ -242,7 +275,6 @@ Before entering truck when truck is closed: try opening the truck.
 Before exiting when player is in truck and truck is closed: try opening the truck.
 
 Understand "drive" or "drive [pickup]" or "start [pickup]" or "turn on [pickup]" or "turn key" or "switch on [pickup]" or "shift" or "steer" or "brake" as a mistake ("Your truck's not going anywhere in this condition.").
-
 
 Part 5 - Flashlight
 
@@ -363,9 +395,7 @@ Part 11 - Fluid Containers
 [See §15.19. Arithmetic with units]
 [Most of this section was pulled from the Example titled Lemonade]
 
-
 A fluid container is a kind of container. A fluid container has a volume called a fluid capacity. A fluid container has a volume called current volume. A fluid container is openable. A fluid container is usually closed. A fluid container is inedible.
-
 
 The liquids are water, gasoline, and isopropyl alcohol.
 
@@ -472,7 +502,7 @@ Part 12 - Can Opener
 
 A can opener is in Control Center. 
 
-The can opener is privately-named. Understand "opener" or "can opener" as the can opener.
+The can opener is privately-named. Understand "opener/can opener" as the can opener.
 
 Part 13 - Cigarettes
 
@@ -480,7 +510,7 @@ A cigarette is a kind of thing.
 A cigarette is inedible.
 
 The pack of smokes is an opaque, portable container. 
-Understand "pack of smokes" or "pack" or "pack of cigarettes" as the pack of smokes.
+Understand "pack of smokes/pack/pack of cigarettes/smokes" as the pack of smokes.
 The carrying capacity of the pack of smokes is 20.
 Ten cigarettes are in the pack of smokes.
 
@@ -495,7 +525,7 @@ Check inserting something into in the pack of smokes:
 Check inserting something into in the crumpled box:
 	if the noun is not a cigarette, say "There is nothing magical about the crumpled carton. You can't put that in there.".
 
-There is a number variable called original cigarette count. Original cigarette count is 10.
+There is a number variable called original cigarette count. Original cigarette count is 7.
 
 [There is a number variable called cigarettes on hand. ]
 
@@ -531,7 +561,9 @@ Before smoking when crumpled box is not held and crumpled box is visible: say "(
 
 First report smoking: say "You pull out a cigarette and light the tip. The familiar smell of lighted tobacco calms you."
 
-Report smoking: say "Well, you're still stuck here. [run paragraph on]"
+Report smoking: 
+	let hint be best course of action;
+	if best course of action is not "", say "Maybe [hint]. [run paragraph on]"
 	
 Last report smoking: say "[paragraph break][if player is in pickup truck]You extinguish the butt in one of the empty cups[otherwise]You crush the butt under your heel[end if] and wonder where to go next."
 
@@ -675,7 +707,7 @@ The player carries a wallet.
 
 Part 2 - Location
 
-The player is [in the pickup truck]in Middle of Nowhere.
+The player is [in the pickup truck] in Middle of Nowhere.
 
 Part 3 - Actions
 
