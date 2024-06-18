@@ -705,6 +705,13 @@ The player carries a lighter. The description of lighter is "You pat your pocket
 
 The player carries a wallet.
 
+[Exercise 7.2 Attempt]
+[Friends is a list of people variable.
+Sean is a kind of person.
+Todd is a kind of person.
+Roy is a kind of person.
+Friends is {Sean, Todd, Roy}.]
+
 Part 2 - Location
 
 The player is [in the pickup truck] in Middle of Nowhere.
