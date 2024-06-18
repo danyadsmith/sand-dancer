@@ -957,7 +957,7 @@ A boarded-up door is a closed unopenable undescribed door. It is  northeast of C
 Section 2 - Window
 
 A pane of cracked glass is a tall window. It is outside of Staging Area and inside from Crumbling Concrete.
-Understand "pane/cracked/glass/window" as pane of cracked glass.
+Understand "pane/cracked/glass" as pane of cracked glass.
 
 Section 3 - Hole in the Floor
 
@@ -1019,7 +1019,7 @@ Foreman's Office is north of Staging Area.
 
 Chapter 1 - Foreman's Office Description
 
-The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights illuminate every corner of[end if] the tiny office where the boss likely held court. You can barely see the metal infrastructure of the tower's base through an obscured pane of glass."
+The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights illuminate every corner of[end if] the tiny office where the boss likely held court. You can barely see the metal infrastructure of the tower's base through an obscured [dust-covered window]."
 
 Chapter 2 - Foreman's Office Props
 
@@ -1040,7 +1040,7 @@ A rusted filing cabinet is a container in Foreman's Office. It is fixed in place
 		The unmarked folder contains a job application. 
 		The unmarked folder contains a note.
 		
-A dust-covered window is a small window in Foreman's Office. The initial appearance of a dust-covered window is "The dust-covered window casts a fractured reflection of [the random thing in Foreman's Office]."
+A dust-covered window is a small window in Foreman's Office. The initial appearance of a dust-covered window is "A dust-covered window casts a mottled, fractured reflection of [the random thing in Foreman's Office]."
 
 The ankle boots are in Foreman's Office.
 
@@ -1050,7 +1050,7 @@ Break Room is east of Staging Area.
 
 Chapter 1 - Break Room Description
 
-The description of Break Room is "It was never designed for comfort. A few utilitarian picnic tables and basic supplies provided a cramped space for workers to take a lunch break or tend to an injury before returning to work. The [tiny frosted window] provided no scenic escape. Perhaps it was a kindness. All anyone could see beyond that window was a weed-strewn wasteland."
+The description of Break Room is "It was never designed for comfort. A few utilitarian picnic tables and basic supplies provided a cramped space for workers to take a lunch break or tend to an injury before returning to work. The [tiny frosted window] provided no scenic escape. Perhaps that was a kindness. All anyone could see beyond that window was a weed-strewn wasteland."
 
 Chapter 2 - Break Room Props
 
