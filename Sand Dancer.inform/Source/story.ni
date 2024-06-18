@@ -14,6 +14,10 @@ Part 2 - Scoring
 
 Use no scoring.
 
+Part 3 - Rules
+
+The can't go through undescribed doors rule is not listed in the check going rulebook.
+
 BOOK 2 - EXTENSIONS  BY AUTHOR (with state)
 
 Part 1 - Eric Eve
@@ -135,21 +139,35 @@ BOOK 3 - CUSTOM KINDS
 
 Part 1 - Windows
 
-A small window is a kind of thing. 
-A small window is always fixed in place.
-A small window is usually undescribed.
-
+A small window is a kind of thing.
 A tall window is a kind of door.
-A tall window is usually closed, unopenable, and undescribed.
+A tall window is usually closed, unopenable and undescribed.
+Understand "small/tall/window" as a window.
 Understand the open property as describing a tall window.
 The description of a tall window is usually "[if noun is open]Just an empty frame.[otherwise]Dusty glass panes."
 
 Instead of opening or closing a closed tall window: say "[if noun is open]It's already busted open.[otherwise]It looks like these windows have been rusted shut for years."
 
-Instead of throwing something (called the missile) at a tall window (called the broken window):
-	move missile to location;
-	now broken window is open;
-	say "[The missile] smashes against [the broken window], shattering it."	
+Instead of throwing something (called the missile) at a closed tall window (called the targeted window):
+	now missile is in the other side of the targeted window;
+	if other side of targeted window is Staging Area:
+		now missile is undescribed;
+	now the targeted window is open;
+	say "[The missile] smashes through [the targeted window], shattering it."
+
+Instead of throwing something at an open tall window (called the broken window): 
+	say "[The broken window] is already broken."
+
+Instead of attacking a tall window: say "Nice thought, but the last thing you need is a sliced open hand. Maybe if you could get a little distance."
+
+Instead of attacking an open tall window: say "You've already busted it open."
+
+Understand "climb in/into/through [a door]" as entering. 
+Understand "look through/in/inside/into [a closed window]" as a mistake ("The glass is too filthy for you to see anything on the other side.").
+
+Report going through a tall window: say "You [first time]brush away remnants of broken glass and [only]wriggle through the window."
+
+Instead of going through a small window: say "It's too small for you to wriggle through."
 
 Part 2 - Plants
 
@@ -226,6 +244,7 @@ Carry out switching off flashlight: now flashlight is unlit.
 Before switching on flashlight in dim Staging Area: 
 	now metal desk is described; 
 	now hole in the floor is described; 
+	now every handled visible thing is described;
 	now Staging Area is bright.
 
 After switching on flashlight: say "Your surroundings are no longer shrouded in total darkness."; try looking.
@@ -749,7 +768,7 @@ Crumbling Concrete is north of Middle of Nowhere.
 
 Chapter 1 - Crumbling Concrete Description
 
-The description of Crumbling Concrete is "This building must have been a utility structure for [the huge electrical tower] to the north. Now abandoned, [if lit by headlights][fragments of glass] sparkle faintly in the beam of your headlights[otherwise if lit by flashlight]: it seems dead and alone in the dusty beam of your flashlight[end if]. Tendrils of [sand] spill through the empty doorframe leading in to a [if lit brightly]brightly lit[otherwise]dark[end if] interior; you could also walk around to the east or head south back to your truck."
+The description of Crumbling Concrete is "This building must have been a utility structure for [the huge electrical tower] to the north. Now abandoned, [if lit by headlights][fragments of glass] sparkle faintly in the beam of your headlights[otherwise if lit by flashlight]: it seems dead and alone in the dusty beam of your flashlight[end if]. Tendrils of [sand] have piled up against the boarded-up doorframe next to a tall picture window that frames a [if lit brightly]brightly lit[otherwise]dark[end if] interior. The building might offer some refuge; you could also walk around to the east or head south back to your truck."
 
 Chapter 2 - Crumbling Concrete Props
 
@@ -956,8 +975,9 @@ A boarded-up door is a closed unopenable undescribed door. It is  northeast of C
 
 Section 2 - Window
 
-A pane of cracked glass is a tall window. It is outside of Staging Area and inside from Crumbling Concrete.
-Understand "pane/cracked/glass" as pane of cracked glass.
+A  pane of cracked glass is a tall window. It is inside from Crumbling Concrete and outside of Staging Area. 
+	The description of a pane of cracked glass is "[if pane of cracked glass is closed]A tall picture window flanks the front door. It is covered with dust that obscures a curvy crack that trails diagonally across the pane.[otherwise]The frame is now empty. Shards of dusty glass cover the sandy floor.[end if]".
+	Understand "pane/cracked/glass/picture/window" as pane of cracked glass.
 
 Section 3 - Hole in the Floor
 
@@ -1193,7 +1213,7 @@ Test map with "south / north / north / east / northwest / north / north / south 
 
 Chapter 2 - Enter Building
 
-Test enter with "north / in ".
+Test enter with "north / north / take can / south / throw can at window / in ".
 
 Chapter 3 - Flashlight
 
