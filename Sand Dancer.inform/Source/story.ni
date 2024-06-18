@@ -135,14 +135,21 @@ BOOK 3 - CUSTOM KINDS
 
 Part 1 - Windows
 
-A window is a kind of thing.
-A window can be open. A window is usually closed.
-Understand the open property as describing a window.
-A window can be openable. A window is usually openable.
-A window is always fixed in place.
-A window is usually undescribed.
+A small window is a kind of thing. 
+A small window is always fixed in place.
+A small window is usually undescribed.
 
-Instead of opening or closing a closed window: say "It looks like these windows have been rusted shut for years."
+A tall window is a kind of door.
+A tall window is usually closed, unopenable, and undescribed.
+Understand the open property as describing a tall window.
+The description of a tall window is usually "[if noun is open]Just an empty frame.[otherwise]Dusty glass panes."
+
+Instead of opening or closing a closed tall window: say "[if noun is open]It's already busted open.[otherwise]It looks like these windows have been rusted shut for years."
+
+Instead of throwing something (called the missile) at a tall window (called the broken window):
+	move missile to location;
+	now broken window is open;
+	say "[The missile] smashes against [the broken window], shattering it."	
 
 Part 2 - Plants
 
@@ -933,19 +940,26 @@ BOOK 2 - OFFICE INTERIOR
 
 Part 1 - Staging Area
 
-Staging Area is inside from Crumbling Concrete.
+A boarded-up door is a closed unopenable undescribed door. It is northeast of Crumbling Concrete and southwest of Staging Area.
 
 Chapter 1 - Staging Area Description
 
-The description of Staging Area is "[if location is not lit by flashlight and location is not lit brightly]Faint [shafts of light] from your dimming headlights seep through a boarded-up [pane of cracked glass], but you can barely make out anything of the interior[otherwise]It's obvious this place has been abandoned for years. Cold night air breathes through [holes in the roof] and everything is strewn with [sand] and [patches of mold]. Other rooms lie north and east[end if]."
+The description of Staging Area is "[if location is not lit by flashlight and location is not lit brightly]Faint [shafts of light] from your dimming headlights seep through a [pane of cracked glass], but you can barely make out anything of the interior[otherwise]It's obvious this place has been abandoned for years. Cold night air breathes through [holes in the roof], and everything is strewn with [sand] and [patches of mold]. Other rooms lie north and east[end if]."
 
 Chapter 2 - Staging Area Props
 
-Section 1 - Window
+Section 1 - Door
 
-A pane of cracked glass is a window in Staging Area.
+A boarded-up door is a closed unopenable undescribed door. It is  northeast of Crumbling Concrete and southwest of Staging Area.
+	Instead of opening, entering, or attacking boarded-up door: say "The door won't budge. You slam your hands against the boards in frustration[if pane of cracked glass is closed], causing a nearby window to quiver in the reflected light[end if]."
+	Understand "board/boards/boarded" as boarded-up door.
 
-Section 2 - Hole in the Floor
+Section 2 - Window
+
+A pane of cracked glass is a tall window. It is outside of Staging Area and inside from Crumbling Concrete.
+Understand "pane/cracked/glass/window" as pane of cracked glass.
+
+Section 3 - Hole in the Floor
 
 A hole in the floor is a fixed in place open unopenable container in Staging Area. The hole in the floor is undescribed. "The floor has half-collapsed near one corner[if duct tape is in the hole], revealing a hole crisscrossed with [cobwebs][end if]."
 
@@ -953,19 +967,19 @@ Instead of taking something enclosed by the hole when player does not hold coura
 
 Instead of inserting anything into the hole: say "Sounds like a good way to lose something forever."
 
-Section 3 - Cobwebs
+Section 4 - Cobwebs
 
 Some cobwebs are in the hole.
 
 Instead of taking cobwebs when player holds courage: say "You impatiently brush the cobwebs away."; now cobwebs are off-stage.
 
-Section 4 - Duct Tape
+Section 5 - Duct Tape
 
 A roll of duct tape is in the hole. The roll of duct tape is undescribed.
 
 After taking the duct tape: say "[one of]You reach down into the hole[if cobwebs are on-stage], brushing the cobwebs away impatiently,[end if] and pull out the duct tape.[or]Taken.[stopping]"; now cobwebs are off-stage.
 
-Section 5 - Metal Desk
+Section 6 - Metal Desk
 
 A metal desk is a fixed in place undescribed supporter in Staging Area. 
 
@@ -999,15 +1013,13 @@ Instead of going nowhere from dim Staging Area: try going north.
 
 Instead of examining anything in dim Staging Area: say "You can hardly see anything in here. You may have to rely on your other senses."
 
-
-
 Part 2 - Foreman's Office
 
 Foreman's Office is north of Staging Area.
 
 Chapter 1 - Foreman's Office Description
 
-The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights emblazon[end if] this tiny office, probably where the boss once sat under a [dust-covered window]. Through the window, you can see the metal infrastructure of the tower's base."
+The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights illuminate every corner of[end if] the tiny office where the boss likely held court. You can barely see the metal infrastructure of the tower's base through an obscured pane of glass."
 
 Chapter 2 - Foreman's Office Props
 
@@ -1028,7 +1040,7 @@ A rusted filing cabinet is a container in Foreman's Office. It is fixed in place
 		The unmarked folder contains a job application. 
 		The unmarked folder contains a note.
 		
-A dust-covered window is a window in Foreman's Office. The initial appearance of a dust-covered window is "The dust-covered window casts a reflection of [the random thing in Foreman's Office]."
+A dust-covered window is a small window in Foreman's Office. The initial appearance of a dust-covered window is "The dust-covered window casts a fractured reflection of [the random thing in Foreman's Office]."
 
 The ankle boots are in Foreman's Office.
 
@@ -1038,7 +1050,7 @@ Break Room is east of Staging Area.
 
 Chapter 1 - Break Room Description
 
-The description of Break Room is "It was never designed for comfort. A few utilitarian picnic tables and basic supplies provided a cramped space for workers to take a lunch break or tend to an injury before returning to work. The tiny frosted window provided no scenic escape. All anyone could see gazing through that window was a weed-strewn wasteland."
+The description of Break Room is "It was never designed for comfort. A few utilitarian picnic tables and basic supplies provided a cramped space for workers to take a lunch break or tend to an injury before returning to work. The [tiny frosted window] provided no scenic escape. Perhaps it was a kindness. All anyone could see beyond that window was a weed-strewn wasteland."
 
 Chapter 2 - Break Room Props
 
@@ -1070,9 +1082,7 @@ An emergency blanket is in the wire mesh cage.
 
 Section 4 - Tiny Frosted Window
 
-A tiny frosted window is a window in Break Room.
-The tiny frosted window is open. 
-The tiny frosted window is unopenable.
+A tiny frosted window is a small window in Break Room.
 
 The tennis shoes and work boots are in Break Room.
 
