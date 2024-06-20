@@ -103,6 +103,7 @@ Use no scoring.
 BOOK 4 - RULES
 
 The can't go through undescribed doors rule is not listed in the check going rulebook.
+The can't take off what's not worn rule is not listed in the check going rulebook.
 
 BOOK 5 - CUSTOMIZATIONS
 
@@ -510,14 +511,15 @@ A cigarette is a kind of thing.
 A cigarette is inedible.
 
 The pack of smokes is an opaque, portable container. 
-Understand "pack of smokes/pack/pack of cigarettes/smokes" as the pack of smokes.
+Understand "pack of smokes/pack/pack of cigarettes/smokes" as the pack of smokes. 
+The description of pack of smokes is "You're kind of trying to quit, but man, [if number of cigarettes enclosed by player is at least 1]you could really go for one right now. It looks like you've only got [number of cigarettes enclosed by player in words]left[otherwise]you could go for a cigarette right now[end if]."
 The carrying capacity of the pack of smokes is 20.
-Ten cigarettes are in the pack of smokes.
+Seven cigarettes are in the pack of smokes.
 
 The crumpled box is an opaque, portable container.
 Understand "crumpled box" or "crumpled carton" or "crumpled pack" or "discarded pack" or "carton" as the crumpled box.
 the carrying capacity of the crumpled box is 20.
-3 cigarettes are in the crumpled box.
+Five cigarettes are in the crumpled box.
 
 Check inserting something into in the pack of smokes:
 	if the noun is not a cigarette, say "There is nothing magical about the pack of smokes. You can't put that in there.".
@@ -526,8 +528,6 @@ Check inserting something into in the crumpled box:
 	if the noun is not a cigarette, say "There is nothing magical about the crumpled carton. You can't put that in there.".
 
 There is a number variable called original cigarette count. Original cigarette count is 7.
-
-[There is a number variable called cigarettes on hand. ]
 
 Part 14 - Wallet
 	
@@ -697,13 +697,13 @@ BOOK 1 - THE PROTAGONIST
 
 Part 1 - Inventory
 
-The player wears a denim jacket.
+The player wears a denim jacket. A denim jacket is wearable.
 The player is male.
 The player is large-footed.
 
 The player carries a lighter. The description of lighter is "You pat your pockets in search of your lighter [if number of unfamiliar rooms > 0]but you know that darkness is falling and you only have so much time to figure out how to leave this deserted place or find enough supplies to survive the night[otherwise] and find it in your right pocket. You light a cigarette and take a long slow drag[end if]."
 
-The player carries a wallet.
+The player carries a wallet. The wallet is openable and closed.
 
 [Exercise 7.2 Attempt]
 [Friends is a list of people variable.
@@ -1019,9 +1019,16 @@ Chapter 2 - Staging Area Props
 Section 1 - Door
 
 A boarded-up door is a closed unopenable undescribed door. It is  northeast of Crumbling Concrete and southwest of Staging Area.
-	Instead of opening, entering, or attacking boarded-up door: say "The door won't budge. You slam your hands against the boards in frustration[if pane of cracked glass is closed], causing a nearby window to quiver in the reflected light[end if]."
 	Understand "board/boards/boarded" as boarded-up door.
-
+	Instead of opening, entering, or attacking boarded-up door: say "The door won't budge. You slam your hands against the boards in frustration[if pane of cracked glass is closed], causing a nearby window to quiver in the reflected light[end if]."
+	Understand the command "remove" as something new.
+	Removing is an action applying to one thing.
+	Understand "remove [something]" or "take off [something]" as removing.
+	Check removing when noun is worn: instead try taking off the noun.
+	Check removing when noun is a closed door: instead say "You try to pry the boards from the door with no success. Unless you find a crowbar or some other tool, these boards are going nowhere.".
+	Check removing when a tall window is open and noun is not wearable: instead say "Seems redundant. You've found another way into the building.".
+	Check removing when noun is carried: instead say "You are not wearing [the noun]."
+	
 Section 2 - Window
 
 A  pane of cracked glass is a tall window. It is inside from Crumbling Concrete and outside of Staging Area. 
@@ -1097,8 +1104,13 @@ A withered cactus is a dead, flowering, annual, dull plant in Foreman's Office.
 A half-collapsed desk is a supporter in Foreman's Office. 
 On the desk is a rusted key.
 
-A wastepaper basket is an open unopenable fixed in place container.
+A wastepaper basket is an open unopenable fixed in place container. The description of wastpaper basket is "No one bothered to take the trash out before they boarded up the building. You can see [discarded papers] and [discarded food containers] filled to the brim."
 It is in Foreman's Office.
+Discarded papers are scenery in Foreman's Office.
+Discarded food containers are scenery in Foreman's Office.
+The crumpled box is in the wastepaper basket.
+
+
 
 A rusted filing cabinet is a container in Foreman's Office. It is fixed in place. The description is "The rusted old metal filing cabinet is one of the tall, three-drawered varieties common to many office spaces. It has a [top drawer], a [middle drawer], and a [bottom drawer]."
 	A top drawer, a middle drawer, and a bottom drawer are in the rusted filing cabinet. The top drawer, middle drawer, and bottom drawer are undescribed openable closed fixed in place containers.
@@ -1262,7 +1274,7 @@ Test map with "south / north / north / east / northwest / north / north / south 
 
 Chapter 2 - Enter Building
 
-Test enter with "north / north / take can / south / throw can at window / in ".
+Test enter with "north / north / take can / south / throw can at window /  in ".
 
 Chapter 3 - Flashlight
 
@@ -1309,3 +1321,13 @@ Chapter 2 - Gas Can
 Test emergency with "test flashlight / east / north / turn on emergency lights / turn off emergency lights".
 
 Test gasoline with "test flashlight / east / north / turn on emergency lights / ABSTRACT scent to me / ABSTRACT strength to me / up / move barrel / up / look under metal / take gas can"
+
+Part 4 - Testing Chapter 7 (Logic and Control)
+
+Chapter 1 - Boarded-Up Door
+
+Test boards with "north / remove boards / north / take can / south / throw can at window / remove boards / in ".
+
+Chapter 2 - Jacket
+
+Test jacket with  "north / remove boards / remove jacket / north / take can / south / throw can at window / remove boards / remove jacket / in ".
