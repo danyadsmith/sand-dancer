@@ -151,6 +151,44 @@ A latitude is a kind of value. -42 59' specifies a latitude with parts degrees a
 
 A frequency is a kind of value. 100.9kHz specifies a frequency.
 
+A person has a number called age.
+
+Part 3 - Adjectives
+
+A person can be young, middle-aged, or old.
+A person is usually young.
+
+Definition: a person is young if the age of it is less than 30.
+Definition: a person is middle-aged if the age of it is at least 30 and the age of it is at most 60.
+Definition: a person is old if the age of it is greater than 60.
+
+A person can be greatestgen, silentgen, boomer, genx, geny, genz, or genalpha.
+
+Definition: a person is greatestgen if the age of it is at least 97 and the age of it is at most 123.
+Definition: a person is silentgen if the age of it is at least 79 and the age of it is at most 96.
+Definition: a person is boomer if the age of it is at least 60 and the age of it is at most 78.
+Definition: a person is genx if the age of it is at least 44 and the age of it is at most 59.
+Definition: a person is geny if the age of it is at least 28 and the age of it is at most 43.
+Definition: a person is genz if the age of it is at least 12 and the age of it is at most 27.
+Definition: a person is genalpha if the age of it is at least 0 and the age of it is at most 11.
+
+To decide what text is the generation of (P - a person):
+	if P is greatestgen:
+		decide on "the Greatest Generation";
+	otherwise if P is silentgen:
+		decide on "the Silent Generation";
+	otherwise if P is boomer:
+		decide on "Baby Boomer";
+	otherwise if P is genx:
+		decide on "Generation X";
+	otherwise if P is geny:
+		decide on "Generation Y, the Millennials";
+	otherwise if P is genz:
+		decide on "Generation Z";
+	otherwise if P is genalpha:
+		decide on "Generation Alpha";		
+	decide on "a generation yet unnamed".  [Fallback in case none of the conditions are met]
+		
 VOLUME 2 - MECHANICS
 
 BOOK 1 - LIGHTING CONDITIONS	
@@ -534,10 +572,18 @@ Check inserting something into in the crumpled box:
 There is a number variable called original cigarette count. Original cigarette count is 7.
 
 Part 14 - Wallet
-	
-The wallet is closed and openable. In the wallet is a driver's license and a receipt from Big Jimmy's. 
 
-The description of driver's license is "When the highway patrol pulls you over they see your kind of crazy uncombed hair, your brown name (Nakaibito Morales) and brown skin (actually more tan than brown), your D.O.B. (eighteen years ago just barely) and tribal affiliation card (expired) and assume you're either some native eco-terrorist, illegal drug-running border jumper, or delinquent high school dropout (all lies except for the last one which is kinda true). Unless it's Jimmy Kay who pulled you over since he usually wants to buy you a beer and talk about your dad, which is weird but better than getting a ticket."
+A wallet is a portable container.
+
+The wallet is openable and closed. A license and a receipt from Big Jimmy's is in the wallet.
+	
+The description of the wallet is "It's old and weathered brown leather, soft to the touch. It was your father's, and it's the only physical evidence you have that he ever lived, save yourself. You carry it because it meant something to your mother, and for that reason, it means something to you."
+	Understand "receipt" as the receipt from Big Jimmy's.
+	Instead of opening the wallet: now the wallet is open; try examining the wallet.
+
+The description of license is "When the highway patrol pulls you over they see your crazy uncombed hair, your brown name (Nakaibito Morales) and brown skin (actually more tan than brown), your D.O.B. (barely [age of the player in words] years ago, placing you squarely in [generation of the player]) and tribal affiliation card (expired) and assume you're either some native eco-terrorist, illegal drug-running border jumper, or delinquent high school dropout (all lies except for the last one which is kinda true). Unless it's Samuel Whitehouse who pulled you over since he usually wants to buy you a beer and talk about your dad, which is weird but better than getting a ticket."
+	Understand "driver's license" or "license" or "driver’s license" as the license.
+
 
 Part 15 - Emergency Radio
 
@@ -734,13 +780,15 @@ BOOK 1 - THE PROTAGONIST
 
 Part 1 - Inventory
 
-The player wears a denim jacket. A denim jacket is wearable.
+The player is a person.
 The player is male.
+The age of the player is 18.
 The player is large-footed.
+The player wears a denim jacket. A denim jacket is wearable.
 
 The player carries a lighter. The description of lighter is "You pat your pockets in search of your lighter [if number of unfamiliar rooms > 0]but you know that darkness is falling and you only have so much time to figure out how to leave this deserted place or find enough supplies to survive the night[otherwise] and find it in your right pocket. You light a cigarette and take a long slow drag[end if]."
 
-The player carries a wallet. The wallet is openable and closed.
+The player carries a wallet. 
 
 [Exercise 7.2 Attempt]
 [Friends is a list of people variable.
@@ -756,6 +804,14 @@ The player is [in the pickup truck] in Middle of Nowhere.
 Part 3 - Actions
 
 Instead of sleeping: say "You're tired. There's no denying that. But you have to deal with the matter at hand. There will be time to sleep later."
+
+BOOK 2 - THE GRANDMOTHER
+
+Part 1 - Description
+
+Annamarie is a person.
+The age of Annamarie is 89.
+
 
 VOLUME 4 - THE STORY WORLD
 
