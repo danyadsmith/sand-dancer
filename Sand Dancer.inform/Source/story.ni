@@ -149,6 +149,8 @@ A volume is a kind of value. 15.9 fl oz specifies a volume with parts ounces and
 
 A latitude is a kind of value. -42 59' specifies a latitude with parts degrees and minutes.
 
+A frequency is a kind of value. 100.9kHz specifies a frequency.
+
 VOLUME 2 - MECHANICS
 
 BOOK 1 - LIGHTING CONDITIONS	
@@ -536,6 +538,39 @@ Part 14 - Wallet
 The wallet is closed and openable. In the wallet is a driver's license and a receipt from Big Jimmy's. 
 
 The description of driver's license is "When the highway patrol pulls you over they see your kind of crazy uncombed hair, your brown name (Nakaibito Morales) and brown skin (actually more tan than brown), your D.O.B. (eighteen years ago just barely) and tribal affiliation card (expired) and assume you're either some native eco-terrorist, illegal drug-running border jumper, or delinquent high school dropout (all lies except for the last one which is kinda true). Unless it's Jimmy Kay who pulled you over since he usually wants to buy you a beer and talk about your dad, which is weird but better than getting a ticket."
+
+Part 15 - Emergency Radio
+
+An emergency radio is a device. It is in Break Room.
+
+The emergency radio has a frequency called the frequency tuned to.
+The frequency tuned to of the emergency radio is 77.2kHz.
+
+The radio has a frequency called the maximum frequency.
+The maximum frequency of the emergency radio is 109.9kHz.
+The radio has a frequency called the minimum frequency.
+The minimum frequency of the emergency radio is 67.0kHz.
+
+The emergency frequency is a frequency variable. The emergency frequency is 102.3kHz.
+		
+The description of the emergency radio is "Vintage, man. A chrome switch on the side to turn it on and off, and a big fifties dial on the front. It looks like it's tuned to [the frequency tuned to] right now." Understand "dial/knob/switch/radiod" as emergency radio.
+	
+Tuning is an action applying to one thing and one frequency.
+Understand "tune [thing] to [frequency]" as tuning.
+
+Check tuning when the noun does not provide a frequency tuned to: instead say "You can't tune that."
+
+Check tuning when the frequency understood is less than the minimum frequency of the noun: instead say "[The noun] doesn't go any lower than [the minimum frequency of the noun]."
+
+Check tuning when the frequency understood is greater than the maximum frequency of the noun: instead say "[The noun] doesn't go any higher than [the maximum frequency of the noun]."
+
+Check tuning when the frequency understood is the frequency tuned to of the noun: instead say "[The noun] is already tuned to that frequency."
+
+Check tuning when the radio is switched off: instead say "Not much point when it's not turned on."
+
+Carry out tuning: now the frequency tuned to of the noun is the frequency understood.
+
+Report tuning: say "You tune [the radio] to [the frequency tuned to of the radio]."
 
 BOOK 4 - CUSTOM COMMANDS
 
