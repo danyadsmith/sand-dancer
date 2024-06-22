@@ -147,6 +147,7 @@ A liquid level is a kind of value. The liquid levels are completely full, mostly
 
 A volume is a kind of value. 15.9 fl oz specifies a volume with parts ounces and tenths (optional, preamble optional).
 
+A latitude is a kind of value. -42 59' specifies a latitude with parts degrees and minutes.
 
 VOLUME 2 - MECHANICS
 
@@ -251,8 +252,9 @@ After switching on the headlights: now every within range of headlights room is 
 
 	After switching off the headlights: if emergency lights are switched off, now every within range of headlights room is dark; say "You click the headlights off[if emergency lights are switched off and flashlight is switched off]and blackness swallows you up.[otherwise if emergency lights are switched off and flashlight is switched on and flashlight is visible], leaving only the ghostly beam of your flashlight[end if]."
 
-A state map of New Mexico is in the pickup truck. It is undescribed.
-Understand "New Nexico/state map" as state map of New Mexico.
+A state map of New Mexico is in the pickup truck. 
+Understand "map/state map" as state map of New Mexico.
+The description of state map of New Mexico is "ADD HERE"
 
 A pair of aviator sunglasses is inside the pickup truck. It is undescribed.
 The pair of aviator sunglasses is wearable.
