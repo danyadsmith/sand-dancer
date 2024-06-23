@@ -19,9 +19,9 @@ Chapter 1 - Exit Lister (Not Installed)
 [Include Exit Lister by Eric Eve.]
 [Exit Lister includes most of the information provided by Exit Descriptions, but it places it in the Status Line instead of embedding it into the narrative text. The directions to visited rooms are displayed in lowercase, while the directions to unvisited rooms display in UPPERCASE.]
 
-Chapter 2 - Limited Implicit Actions (Installed)
+Chapter 2 - Limited Implicit Actions (Not Installed)
 
-Include Limited Implicit Actions by Eric Eve.
+[Include Limited Implicit Actions by Eric Eve.]
 
 Part 2 - Matthew Fletcher
 
@@ -60,7 +60,31 @@ Chapter 1 - Approaches (Installed)
 
 Include Approaches by Emily Short.
 
-Chapter 2 - Plurality (Deprecated)
+Chapter 2 - Basic Screen Effects (Installed)
+
+Include Basic Screen Effects by Emily Short.
+
+Chapter 3 - Basic Help Menu (Installed)
+
+Include Basic Help Menu by Emily Short.
+
+When play begins:
+	choose row 1 in Table of Basic Help Options;
+	now description entry is "Sand Dancer is a [story genre] story designed to teach aspiring authors how to create interactive fiction using Inform 7. Aaron Reed's book [italic type]Creating Interactive Fiction with Inform 7[roman type] largely consists of exercises that guide an author through creating a personal copy of this game. Danya D. Smith authored this version.
+	
+	The scenario: [story description]
+	
+	At the top of the screen, you'll see a customized status bar that displays your current region and location. It includes a compass rose that displays the directions you can move. In addition to the cardinal directions, you may see U for up, D down, IN for inside, or OUT for outside.
+	
+	Directions for locations you have not visited display in bold text, while directions to locations you have already visited display in normal text.
+	
+	The last line in the status bar displays the number of locations you have visited (out of the total number in the story world)."
+
+Chapter 4 - Modified Exit (Installed)
+
+Include Modified Exit by Emily Short.
+
+Chapter 5 - Plurality (Deprecated)
 
 [The Plurality extension is now deprecated.]
 
@@ -75,16 +99,20 @@ Instead of touching something: say “[That-those of noun] [is-are] all prickly.
 INFORM7 EXAMPLE:
 Instead of eating something inedible, say “[The noun] [don’t] seem likely to agree with [us] at all. [We][’]d be wiser to leave [regarding the noun][them] alone.”
 Instead of touching something: say “[regarding the noun][Those] [are] all prickly.”]
+	
+Chapter 6 - Property Checking (Installed)
 
-Chapter 3 - Room Description Control (Installed)
+Include Property Checking by Emily Short.
+
+Chapter 7 - Room Description Control (Installed)
 
 Include Room Description Control by Emily Short.
 
-Chapter 4 - Tailored Room Description (Installed)
+Chapter 8 - Tailored Room Description (Installed)
 
 Include Tailored Room Description by Emily Short.
 
-Chapter 6 - Tutorial Mode (Not Installed)
+Chapter 9 - Tutorial Mode (Not Installed)
 
 [NOTE: The testing commands do not work when Tutorial Mode is enabled]
 [Include Tutorial Mode by Emily Short.]
@@ -1354,8 +1382,169 @@ Desert Expanse is a room east of Weed-strewn Rust, northeast of Flowering Desert
 
 The description of Desert Expanse is "You've walked far enough to realize there is nothing around for miles. There are no city lights in the distance, no sounds of vehicles traversing a nearby highway. You'd best turn back. There is no help for you here."
 
+BOOK 4 - VAST DESERT
 
-VOLUME 6 - TESTING
+Part 1 - Open Desert
+
+The Open Desert is regionally in Vast Desert. 
+
+The Open Desert is  north of Stark Desert and northwest of Stark Desert and west of Stark Desert and southwest of Stark Desert.
+The Open Desert is northwest of Gloomy Desert and west of Gloomy Desert and southwest of Gloomy Desert.
+The Open Desert is northwest of Cool Desert and west of Cool Desert and southwest of Cool Desert.
+The Open Desert is northwest of Vacant Desert and west of Vacant Desert and southwest of Vacant Desert and south of Vacant Desert.
+The Open Desert is west of Backtracking and southwest of Backtracking and south of Backtracking and southeast of Backtracking and east of Backtracking.
+The Open Desert is south of Desert Expanse and southeast of Desert Expanse and east of Desert Expanse and northeast of Desert Expanse and north of Desert Expanse.
+The Open Desert is east of Cactus-filled Desert and northeast of Cactus-filled Desert.
+The Open Desert is southeast of Sandy Desert and east of Sandy Desert and northeast of Sandy Desert and north of Sandy Desert.
+The Open Desert is north of Desolate Desert and northeast of Desolate Desert and east of Desolate Desert and northwest of Desolate Desert and west of Desolate Desert.
+The Open Desert is southeast of Middle of Nowhere and southwest of Middle of Nowhere.
+
+Definition: A direction is cardinal if it is not up and it is not down and it is not outside and it is not inside.
+
+Before going to The Open Desert when The Open Desert is unvisited:
+	repeat with heading running through cardinal directions:
+		change the heading exit of The Open Desert to The Open Desert.
+
+Before going from Around the Tower to Open Desert:
+	if flashlight is not held, instead say "[if headlights are switched on]Outside the wavering glow of your headlights, i[otherwise]I[end if]t's pitch black. A storm must have rolled in; there are no stars above, and nothing but darkness surrounds you. The darkness seems to thicken at every turn. Only the smell of the desert tells you it is still out there.";
+	if emergency lights are switched off [or voice has not been visible], instead say "You heft your flashlight, but decide not to head out into the desert just yet. [if headlights are switched on]Your truck lights are already starting to dim, and with[otherwise]With[end if]how dark it is, you're not sure you could find your way back."[;
+	if Rainstorm is happening, instead say "In a storm like this? No way.";
+	if Coyote's Offer has ended, instead say "You have some feeling that when the last spirit animal decides to make an appearance, it will find you.";
+	if Pursuit is not happening and Temptation is not happening, instead say "On a night as freakishly dark as this, that's insane."].
+
+Report going to The Open Desert when The Open Desert is unvisited: say "You walk for a long time, thoughts turning over like the sand under your work boots. You think about [a random thing in emotional baggage]. You think about Ocean and how pissed she's gonna be that you're not home. You tell her not to wait up for you but she always does.
+
+Some wind kicks up and chucks sand in your face. You blink and realize as you clear your eyes that you haven't really been looking where you've been going. The walk, the night air, time alone with your thoughts. It's been calming. As another gust swirls through the sagebrush, your calm begins to turn to panic as you realize that the dust is thickening so much you can't see a damn thing. Not the headlights of your truck, the electrical tower, or your own footprints. You're lost. Well, shit."
+
+The description of The Open Desert is "[one of]You've walked far enough to realize there is nothing around for miles. There are no city lights in the distance, no sounds of vehicles traversing a nearby highway. You'd best turn back. There is no help for you here[or]Clouds of dust swirl through the air[or]The dust storm rages around you[or]Your tracks are swallowed up by the billowing sand[or]The desert stretches around you in all directions[in random order], and [one of] you shiver in the chill night air[or]you plod wearily through the sand[or] you wish you could see more than twenty feet in front of you[or] god damn it's dark[or] every inch of sand looks the same[in random order]."
+
+Desert flotsam is a kind of thing. 
+	A looming cactus is desert flotsam. 
+	A dull grey boulder is desert flotsam. 
+	A dead cow is desert flotsam. 
+	A low bluff is desert flotsam. 
+	A clutch of weeds is desert flotsam. 
+	Some dry bones are desert flotsam. 
+	Some clumps of sagebrush are desert flotsam. 
+	A dry streambed is desert flotsam. 
+	A stand of cactus is desert flotsam. 
+
+The initial appearance of desert flotsam is usually "[one of]All you can make out in the darkness [is-are a list of visible desert flotsam][or]You can sort of see [a list of visible desert flotsam][or]Nearby: [list of visible desert flotsam]. Nothing to write home about[or]Half-lost in shadows, you see [a list of visible desert flotsam] and that's about it[in random order]."
+
+Before going to Open Desert:
+	repeat with item running through visible desert flotsam:
+		now item is off-stage;
+	let decorations be the list of desert flotsam;
+	sort decorations in random order;
+	truncate decorations to the first 2 entries;
+	repeat with item running through decorations:
+		now item is in The Open Desert.
+
+Instead of dropping something when location is The Open Desert: say "Sounds like a good way to lose something forever."
+
+VOLUME 6 - ENHANCEMENTS
+
+BOOK 1 - IMPROVED STATUS LINE
+
+[TODO: To view the output from the Property Checking extension, comment this section before the definition of Table of Fancy Status]
+When play begins:
+	clear the screen;
+	clear only the status line;
+	leave space;
+	say "[story title]";
+	say line break;
+	say "by [story author]";
+	say line break;
+	say "[story headline]"; 
+	leave space;
+	say italic text;
+	say "[story description]";
+	say monospaced;
+	leave space;
+	say "If you have never played interactive fiction, enter HELP for guidance.";
+	say paragraph break;
+	say "Press SPACE to begin.";
+	wait for the SPACE key;
+	clear the screen;	
+	leave space;		
+	say normal text;
+
+To leave space:
+	say paragraph break;
+	say paragraph break;
+	
+
+Table of Fancy Status
+left	central	right
+" Region:   [regional area] "	""    	"[top rose]" 
+" [if in darkness]Darkness[otherwise]Location: [location][end if]"	""    	"[middle rose]" 
+" "    	""    	"[bottom rose]" 
+""	""	""
+" Locations visited: [number of rooms which are visited]/[number of rooms]" 	"[if player holds at least one talent]Talents: [the list of held talents][end if]"	"[if player holds pack of smokes]Cigarettes: [number of cigarettes enclosed by player][end if]"
+
+
+
+To say bold text:
+	say "[bold type]".
+	
+To say normal text:
+	say "[roman type]".
+	
+To say italic text:
+	say "[italic type]".
+	
+To say monospaced:
+	say "[fixed letter spacing]".
+	
+To say rose (way - a direction):
+	let place be the room way from the location;
+	if the place is a room, say 
+		"[if the place is unvisited][bold text][way abbreviation][else][normal text][way abbreviation][end if][normal text]"; 
+	otherwise say 
+		"[way spacing]";
+				
+To say (way - a direction) abbreviation:
+	choose row with a chosen way of way in the Table of Various Directions;
+	say abbrev entry.
+
+To say (way - a direction) spacing:
+	choose row with a chosen way of way in the Table of Various Directions;
+	say spacing entry.
+
+To say regional area:
+	if in darkness, rule succeeds;
+	if location is in Around the Tower, say "Around the Tower";
+	if location is in Office Interior, say "Office Interior";
+	
+Table of Various Directions
+chosen way    	abbrev    	spacing
+up    	"U "    	"  "	
+northwest    	"NW "    	"   "
+north    	" N"    	"   "
+northeast    	"  NE"    	"   "
+east    	"E"    	" "	
+west    	"W"    	" "
+southeast    	"  SE"    	"   "
+south    	" S"    	"   "
+southwest    	"SW "    	"   "
+down    	"D "    	"  "
+inside	" IN    "	"  "
+outside	" OUT   "	"  "
+
+To say top rose:
+	say "[rose up][rose northwest][rose north][rose northeast][rose inside]  ".
+
+To say middle rose:
+	say "   [rose west]  +  [rose east]  ";
+
+To say bottom rose:
+	say "[rose down][rose southwest][rose south][rose southeast][rose outside]  ".
+	
+Rule for constructing the status line:
+	fill status bar with Table of Fancy Status;
+	rule succeeds.
+
+VOLUME 7 - TESTING
 
 BOOK 1 - TEST SCRIPTS
 
@@ -1424,3 +1613,5 @@ Test boards with "north / remove boards / north / take can / south / throw can a
 Chapter 2 - Jacket
 
 Test jacket with  "north / remove boards / remove jacket / north / take can / south / throw can at window / remove boards / remove jacket / in ".
+
+Test wallet with "open wallet / examine license / examine receipt".
