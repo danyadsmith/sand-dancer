@@ -20,14 +20,29 @@ This chapter introduces the syntax required to:
 * Modify the size of a list using `truncate`
 * Loop through a list using `repeat running through`
 * Declare various kinds of number values using units with the `specifies` assertion
+* Compare numbers with math symbols or words
+* Perform basic arithmetic on numbers written out or with symbols
+* Get the remainder of the division operations with `the remainder after dividing`
+* Increment or decrement a number with `increase by` or `decrease by`
+* Display a number `in words`
+* Round a number using `to the nearest` followed by the unit
+* Use random numbers and random chances
+* Select random rooms, objects, or kinds
+* Display random text
 
 ### Lessons Learned
 
 * There is a rule in the check going rulebook that prevents the player from going through an undescribed door. 
 * There is a rule in the check going rulebook that prevents the player from removing something that is not worn. In my revised description of Crumblinb Concrete, the player learns that the door is boarded up. A player could likely attempt to `remove boards` which resulted in a bug. The interpreter responded `You aren't wearing the boarded-up door.`. Resolving this required unlisting the rule and customizing the `remove` command. 
+* There is a table that describes various randomness types including `at random`, `then at random`, and other options.
+* The three columns in the Kinds index tell you if the kind:
+  * can use a `repeat` loop
+  * has `props` (or, properties)
+  * can implement `understand` rules
+* 
 
 ### Extensions Mentioned in this Chapter
 
-* []() by Aaron Reed
+* [Procedural Randomness]() by Aaron Reed (_hyperlink not found_)
 
 
