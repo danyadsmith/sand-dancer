@@ -1085,7 +1085,7 @@ Backtracking is south of Middle of Nowhere and west of Cactus-filled Desert.
 
 Chapter 1 - Backtracking Description
 
-The description of Backtracking is "The black desert night bleeds into this quiet, shadowed expanse. Your [tire tracks]are barely visible in the [desert sand],  and you can scarcely follow the way back to your truck."
+The description of Backtracking is "The black desert night bleeds into this quiet, shadowed expanse. Your [tire tracks] are barely visible in the [desert sand],  and you can scarcely follow the way back to your truck."
 
 Chapter 2 - Backtracking Implementation
 
@@ -1428,6 +1428,10 @@ Desert flotsam is a kind of thing.
 	Some clumps of sagebrush are desert flotsam. 
 	A dry streambed is desert flotsam. 
 	A stand of cactus is desert flotsam. 
+	A patch of desert flowers is desert flotsam.
+	A shimmering oasis is desert flotsam.
+	A weathered pickaxe is desert flotsam.
+	A dried coiled snake skin is desert flotsam.
 
 The initial appearance of desert flotsam is usually "[one of]All you can make out in the darkness [is-are a list of visible desert flotsam][or]You can sort of see [a list of visible desert flotsam][or]Nearby: [list of visible desert flotsam]. Nothing to write home about[or]Half-lost in shadows, you see [a list of visible desert flotsam] and that's about it[in random order]."
 
@@ -1447,6 +1451,7 @@ VOLUME 6 - ENHANCEMENTS
 BOOK 1 - IMPROVED STATUS LINE
 
 [TODO: To view the output from the Property Checking extension, comment this section before the definition of Table of Fancy Status]
+
 When play begins:
 	clear the screen;
 	clear only the status line;
@@ -1461,7 +1466,7 @@ When play begins:
 	say "[story description]";
 	say monospaced;
 	leave space;
-	say "If you have never played interactive fiction, enter HELP for guidance.";
+	say "If you have never played interactive fiction, type HELP for guidance.";
 	say paragraph break;
 	say "Press SPACE to begin.";
 	wait for the SPACE key;
