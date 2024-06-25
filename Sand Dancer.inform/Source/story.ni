@@ -1,16 +1,25 @@
-"Sand Dancer" by "Danya D. Smith"
+"Sand Dancer" by "Aaron Reed, Alexei Othenin-Girard, and Danya D. Smith"
 [GitHub Version]
 
 VOLUME 1 - CONFIGURATION
 
-BOOK 1 - SETTINGS
+BOOK 1 - BIBLIOGRAPHIC DATA
+
+The story title is "Sand Dancer".
+The story author is "Aaron Reed, Alexei Othenin-Girard, and Danya D. Smith".
+The story headline is "A Desert Fable". 
+The story genre is "young adult fantasy". 
+The story creation year is 2024.
+The release number is 1. 
+
+BOOK 2 - SETTINGS
 
 Part 1 - Style
 
 Use serial comma.
 Use American dialect.
 
-BOOK 2 - EXTENSIONS  BY AUTHOR (with state)
+BOOK 3 - EXTENSIONS  BY AUTHOR (with state)
 
 Part 1 - Eric Eve
 
@@ -124,11 +133,11 @@ Chapter 1 - Automap (Not Installed)
 [Include Automap by Mark Tilford.]
 [There isn't a version of Automap that works in version 10 of Inform using Glulx story format. The version I downloaded and tested requires the Z-code story format (configured in Settings).]
 
-BOOK 3 - SCORING
+BOOK 4 - SCORING
 
 Use no scoring.
 
-BOOK 4 - RULES
+BOOK 5 - RULES
 
 The can't go through undescribed doors rule is not listed in the check going rulebook.
 The can't take off what's not worn rule is not listed in the check going rulebook.
@@ -316,13 +325,15 @@ Some headlights are part of the pickup truck. The headlights are a device. They 
 
 A gas tank is part of the pickup truck. The gas tank has a liquid level. The gas tank is mostly empty.
 
+Some scratches around the lock are part of the pickup truck.
+
 After switching on the headlights: now every within range of headlights room is lighted; say "The desert shadows dissolve in the glow of your headlights."
 
 	After switching off the headlights: if emergency lights are switched off, now every within range of headlights room is dark; say "You click the headlights off[if emergency lights are switched off and flashlight is switched off]and blackness swallows you up.[otherwise if emergency lights are switched off and flashlight is switched on and flashlight is visible], leaving only the ghostly beam of your flashlight[end if]."
 
-A state map of New Mexico is in the pickup truck. 
+A state map of New Mexico is inside the pickup truck. The state map is undescribed.
 Understand "map/state map" as state map of New Mexico.
-The description of state map of New Mexico is "ADD HERE"
+The description of state map of New Mexico is "TODO: ADD DESCRIPTION"
 
 A pair of aviator sunglasses is inside the pickup truck. It is undescribed.
 The pair of aviator sunglasses is wearable.
@@ -335,9 +346,7 @@ The initial appearance of the truck is "Your poor old [pickup truck] ticks and g
 
 After opening the pickup truck: say "The door creaks open with difficulty rusted joints straining."
 
-The description of the pickup truck is "You can see [a list of things in truck] in the cabin."
-
-After examining the open pickup truck: say "[if glove box is closed] There are scratches around the lock for the glove compartment."
+The description of the pickup truck is "You can see [a list of things in truck] in the cabin. [if glove box is closed]There are scratches around the lock for the glove compartment. [end if]"
 
 After closing the truck: say "You slam the door shut."
 
@@ -587,6 +596,7 @@ The carrying capacity of the pack of smokes is 20.
 Seven cigarettes are in the pack of smokes.
 
 The crumpled box is an opaque, portable container.
+The crumpled box is undescribed.
 Understand "crumpled box" or "crumpled carton" or "crumpled pack" or "discarded pack" or "carton" as the crumpled box.
 the carrying capacity of the crumpled box is 20.
 Five cigarettes are in the crumpled box.
@@ -612,8 +622,11 @@ The description of the wallet is "It's old and weathered brown leather, soft to 
 The description of license is "When the highway patrol pulls you over they see your crazy uncombed hair, your brown name (Nakaibito Morales) and brown skin (actually more tan than brown), your D.O.B. (barely [age of the player in words] years ago, placing you squarely in [generation of the player]) and tribal affiliation card (expired) and assume you're either some native eco-terrorist, illegal drug-running border jumper, or delinquent high school dropout (all lies except for the last one which is kinda true). Unless it's Samuel Whitehouse who pulled you over since he usually wants to buy you a beer and talk about your dad, which is weird but better than getting a ticket."
 	Understand "driver's license" or "license" or "driver’s license" as the license.
 
+Part 15 - Denim Jacket
 
-Part 15 - Emergency Radio
+A denim jacket is wearable.
+
+Part 16 - Emergency Radio
 
 An emergency radio is a device. It is in Break Room.
 
@@ -748,6 +761,10 @@ Part 4 - Emotional Baggage
 The player carries an open transparent unopenable container called emotional baggage. The description of emotional baggage is "Your guidance counselor used to say you're always carrying it with you, and that memories associated with intense feelings (from euphoric to downright traumatic) have more weight than others. [if emotional baggage contains nothing]Lately, you've been working so much you barely have time to think.[end if]"
 
 Instead of doing anything other than examining when noun is emotional baggage or second noun is emotional baggage: say "It's not real, bro."
+		
+Every turn while a charged thing (called the item) is visible: 
+	move the triggered memory of the item to emotional baggage; 
+	say "Something about [the item] [one of]triggers a distant memory of [or]reminds you of [or]makes you think about [at random][triggered memory of the item].".
 
 Part 4 - Brooding
 
@@ -780,9 +797,13 @@ Definition: a plan is in progress if a handled thing is required by it.
 
 Definition: a plan is complete if two handled things are required by it.
 
+A thing can be noted as useful. Every turn when noun is a thing and noun is required by a plan and noun is not noted as useful: note noun as useful.
+
+To note (item - a thing) as useful: now item is noted as useful; say "Hey, that [item] might be useful if you decide on [objective of item]."
+
 Part 2 - Requirement
 
-Requirement relates one plan to various things.
+Requirement relates one plan (called the objective) to various things.
 The verb to require (he requires, they require, he required, it is required, he is requiring) implies the requirement relation.
 
 Part 3 - The Protagonist's Plans
@@ -812,7 +833,7 @@ The player is a person.
 The player is male.
 The age of the player is 18.
 The player is large-footed.
-The player wears a denim jacket. A denim jacket is wearable.
+The player wears a denim jacket. 
 
 The player carries a lighter. The description of lighter is "You pat your pockets in search of your lighter [if number of unfamiliar rooms > 0]but you know that darkness is falling and you only have so much time to figure out how to leave this deserted place or find enough supplies to survive the night[otherwise] and find it in your right pocket. You light a cigarette and take a long slow drag[end if]."
 
@@ -827,7 +848,7 @@ Friends is {Sean, Todd, Roy}.]
 
 Part 2 - Location
 
-The player is [in the pickup truck] in Middle of Nowhere.
+The player is in the pickup truck.
 
 Part 3 - Actions
 
@@ -914,7 +935,7 @@ Middle of Nowhere is a room.
 
 Chapter 1 - Middle of Nowhere Description
 
-The description of Middle of Nowhere is "The [tire tracks] from the south stop abruptly here, but where the hell are you? The [desert sand] and clumps of pale [sagebrush] are all [if lit by headlights]your dimming [headlights] reveal before barely reaching [otherwise if lit by flashlight]your flashlight picks out, other than[otherwise]you can see in the glow of[end if] the [concrete building] to the north."
+The description of Middle of Nowhere is "[if player is not in pickup truck]The [tire tracks] from the south stop abruptly here, but where the hell are you?  [end if]You've smashed your truck against [a tall saguaro]. The [desert sand] and clumps of pale [sagebrush] are all [if lit by headlights]your dimming [headlights] reveal in the path toward [otherwise if lit by flashlight]your flashlight reveals, other than the rough outline of [end if][the concrete building] to the north.[first time][paragraph break]Ocean keeps telling you this night commute on this lonely highway will kill you; maybe you should start listening.[only][if player is in pickup truck][paragraph break]You look around the cabin for something useful. There isn't much. Your sunglasses are within reach. The cup holders are filled with [empty cups] and [loose change]. A [state map of New Mexico] rests on the dashboard.[end if]"
 
 Chapter 2 - Middle of Nowhere Props
 
@@ -1146,7 +1167,7 @@ A boarded-up door is a closed unopenable undescribed door. It is  northeast of C
 	Removing is an action applying to one thing.
 	Understand "remove [something]" or "take off [something]" as removing.
 	Check removing when noun is worn: instead try taking off the noun.
-	Check removing when noun is a closed door: instead say "You try to pry the boards from the door with no success. Unless you find a crowbar or some other tool, these boards are going nowhere.".
+	Check removing when noun is a closed door: instead say "You try to pry the boards from the door with no success.".
 	Check removing when a tall window is open and noun is not wearable: instead say "Seems redundant. You've found another way into the building.".
 	Check removing when noun is carried: instead say "You are not wearing [the noun]."
 	
@@ -1225,13 +1246,11 @@ A withered cactus is a dead, flowering, annual, dull plant in Foreman's Office.
 A half-collapsed desk is a supporter in Foreman's Office. 
 On the desk is a rusted key.
 
-A wastepaper basket is an open unopenable fixed in place container. The description of wastpaper basket is "No one bothered to take the trash out before they boarded up the building. You can see [discarded papers] and [discarded food containers] filled to the brim."
+A wastepaper basket is an open unopenable fixed in place container. The description of wastpaper basket is "No one bothered to take the trash out before they boarded up the building. You can see [discarded papers] and [discarded food containers] filled to the brim, and there appears to be an old [crumpled box] of cigarettes."
 It is in Foreman's Office.
 Discarded papers are scenery in Foreman's Office.
 Discarded food containers are scenery in Foreman's Office.
 The crumpled box is in the wastepaper basket.
-
-
 
 A rusted filing cabinet is a container in Foreman's Office. It is fixed in place. The description is "The rusted old metal filing cabinet is one of the tall, three-drawered varieties common to many office spaces. It has a [top drawer], a [middle drawer], and a [bottom drawer]."
 	A top drawer, a middle drawer, and a bottom drawer are in the rusted filing cabinet. The top drawer, middle drawer, and bottom drawer are undescribed openable closed fixed in place containers.
@@ -1446,7 +1465,13 @@ Before going to Open Desert:
 
 Instead of dropping something when location is The Open Desert: say "Sounds like a good way to lose something forever."
 
-VOLUME 6 - ENHANCEMENTS
+VOLUME 6 - PLOT
+
+BOOK 1 - BEGINNING THE GAME
+
+When play begins: say "but it's too late, you're crashing, you're crashing, you crash..."
+
+VOLUME 7 - UI ENHANCEMENTS
 
 BOOK 1 - IMPROVED STATUS LINE
 
@@ -1466,7 +1491,6 @@ When play begins:
 	say "[story description]";
 	say monospaced;
 	leave space;
-	say "If you have never played interactive fiction, type HELP for guidance.";
 	say paragraph break;
 	say "Press SPACE to begin.";
 	wait for the SPACE key;
@@ -1481,12 +1505,18 @@ To leave space:
 
 Table of Fancy Status
 left	central	right
-" Region:   [regional area] "	""    	"[top rose]" 
-" [if in darkness]Darkness[otherwise]Location: [location][end if]"	""    	"[middle rose]" 
+" [current region] "	""    	"[top rose]" 
+" [current location] "	""    	"[middle rose]" 
 " "    	""    	"[bottom rose]" 
 ""	""	""
-" Locations visited: [number of rooms which are visited]/[number of rooms]" 	"[if player holds at least one talent]Talents: [the list of held talents][end if]"	"[if player holds pack of smokes]Cigarettes: [number of cigarettes enclosed by player][end if]"
+" [visited locations] " 	"[talent listing]"	"[cigarette count]"
 
+Table of Normal Status
+left	central	right
+" [current region] "	""    	"" 
+" [current location] "	""    	""
+""    	""    	"" 
+" [visited locations] " 	"[talent listing]"	"[cigarette count]"
 
 
 To say bold text:
@@ -1515,11 +1545,26 @@ To say (way - a direction) abbreviation:
 To say (way - a direction) spacing:
 	choose row with a chosen way of way in the Table of Various Directions;
 	say spacing entry.
+	
+To say current region:
+	say "Region:   [regional area] ".
+	
+To say current location: 
+	say "[if in darkness]Darkness[otherwise]Location: [location][end if]".
+	
+To say visited locations:
+	say "Locations visited: [number of rooms which are visited]/[number of rooms]".
 
 To say regional area:
 	if in darkness, rule succeeds;
 	if location is in Around the Tower, say "Around the Tower";
 	if location is in Office Interior, say "Office Interior";
+	
+To say talent listing:
+	say "[if player holds at least one talent]Talents: [the list of held talents][end if]".
+	
+To say cigarette count:
+	say "[if player holds pack of smokes]Cigarettes: [number of cigarettes enclosed by player][end if]".
 	
 Table of Various Directions
 chosen way    	abbrev    	spacing
@@ -1545,10 +1590,46 @@ To say middle rose:
 To say bottom rose:
 	say "[rose down][rose southwest][rose south][rose southeast][rose outside]  ".
 	
-Rule for constructing the status line:
-	fill status bar with Table of Fancy Status;
-	rule succeeds.
+The compass choice is a table name that varies. The compass choice is Table of Normal Status.
 
+When play begins:
+	say "During game play:[line break]     You can type HELP for guidance.[line break]     You can disable the map by entering COMPASS OFF.[line break]     You can enable the map using COMPASS ON.[paragraph break]When the compass is on, directions to locations you have visited appear in normal text, while directions to locations you have not visited appear in [bold type]bold[roman type] text. [paragraph break]Would you like to see which directions you can go in the status bar?";
+	follow the immediately prompt rule;
+	if the player consents:
+		now compass choice is Table of Fancy Status;
+	clear the screen.
+		
+Rule for constructing the status line:
+	fill status bar with compass choice;	
+	rule succeeds
+	
+This is the immediately prompt rule:
+	say ">[run paragraph on]".
+	
+BOOK 2 - DISABLING THE COMPASS
+
+Disabling the compass is an action out of world.
+Report disabling the compass: 
+	now compass choice is Table of Normal Status;
+	clear only the status line;
+	fill status bar with compass choice.
+Understand "COMPASS OFF" as disabling the compass.
+
+Carry out disabling the compass:
+	follow the immediately prompt rule.
+
+BOOK 3 - ENABLING THE COMPASS
+
+Enabling the compass is an action out of world.
+Report enabling the compass: 
+	now compass choice is Table of Fancy Status;
+	clear only the status line;
+	fill status bar with compass choice.
+Understand "COMPASS ON" as enabling the compass.
+
+Carry out enabling the compass:
+	follow the immediately prompt rule.
+	
 VOLUME 7 - TESTING
 
 BOOK 1 - TEST SCRIPTS
