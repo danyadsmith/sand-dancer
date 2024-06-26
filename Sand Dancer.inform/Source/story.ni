@@ -1471,6 +1471,14 @@ BOOK 1 - BEGINNING THE GAME
 
 When play begins: say "but it's too late, you're crashing, you're crashing, you crash..."
 
+BOOK 2 - ENDING THE GAME
+
+When play ends:
+	say "Are you happy with this ending?";
+	if the player consents:
+		now player is in Roof;
+		resume the story.
+
 VOLUME 7 - UI ENHANCEMENTS
 
 BOOK 1 - IMPROVED STATUS LINE
