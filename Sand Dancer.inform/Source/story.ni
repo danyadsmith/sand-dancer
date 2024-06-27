@@ -657,7 +657,7 @@ Check tuning when the radio is switched off: instead say "Not much point when it
 
 Carry out tuning: now the frequency tuned to of the noun is the frequency understood.
 
-Report tuning: say "You tune [the radio] to [the frequency tuned to of the radio]."
+Report tuning: say "You tune [the radio] to [the frequency tuned to of the radio][if the frequency tuned to of the radio is the emergency frequency], and the static resolves into a cleaar signal[otherwise if the frequency tuned to of the radio was the emergency frequency], and the voice dissolves into static [end if]."
 
 BOOK 4 - CUSTOM COMMANDS
 
@@ -1246,11 +1246,13 @@ A withered cactus is a dead, flowering, annual, dull plant in Foreman's Office.
 A half-collapsed desk is a supporter in Foreman's Office. 
 On the desk is a rusted key.
 
-A wastepaper basket is an open unopenable fixed in place container. The description of wastpaper basket is "No one bothered to take the trash out before they boarded up the building. You can see [discarded papers] and [discarded food containers] filled to the brim, and there appears to be an old [crumpled box] of cigarettes."
+A wastepaper basket is an open unopenable fixed in place container. 
 It is in Foreman's Office.
 Discarded papers are scenery in Foreman's Office.
 Discarded food containers are scenery in Foreman's Office.
-The crumpled box is in the wastepaper basket.
+Instead of examining the wastepaper basket: 
+	now the crumpled box is in the wastepaper basket;
+	say "No one bothered to take the trash out before they boarded up the building. You can see [discarded papers] and [discarded food containers] filled to the brim, and there appears to be an old [crumpled box] of cigarettes.".
 
 A rusted filing cabinet is a container in Foreman's Office. It is fixed in place. The description is "The rusted old metal filing cabinet is one of the tall, three-drawered varieties common to many office spaces. It has a [top drawer], a [middle drawer], and a [bottom drawer]."
 	A top drawer, a middle drawer, and a bottom drawer are in the rusted filing cabinet. The top drawer, middle drawer, and bottom drawer are undescribed openable closed fixed in place containers.
@@ -1473,11 +1475,27 @@ When play begins: say "but it's too late, you're crashing, you're crashing, you 
 
 BOOK 2 - ENDING THE GAME
 
-When play ends:
-	say "Are you happy with this ending?";
-	if the player consents:
-		now player is in Roof;
-		resume the story.
+Part 1 - Choosing Freedom
+
+Instead of going when player holds freedom: say "You do, with a strange, kinda tingly feeling in the backs of. your hands and inside your eyes. You feel powerful[if player holds strength], stronger than wind now[otherwise if player holds courage], braver than the sun now[end if] and free, most of all free. You walk backwards across the sand to your truck, sucking up your footprints as you go, and slip behind the wheel. There's this crazy wrenching bang and you jerk backwards as the engine starts, uncrashing your pickup off the cactus and juddering back onto the highway, and you smile. You're going back, back to a second chance, back to make it all right.
+
+You speed up, drive backwards at a thousand miles an hour to work, and unclean bathrooms and reback inventory in a flash, faster and faster. The days rewind like videotape, unwork, unsleep, giving back kisses from Ocean one by one[if player holds scent], and the smell of the past unfurling is like wine and ozone[end if]. And then it's that night, the night you made the Big Mistake[if player holds luck] before your luck started turning around, yeah, cause[otherwise], but[end if] this time you make it backwards, and the moment unpasses and your future is safe and uncomplicated, no kid, no nightmares, no arguments, no lecures, and you just have to get this thing out of reverse now and do it right htis time (or maybe not at all, it's too hot anyway ya know babe?) and this time you'll make everything perfecto.
+
+Bu you don't turn around. You try, but it's kinda like trying to stop falling, and you suggendly get that you [italic type]are[roman type] falling, plummeting back faster and faster like you got pushed off the cliff of now. You're unmeeting Ocean and unditching school and unsmoking for the first time behind the dumpsters, faster and faster, stomach in your throat, memories blowing back your hair as they rocket past. You're a kid again unskateboarding and unlearning video game combos, screaming backwards faster and faster and you get it now, you get the lizard's joke. He's making you free by unmaking you, fixing the burden by erasing the guy who's bearing it, and you're unlearning to read and unlearning to walk and uncrawling and uncrying and then some brilliant moment of light and noise and chaos comes shrieking towards you hella fast, fast, faster than anything and it's too late, you're crashing, you're crashing, you crash..."; end the story.
+
+Part 2 - Choosing Honor
+
+Instead of going when player holds honor: say "You go, and when you get back outside the clouds are gone and the stars are so bright you squint. You patch the fuel line and refill the tank and she starts like a beauty, and then you're back on the highway again, headed for Ocean, [if player holds luck]and you've never felt luckier[otherwise if player holds scent]and the urge to breathe the same air as her leads you on like a bloodhound[end if].
+
+You shut off the headlights as you pull up to the trailer, and climb in through her window for old times sake[if player holds courage], crazy courage her sister at least appreciated if not her old man[otherwise if player holds strength] even though you think you're finally strong enough to take her old man[end if]. She's awake of course, always no matter how quiet you are, and she holds out a hand from somewhere under the blankets. And as she's doing it you're suddenly exhausted, beyond exhausted but also safe, warm even before you slip under the covers. She half turns to kiss you as you fumble with the blankets but you're so tired all you can do is push your face against her neck and slip an arm around her warm skin, and she starts to ask you something but it's too late, you're crashing, you're crashing, you crash..."; end the story.
+
+Part 3 - Choosing Spirit
+
+Instead of going when player holds spirit: say "You go, and the night collapses in on you so hard you barely remember curling up in a corner with the blanket[if player holds courage], not afraid any more[otherwise if player holds strength], strong enough now to wait ou tthe night[end if].
+
+In the morning some highway patrol dude shakes you awake with a lecture and a ride back to town. Oro Oeste? he asks but you tell him no, take a left instead, and you end up on a street corner in Pobre Vista and keep going. Seven Sticks and then Gallup and then Flagstaff, hitching west. The cash in your wallet runs out but a trucker buys you a value meal and [if player holds luck]with a littl emore luck you keep from being hungry[otherwise if player holds scent]you seem to have a knack for sniffing out enough to stay fed[end if] and your blanket keeps you warm and you keep going.
+
+When you hit the Pacific you roll up your jeans and wade into the surf for the first time in your life. And it's warm on the top and cool underneath and this is all you want, this moment, this here and now. You'll find work and you'll find love but you'll never find home and that's okay. It's okay. You wade deeper and the waves lap higher and then a big one rolls in, blue and white, and you feel [if player holds strength] strong, strong[otherwise]crazy brave[end if] as it crests and smashes into you with the force of all the water in the world, and you laugh and try to stay on your feet but it's too late, you're crashing, you're crashing, you crash..."; end the story.
 
 VOLUME 7 - UI ENHANCEMENTS
 
@@ -1601,7 +1619,7 @@ To say bottom rose:
 The compass choice is a table name that varies. The compass choice is Table of Normal Status.
 
 When play begins:
-	say "During game play:[line break]     You can type HELP for guidance.[line break]     You can disable the map by entering COMPASS OFF.[line break]     You can enable the map using COMPASS ON.[paragraph break]When the compass is on, directions to locations you have visited appear in normal text, while directions to locations you have not visited appear in [bold type]bold[roman type] text. [paragraph break]Would you like to see which directions you can go in the status bar?";
+	say "During game play:[line break]     You can type HELP for guidance.[line break]     You can disable the map by entering COMPASS OFF.[line break]     You can enable the map using COMPASS ON.[paragraph break]When the compass is on, directions to locations you have visited appear in normal text, while directions to locations you have not visited appear in bold text. If you cannot move in a direction, it does not appear on the compass.[paragraph break]Would you like to see which directions you can go in the status bar?";
 	follow the immediately prompt rule;
 	if the player consents:
 		now compass choice is Table of Fancy Status;
