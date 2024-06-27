@@ -1475,7 +1475,39 @@ BOOK 1 - BEGINNING THE GAME
 
 When play begins: say "but it's too late, you're crashing, you're crashing, you crash..."
 
-BOOK 2 - ENDING THE GAME
+BOOK 2 - SCENES
+
+A scene can be dramatic. Instead of smoking during a dramatic scene: say "Time is ticking. You might appreciate the distraction, but you really need to focus."
+
+Part 1 - Rainstorm
+
+Rainstorm is a scene. "Rain starts to come down, pattering on the desert sand. Soon it's gonna be a muddy deathtrap out here."
+
+Rainstorm begins when Rabbit's Offer ends.
+
+The rain is a backdrop. "Rain batters down on the desert."
+
+When Ranstorm begins: now the rain is in Around the Tower.
+
+Rainstorm ends when at least one thing required by a plan has been carried and Control Center is visited and location is not Roof and a random chance of 1 in 4 succeeds.
+
+When Rainstorm ends: now the rain is off-stage; say "The rain's dying down, th sounds of the storm fading, water sinking into the thirsty sand leaving only the smell of sage behind."
+
+Instead of going to The Open Desert during Rainstorm: say "That's not the best idea in a storm like this."
+
+Instead of listening during Rainstorm: say "You can't hear anything at all above the pounding noise of water slapping sand."
+
+Report going from Crumbling Concrete to Staging Area during rainstorm: say "Gratefully, you slip inside the building, out of the storm."
+
+Part 2 - Pursuit
+
+Pursuit is a recurring scene.
+
+Part 3 - Rabbit's Offer
+
+Rabbit's Offer is a dramatic scene.
+
+BOOK 3 - ENDING THE GAME
 
 Part 1 - Choosing Freedom
 
