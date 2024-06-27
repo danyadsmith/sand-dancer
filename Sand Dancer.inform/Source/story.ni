@@ -685,6 +685,8 @@ Before smoking when crumpled box is not held and crumpled box is visible: say "(
 
 First report smoking: say "You pull out a cigarette and light the tip. The familiar smell of lighted tobacco calms you."
 
+Instead of smoking for at least two turns: say "There's something about the ritual that grounds you, but too many in a row make you jittery, dizzy, and nauseous. You slide the cigarette back into the pack and think about what to do next."
+
 Report smoking: 
 	let hint be best course of action;
 	if best course of action is not "", say "Maybe [hint]. [run paragraph on]"
@@ -1630,7 +1632,7 @@ Rule for constructing the status line:
 	rule succeeds
 	
 This is the immediately prompt rule:
-	say ">[run paragraph on]".
+	say "[line break]>[run paragraph on]".
 	
 BOOK 2 - DISABLING THE COMPASS
 
