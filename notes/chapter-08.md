@@ -11,6 +11,23 @@ This chapter introduces the syntax required to:
   * `Report going for ___ turns` (number)
   * `Instead of waiting for at least ___ turns` (number)
   * `If ___ for the ___ time` (condition, number)
+* Track what is happening in the current turn using:
+  * `if the current action is`
+  * `if we are`
+* Track if an action has successfully taken place using `if we have`
+* Change the story world at the time that an action takes place using `at the time when`
+* Create and manage **scenes**:
+  * Denote when a scene `begins` and `ends` 
+  * Control what can happen `during` scenes
+  * Check if a scene `is happening` or `is not happening`
+  * Check if a scene `has happened`, `has ended`, or `has not ended`
+  * Create a `recurring` scene
+  * Create multiple possible scene endings
+  * Classify scenes
+* Enable the `SCENES` testing command and disable it with `SCENES OFF`
+* Set the `time of day` variable:
+  * To a specific time: `now the time of day is ___`
+  * Via an increment: `increase the time of day by ___`
 
 ### Lessons Learned
 
@@ -29,7 +46,11 @@ This chapter introduces the syntax required to:
   * Check if something `has been` or `has not been` in a given state on any turn until the present moment
   * Check if something `was` or `was not` true at the start of the current turn
   * Check if something `had been` or `had not been` true at the start of the current turn
-
+* The phrases `rule succeeds` and `rule fails` behave like `stop the action` and explicitly record that the action succeeded or failed 
+* The Inform 7 Index includes a **Scenes** panel that includes all of the rules that apply to each scene.
+* The game supports precise tracking of the **time of day** simulating a standard 24-hour clock. 
+* Each turn advances the clock by one minute
+  
 ### Quotes from the Text
 
 No. 1: 
@@ -44,9 +65,16 @@ No. 3:
 
 > Sometimes games remove the player’s ageny entirely for a while, via a sequence known as a **cutscene**. Usually cutscenes are designed to advance the plot through a significant development while ensuring the player doesn’t do anything to screw it up.
 
+No. 4:
+
+> The current action is held in a variable of kind **stored action**, and as with any other kind we can make new stored actions, and set, change, and retrieve their values.
+
 ### Extensions Mentioned in this Chapter
 
-* []() by Aaron Reed
+* [Variable Time Control](https://github.com/i7/extensions/blob/10.1/Eric%20Eve/Variable%20Time%20Control-v4.i7x) by Eric Eve
+* [Scheduled Activities](https://github.com/i7/extensions/blob/10.1/John%20Clemens/Scheduled%20Activities-v10.i7x) by John Clemens
+* [Weather Effects](https://github.com/i7/archive/blob/8ec83df877d34dab13c3230819c62b42cf9d890c/Mikael%20Segercrantz/Weather%20Effects.i7x) by Mikael Segercrantz
+* [Basic Real Time]() by Sarah Morayati (source not found)
 
 
 
