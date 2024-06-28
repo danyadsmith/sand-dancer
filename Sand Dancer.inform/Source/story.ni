@@ -229,6 +229,9 @@ To decide what text is the generation of (P - a person):
 Part 4 - Character Interactions
 
 Before showing something (called the item) to someone (called the viewer): try giving the item to the viewer instead.
+
+[Exercise 9.1]
+[Understand the command "show" as something new. Understand "show [something] to [someone]" as giving it to.]
 		
 VOLUME 2 - MECHANICS
 
