@@ -26,6 +26,7 @@ This chapter introduces the syntax required to:
 * The **viewpoint character** may or may not be the PC
 * Stories can have multiple player characters
 * Many of Inform’s built-in actions are just bare-bones definitions, or **stubs**
+* Inform offer a handy **pathfinding** tool that will help move NPCs through the story world
 
 ### Quotes from the Text
 
