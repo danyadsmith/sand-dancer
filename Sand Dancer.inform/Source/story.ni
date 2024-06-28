@@ -588,10 +588,11 @@ Part 13 - Cigarettes
 
 A cigarette is a kind of thing.
 A cigarette is inedible.
+A cigarette is undescribed.
 
 The pack of smokes is an opaque, portable container. 
 Understand "pack of smokes/pack/pack of cigarettes/smokes" as the pack of smokes. 
-The description of pack of smokes is "You're kind of trying to quit, but man, [if number of cigarettes enclosed by player is at least 1]you could really go for one right now. It looks like you've only got [number of cigarettes enclosed by player in words]left[otherwise]you could go for a cigarette right now[end if]."
+The description of pack of smokes is "You're kind of trying to quit, but man, [if number of cigarettes enclosed by player is at least 1]you could really go for one right now. It looks like you've only got [number of cigarettes enclosed by player in words] left[otherwise]you could go for a cigarette right now[end if]."
 The carrying capacity of the pack of smokes is 20.
 Seven cigarettes are in the pack of smokes.
 
@@ -937,7 +938,7 @@ Middle of Nowhere is a room.
 
 Chapter 1 - Middle of Nowhere Description
 
-The description of Middle of Nowhere is "[if player is not in pickup truck]The [tire tracks] from the south stop abruptly here, but where the hell are you?  [end if]You've smashed your truck against [a tall saguaro]. The [desert sand] and clumps of pale [sagebrush] are all [if lit by headlights]your dimming [headlights] reveal in the path toward [otherwise if lit by flashlight]your flashlight reveals, other than the rough outline of [end if][the concrete building] to the north.[first time][paragraph break]Ocean keeps telling you this night commute on this lonely highway will kill you; maybe you should start listening.[only][if player is in pickup truck][paragraph break]You look around the cabin for something useful. There isn't much. Your sunglasses are within reach. The cup holders are filled with [empty cups] and [loose change]. A [state map of New Mexico] rests on the dashboard.[end if]"
+The description of Middle of Nowhere is "[if player is not in pickup truck]The [tire tracks] from the south stop abruptly here, but where the hell are you?  [end if]You've smashed your truck against [a tall saguaro]. The [desert sand] and clumps of pale [sagebrush] are all [if lit by headlights]your dimming [headlights] reveal in the path toward [otherwise if lit by flashlight]your flashlight reveals, other than the rough outline of [end if][the concrete building] to the north.[first time][paragraph break]Ocean keeps telling you this late night commute will kill you; maybe you should start listening.[only][if player is in pickup truck][paragraph break]The only good news is that the crash didn't deploy the air bag. You look around the cabin for something useful. There isn't much. Your sunglasses are within reach. The cup holders are filled with [empty cups] and [loose change]. A [state map of New Mexico] rests on the dashboard.[end if]"
 
 Chapter 2 - Middle of Nowhere Props
 
@@ -1507,6 +1508,15 @@ Part 3 - Rabbit's Offer
 
 Rabbit's Offer is a dramatic scene.
 
+Part 4 - Craving
+
+Craving is a scene. 
+
+Craving begins when the player carries the pack of smokes and the number of cigarettes enclosed by the player is less than 4.
+
+Every turn when a random chance of 1 in 20 succeeds during Craving: 
+	if a dramatic scene is not happening, say "Damn, you could really go for a cigarette."
+
 BOOK 3 - ENDING THE GAME
 
 Part 1 - Choosing Freedom
@@ -1576,8 +1586,8 @@ left	central	right
 " [current region] "	""    	"" 
 " [current location] "	""    	""
 ""    	""    	"" 
-" [visited locations] " 	"[talent listing]"	"[cigarette count]"
-
+" [visited locations] " 	""	""
+" [talent listing]"	"" 	"[cigarette count]"
 
 To say bold text:
 	say "[bold type]".
