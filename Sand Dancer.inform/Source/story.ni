@@ -225,6 +225,10 @@ To decide what text is the generation of (P - a person):
 	otherwise if P is genalpha:
 		decide on "Generation Alpha";		
 	decide on "a generation yet unnamed".  [Fallback in case none of the conditions are met]
+	
+Part 4 - Character Interactions
+
+Before showing something (called the item) to someone (called the viewer): try giving the item to the viewer instead.
 		
 VOLUME 2 - MECHANICS
 
@@ -702,7 +706,6 @@ Report smoking: if there is an in progress plan, say "You've found the [list of 
 
 Carry out smoking: now the noun is nowhere.
 
-
 BOOK 5 - MEMORIES
 
 Part 1 - Memory
@@ -834,9 +837,12 @@ Part 1 - Inventory
 
 The player is a person.
 The player is male.
+The player is called Knock.
 The age of the player is 18.
 The player is large-footed.
 The player wears a denim jacket. 
+
+The description of the player is "You don't really want to think about what you look like right now, especially when there's a totally legit likeness on the driver's license inside your wallet."
 
 The player carries a lighter. The description of lighter is "You pat your pockets in search of your lighter [if number of unfamiliar rooms > 0]but you know that darkness is falling and you only have so much time to figure out how to leave this deserted place or find enough supplies to survive the night[otherwise] and find it in your right pocket. You light a cigarette and take a long slow drag[end if]."
 
@@ -857,13 +863,31 @@ Part 3 - Actions
 
 Instead of sleeping: say "You're tired. There's no denying that. But you have to deal with the matter at hand. There will be time to sleep later."
 
-BOOK 2 - THE GRANDMOTHER
+BOOK 2 - THE SUPPORTING CAST
 
-Part 1 - Description
+Part 1 - Grandmother
 
 Annamarie is a person.
 The age of Annamarie is 89.
 
+Part 2 - Spirit Animals
+
+A spirit animal is a kind of person.
+
+The rabbit, the Coyote, and Sand-dancer are a male spirit animal.
+
+Chapter 1 - The Coyote
+
+The description of the Coyote is "You can barely see him in the darkness, can't tell whether he's old or how old, what color his [dusty hoodie] is, and with those [plastic-framed sunglasses] you can't even tell whether he's smirking at you or just twitching his mouth. There's a weird smell coming off him, sweat and dirt and a little wet dog and something deeper, earth, desert, rain, all mixed with cigarette smoke."
+
+The Coyote holds a cigarette. He wears some plastic-framed sunglasses and a dusty hoodie.
+
+
+Part 2 - Normal Animals
+
+A normal animal is a kind of animal.
+
+A desert hare and a brown lizard are normal animals.
 
 VOLUME 4 - THE STORY WORLD
 
@@ -1565,17 +1589,8 @@ Part 3 - Rabbit's Offer
 Rabbit's Offer is a dramatic scene.
 
 Rabbit's offer begins when location is Burrow.
-
-Part 4 - Craving
-
-Craving is a scene. 
-
-Craving begins when the player carries the pack of smokes and the number of cigarettes enclosed by the player is less than 4.
-
-Every turn when a random chance of 1 in 20 succeeds during Craving: 
-	if a dramatic scene is not happening, say "Damn, you could really go for a cigarette."
 	
-Part 5 - Temptation
+Part 4 - Temptation
 
 Temptation is a scene.
 
@@ -1596,7 +1611,7 @@ Every turn during Temptation: if a random chance of 1 in 4 succeeds and location
 
 Temptation ends when location is The Open Desert. When Temptation ends: now the distant figure is off-stage.
 
-Part 6 - Chase
+Part 5 - Chase
 
 Chase is a dramatic scene. Chase begins when Temptation ends. Chase ends when Chase is happening for six turns.
 
@@ -1606,7 +1621,7 @@ Every turn during Chase: say "[one of]Something snarls off in the distance, a wa
 
 The snarling shadows are an undescribed animal. When Chase begins: move snarling shadows to Open Desert. When Chase ends: now snarling shadows are off-stage. Understand "moving/shadow/animal/form/forms/snarl/growl/howl/coyote/sound/sounds/coyotes/wolf/call/feral/wild/shifting/pack/snarls/teeth/mangy/fur" as snarling shadows. Instead of doing anything to snarling shadows: say "All you can do is run."
 
-Part 7 - Fight
+Part 6 - Fight
 
 Fight is a dramatic scene. Fight begins when Chase ends.
 
@@ -1630,11 +1645,36 @@ Instead of throwing anything at circle of snarling coyotes during Fight: say "Ma
 
 When Fight ends: now circle of snarling coyotes is off-stage.
 
-Part 8 - Coyote's Offer
+Part 7 - Coyote's Offer
 
 Coyote's Offer is a scene. "And then you blink, and realize he's not a coyote after all. Just... just a guy." 
 
 Coyote's Offer begins when Fight ends.
+
+Part 8 - Jonesing
+
+Jonesing is a scene. 
+
+Jonesing begins when Foreman's Office is unvisited and the turn count is greater than 20.
+
+Every turn when a dramatic scene is not happening and we are not smoking and a random chance of 1 in 25 succeeds during Jonesing: say "[one of]Hey, you could really go for a smoke right now[or]Man, you really need a cigarette[or]You'd kill for a smoke right now[or]You're really jonesing for a smoke right now[cycling]."  
+
+Jonesing ends when Foreman's Office is visited.
+
+Part 9 - Addicted
+
+Addicted is a scene.
+
+Addicted begins when Control Center is unvisited and the turn count is greater than 30. 
+
+ Every turn when a dramatic scene is not happening and we are not smoking and a random chance of 1 in 10 succeeds during Addicted:
+	if the player encloses a cigarette (called the chosen one):
+		say "[one of]You can't help it. You need another cigarette[or]What the hell, another cigarette won't kill you[or]You really need another smoke[cycling].";
+		try smoking the chosen one;
+	otherwise:
+		say "[one of]Damn[or]Tonight sucks[cycling].".
+
+Addicted ends when Control Center is visited.
 
 BOOK 3 - ENDING THE GAME
 

@@ -29,7 +29,7 @@ highlighted passages for future reference.
 * [Chapter 06 - Understanding the Player](notes/chapter-06.md)
 * [Chapter 07 - Logic and Control](notes/chapter-07.md)
 * [Chapter 08 - Time, Scenes, and Pacing](notes/chapter-08.md)
-* Chapter 09 - Creating Characters
+* [Chapter 09 - Creating Characters](notes/chapter-09.md)
 * Chapter 10 - Challenging Assumptions
 * Chapter 11 - Finishing
 * Chapter 12 - Further Pursuits
