@@ -885,12 +885,25 @@ The description of the Coyote is "You can barely see him in the darkness, can't 
 
 The Coyote holds a cigarette. He wears some plastic-framed sunglasses and a dusty hoodie.
 
-
 Part 2 - Normal Animals
 
 A normal animal is a kind of animal.
 
 A desert hare and a brown lizard are normal animals.
+
+Chapter 1 - The Brown Lizard
+
+The brown lizard is in Middle of Nowhere. "[if player is in pickup truck]You see a little lizard clinging frantically to the [Saguaro] through the windshield[otherwise]A brown-colored lizard clings to the cactus[end if]."
+
+Understand "brown-colored/colored/sand-dancer/dancer" or "sand dancer" as brown lizard.
+
+The description is "[one of]He looks pretty pissed that you crashed into his cactus. What did grandma used to call those little dudes? You can't remember[or]Oh yeah, you remember, she called them sand-dancers. This little sand dancer still looks pissed [or] The little sand-dancer lizard stares at you with one slitte eye[stopping]."
+
+Instead of giving anything to the lizard: say "You dangle [the noun] in front of it, but it just flicks its tongue in and out a little faster, staying put." 
+
+Instead of attacking or taking or pushing or touching the lizard: say "You reach out to grab it, but in a flash it scurries around to the other side of the cactus and disappears."; now lizard is off-stage.
+
+Instead of kissing the lizard: say "Someone in elementary school dared you to do that once and you beat him up."
 
 VOLUME 4 - THE STORY WORLD
 
