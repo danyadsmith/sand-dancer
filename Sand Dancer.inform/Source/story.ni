@@ -905,6 +905,18 @@ Instead of attacking or taking or pushing or touching the lizard: say "You reach
 
 Instead of kissing the lizard: say "Someone in elementary school dared you to do that once and you beat him up."
 
+Chapter 2 - Desert Hare
+
+The desert hare is in Base of the Tower.
+
+Every turn when a random chance of 1 in 4 succeeds:
+	let starting point be the location of the desert hare;
+	let destination be a random room which is adjacent to starting point;
+	let heading be the best route from starting point to destination;
+	if heading is a direction and direction is regionally in Around the Tower, try the desert hare going heading.
+	
+After the hare going a direction (called way): if the hare is visible or the hare was visible, say "The hare hops [way]wards."
+
 VOLUME 4 - THE STORY WORLD
 
 BOOK 1 - REGIONS

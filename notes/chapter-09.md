@@ -10,6 +10,13 @@ This chapter introduces the syntax required to:
   * `neuter person` to refer to the character with gender-neutral pronouns
 * Create characters using the `animal` designation
 * Describe characters and the things they carry or wear
+* Give orders to characters by prefixing an action the player could take with the character’s name:
+  * `____, take the rose` (character name)
+* Allow the action to succeed using a **persuasion** rule:
+  * `Persuation rule for asking ___ to ___: persuasion succeeds.`
+* Allow player-prompted converations between characters:
+  * `ASK ____ ABOUT ___`
+  * `TELL ___ ABOUT ___`
 
 ### Lessons Learned
 
@@ -42,8 +49,9 @@ No. 1:
 
 ### Extensions Mentioned in this Chapter
 
-* []() by Author 
-
-
-
+* [Intelligent Hinting]() by Aaron Reed (source not found)
+* [Planner](https://github.com/i7/extensions/blob/10.1/Nate%20Cull/Planner-v2.i7x) by Nate Cull
+* [Mood Variations](https://github.com/i7/extensions/blob/10.1/Emily%20Short/Mood%20Variations-v3.i7x) by Emily Short
+* [Simple Followers](https://github.com/i7/extensions/blob/10.1/Emily%20Short/Simple%20Followers-v7.i7x) by Emily Short
+* []() by Author
 
