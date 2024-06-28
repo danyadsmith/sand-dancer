@@ -1470,6 +1470,10 @@ Before going to Open Desert:
 
 Instead of dropping something when location is The Open Desert: say "Sounds like a good way to lose something forever."
 
+BOOK 5 - BURROW
+
+Burrow is a room.
+
 VOLUME 6 - PLOT
 
 BOOK 1 - BEGINNING THE GAME
@@ -1504,9 +1508,63 @@ Part 2 - Pursuit
 
 Pursuit is a recurring scene.
 
+Pursuit begins when
+	player holds flashlight and
+	emergency lights are switched on and
+	The Rabbit's Offer has not happened and
+	the shadow appears.
+
+To decide whether the shadow appears:
+	if location is The Open Desert for at least six turns, decide on whether or not a random chance of 1 in 3 succeeds;
+	if location is Roof, decide no;
+	if location is in Around the Tower, decide on whether or not a random chance of 1 in 3 succeeds;
+	decide no.
+	
+Understand "movement/moving/something" as darting shadow. The darting shadow has a direction called the path.
+
+The initial appearance of darting shadow is "[one of]Hey, there it is again[or]Yeah, you're sure you saw it[or]It's gone now... no, wait[in random order]—[one of]something's moving[or]movement[or]a darting shadow[in random order], to the [path of darting shadow]."
+
+Instead of doing anything to the darting shadow, say "Hey, you're not even sure you saw it."
+
+When Pursuit begins:
+	let desert connection be an object;
+	if location is The Open Desert:
+		now desert connection is a random cardinal direction;
+	otherwise if location is Weed-strewn Rust:
+		now desert connection is east;
+	otherwise:
+		now desert connection is west;
+	now path of darting shadow is desert connection;
+	move darting shadow to location;
+	if darting shadow is visible, say "[one of]Out of the corner of your eye you spot a glimpse of something moving in the darkness, off in the desert to the [path of darting shadow][or]You see that weird movement again, out in the shadows to the [path of darting shadow][stopping]."
+	
+The darting shadow has a number called times followed. The times followed of darting shadow is 0.
+
+Before going during Pursuit:
+	if noun is path of darting shadow:
+		increase the times followed of darting shadow by 1;
+	otherwise:
+		now times followed of darting shadow is 0;
+		now darting shadow is off-stage;
+		say "You loose sight of whatever it was."
+		
+Carry out going path of darting shadow when darting shadow is visible during Pursuit:
+	say "[if times followed of the darting shadow is 1]You head off in the direction of the movement, scanning with your flashlight over the skittering shadows.[otherwise if times followed of darting shadow is 2]You chase after the shadow, faster and faster, breath misting in the cold air.[otherwise]Some crazy thrill comes over you. You feel like a hunter. You can almost smell the thing you are chasing in the air. You [italic type]can[roman type]smell it, sweaty fur and terror. You race after it.[end if]";
+	now path of darting shadow is a random cardinal direction;
+
+Instead of going path of darting shadow when times followed of darting shadow is at least 4 and darting shadow is visible:
+	say "Dodging after the fleeing, skittering shadow, you're almost caught up to it when your foot trips on a rock and you stumble to the ground. But the ground doesn't stop your fall, it collapses, and you're tumbling in a shower of dirt clods down a hole, rolling down some crazy underground tunnel clutching at mud and roots till finally you slide into some damp, fetid place, and come to a stop against something soft, huge, warm, and furry.";
+now player is in Burrow;
+now darting shadow is off-stage.
+
+Pursuit ends when darting shadow is not visible. 
+When Pursuit ends: now times followed of darting shadow is 0.
+
 Part 3 - Rabbit's Offer
 
 Rabbit's Offer is a dramatic scene.
+
+Rabbit's offer begins when location is Burrow.
 
 Part 4 - Craving
 
@@ -1516,6 +1574,67 @@ Craving begins when the player carries the pack of smokes and the number of ciga
 
 Every turn when a random chance of 1 in 20 succeeds during Craving: 
 	if a dramatic scene is not happening, say "Damn, you could really go for a cigarette."
+	
+Part 5 - Temptation
+
+Temptation is a scene.
+
+Temptation begins when
+	Rainstorm has ended and
+	Control Center is visible and
+	location is not regionally in Office Interior and
+	location is not Roof and
+	location is not Control Center.
+	
+When Temptation begins: say "You stop in mid-stride as your eyes flick to the horizon. Way out in the desert, silhouetted on a rise, a [distant figure] stands. As you watch he raises a hand and waves."; move distant figure to Around the Tower.
+
+The distant figure is a backdrop. Instead of doing anything to the distant figure, say "He's too far away. You can barely see him."
+
+Instead of waving hands during Temptation: say "The figure waves back, then seems to beckon you forward."
+
+Every turn during Temptation: if a random chance of 1 in 4 succeeds and location is not regionally in Office Interior, say "The [distant figure] waves again, out in the deep desert."
+
+Temptation ends when location is The Open Desert. When Temptation ends: now the distant figure is off-stage.
+
+Part 6 - Chase
+
+Chase is a dramatic scene. Chase begins when Temptation ends. Chase ends when Chase is happening for six turns.
+
+Carry out going during Chase: say "[one of]You move nervously forward.[or]You jog forward, eyes snapping left and right at the moving shadows around you.[or]You're running now, jumping over sagebrush and stumbling on rocks, as snarling animal forms close in around you.[or]You run.[stopping]".
+
+Every turn during Chase: say "[one of]Something snarls off in the distance, a warning growl.[or]A howl from behind you, and an answer from somewhere ahead. Coyotes. They sound hungry.[or]Coyotes call all around you now, circling in the dark, unseen, but coming closer, closer.[or]You can smell them now, wild, feral. Shifting shadows whirl around you, panting, whining with the thrill of the chase.[or]The pack's at your heels, snapping, growling, and you've never in your life been this terrified.[or]Snarls and teeth and mangy fur on every side.[stopping]".
+
+The snarling shadows are an undescribed animal. When Chase begins: move snarling shadows to Open Desert. When Chase ends: now snarling shadows are off-stage. Understand "moving/shadow/animal/form/forms/snarl/growl/howl/coyote/sound/sounds/coyotes/wolf/call/feral/wild/shifting/pack/snarls/teeth/mangy/fur" as snarling shadows. Instead of doing anything to snarling shadows: say "All you can do is run."
+
+Part 7 - Fight
+
+Fight is a dramatic scene. Fight begins when Chase ends.
+
+When Fight begins: now circle of snarling coyotes is in location; say "It's over. They've caught you. They surround you, circling, growling, looking for weakness, moving in for the kill."
+
+The circle of snarling coyotes is an animal. Understand "coyote" as circle of snarling coyotes. Every turn when circle of snarling coyotes is visible: say "[one of]A coyote snaps his teeth, lunging forward then fading back into the pack.[or]The circle of snarling coyotes tightens.[or]The coyotes growl, pulling closer, snapping at your heels.[in random order]".
+
+Instead of going when circle of snarling coyotes is visible: say "You try to flee and instantly teeth and claws block your path; you pull back to the center of the circle, terrified."
+
+Fight ends in cowardice when Fight is happening for six turns. When Fight ends in cowardice: say "It's over. The coyotes dive in for the kill, jaws snapping, and you cower in fear.
+
+But then one of them flicks his head and bears his teeth, and the others pull back. He's not bigger or stronger or anything but there's something about him that's different. He takes the smallest step forward and the others scatter, mangy shadows slinking away into the desert and then you're left alone with the alpha."
+
+Fight ends in bravery when we are attacking. Instead of attacking during Fight: say "It's over. The coyotes dive in for the kill, jaws snapping, [if player holds strength]and without realizing what you're doing you make a fist and slam it into the one that's closest.
+
+The coyote squeals, flung sideways by the strength of your blow, blood dripping from its nose, and the rest of the pack pulls back in sudden caution. Another coyote makes to lunge and you whirl towards it in fury, pulling back for another blow, but the pack breaks in some collective decision and scatters [otherwise if player holds courage]and suddenly this bold of courage runs through you and without even thinking about it you leap towards the biggest coyote with a terrible scream.
+
+It flinches back, suddenly unsure, and you charge at it full speed, still screaming, arms outstretched, until it turns tail and bolts away. The other coyotes circle uncertainly, but you turn your snarling furious rage on them too and then they're all scattering[end if], mangy shadows slinking away into the desert. Except for one last coyote who stands his ground."
+
+Instead of throwing anything at circle of snarling coyotes during Fight: say "Maybe you could just attack them directly."
+
+When Fight ends: now circle of snarling coyotes is off-stage.
+
+Part 8 - Coyote's Offer
+
+Coyote's Offer is a scene. "And then you blink, and realize he's not a coyote after all. Just... just a guy." 
+
+Coyote's Offer begins when Fight ends.
 
 BOOK 3 - ENDING THE GAME
 
