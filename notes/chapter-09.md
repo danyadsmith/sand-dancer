@@ -49,9 +49,22 @@ No. 1:
 
 ### Extensions Mentioned in this Chapter
 
+#### From the Friends of I7 Extensions Repository
+
 * [Intelligent Hinting]() by Aaron Reed (source not found)
 * [Planner](https://github.com/i7/extensions/blob/10.1/Nate%20Cull/Planner-v2.i7x) by Nate Cull
 * [Mood Variations](https://github.com/i7/extensions/blob/10.1/Emily%20Short/Mood%20Variations-v3.i7x) by Emily Short
 * [Simple Followers](https://github.com/i7/extensions/blob/10.1/Emily%20Short/Simple%20Followers-v7.i7x) by Emily Short
-* []() by Author
+* [Conversation Framework](https://github.com/i7/extensions/blob/10.1/Eric%20Eve/Conversation%20Framework-v12.i7x) by Eric Eve
+* [Conversation Suggestions](https://github.com/i7/extensions/blob/10.1/Eric%20Eve/Conversation%20Suggestions-v6.i7x) by Eric Eve
+* [Conversation Nodes](https://github.com/i7/extensions/blob/10.1/Eric%20Eve/Conversation%20Nodes-v7.i7x) by Eric Eve
+* [Threaded Conversation](https://github.com/i7/extensions/blob/10.1/Chris%20Conley/Threaded%20Conversation-v9.i7x) by Emily Short (Chris Conley took over authorship and is now the maintainer)
+* [Keyword Interface](https://github.com/i7/extensions/blob/10.1/Aaron%20Reed/Keyword%20Interface-v9.i7x) by Aaron Reed
+* [Quip-Based Conversation](https://github.com/i7/extensions/blob/10.1/Michael%20Martin/Quip-Based%20Conversation-v5.i7x) by Michael Martin
+
+#### From the Friends of I7 Archive Repository
+
+* [Epistemology](https://github.com/i7/archive/blob/master/Eric%20Eve/Epistemology.i7x) by Eric Eve
+* [Keywords for Conversation](https://github.com/i7/archive/blob/master/Matt%20Wigdahl/Keywords%20for%20Conversation.i7x) by Matt Wigdahl
+* [Simple Chat](https://github.com/i7/archive/blob/master/Mark%20Tilford/Simple%20Chat.i7x) by Mark Tilford
 

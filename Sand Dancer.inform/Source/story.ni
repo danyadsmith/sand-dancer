@@ -47,19 +47,23 @@ Chapter 1 - Disambiguation Control  (Incompatible)
 
 Part 4 - Aaron Reed
 
-Chapter 1 - Keyword Interface (Not Installed)
+Chapter 1 - Conversation Framework For Sand-Dancer (Installed)
+
+Include Conversation Framework For Sand-Dancer by Aaron Reed.
+
+Chapter 2 - Keyword Interface (Not Installed)
 
 [Include Keyword Interface by Aaron Reed.]
-
-Chapter 2 - Small Kindnesses (Not Installed)
-
-[Include Small Kindnesses by Aaron Reed.]
 
 Chapter 3 - Poor Man's Mistype (Not Installed)
 
 [Include Poor Man's Mistype by Aaron Reed.]
 
-Chapter 4 - Smarter Parser (Not Installed)
+Chapter 4 - Small Kindnesses (Not Installed)
+
+[Include Small Kindnesses by Aaron Reed.]
+
+Chapter 5 - Smarter Parser (Not Installed)
 
 [Include Smarter Parser by Aaron Reed.]
 
@@ -422,7 +426,23 @@ Instead of attacking the emergency lights:
 
 Part 7 - Guidebook
 
-A weather-worn guidebook is a thing. The description is "Many of the pages are faded, but you can see that it once served as a comprehensive guide to local fauna. You haven't seen much out here besides that solitary lizard swinging from the Saguaro, but if curiosity or necessity arises, you can try to look up various animals in it."
+A weather-worn guidebook is a thing. 
+
+The description of guidebook is "Most of the pages are faded beyond readability, but you can see that it once served as a comprehensive guide to local fauna. You haven't seen much out here besides that solidary lizard swinging from the Saguaro, but if curiousity overtakes you you could try to look up an animal in the book."
+
+Understand "guide/book/page/pages" as the guidebook.
+
+Consulting is an action applying to one carried thing. Understand "consult [something]" or "consult about [something]"  or "read about [something]" as consulting.
+
+Check consulting when noun is not the weather-worn guidebook: instead say "Eh. You can't really consult that about anything."
+
+Instead of consulting the guidebook about "sand-dancer/sand/dancer/lizard/lizards": say "You look for the brown-colored lizard in the guidebook. The entry says it's a 'rare subspecies of the common desert lizard found only in the outskirts of Oro Oeste, and known to native peoples as [italic type]sand-dancer[roman type]. In legends, the sand-dancer was a clever triskster and twister or words who created night by tricking the sun into spending half the day underground.' Interesting."
+
+Instead of consulting the guidebook about "spider/spiders": say "The picture of the wingspan of a great horned owl catches your attention. You note that this particular species can carry prey that exceeds its weight. While it seems partial to racoons, rabbits, and squirrels, you wonder if it might dispose of a particularly large spider. Well, probably not, but one can hope. You continue to flip through the book until you find the entry for tarantulas. [if cobwebs are in Staging Area]You think about those cobwebs as you read on.[end if]
+
+'Tarantulas are the largest spiders in the world. They adapt in the desert by building an underground burrow lined with silk webbing. They are active during the monsoons and into early fall. They are nocturnal hunters preying on a variety of insects and small lizards. They catch their victims by ambushing them and killing them with a venomous bite with their fangs.'"
+
+Instead of consulting the guidebook about "snake/snakes/rattlesnake": say "The western diamondback rattlesnake (Crotalus atrox) is a venomous species of the diamondback rattlesnake native to the United States and Mexico. It is also known as the Arizona diamond rattlesnake or desert diamondback. The western diamondback is responsible for a majority of snakebite deaths in Mexico every year. On an average, it can grow up to 4 ft in length; though specimen measuring up to 5 ft have also been reported. It is generally grayish brown in color and has around 20 to 25 irregular spots on its dusty body. It is an ambush predator, which hunts at dawn or during the night. It hides in the sand and waits for the prey. When the prey is within reach, it pounces on it and injects its deadly venom to kill it. The western diamondback feeds on prairie dogs, kangaroos, rats, whiptail lizards, Texas banded geckos, birds and even on small snakes."
 
 Instead of burning the weather-worn guidebook: say "It may seem useless right now, but it won't cast much warmth, and there are other things around you can use for kindling."
 
@@ -667,6 +687,10 @@ Carry out tuning: now the frequency tuned to of the noun is the frequency unders
 
 Report tuning: say "You tune [the radio] to [the frequency tuned to of the radio][if the frequency tuned to of the radio is the emergency frequency], and the static resolves into a cleaar signal[otherwise if the frequency tuned to of the radio was the emergency frequency], and the voice dissolves into static [end if]."
 
+Part 17 - Easter Basket
+
+There is a thing called an easter basket filled with plastic green grass. Instead of doing anything to easter basket: say "You know it is not worth the effort. You have other matters to attend to."
+
 BOOK 4 - CUSTOM COMMANDS
 
 Part 1 - Verbs to Remove
@@ -765,6 +789,10 @@ And now... no, you can't think about that yet."
 
 The handled canned oranges trigger a memory called Ocean's favorite hobby. The description of Ocean's favorite hobby is "It was the first indication you had that while Ocean lived simply, she had expensive taste. You thought about cutting your losses then. It was before your first kiss, before she let you see her naked that night under the light of the full moon, the night she said yes for the first time. You were sitting in her trailer and noticed how sweet and crisp the air seemed. It wasn't her shampoo or the soap she used. Those had a creamy scent that reminded you of sweetened milk. No, this came from a tiny device that sent puffs of air into the room on timed intervals. When you asked her about it, she said something like, [quotation mark]Oh, that's just aromatherapy. When I feel stressed, I reach for the citrus scents, like oranges.[quotation mark] When you asked what she was so stressed out about, she looked down and fixed her gaze on nothing at all, staring into a physical void where a million thoughts were present, all kept secret from you. That's when you knew that she would always retain some aspects of herself, her life, her past, and keep them from you. You wondered if there would ever be a time when there were no secrets left between you. It made you feel frustrated and somewhat sad, because in the space of several months you had told her everything there was to tell. You left her that day feeling empty for the first time. It wasn't the last time."
 
+The bunny's bow tie triggers a memory called her graduation night. Understand "Ocean's/Oceans" as her graduation night. Instead of doing anything to the bunny's bow tie: say "It's just a few lines on a silhouette." The description of her graduation night is "She grinned when you picked her up, and you drove on in to Mike's. Mike's was packed that night and everyone looked great but she was the most beautiful girl in the room. You danced a lot, drank a bit, and left early to go lie down under the stars. 
+
+And that was it. The first time she said she loved you, and you said it back cause it felt wrong to leave her hanging. But you didn't really know. You felt a bit caught off guard. You knew that you liked her a lot. You knew you were attracted. But there was so much you didn't know about her, or about yourself."
+
 Part 4 - Emotional Baggage
 
 The player carries an open transparent unopenable container called emotional baggage. The description of emotional baggage is "Your guidance counselor used to say you're always carrying it with you, and that memories associated with intense feelings (from euphoric to downright traumatic) have more weight than others. [if emotional baggage contains nothing]Lately, you've been working so much you barely have time to think.[end if]"
@@ -786,7 +814,7 @@ Check brooding when noun is not a memory: instead say "Eh. You can't really refl
 Carry out brooding: say "[description of noun][line break]"; now the noun is retrieved. 
 [We defined earlier that memories can either be buried (not yet brooded about) or retrieved.]
 
-Instead of doing anything other than brooding to a memory: say "As if. All you can really do is BROOD ABOUT it."
+Instead of doing anything other than brooding to a memory: say "As if. All you can really do is brood about or think about it."
 
 Instead of thinking: say "Most of the thinking you do nowadays comes from either smoking or brooding." [Thinking is a standard action which we'll use to hint the player towards better options.]
 
@@ -796,7 +824,43 @@ A talent is a kind of thing.
 strength, courage, luck, scent, honor, spirit, and freedom are talents.
 [Note the uncapitalized "strength": we don't want the talents to have articles, but we also don't want them to be capitalized like proper nouns.]
 
-BOOK 7 - PLANS
+BOOK 7 - TRADING
+
+Trading is an action applying to two things. Understand "trade [something preferably held] for [something]" as trading.
+
+The trading action has a person called the trader. Rule for setting action variables for trading: now the trader is a random visible spirit animal.
+
+Check trading when the trader is not a spirit animal: instead say "There's no one here to trade with."
+
+Check trading when the noun is not a memory: instead say "'I'm only interested in trading memories,' [the trader] says."
+
+Check trading when the second noun is not a talent: instead say "'I only have talents to offer you,' says [the trader], '[list of visible not held talents].'"
+
+Check trading when the second noun is held: instead say "You've already got the talent of [second noun]."
+
+Check trading when the noun is not in emotional baggage: instead say "You've already traded away that memory."
+
+Check trading when trader needs more memories: move the noun to the trader; instead say "[The trader] touches your fingertips and pulls [the noun] through your nerve endings. 'Good,' he says, 'I'll take that, although it's not enough to complete the trade.'[paragraph break]Somewhere inside you, things are shifting, moving, growing."
+
+To decide whether (trader - a person) needs more memories:
+	let the projected total be the number of memories held by trader + 1;
+	if the projected total is less than the price of trader, decide yes;
+	decide no.
+
+Carry out trading:
+	move the second noun to the player;
+	repeat with item running through visible not held talents:
+		now item is off-stage.
+
+Report trading: say "[The trader] nods. 'Yes,' he says, 'a fair trade.' And something happens inside you as he says it. [The noun] shifts and wriggles and fades. It has shifted. And yeah, it kinda does feel like you could call it [the second noun]. Cool."
+	
+Instead of taking a not held talent when a spirit animal(called the potential trader) is visible: say "'You can't just have it,' [the potential trader] says. 'That's not how it works. You have to TRADE something for it.'".
+
+Instead of giving something to a spirit animal(called the potential trader): say "'No, not like that,' [the potential trader] says. 'You have to TRADE something for it.'".
+
+Instead of doing anything other than quizzing, implicit-quizzing or trading to a not held talent: say "It's just potential, or something."
+
+BOOK 8 - PLANS
 
 Part 1 - Plan
 
@@ -879,11 +943,74 @@ A spirit animal is a kind of person.
 
 The rabbit, the Coyote, and Sand-dancer are a male spirit animal.
 
+A spirit animal has a number called price. 
+The price of the rabbit is 1.
+The price of the Coyote is 2.
+The price of Sand-dancer is 3.
+
 Chapter 1 - The Coyote
+
+The initial appearance of Coyote is "The Coyote watches you intently." Understand "guy/man" as the Coyote.
 
 The description of the Coyote is "You can barely see him in the darkness, can't tell whether he's old or how old, what color his [dusty hoodie] is, and with those [plastic-framed sunglasses] you can't even tell whether he's smirking at you or just twitching his mouth. There's a weird smell coming off him, sweat and dirt and a little wet dog and something deeper, earth, desert, rain, all mixed with cigarette smoke."
 
 The Coyote holds a cigarette. He wears some plastic-framed sunglasses and a dusty hoodie.
+
+At the time when Coyote's conversation starts: try quizzing the Coyote about introduction; now Coyote holds down to business; try listing suggested topics.
+
+After quizzing Coyote about introduction: say "He wears a couple days of stubble, a [dusty hoodie], and, ridiculously in the darkness, a pair of cheap [plastic-framed sunglasses]. He lights a cigarette, then holds up a hand in annoyance to block the beam of your flashlight. 'Turn that thing off,' he says, and either you do it or it goes off by itself, because the next thing you know it's darker and he's closer and the only light comes from the red glow of the cigarette.[paragraph break]'That's better,' he says. He takes a drag on the cigarette, then pulls another from behind his ear and offers it to you. 'Smoke?'[add yes-no-suggestion other suggestion]".
+
+When Coyote's Offer begins: now flashlight is switched off; now Coyote is lit. Instead of switching on flashlight during Coyote's Offer: say "You think you'd rather keep him on your side."
+
+Instead of taking cigarette: move a random cigarette held by The Coyote to player; try saying yes. Instead of dropping cigarette: now a random cigarette held by player is off-stage; say "You drop it to the ground and stub it out with your foot." Instead of smoking when player holds cigarette during Coyote's Offer: say "You take a drag, thoughts and adrenaline whirring through your head." Instead of smoking during Coyote's Offer: try saying yes.
+
+Instead of saying yes when yes-no-suggestion is familiar and Coyote is visible: say "You pull out your pack and [if the number of cigarettes enclosed by player is 0]see that it's empty, but Coyote grins and hands you his last one[otherwise]he grins, like he knew you'd say yes[end if], and leans forward for you to light up off him. His sunglasses reflect back nothing but your own face weirdly lit by the glow from the cig, and for a moment it's like the blackness behind them is deep, deeper than the sky, deeper than the universe..."; if the number of cigarettes enclosed by the player > 0, now a random cigarette enclosed by the player is nowhere; say Coyote-talks.
+
+Instead of saying no when yes-no-suggestion is familiar and Coyote is visible: say "He shrugs, takes a puff on his, and exhales the smoke into the desert night. Wind whips it away and he stares towards the horizon, forehead wrinkling in something (annoyance, maybe contemplation) you can't read through the sunglasses."; say Coyote-talks.
+	
+To say Coyote-talks: clear all topics; say "[line break]'Gotta keep an eye on the horizon,' he says in a scratchy, slow voice[if we are saying yes] as you step back, inhaling the dry smoke[end if]. 'Always someone hunting Border Patrol, National Guard, INS, Minute-men. You want to help people get where they're going out here, you need more than [if player holds strength]strength[otherwise]courage[end if]. You need to learn how to hide.'[paragraph break]'I'm the Coyote,' he says. 'And we've been hiding from each other for a long time.'[make rabbit known][add rabbit ask suggestion][add Coyote ask suggestion][add advice ask suggestion][add business other suggestion]".
+	
+To say Coyote-business: say "[one of]smoke gusting from his lungs in clouds[or]scratching his stubble with the hand that holds the cigarette[or]itching underneath his jacket, slowly[or]the red tip of the cigarette glowing as he takes another drag[cycling]".
+	
+advice is held by the Coyote. After quizzing the Coyote about advice: say "He laughs, [Coyote-business]. 'Kid,' he says, 'you don't want my advice. I could tell you some stories and you'll smile and be sure they'll never happen to you. I could tell you some stories and you'll yawn and think you know them already. I could tell you some stories and you'll think they're wise and not realize you don't understand them until you make the same mistakes yourself an try to turn your failure into advice and fail at that, too. I could tell you some stories.' He looks off towards the horizon, [Coyote-business]. 'But it's not my stories that will help you'".
+
+After quizzing the Coyote about Coyote: say "'You know who I am,' he says, [Coyote-business]I'm the one who runs both sides of the fence. I'm the one who scouts ahead. I'm the one with songs in my blood and dirt under my nails and people owe me money in every trailer park from here to Yuma, or maybe I owe them money but anyway they don't want to see me. You know who I am, Knock.'".
+
+After quizzing the Coyote about the rabbit: say "He grins, not unkindly but not exactly kindly either. 'That cute little jackalope?' he says, [Coyote-business] 'He's got upsides, I guess. [if player holds strength]Strength[otherwise]Bravery[end if] has it's place. But if you're always in the spotlight, you'll never learn how to live in the shadows. And most of us spend a lot of time in the shadows.'".
+
+After quizzing the Coyote about business: say "He presses his hands together, still clutching the cigarette with thumb and index finger, and smoke rises past his hidden eyes as he slowly rubs his palms together. He mutters something rhythmic to himself and you realize it's a song, and you can't quite make out the lyrics but the melody is simple and makes you think of Johnny Cash and the end of the world. And then he stops, and pulls his hands apart, and in each he holds a talent.[paragraph break]'Here we have luck,' he says, bobbing the left, 'and scent. And look, I'll be straight with you. These are precious things and I can't afford whatever blue light special deal the bunny gave you. I need double his price. I need two memories to part with one of these. Oh, they're worth it, believe me. Both have saved my ass more times than you'd believe. Both could save yours. But it's up to you. Which'll it be?'[add luck ask suggestion][add scent ask suggestion][add trade-for-luck other suggestion][add trade-for-scent other suggestion][add take-inventory other suggestion]"; clear all topics; move luck to location; now luck is familiar; move scent to location; now scent is familiar.
+	.
+After quizzing the Coyote about luck: say "[if player holds strength]'Looks like you're already pretty tough,' he says appraisingly, looking you over. 'With a little luck, you ought to make it through the night and get on with the rest of your life.'[otherwise]'You found some cojones, kid,' he says, looking you over appraisingly, 'which'll be good for fixing your truck and getting back to your girl. I don't know if luck'll help you out much there, though.'".
+		
+After quizzing the Coyote about scent: say "[if player holds courage]'You found some cojones, kid,' he says, 'If you can just sniff out the right finds, you can probably get back to that little lady you're so fond of, if that's what you want.'[otherwise]'You're pretty tough,' he says, 'but I don't know that a good nose is going to help you make it through the night an get on with the rest of your life, if that's what you're trying to do.'".
+
+trade-for-luck is a misc-suggestion. It is held by Coyote. The printed name is "trade something for luck".
+
+trade-for-scent is a misc-suggestion. It is held by Coyote. The printed name is "trade something for scent".
+
+Report trading when Coyote is visible: clear all topics; now more coming is familiar; try quizzing Coyote about more coming; stop the action.
+
+After quizzing Coyote about more coming: say "He tucks the other talent back in his pocket, and without its faint glow it seems darker than ever, the pulsing red tip of his cigarette all you can see.[paragraph break]'The last of us is coming,' Coyote's voice says out of the black, 'las and most powerful, and most dangerous, and most afraid. Sand-dancer. Be careful of him, Knock. [if player holds strength]Stay strong[otherwise]Stay brave[end if]. [if player holds luck]Stay lucky[otherwise]Keep your nose to the wind[end if]. Remember the shadows.'[paragraph break]And it seems like he's growing, larger and larger, the red tip of his cigarette pulsing and glowing now high up in the sky, and you stumble back, shivering, and suddenly remember your flashlight in your hand and switch it on..."; reset the interlocutor; now flashlight is switched on; move player to Base of the Tower.
+
+Chapter 2 - The Rabbit
+
+At the time when Rabbit's conversation starts: try quizzing the rabbit about introduction; try listing suggested topics.
+
+introduction is a familiar thing. After quizzing the rabbit about introduction: say "The rabbit breathes and stares. You wonder if it's going to start talking like in some crap Disney movie and then Jesus Christ it does...[paragraph break]'So what'd you expect from an animal guardian?' it says, but like not with its lips, somewhere in your head instead. 'Were you thinking big, nasty, sharp, pointy teeth? Waitcoat and pocket watch? Nah. Tricks are for kids. What's up Knock?' It's whiskers twitch.[add rabbit ask suggestion][add go insane other suggestion]".
+
+go insane is a misc-suggestion. It is held by the rabbit. The printed name is "just, you know, go insane." Understand "go insane" as a mistake ("I know, right? Looks like it's too late though.") when location is Burrow.
+
+After quizzing the rabbit about the rabbit: say "[remove go insane other suggestion]'Oh come on, pal, you know me,' he says with this kind of stupid cheerful tone, and suddenly he looks more like Buster from Arthur, scrawny and poorly animated. 'I've been keeping an eye on you from the TV all these years. Your grandma asked me to, remember?' He grins, buck teeth protruding.[add grandma's wild stories ask suggestion][add how he's not real tell suggestion]".
+
+grandma's wild stories is held by the rabbit. After quizzing the rabbit about grandma's wild stories: say "'She was wrong about lots of stuff,' Buster says, scratching himself with a hind paw thoughtfully, 'but right about lots too. Oh, lots.'"; try quizzing the rabbit about rabbit's judgement.
+
+how he's not real is held by the rabbit. After informing the rabbit about how he's not real: say "'Oh, don't say that!' the rabbit says, animated eyes going round like saucers. 'Then it'd be just you here all alone, and wouldn't that be boring. It's much more interesting if I'm really around.'"; try quizzing the rabbit about rabbit's judgement.
+
+rabbit's judgement is held by rabbit. After quizzing the rabbit about rabbit's judgement: clear all topics; say "[one of][if player encloses at most 8 cigarettes]'Yo, you started smokin['] again?' Buster asks, sniffing distainfully, except he's not Buster anymore, more like Eminem. 'I thought you quit that shit dawg. It's cool, I won't tell your grandma, but it makes Thumper cry a little, you know what I'm sayin[']?'[otherwise if at least 1 tall window is open]'Yo, nice work breakin['] the window, Buster says, except he's not Buster anymore, more like Eminem. 'Way to stick it to the man. You hella bad, dawg. Maybe you can tag some shit when you get back to town too.'[otherwise]'Hey yo, you been hella good about keepin['] off those cancer sticks,' Buster says,  except he's not Buster anymore, more like Eminem. 'Don't think I ain[']t watchin['] ya.'[end if](Oh hey, Rabbit Smith,  you get it.)[or]The rabbit just scratches his ear with a hind paw, smirking.[stopping][add how he knows so much about everything ask suggestion]".
+
+how he knows so much about everything is held by the rabbit. After quizzing the rabbit about how he knows so much about everything: say "'Hey, back off man,' he says, 'it's my ****in['] job.' And there's actually like a bleep, too, and now thaht you think of it you only ever saw 8 Mile on TV.";try quizzing rabbit about down to business.
+
+down to business is held by the rabbit. The printed name of down to business is "ask to get down to business". After quizzing the rabbit about down to business: clear all topics; say "'Anyway, look, man, we both know. you're in trouble. I just gotta ask you one question.' And he changes again into like a giant silhouette, and it's the Playboy Bunny, ears and bow tie and all. 'Do you love her?'[add yes-no-suggestion other suggestion]";move the bunny's bow tie to location.
 
 Part 2 - Normal Animals
 
@@ -1526,6 +1653,12 @@ BOOK 5 - BURROW
 
 Burrow is a room.
 
+The description of Burrow is "Roots push through the earthen roof, casting weird shadows in the beam of your flashlight. It's round and small and underground in here and filled with hot sweat and animal stench. But mostly filled with something big and alive." Some roots are scenery in Burrow.
+
+The rabbit is in Burrow. The initial appearance of the rabbit is "[one of]It's huge, covered in sweaty fur stained with mud, and a huge eye stares out at you above long black whiskers. You can feel it's breath on your face and it's heartbeat thudding through the floor and you cringe back in terror against the wall. It's.. well.[paragraph break]It's a rabbit.[or]The rabbit stares at you, whiskers twitching, and it's freaking you out.[stopping]".
+
+The description of the rabbit is "The closer you look the weirder it gets, like it doesn't start or end in any one place or something all new-agey like that."
+
 VOLUME 6 - PLOT
 
 BOOK 1 - BEGINNING THE GAME
@@ -1616,7 +1749,52 @@ Part 3 - Rabbit's Offer
 
 Rabbit's Offer is a dramatic scene.
 
-Rabbit's offer begins when location is Burrow.
+Rabbit's Offer begins when location is Burrow.
+
+When Rabbit's Offer begins: Rabbit's conversation starts in 1 turn from now.
+
+Instead of saying yes when yes-no-suggestion is familiar and location is The Burrow: say "'Then you should probably get home and tell her', the bunny says. 'Patch up that truck and fly down that highway before she gets away.' It winks."; introduce rabbit's choices.
+
+Instead of saying no when yes-no-suggestion is familiar and location is The Burrow: say "'Then what are you still doing with her?' the bunny says. 'Get out while the getting's good. You think either of you will be happier if you put that off? There's fish in other oceans kid. You've got your whole lie ahead to swim.' It winks."; introduce rabbit's choices.
+
+To introduce rabbit's choices:
+	clear all topics;
+	now bow tie is off-stage;
+	move strength to location;
+	now strength is familiar;
+	move courage to location;
+	now courage is familiar;
+	move easter basket to location;
+	say "[line break]'Look,' he says, and now he's big and fluffy and smells like springtime. 'I can help you make your decisions. I'll trade you for one of these talents.' He holds out [an easter basket filled with plastic green grass]; in it are two glowing orbs.[paragraph break]'Strength,' he says, pointing to the first one, 'and courage. Pick whichever one you think will be the most useful, but you have to give me something back. Something real, something I can work with.'[add more about trading ask suggestion][add courage ask suggestion][add trade-for-strength other suggestion][add trade-for-courage other suggestion][add don't want to trade other suggestion]".
+
+don't know if I love her is a misc-suggestion. It is held by the rabbit. The printed name is "tell him that you don't know". Understand "that/you" as don't know if I love her. After informing the rabbit about don't know if I love her: say "'Yeah,' the bunny says, 'well this is the night to figure it out. Whether you decide ot go home to her tonight might have consequences on a night with a storm like the one that's coming. Just sayin['].' It winks"; introduce rabbit's choices.
+
+After quizzing the rabbit about strength: say "'Might be useful for surviving through the night,' he says, 'if that's what you're planning.'"
+
+After quizzing the rabbit about courage: say "'You're going to need it to get home to Ocean,' he says, 'if that's what you want.'".
+
+more about trading is a familiar thing held by the rabbit. After quizzing the rabbit about more about trading: say "'You won't lose what you trade entirely,' he says, twitching his whiskers, 'but it will change, transverse, be ressurected as something else. Reborn.'".
+
+trade-for-strength is a misc-suggestion. It is held by the rabbit. The printed name is "trade something for strength".
+
+trade-for-courage is a misc-suggestion. It is held by the rabbit. The printed name is "trade something for courage".
+	
+you don't want to trade is a misc-suggestion. It is held by the rabbit. The printed name is "tell him you don't want to trade". Understand "i" as you don't want to trade. [This is so we can also recognize i don't want ot trade".]	
+After informing the rabbit about you don't want to trade: say "[remove you don't want to trade other suggestion]'I came all this way to help you,' the rabbit says, 'I'm even missing the big parade,' and it wiggles its tail with a smell of sugar and frosting. 'I think we'd better make a trade.'"
+	
+take-inventory is a misc-suggestion. It is held by the rabbit. The printed name is "take inventory of what you've got".
+
+Check trading when the noun is not a memory and the trader is the rabbit: instead say "'No, no, I don't want that,' says the rabbit, twitching its nose indignantly. 'For a talent like this, you ought to put up something real. Something you care about.'[line break]".
+
+Report trading when Rabbit is visible: clear all topics; now more coming is familiar; try quizzing the rabbit about more coming; stop the action.
+
+more coming is a thing. After quizzing the rabbit about  more coming: say "'The others are coming,' he says, 'they'll be here soon,' and now he looks like Franke from Donnie Darko and his face is behind that freaky metal mask and his voice is distorted and makes your skin crawl.[paragraph break]'Watch out for them,' he says. 'We all want to help, but... the others are wilier than me. Look up.'[paragraph break]'Look up, Naki,' he says again."; now lookup-suggestion is familiar; reset the interlocutor.
+
+lookup-suggestion is an unfamiliar misc-suggestion with printed name "look up".
+
+Instead of examining up when lookup-suggestion is familiar: say "Stupidly, you tilt your head back and stare up at the dirt ceiling, and all you can see is blackness.[paragraph break]No wait... there are patterns slowly shifting, barely visible in the darkness, and miles away. Like clouds. And then a drop of water falls on your face, and then another, and you realize suddenly you're outside and it's starting to rain..."; move player to Backtracking; now lookup-suggestion is unfamiliar.
+
+Rabbit's Offer ends when location is not Burrow.
 	
 Part 4 - Temptation
 
@@ -1678,6 +1856,10 @@ Part 7 - Coyote's Offer
 Coyote's Offer is a scene. "And then you blink, and realize he's not a coyote after all. Just... just a guy." 
 
 Coyote's Offer begins when Fight ends.
+
+When Coyote's Offer begins: move the Coyote to Open Desert; Coyote's conversation starts in 1 turn from now.
+
+Coyote's Offer ends when location is not Open Desert.
 
 Part 8 - Jonesing
 
