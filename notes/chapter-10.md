@@ -11,6 +11,13 @@ This chapter introduces the syntax required to:
 * Create custom directions: `___ is a direction`
 * Handle plural objects and kinds
 * Handle indistinguishable objects
+* Create games in other languages
+* Use special characters in source text
+* Prevent use of the `UNDO` command:
+  * `Use undo prevention`
+* Increase the game object limit:
+  * `Use MAX_OBJECTS of 1000.`
+* Create and alter Activity Rulebooks
   
 ### Lessons Learned
 
@@ -30,10 +37,16 @@ No. 1:
 
 #### From the Friends of I7 Extensions Repository
 
-* [Basic Screen Effects]() by Emily Short
+* [Extension]() by Author
 
 #### From the Friends of I7 Archive Repository
 
-* [Name of Extension]() by Author (source not found)
+* [Italian](https://github.com/i7/archive/blob/master/Massimo%20Stella/Italian.i7x) by Massimo Stella
+* [Conditional Undo](https://github.com/i7/archive/blob/master/Jesse%20McGrew/Conditional%20Undo.i7x) by Jesse McGrew
+* [Undo Output Control](https://github.com/i7/archive/blob/master/Erik%20Temple/Undo%20Output%20Control.i7x) by Erik Temple
+
+#### Source Text Not Found
+ 
+* [Emphasized Words]() by Aaron Reed
 
 

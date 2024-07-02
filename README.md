@@ -3,7 +3,7 @@
 Aaron A. Reed's book [Creating Interactive Fiction with Inform
 7](http://inform7.textories.com) largely consists of exercises that guide an
 author through creating a personal copy of Sand Dancer.  Danya D. Smith
-authored this version in 2023 using the most recent version of [Inform
+authored this version in 2023 and 2024 using the most recent version of [Inform
 7](https://ganelson.github.io/inform-website/).  (10.1.2).
 
 It has been over ten years since the first edition of Reed’s book was published
@@ -12,6 +12,18 @@ of the language's syntax remains the same, there have been changes that render
 some source text obsolete. The evolution and deprecation of extensions popular
 at the time of publication create additional hurdles for readers working
 through the book while attempting to use the most current version of Inform.
+
+To view published errata for Reed's book, see [Updates and Errata](http://inform7.textories.com/errata/).
+
+To find up-to-date extensions that are compatible with the latest version of Inform:
+
+* Consult the Public Library in the application
+* Visit the Friends of I7 [Extensions](https://github.com/i7/extensions) repository
+
+To find extensions that are deprecated and may need updates to work with the
+latest version of Inform:
+
+* Visit the Friends of I7 [Archive](https://github.com/i7/archive) repository
 
 ## About this Repository
 
@@ -30,7 +42,7 @@ highlighted passages for future reference.
 * [Chapter 07 - Logic and Control](notes/chapter-07.md)
 * [Chapter 08 - Time, Scenes, and Pacing](notes/chapter-08.md)
 * [Chapter 09 - Creating Characters](notes/chapter-09.md)
-* Chapter 10 - Challenging Assumptions
+* [Chapter 10 - Challenging Assumptions](notes/chapter-10.md)
 * Chapter 11 - Finishing
 * Chapter 12 - Further Pursuits
 * Appendix A - A Thought Experiment
