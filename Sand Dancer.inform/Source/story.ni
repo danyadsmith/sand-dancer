@@ -626,11 +626,20 @@ There is a number variable called original cigarette count. Original cigarette c
 
 Part 14 - Packs of Cigarettes
 
+Chapter 1 - Pack of Smokes
+
 The pack of smokes is an opaque, portable container. 
 Understand "pack of smokes/pack/pack of cigarettes/smokes" as the pack of smokes. 
 The description of pack of smokes is "You're kind of trying to quit, but man, [if number of cigarettes enclosed by player is at least 1]you could really go for one right now. It looks like you've only got [number of cigarettes enclosed by player in words] left[otherwise]you could go for a cigarette right now[end if]."
 The carrying capacity of the pack of smokes is 20.
 Seven cigarettes are in the pack of smokes.
+
+Check inserting something into in the pack of smokes:
+	if the noun is not a cigarette, say "There is nothing magical about the pack of smokes. You can't put that in there.".
+	
+After printing the name of the pack of smokes while taking inventory: say " you should have given up months ago".
+
+Chapter 2 - Crumpled Box
 
 The crumpled box is an opaque, portable container.
 The crumpled box is undescribed.
@@ -638,11 +647,10 @@ Understand "crumpled box" or "crumpled carton" or "crumpled pack" or "discarded 
 the carrying capacity of the crumpled box is 20.
 Five cigarettes are in the crumpled box.
 
-Check inserting something into in the pack of smokes:
-	if the noun is not a cigarette, say "There is nothing magical about the pack of smokes. You can't put that in there.".
-
 Check inserting something into in the crumpled box:
 	if the noun is not a cigarette, say "There is nothing magical about the crumpled carton. You can't put that in there.".
+	
+After printing the name of the crumpled box while taking inventory: say " you pilfered from the trash (pathetic)".
 
 Part 15 - Wallet
 
@@ -2152,5 +2160,5 @@ Test wallet with "open wallet / examine license / examine receipt".
 
 Part 7 - Testing Chapter 10 (Challenging Assumptions)
 
-Test cigarettes with "examine truck / open glove box / take pack of smokes / smoke cigarette / test flashlight"
+Test cigarettes with "examine truck / open glove box / take pack of smokes / smoke cigarette / test flashlight / north / examine wastepaper basket / take crumpled box / smoke cigarette / smoke cigarette / inventory"
  
