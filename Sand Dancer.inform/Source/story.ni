@@ -236,12 +236,57 @@ Before showing something (called the item) to someone (called the viewer): try g
 
 [Exercise 9.1]
 [Understand the command "show" as something new. Understand "show [something] to [someone]" as giving it to.]
+
+Part 5 - Types of Rooms
+
+A room can be earthbound, nautical, aeronautical, or astronautical.
+
+The stern is a direction. The opposite of stern is bow. [Rearward]
+The bow is a direction. The opposite of bow is stern. [Foward]
+The port is a direction. The opposite of port is starboard. [Left]
+The starboard is a direction. The opposite of starboard is port. [Right]
+
+Understand "sn" as stern.
+Understand "b" as bow.
+Understand "p" as port.
+understand "sb" as starboard.
+
+Before going stern in an earthbound room: say "Nautical directions can only be used on board a ship."
+Before going bow in an earthbound room: say "Nautical directions can only be used on board a ship."
+Before going port in an earthbound room: say "Nautical directions can only be used on board a ship."
+Before going starboard in an earthbound room: say "Nautical directions can only be used on board a ship."
+
+The forward is a direction. The opposite of forward is aft. [Forward]
+The aft is a direction. The opposite of aft is forward. [Rearward]
+The left is a direction. The opposite of left is right. [Left]
+The right is a direction. The opposite of right is left. [Right]
+
+Understand "f" as forward.
+Understand "a" as aft.
+Understand "l" as left.
+Understand "r" as right.
+
+Before going forward in an earthbound room, say "Aeronautical directions can only be used on board a plane."
+Before going aft in an earthbound room, say "Aeronautical directions can only be used on board a plane."
+Before going left in an earthbound room, say "Aeronautical directions can only be used on board a plane."
+Before going right in an earthbound room, say "Aeronautical directions can only be used on board a plane."
+
+The prograde is a direction. The opposite of prograde is retrograde. [Forward relative to craft trajectory]
+The retrograde is a direction. The opposite of retrograde is prograde. [Backward relative to craft trajectory]
+
+Understand "pg" as prograde.
+Understand "rg" as retrograde.
+
+Before going prograde in an earthbound room, say "Astronautical directions can only be used on board a spacecraft."
+Before going retrograde in an earthbound room, say "Astronautical directions can only be used on board a spacecraft."
 		
 VOLUME 2 - MECHANICS
 
 BOOK 1 - LIGHTING CONDITIONS	
 
-A room is usually dark. Middle of Nowhere, Backtracking, Crumbling Concrete, Staging Area, and Base of the Tower are lighted.
+A room is usually dark. 
+Middle of Nowhere, Backtracking, Crumbling Concrete, Staging Area, and Base of the Tower are lighted.
+Transporter Room, Main Corridor, and Bridge are lighted.
 
 Part 1 - Lit Brightly
 
@@ -1113,7 +1158,7 @@ BOOK 1 - AROUND THE TOWER
 
 Part 1 - Middle of Nowhere
 
-Middle of Nowhere is a room.
+Middle of Nowhere is an earthbound room.
 
 Chapter 1 - Middle of Nowhere Description
 
@@ -1260,7 +1305,7 @@ A red warning light is scenery in Base of the Tower.
 
 Part 5 - Weed-strewn Rust
 
-A room called Weed-strewn Rust is east of Crumbling Concrete and southeast of Base of the Tower and west of Desert Expanse.
+An earthbound room called Weed-strewn Rust is east of Crumbling Concrete and southeast of Base of the Tower and west of Desert Expanse.
 
 Chapter 1 - Weed-strewn Rust Description
 
@@ -1527,61 +1572,61 @@ Some bare metal shelves, a utility ladder and a broken skylight are scenery in S
 
 Part 5 - Roof
 
-Roof is a room above Storage Room. 
+Roof is an earthbound room above Storage Room. 
 
 BOOK 3 - SURROUNDING DESERT
 
 Part 1 - Flowering Desert
 
-The Flowering Desert is a room. The Flowering Desert is east of Middle of Nowhere, southeast of Crumbling Concrete, south of Weed-strewn Rust, and northeast of Backtracking.
+The Flowering Desert is an earthbound room. The Flowering Desert is east of Middle of Nowhere, southeast of Crumbling Concrete, south of Weed-strewn Rust, and northeast of Backtracking.
 
 The description of Flowering Desert is "You can't see the vivid colors of the desert flowers in this blackness, but you can smell them. Most of them are strangely sweet but subtle, like a well-worn perfume."
 
 Part 2 - Desolate Desert
 
-Desolate Desert is a room.
+Desolate Desert is an earthbound room.
 
 The description of Desolate Desert is "The blackness adds a heaviness around your shoulders, causing them to sink as your thoughts turn more desolate and desperate."
 	
 Part 3 - Vacant Desert
 
-Vacant Desert is a room. Vacant Desert is west of Middle of Nowhere, southwest of Crumbling Concrete,  and northwest of Backtracking.
+Vacant Desert is an earthbound room. Vacant Desert is west of Middle of Nowhere, southwest of Crumbling Concrete,  and northwest of Backtracking.
 
 The description of Vacant Desert is "In daylight, the desert is a landscape of immense beauty. At night, without the grace of a full moon, everything is shrouded in darkness."
 	
 Part 4 - Cool Desert
 
-Cool Desert is a room. Cool Desert is  north of Vacant Desert, west of Crumbling Concrete, northwest of Middle of Nowhere, and southwest of Base of the Tower.
+Cool Desert is an earthbound room. Cool Desert is  north of Vacant Desert, west of Crumbling Concrete, northwest of Middle of Nowhere, and southwest of Base of the Tower.
 
 The description of Cool Desert is "You stumble through the cool desert night air, mindful of your direction so you can retrace your steps in the darkness."
 	
 Part 5 - Gloomy Desert
 
-Gloomy Desert is a room. Gloomy Desert is north of Cool Desert, west of Base of the Tower, northwest of Crumbling Concrete, and southwest of Against the Fence.
+Gloomy Desert is an earthbound room. Gloomy Desert is north of Cool Desert, west of Base of the Tower, northwest of Crumbling Concrete, and southwest of Against the Fence.
 
 The description of Gloomy Desert is "Alone in the dark, the night sky casts a fraught and gloomy mood over everything it touches. It matches your mood tonight. You have important matters to attend to and nothing is helped by being stuck out here."
 	
 Part 6 - Stark Desert
 
-Stark Desert is a room. Stark Desert is north of Gloomy Desert, west of Against the Fence, southwest of Desolate Desert, and northwest of Base of the Tower.
+Stark Desert is an earthbound room. Stark Desert is north of Gloomy Desert, west of Against the Fence, southwest of Desolate Desert, and northwest of Base of the Tower.
 
 The description of Stark Desert is "As you walk through the night air, with the sliver of a moon above you and the sounds of insects chirping and flapping about, you realize how good it is to have moments like this; moments away from work and other distractions when you can be alone with your thoughts."
 	
 Part 7 - Sandy Desert
 
-Sandy Desert is a room. Sandy Desert is east of Against the Fence, southeast of Desolate Desert, and northeast of Base of the Tower.
+Sandy Desert is an earthbound room. Sandy Desert is east of Against the Fence, southeast of Desolate Desert, and northeast of Base of the Tower.
 
 The description of Sandy Desert is "You are grateful for your sturdy work boots in this sandy desert."
 	
 Part 8 - Cactus-filled Desert
 
-Cactus-filled Desert is a room east of Base of the Tower, south of Sandy Desert, north of Weed-strewn Rust, and southeast of Against the Fence.
+Cactus-filled Desert is an earthbound room east of Base of the Tower, south of Sandy Desert, north of Weed-strewn Rust, and southeast of Against the Fence.
 
 The description of Cactus-filled Desert is "Despite the soundtrack of nature that surrounds you, there is a deep quiet in this place that brings about a meditative pause in a rather hectic and long day."
 	
 Part 9 - Desert Expanse
 
-Desert Expanse is a room east of Weed-strewn Rust, northeast of Flowering Desert, and southeast of Cactus-filled Desert.
+Desert Expanse is an earthbound room east of Weed-strewn Rust, northeast of Flowering Desert, and southeast of Cactus-filled Desert.
 
 The description of Desert Expanse is "You've walked far enough to realize there is nothing around for miles. There are no city lights in the distance, no sounds of vehicles traversing a nearby highway. You'd best turn back. There is no help for you here."
 
@@ -1651,7 +1696,7 @@ Instead of dropping something when location is The Open Desert: say "Sounds like
 
 BOOK 5 - BURROW
 
-Burrow is a room.
+Burrow is an earthbound room.
 
 The description of Burrow is "Roots push through the earthen roof, casting weird shadows in the beam of your flashlight. It's round and small and underground in here and filled with hot sweat and animal stench. But mostly filled with something big and alive." Some roots are scenery in Burrow.
 
@@ -1946,15 +1991,18 @@ Table of Fancy Status
 left	central	right
 " [current region] "	""    	"[top rose]" 
 " [current location] "	""    	"[middle rose]" 
-" "    	""    	"[bottom rose]" 
-""	""	""
-" [visited locations] " 	"[talent listing]"	"[cigarette count]"
+" "    	" "    	"[bottom rose]" 
+" "	" "	" "
+" [visited locations] " 	""	""
+" [talent listing]"	"" 	"[cigarette count]"
+
 
 Table of Normal Status
 left	central	right
 " [current region] "	""    	"" 
 " [current location] "	""    	""
-""    	""    	"" 
+" "    	" "    	" " 
+" "	" "	" "
 " [visited locations] " 	""	""
 " [talent listing]"	"" 	"[cigarette count]"
 
@@ -1998,6 +2046,7 @@ To say regional area:
 	if in darkness, rule succeeds;
 	if location is in Around the Tower, say "Around the Tower";
 	if location is in Office Interior, say "Office Interior";
+	if location is in Starship Voyager, say "U.S.S. Voyager";
 	
 To say talent listing:
 	say "[if player holds at least one talent]Talents: [the list of held talents][end if]".
@@ -2019,12 +2068,22 @@ southwest    	"SW "    	"   "
 down    	"D "    	"  "
 inside	" IN    "	"  "
 outside	" OUT   "	"  "
-
+stern	" SN" 	" "
+bow	"B"	" "
+port	"P"	" "
+starboard	"SB"	" "
+forward	"F"	""
+aft	"A"	""
+left	"L"	""
+right	"R"	"" 
+prograde	"PG"	""
+retrograde	"RG"	""
+	
 To say top rose:
-	say "[rose up][rose northwest][rose north][rose northeast][rose inside]  ".
+	say "[rose up][rose northwest][rose north][rose northeast][rose inside]  ".	
 
 To say middle rose:
-	say "   [rose west]  +  [rose east]  ";
+	say "   [rose west]  +  [rose east]  ".
 
 To say bottom rose:
 	say "[rose down][rose southwest][rose south][rose southeast][rose outside]  ".
@@ -2140,3 +2199,19 @@ Chapter 2 - Jacket
 Test jacket with  "north / remove boards / remove jacket / north / take can / south / throw can at window / remove boards / remove jacket / in ".
 
 Test wallet with "open wallet / examine license / examine receipt".
+
+Part 7 - Testing Chapter 10 ()
+
+Starship Voyager is a region.
+Transporter Room is an astronautical room up from Middle of Nowhere.
+
+Report going up from Middle of Nowhere: say "You tap your comm badge and say, 'One to beam up.' You feel a slight tingle as your body, your clothes, your very soul dissolves to reintegrate onboard the U.S.S. Voyager."
+
+Main Corridor is an astronautical room left of Transporter Room.
+Bridge is an astronautical room prograde of Main Corridor.
+Transporter Room is regionally in Starship Voyager.
+Main Cooridor is regionally in Starship Voyager.
+Bridge is regionally in Starship Voyager.
+
+Test space with "exit truck / up / left / forward".
+ 
