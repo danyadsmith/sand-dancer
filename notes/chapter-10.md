@@ -9,6 +9,8 @@ This chapter introduces the syntax required to:
   * `now the left hand status line is “Heading: [value]”`
   * `now the right hand status line is “Heading: [value]”`
 * Create custom directions: `___ is a direction`
+* Handle plural objects and kinds
+* Handle indistinguishable objects
   
 ### Lessons Learned
 

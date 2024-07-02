@@ -402,7 +402,7 @@ Instead of attacking the flashlight: say "You're really in a mood, aren't you? G
 
 Part 6 - Emergency Lights
 
-The emergency lights are a fixed in place device. 
+The emergency lights are a plural-named fixed in place device. 
 
 Understand "control/panel/control panel/emergency/lights" as the emergency lights.
 
