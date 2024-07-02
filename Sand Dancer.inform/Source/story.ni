@@ -622,6 +622,10 @@ A cigarette is a kind of thing.
 A cigarette is inedible.
 A cigarette is undescribed.
 
+There is a number variable called original cigarette count. Original cigarette count is 7.
+
+Part 14 - Packs of Cigarettes
+
 The pack of smokes is an opaque, portable container. 
 Understand "pack of smokes/pack/pack of cigarettes/smokes" as the pack of smokes. 
 The description of pack of smokes is "You're kind of trying to quit, but man, [if number of cigarettes enclosed by player is at least 1]you could really go for one right now. It looks like you've only got [number of cigarettes enclosed by player in words] left[otherwise]you could go for a cigarette right now[end if]."
@@ -640,9 +644,7 @@ Check inserting something into in the pack of smokes:
 Check inserting something into in the crumpled box:
 	if the noun is not a cigarette, say "There is nothing magical about the crumpled carton. You can't put that in there.".
 
-There is a number variable called original cigarette count. Original cigarette count is 7.
-
-Part 14 - Wallet
+Part 15 - Wallet
 
 A wallet is a portable container.
 
@@ -655,11 +657,11 @@ The description of the wallet is "It's old and weathered brown leather, soft to 
 The description of license is "When the highway patrol pulls you over they see your crazy uncombed hair, your brown name (Nakaibito Morales) and brown skin (actually more tan than brown), your D.O.B. (barely [age of the player in words] years ago, placing you squarely in [generation of the player]) and tribal affiliation card (expired) and assume you're either some native eco-terrorist, illegal drug-running border jumper, or delinquent high school dropout (all lies except for the last one which is kinda true). Unless it's Samuel Whitehouse who pulled you over since he usually wants to buy you a beer and talk about your dad, which is weird but better than getting a ticket."
 	Understand "driver's license" or "license" or "driver’s license" as the license.
 
-Part 15 - Denim Jacket
+Part 16 - Denim Jacket
 
 A denim jacket is wearable.
 
-Part 16 - Emergency Radio
+Part 17 - Emergency Radio
 
 An emergency radio is a device. It is in Break Room.
 
@@ -692,7 +694,7 @@ Carry out tuning: now the frequency tuned to of the noun is the frequency unders
 
 Report tuning: say "You tune [the radio] to [the frequency tuned to of the radio][if the frequency tuned to of the radio is the emergency frequency], and the static resolves into a cleaar signal[otherwise if the frequency tuned to of the radio was the emergency frequency], and the voice dissolves into static [end if]."
 
-Part 17 - Easter Basket
+Part 18 - Easter Basket
 
 There is a thing called an easter basket filled with plastic green grass. Instead of doing anything to easter basket: say "You know it is not worth the effort. You have other matters to attend to."
 
@@ -2150,5 +2152,5 @@ Test wallet with "open wallet / examine license / examine receipt".
 
 Part 7 - Testing Chapter 10 (Challenging Assumptions)
 
-
+Test cigarettes with "examine truck / open glove box / take pack of smokes / smoke cigarette / test flashlight"
  
