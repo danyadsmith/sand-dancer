@@ -240,45 +240,6 @@ Before showing something (called the item) to someone (called the viewer): try g
 Part 5 - Types of Rooms
 
 A room can be earthbound, nautical, aeronautical, or astronautical.
-
-The stern is a direction. The opposite of stern is bow. [Rearward]
-The bow is a direction. The opposite of bow is stern. [Foward]
-The port is a direction. The opposite of port is starboard. [Left]
-The starboard is a direction. The opposite of starboard is port. [Right]
-
-Understand "sn" as stern.
-Understand "b" as bow.
-Understand "p" as port.
-understand "sb" as starboard.
-
-Before going stern in an earthbound room: say "Nautical directions can only be used on board a ship."
-Before going bow in an earthbound room: say "Nautical directions can only be used on board a ship."
-Before going port in an earthbound room: say "Nautical directions can only be used on board a ship."
-Before going starboard in an earthbound room: say "Nautical directions can only be used on board a ship."
-
-The forward is a direction. The opposite of forward is aft. [Forward]
-The aft is a direction. The opposite of aft is forward. [Rearward]
-The left is a direction. The opposite of left is right. [Left]
-The right is a direction. The opposite of right is left. [Right]
-
-Understand "f" as forward.
-Understand "a" as aft.
-Understand "l" as left.
-Understand "r" as right.
-
-Before going forward in an earthbound room, say "Aeronautical directions can only be used on board a plane."
-Before going aft in an earthbound room, say "Aeronautical directions can only be used on board a plane."
-Before going left in an earthbound room, say "Aeronautical directions can only be used on board a plane."
-Before going right in an earthbound room, say "Aeronautical directions can only be used on board a plane."
-
-The prograde is a direction. The opposite of prograde is retrograde. [Forward relative to craft trajectory]
-The retrograde is a direction. The opposite of retrograde is prograde. [Backward relative to craft trajectory]
-
-Understand "pg" as prograde.
-Understand "rg" as retrograde.
-
-Before going prograde in an earthbound room, say "Astronautical directions can only be used on board a spacecraft."
-Before going retrograde in an earthbound room, say "Astronautical directions can only be used on board a spacecraft."
 		
 VOLUME 2 - MECHANICS
 
@@ -286,7 +247,6 @@ BOOK 1 - LIGHTING CONDITIONS
 
 A room is usually dark. 
 Middle of Nowhere, Backtracking, Crumbling Concrete, Staging Area, and Base of the Tower are lighted.
-Transporter Room, Main Corridor, and Bridge are lighted.
 
 Part 1 - Lit Brightly
 
@@ -2046,7 +2006,6 @@ To say regional area:
 	if in darkness, rule succeeds;
 	if location is in Around the Tower, say "Around the Tower";
 	if location is in Office Interior, say "Office Interior";
-	if location is in Starship Voyager, say "U.S.S. Voyager";
 	
 To say talent listing:
 	say "[if player holds at least one talent]Talents: [the list of held talents][end if]".
@@ -2068,20 +2027,9 @@ southwest    	"SW "    	"   "
 down    	"D "    	"  "
 inside	" IN    "	"  "
 outside	" OUT   "	"  "
-stern	" SN" 	" "
-bow	"B"	" "
-port	"P"	" "
-starboard	"SB"	" "
-forward	"F"	""
-aft	"A"	""
-left	"L"	""
-right	"R"	"" 
-prograde	"PG"	""
-retrograde	"RG"	""
 	
 To say top rose:
 	say "[rose up][rose northwest][rose north][rose northeast][rose inside]  ".	
-
 To say middle rose:
 	say "   [rose west]  +  [rose east]  ".
 
@@ -2200,18 +2148,7 @@ Test jacket with  "north / remove boards / remove jacket / north / take can / so
 
 Test wallet with "open wallet / examine license / examine receipt".
 
-Part 7 - Testing Chapter 10 ()
+Part 7 - Testing Chapter 10 (Challenging Assumptions)
 
-Starship Voyager is a region.
-Transporter Room is an astronautical room up from Middle of Nowhere.
 
-Report going up from Middle of Nowhere: say "You tap your comm badge and say, 'One to beam up.' You feel a slight tingle as your body, your clothes, your very soul dissolves to reintegrate onboard the U.S.S. Voyager."
-
-Main Corridor is an astronautical room left of Transporter Room.
-Bridge is an astronautical room prograde of Main Corridor.
-Transporter Room is regionally in Starship Voyager.
-Main Cooridor is regionally in Starship Voyager.
-Bridge is regionally in Starship Voyager.
-
-Test space with "exit truck / up / left / forward".
  
