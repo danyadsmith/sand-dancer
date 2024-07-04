@@ -240,6 +240,14 @@ Before showing something (called the item) to someone (called the viewer): try g
 Part 5 - Types of Rooms
 
 A room can be earthbound, nautical, aeronautical, or astronautical.
+
+Part 6 - Text Descriptions
+
+Chapter 1 - Flag Objects without Descriptions
+
+After printing the name of something (called item) while the description of item is "" and the item is not a backdrop and the item is not undescribed: say "***".
+
+Before printing the name of something (called item) while item is portable and item is not part of something: say "__".
 		
 VOLUME 2 - MECHANICS
 
@@ -337,7 +345,10 @@ A glove box is part of the pickup truck. Understand "glove compartment/box/compa
 	An owner's manual is inside the glove box.
 	A pack of gum is inside the glove box.
 
-Some headlights are part of the pickup truck. The headlights are a device. They are switched on.
+Some headlights are part of the pickup truck. 
+	The headlights are a device. 
+	They are switched on.
+	The headlights are undescribed.
 
 A gas tank is part of the pickup truck. The gas tank has a liquid level. The gas tank is mostly empty.
 
@@ -347,16 +358,15 @@ After switching on the headlights: now every within range of headlights room is 
 
 	After switching off the headlights: if emergency lights are switched off, now every within range of headlights room is dark; say "You click the headlights off[if emergency lights are switched off and flashlight is switched off]and blackness swallows you up.[otherwise if emergency lights are switched off and flashlight is switched on and flashlight is visible], leaving only the ghostly beam of your flashlight[end if]."
 
-A state map of New Mexico is inside the pickup truck. The state map is undescribed.
+A state map of New Mexico is inside the pickup truck. The state map is a backdrop.
 Understand "map/state map" as state map of New Mexico.
-The description of state map of New Mexico is "TODO: ADD DESCRIPTION"
 
 A pair of aviator sunglasses is inside the pickup truck. It is undescribed.
 The pair of aviator sunglasses is wearable.
 
-Some loose change is inside the pickup truck. It is undescribed.
+Some loose change is inside the pickup truck. It is a backdrop.
 
-empty cups are inside the pickup truck. They are undescribed.
+empty cups are inside the pickup truck. They are a backdrop.
 
 The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air. In the cabin, you can see [a list of things in truck]."
 
@@ -628,9 +638,11 @@ Part 14 - Packs of Cigarettes
 
 Chapter 1 - Pack of Smokes
 
-The pack of smokes is an opaque, portable container. 
+The pack of smokes is a closed, opaque, portable openable container.
 Understand "pack of smokes/pack/pack of cigarettes/smokes" as the pack of smokes. 
-The description of pack of smokes is "You're kind of trying to quit, but man, [if number of cigarettes enclosed by player is at least 1]you could really go for one right now. It looks like you've only got [number of cigarettes enclosed by player in words] left[otherwise]you could go for a cigarette right now[end if]."
+Instead of examining the pack of smokes:
+	now pack of smokes is open;
+	say  "You're kind of trying to quit, but man, [if number of cigarettes enclosed by player is at least 1]you could really go for one right now. It looks like you've only got [number of cigarettes enclosed by pack of smokes in words] left[otherwise]you could go for a cigarette right now[end if]."
 The carrying capacity of the pack of smokes is 20.
 Seven cigarettes are in the pack of smokes.
 
@@ -641,16 +653,17 @@ After printing the name of the pack of smokes while taking inventory: say " you 
 
 Chapter 2 - Crumpled Box
 
-The crumpled box is an opaque, portable container.
-The crumpled box is undescribed.
-Understand "crumpled box" or "crumpled carton" or "crumpled pack" or "discarded pack" or "carton" as the crumpled box.
+The crumpled box is a closed, opaque, portable openable container.
+Instead of examining the crumpled box:
+	now crumpled box is open;
+	say "An unusually high level of anxiety prompted you to fish it out from the trash, [if number of cigarettes enclosed by player is at least 1]and you hope it might bring some measure of calm. It looks like you've only got [number of cigarettes enclosed by crumpled box in words] left[otherwise]you could go for a cigarette right now[end if]."Understand "crumpled box" or "crumpled carton" or "crumpled pack" or "discarded pack" or "carton" as the crumpled box.
 the carrying capacity of the crumpled box is 20.
 Five cigarettes are in the crumpled box.
 
 Check inserting something into in the crumpled box:
 	if the noun is not a cigarette, say "There is nothing magical about the crumpled carton. You can't put that in there.".
 	
-After printing the name of the crumpled box while taking inventory: say " you pilfered from the trash (pathetic)".
+After printing the name of the crumpled box while taking inventory: say " you pilfered from the trash".
 
 Part 15 - Wallet
 
@@ -1108,11 +1121,11 @@ They are in Middle of Nowhere and Backtracking.
 
 Part 2 - Desert Sand
 
-The desert sand is a backdrop in Around the Tower.
+The desert sand is a backdrop in Around the Tower. 
 
 Part 3 - Sagebrush
 
-The sagebrush is a backdrop in Around the Tower.
+The sagebrush is a backdrop in Around the Tower. 
 
 Part 4 - Concrete Building
 
@@ -1137,6 +1150,7 @@ The description of Middle of Nowhere is "[if player is not in pickup truck]The [
 Chapter 2 - Middle of Nowhere Props
 
 A tall Saguaro is a flowering, perennial plant in Middle of Nowhere. 
+	The tall Saguaro is undescribed.
 [Saguaros are large, tree-like columnar cacti that develop branches (or arms) as they age. They grow slowly but can reach a height of between 40-60 feet. A fully-hydrated saguaro can weigh between 3200 and 4800 pounds and may have upwards of 25 arms. The saguaro is the tallest cactus in the United States.]
 
 Instead of touching the Saguaro: say "Yeah, you did that once as a kid, on accident. Not happening again." Instead of taking the Saguaro: try touching the Saguaro.
@@ -1162,7 +1176,7 @@ Chapter 2 - Crumbling Concrete Props
 
 Chapter 3 - Crumbling Concrete Scenery
 
-Some fragments of glass are scenery in Crumbling Concrete.
+Some fragments of glass are a backdrop in Crumbling Concrete.
 
 Part 2 - Roof
 
