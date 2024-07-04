@@ -715,7 +715,17 @@ Carry out tuning: now the frequency tuned to of the noun is the frequency unders
 
 Report tuning: say "You tune [the radio] to [the frequency tuned to of the radio][if the frequency tuned to of the radio is the emergency frequency], and the static resolves into a cleaar signal[otherwise if the frequency tuned to of the radio was the emergency frequency], and the voice dissolves into static [end if]."
 
-Part 18 - Easter Basket
+Part 18 - Piece of Jade
+
+A velvet drawstring bag is an opaque closed openable portable container. It is in the glove box. The description of the velvet drawstring bag is "The black velvet pouch is small enough to rest in the palm of your hand. [if the velvet drawstring bag is closed]The drawstrings are pulled tight[end if]." 
+
+A piece of jade is in the velvet drawstring bag.
+
+Before printing the name of piece of jade when player holds luck: say "lucky ".
+
+The description of a piece of jade is "The tumbled bright green stone is cool to the touch. It was your grandmother's, one of many stones she collected in a wooden bowl. Grandma said it will bring you luck, which hasn't really been working out."
+
+Part 19 - Easter Basket
 
 There is a thing called an easter basket filled with plastic green grass. Instead of doing anything to easter basket: say "You know it is not worth the effort. You have other matters to attend to."
 
@@ -745,7 +755,7 @@ Before smoking when crumpled box is not held and crumpled box is visible: say "(
 
 First report smoking: say "You pull out a cigarette and light the tip. The familiar smell of lighted tobacco calms you."
 
-Instead of smoking for at least two turns: say "There's something about the ritual that grounds you, but too many in a row make you jittery, dizzy, and nauseous. You slide the cigarette back into the pack and think about what to do next."
+Instead of smoking for at least two turns: say "There's something about the ritual that grounds you, but too many in a row make you jittery, dizzy, and nauseous. You slide the cigarette back into the pack and think about what to do next."; now the noun is in pack of smokes.
 
 Report smoking: 
 	let hint be best course of action;
@@ -1108,9 +1118,9 @@ Instead of going to a room regionally in Surrounding Desert when location is lit
 
 Instead of going to a room regionally in Surrounding Desert when flashlight is held and flashlight is switched on and emergency lights are switched off: say "You heft your flashlight, but decide not to head out into the desert just yet. [if headlights are switched on]Your truck lights are already starting to dim, and with[otherwise]With[end if]how dark it is, you're not sure you could find your way back."
 
-Part 6 - Vast Desert Region
+Part 6 - Endless Desert Region
 
-The Open Desert is in Vast Desert.
+Endless Desert is a region.
 
 BOOK 2 - BACKDROPS
 
@@ -1402,6 +1412,8 @@ Some cobwebs are in the hole.
 
 Instead of taking cobwebs when player holds courage: say "You impatiently brush the cobwebs away."; now cobwebs are off-stage.
 
+Before printing the name of cobwebs when player holds courage: say "hardly noticeable ".
+
 Section 5 - Duct Tape
 
 A roll of duct tape is in the hole. The roll of duct tape is undescribed.
@@ -1492,11 +1504,13 @@ The expired first aid kit is in Break Room.
 
 Section 1 - Scattered Newspapers
 
-Some scattered newspapers are in Break Room.
+Some scattered newspapers are a backdrop in Break Room.
 
 Section 2 - Wire Mesh Cage
 
 A wire mesh cage is in Break Room. 
+
+Before printing the name of cage when player holds strength: say "flimsy-looking "
 
 The cage is transparent and fixed in place.
 
@@ -1560,6 +1574,8 @@ Roof is an earthbound room above Storage Room.
 
 BOOK 3 - SURROUNDING DESERT
 
+Flowering Desert, Desolate Desert, Vacant Desert, Cool Desert, Gloomy Desert, Stark Desert, Sandy Desert, Cactus-filled Desert, and Desert Expanse are regionally in Surrounding Desert.
+
 Part 1 - Flowering Desert
 
 The Flowering Desert is an earthbound room. The Flowering Desert is east of Middle of Nowhere, southeast of Crumbling Concrete, south of Weed-strewn Rust, and northeast of Backtracking.
@@ -1614,11 +1630,11 @@ Desert Expanse is an earthbound room east of Weed-strewn Rust, northeast of Flow
 
 The description of Desert Expanse is "You've walked far enough to realize there is nothing around for miles. There are no city lights in the distance, no sounds of vehicles traversing a nearby highway. You'd best turn back. There is no help for you here."
 
-BOOK 4 - VAST DESERT
+BOOK 4 - ENDLESS DESERT
 
 Part 1 - Open Desert
 
-The Open Desert is regionally in Vast Desert. 
+Open Desert is regionally in Endless Desert.
 
 The Open Desert is  north of Stark Desert and northwest of Stark Desert and west of Stark Desert and southwest of Stark Desert.
 The Open Desert is northwest of Gloomy Desert and west of Gloomy Desert and southwest of Gloomy Desert.
@@ -2030,6 +2046,8 @@ To say regional area:
 	if in darkness, rule succeeds;
 	if location is in Around the Tower, say "Around the Tower";
 	if location is in Office Interior, say "Office Interior";
+	if location is in Surrounding Desert, say "Surrounding Desert";
+	if location is in Endless Desert, say "Endless Desert";
 	
 To say talent listing:
 	say "[if player holds at least one talent]Talents: [the list of held talents][end if]".
@@ -2174,5 +2192,5 @@ Test wallet with "open wallet / examine license / examine receipt".
 
 Part 7 - Testing Chapter 10 (Challenging Assumptions)
 
-Test cigarettes with "examine truck / open glove box / take pack of smokes / smoke cigarette / test flashlight / north / examine wastepaper basket / take crumpled box / smoke cigarette / smoke cigarette / inventory"
+Test cigarettes with "examine truck / open glove box / take pack of smokes / smoke cigarette / test flashlight / north / examine wastepaper basket / take crumpled box / smoke cigarette / smoke cigarette / inventory / examine pack of smokes / examine crumpled box"
  
