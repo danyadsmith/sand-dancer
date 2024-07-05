@@ -251,7 +251,11 @@ Before listing contents while taking inventory: group things required by a plan 
 	
 Before grouping together things required by a plan: say "useful stuff:".
 
-Part 7 - Testing
+Part 7 - Customize Default Library Messages 
+
+Instead of dropping something not held: say "You don't have the [noun], man.";
+
+Part 8 - Testing
 
 Chapter 1 - Flag Objects without Descriptions
 
