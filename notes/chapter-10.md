@@ -18,10 +18,15 @@ This chapter introduces the syntax required to:
 * Increase the game object limit:
   * `Use MAX_OBJECTS of 1000.`
 * Create and alter Activity Rulebooks
+* Supply a missing noun
+* Print banner text
+* Describe several objects simulaneously using `for writing a paragraph about`
   
+
 ### Lessons Learned
 
-* Add lessons
+* The `VERSION` command is an action out of world that displays bibliographic data and other information about the story format
+* Visible objects are `unmentioned` before the room description process and switch to `mentioned` when described
 
 ### Quotes from the Text
 
