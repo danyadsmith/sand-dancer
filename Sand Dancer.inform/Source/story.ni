@@ -416,7 +416,9 @@ The emergency lights are a plural-named fixed in place device.
 
 Understand "control/panel/control panel/emergency/lights" as the emergency lights.
 
-The initial appearance of the emergency lights is "Mounted to the wall is a control panel for the building's emergency lights. They are switched [if emergency lights are switched on]on[otherwise]off[end if]."
+For writing a paragraph about the emergency lights: say "Near some [rows of crumbling shelving] supporting hundreds of dusty [cans of food][if emergency lights are switched off] you spot a dark[otherwise] is the[end if] control panel for the building's emergency lights."; now cans of food are mentioned.
+
+[The initial appearance of the emergency lights is "Mounted to the wall is a control panel for the building's emergency lights. They are switched [if emergency lights are switched on]on[otherwise]off[end if]."]
 
 After switching on the emergency lights: 
 	now every room regionally in Tower Vicinity is lighted; 
