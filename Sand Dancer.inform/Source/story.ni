@@ -1194,19 +1194,17 @@ Part 2 - Roof
 
 Chapter 1 - Roof Description
 
-The description of Roof is "From the roof of the building, you can see [the huge electrical tower] rising in front of you. At your feet is the way back down."
-
 Chapter 2 - Roof Props
 
 Section 1 - Metal Rungs
 
-Some metal rungs are a fixed in place thing in Roof. "Some [metal rungs] once led to a control room higher up the tower, but the lowest ones are well above your head. You'd have to jump out into space and grab the bottom rung. You could also go back down."
+Some metal rungs are a fixed in place thing in Roof. For writing a paragraph about some metal rungs: say "From the roof of the building, you can see [the huge electrical tower] rising in front of you. Some [metal rungs] once led to a control room higher up the tower, but the lowest ones are well above your head. [A huge metal barrel] stands upright and intact nearby, [if metal barrel is placed correctly]directly underneath the bottom rungs[otherwise]large enough you could climb on top of it but man, it looks heavy. Pushing it might be a two man job[end if]."
 
 Understand "rungs/ladder" as metal rungs.
 
 Section 2 - Metal Barrel
 
-A huge metal barrel is a fixed in place supporter in roof. The description of the huge metal barrel is "[A huge metal barrel] stands upright and intact nearby, [if placed correctly]directly underneath the bottom rungs[otherwise]large enough you could climb on top of it[end if]."
+A huge metal barrel is a fixed in place supporter in roof. 
 
 The huge metal barrel can be placed correctly.
 
@@ -2178,7 +2176,7 @@ Chapter 2 - Gas Can
 
 Test emergency with "test flashlight / east / north / turn on emergency lights / turn off emergency lights".
 
-Test gasoline with "test flashlight / east / north / turn on emergency lights / ABSTRACT scent to me / ABSTRACT strength to me / up / move barrel / up / look under metal / take gas can"
+Test gasoline with "test cigarettes / test flashlight / east / north / turn on emergency lights / ABSTRACT scent to me / ABSTRACT strength to me / up / move barrel / up / look under metal / take gas can"
 
 Part 4 - Testing Chapter 7 (Logic and Control)
 
@@ -2194,5 +2192,5 @@ Test wallet with "open wallet / examine license / examine receipt".
 
 Part 7 - Testing Chapter 10 (Challenging Assumptions)
 
-Test cigarettes with "examine truck / open glove box / take pack of smokes / smoke cigarette / test flashlight / north / examine wastepaper basket / take crumpled box / smoke cigarette / smoke cigarette / inventory / examine pack of smokes / examine crumpled box"
+Test cigarettes with "examine truck / open glove box / take pack of smokes / smoke cigarette /  smoke cigarette / smoke cigarette / inventory / examine pack of smokes / examine crumpled box"
  
