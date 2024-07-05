@@ -243,11 +243,28 @@ A room can be earthbound, nautical, aeronautical, or astronautical.
 
 Part 6 - Text Descriptions
 
+Chapter 1 - Group Talents and Objects Required by a Plan in Inventory
+
+Before listing contents while taking inventory: group talents together.
+	
+Before listing contents while taking inventory: group things required by a plan together.
+	
+Before grouping together things required by a plan: say "useful stuff:".
+
+Part 7 - Testing
+
 Chapter 1 - Flag Objects without Descriptions
 
 After printing the name of something (called item) while the description of item is "" and the item is not a backdrop and the item is not undescribed: say "***".
 
+Chapter 2 - Flag Portable Objects
+
 Before printing the name of something (called item) while item is portable and item is not part of something: say "__".
+
+Chapter 3 - Flag Default Messages
+
+[NOTE: Introduced in Chapter 10 - This does not work]
+[When play begins: change library message debug to dbg_on.]
 		
 VOLUME 2 - MECHANICS
 
@@ -904,7 +921,7 @@ BOOK 8 - PLANS
 
 Part 1 - Plan
 
-A plan is a kind of thing.
+A plan is a kind of thing. A plan is fixed in place.
 
 Definition: a plan is in progress if a handled thing is required by it.
 
@@ -934,7 +951,6 @@ Chapter 2 - Fixing the Truck
 The roll of duct tape and the gas can are required by a plan called fixing the truck.
 
 The printed name of fixing the truck is "fixing your truck and getting out of here". 
-
 
 VOLUME 3 - CHARACTERS
 
@@ -1198,7 +1214,7 @@ Chapter 2 - Roof Props
 
 Section 1 - Metal Rungs
 
-Some metal rungs are a fixed in place thing in Roof. For writing a paragraph about some metal rungs: say "From the roof of the building, you can see [the huge electrical tower] rising in front of you. Some [metal rungs] once led to a control room higher up the tower, but the lowest ones are well above your head. [A huge metal barrel] stands upright and intact nearby, [if metal barrel is placed correctly]directly underneath the bottom rungs[otherwise]large enough you could climb on top of it but man, it looks heavy. Pushing it might be a two man job[end if]."
+Some metal rungs are a fixed in place thing in Roof. For writing a paragraph about some metal rungs: say "From the roof of the building, you can see [the huge electrical tower] rising in front of you. Some [metal rungs] once led to a control room higher up the tower, but the lowest ones are well above your head. [A huge metal barrel] stands upright and intact nearby, [if metal barrel is placed correctly]directly underneath the bottom rungs[otherwise]large enough you could climb on top of it but man, it looks like pushing it might be a two man job[end if]."
 
 Understand "rungs/ladder" as metal rungs.
 
@@ -2176,7 +2192,7 @@ Chapter 2 - Gas Can
 
 Test emergency with "test flashlight / east / north / turn on emergency lights / turn off emergency lights".
 
-Test gasoline with "test cigarettes / test flashlight / east / north / turn on emergency lights / ABSTRACT scent to me / ABSTRACT strength to me / up / move barrel / up / look under metal / take gas can"
+Test gasoline with "test cigarettes / test flashlight / test box / east / north / turn on emergency lights / ABSTRACT scent to me / ABSTRACT strength to me / up / move barrel / up / look under metal / take gas can / inventory"
 
 Part 4 - Testing Chapter 7 (Logic and Control)
 
@@ -2192,5 +2208,7 @@ Test wallet with "open wallet / examine license / examine receipt".
 
 Part 7 - Testing Chapter 10 (Challenging Assumptions)
 
-Test cigarettes with "examine truck / open glove box / take pack of smokes / smoke cigarette /  smoke cigarette / smoke cigarette / inventory / examine pack of smokes / examine crumpled box"
+Test cigarettes with "examine truck / open glove box / take pack of smokes / smoke cigarette /  smoke cigarette / smoke cigarette / inventory / examine pack of smokes"
+
+Test box with "test flashlight / north / examine wastepaper basket / take crumpled box / inventory / examine crumpled box / south"
  

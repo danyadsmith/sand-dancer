@@ -21,7 +21,6 @@ This chapter introduces the syntax required to:
 * Supply a missing noun
 * Print banner text
 * Describe several objects simulaneously using `for writing a paragraph about`
-  
 
 ### Lessons Learned
 
@@ -40,15 +39,24 @@ No. 1:
 
 ### Extensions Mentioned in this Chapter
 
+#### From the Inform 7 Built-in Extensions Library
+
+* [Complex Listing](https://github.com/ganelson/inform-public-library/tree/main/docs/v11/resources/Extensions/Emily%20Short) by Emily Short
+
 #### From the Friends of I7 Extensions Repository
 
-* [Extension]() by Author
+* [Room Description Control](https://github.com/i7/extensions/blob/10.1/Emily%20Short/Room%20Description%20Control-v14.i7x) by Emily Short
+* [Tailored Room Descriptions](https://github.com/i7/extensions/blob/10.1/Emily%20Short/Tailored%20Room%20Description-v13.i7x) by Emily Short
+* [Assorted Text Generation](https://github.com/i7/extensions/blob/10.1/Emily%20Short/Assorted%20Text%20Generation-v5.i7x) by Emily Short
+* [Introductions](https://github.com/i7/extensions/blob/10.1/Emily%20Short/Introductions-v2.i7x) by Emily Short
 
 #### From the Friends of I7 Archive Repository
 
 * [Italian](https://github.com/i7/archive/blob/master/Massimo%20Stella/Italian.i7x) by Massimo Stella
 * [Conditional Undo](https://github.com/i7/archive/blob/master/Jesse%20McGrew/Conditional%20Undo.i7x) by Jesse McGrew
 * [Undo Output Control](https://github.com/i7/archive/blob/master/Erik%20Temple/Undo%20Output%20Control.i7x) by Erik Temple
+* [Default Messages](https://github.com/i7/archive/blob/master/David%20Fisher/Default%20Messages.i7x) by David Fisher
+* [Custom Library Messages](https://github.com/i7/archive/blob/master/David%20Fisher/Custom%20Library%20Messages.i7x) by David Fisher
 
 #### Source Text Not Found
  
