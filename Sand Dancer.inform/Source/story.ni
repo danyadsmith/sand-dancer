@@ -21,31 +21,7 @@ Use American dialect.
 
 BOOK 3 - EXTENSIONS  BY AUTHOR (with state)
 
-Part 1 - Eric Eve
-
-Chapter 1 - Exit Lister (Not Installed)
-
-[Include Exit Lister by Eric Eve.]
-[Exit Lister includes most of the information provided by Exit Descriptions, but it places it in the Status Line instead of embedding it into the narrative text. The directions to visited rooms are displayed in lowercase, while the directions to unvisited rooms display in UPPERCASE.]
-
-Chapter 2 - Limited Implicit Actions (Not Installed)
-
-[Include Limited Implicit Actions by Eric Eve.]
-
-Part 2 - Matthew Fletcher
-
-Chapter 1 - Exit Descriptions (Not Installed)
-
-[Include Exit Descriptions by Matthew Fletcher.]
-
-Part 3 - Jon Ingold
-
-Chapter 1 - Disambiguation Control  (Incompatible)
-
-[TODO: Create or find an upgraded version. Disambiguation Control does not compile in Inform 10.1.2]
-[Include Disambiguation Control by Jon Ingold.]
-
-Part 4 - Aaron Reed
+Part 1 - Aaron Reed
 
 Chapter 1 - Conversation Framework For Sand-Dancer (Installed)
 
@@ -67,7 +43,14 @@ Chapter 5 - Smarter Parser (Not Installed)
 
 [Include Smarter Parser by Aaron Reed.]
 
-Part 5 - Emily Short
+Part 2 - David Fisher
+
+Chapter 1 - Default Messages (Deprecated)
+
+[Required to complete exercise 10.6, but now deprecated]
+[Include Default Messages by David Fisher.]
+
+Part 3 - Emily Short
 
 Chapter 1 - Approaches (Installed)
 
@@ -130,12 +113,43 @@ Chapter 9 - Tutorial Mode (Not Installed)
 [NOTE: The testing commands do not work when Tutorial Mode is enabled]
 [Include Tutorial Mode by Emily Short.]
 
+Part 4 - Eric Eve
+
+Chapter 1 - Exit Lister (Not Installed)
+
+[Include Exit Lister by Eric Eve.]
+[Exit Lister includes most of the information provided by Exit Descriptions, but it places it in the Status Line instead of embedding it into the narrative text. The directions to visited rooms are displayed in lowercase, while the directions to unvisited rooms display in UPPERCASE.]
+
+Chapter 2 - Limited Implicit Actions (Not Installed)
+
+[Include Limited Implicit Actions by Eric Eve.]
+
+Part 5 - Jon Ingold
+
+Chapter 1 - Disambiguation Control  (Incompatible)
+
+[TODO: Create or find an upgraded version. Disambiguation Control does not compile in Inform 10.1.2]
+[Include Disambiguation Control by Jon Ingold.]
+
 Part 6 - Mark Tilford
 
 Chapter 1 - Automap (Not Installed)
 
 [Include Automap by Mark Tilford.]
 [There isn't a version of Automap that works in version 10 of Inform using Glulx story format. The version I downloaded and tested requires the Z-code story format (configured in Settings).]
+
+Part 7 - Matthew Fletcher
+
+Chapter 1 - Exit Descriptions (Not Installed)
+
+[Include Exit Descriptions by Matthew Fletcher.]
+
+Part 8 - Nathanael Nerode
+
+Chapter 1 - Neutral Standard Responses (Not Installed)
+
+[Discovered on intfiction.org as an alternative to Default Messages by David Fisher. Needs testing]
+[Include Neutral Standard Responses by Nathanael Nerode.]
 
 BOOK 4 - SCORING
 
@@ -251,11 +265,15 @@ Before listing contents while taking inventory: group things required by a plan 
 	
 Before grouping together things required by a plan: say "useful stuff:".
 
-Part 7 - Customize Default Library Messages 
+Part 7 - Text Customizations
+
+To say bro: say "[one of]bro[or]man[or]dude[as decreasingly likely outcomes]".
+
+Part 8 - Customize Default Library Messages 
 
 Instead of dropping something not held: say "You don't have the [noun], man.";
 
-Part 8 - Testing
+Part 9 - Testing
 
 Chapter 1 - Flag Objects without Descriptions
 
@@ -823,24 +841,24 @@ The verb suggest (he suggests, they suggest, he suggested, it is suggested, he i
 
 Part 3 - The Protagonist's Memories
 
-last day of high school is a memory. It is suggested by the pack of smokes. The description is "You didn't expect it was going to be your last day. But that morning you got called into the principal's office and fat bald Mr. Cox and pissy old Mrs. Borke were there, and they looked kind of like strong animals stalking weak animals, and you knew something bad was up.
+last day of high school is a memory. It is triggered by the pack of smokes. The description is "You didn't expect it was going to be your last day. But that morning you got called into the principal's office and fat bald Mr. Cox and pissy old Mrs. Borke were there, and they looked kind of like strong animals stalking weak animals, and you knew something bad was up.
 
 Cox and I have here, Mr. Morales (a bad start since you hate that name) a test you took last week in Mrs. Burke's sophomore English class. Questions have been raised (he looked up at Mrs. Burke like he was trying to pass the buck) questions have been raised about the quality of your essay, and whether a student with your academic and behavioral record (he scratched his bloated nose meaningfully) could have plausibly produced such an essay, and you get the idea. They thought you cheated.
 
 No. They knew you cheated, deep in their smug empty hearts. They wanted you to admit it, say you were a cheater and a liar. But you weren't. You wrote that essay, every goddamn word because you really really liked the book for once and wanted to show Mrs. Burke that maybe if they gave people better books to read, kids would actually learn something. But they wanted a confession. They wanted a thieving example they could parade in front of the school. Someone of your academic and behavioral and economic and racial background and yeah, screw this shit. So you got up and left and never came back. Drop out, hell. You walked out, and you'd do it again."
 
-Your shit job is a memory. It is suggested by the receipt from Big Jimmy's. The description is "Juza straddles the 371 like a drunk at last call, smelly and without a plan for the future. Shiny cars whiz by at ninety once in a while, only stopping for gas or directions (hint: not this way). No one ever stops for the stalls selling food and jewelry and blankets and cheap t-shirts that cluster around the dirt turn-off onto the rez. At least, no one buying anything.
+Your shit job is a memory. It is triggered by the receipt from Big Jimmy's. The description is "Juza straddles the 371 like a drunk at last call, smelly and without a plan for the future. Shiny cars whiz by at ninety once in a while, only stopping for gas or directions (hint: not this way). No one ever stops for the stalls selling food and jewelry and blankets and cheap t-shirts that cluster around the dirt turn-off onto the rez. At least, no one buying anything.
 
 Big Jimmy shook his head when he heard you lived in Oro Oeste. Hell of a drive, kid, he said, popping up his Lumberjacks cap to scratch the straw pate underneath. You should get a place in Hoo-zuh. Little Jimmy'll set you up in that trailer across the road for almost nothin['].
 
 Almost nothing. Yeah, exactly what you'd turn into on the cold day in hell you moved to Juza. But on the other hand, that was before you met Ocean. Now the road back to Oro Oeste seems longer and longer every night."
 
-stories grandma told is a memory. It is suggested by the piece of jade. The description of stories grandma told is "There are dark spirits who roam the earth, little Knock. Grandma used to say that, holding you tight and stroking your hair. There are dark spirits who roam the earth, but you're not alone. Oh, no. I'm here. (She'd kiss your head and you'd squeeze her back.) But others are watching out for you too. You have three animal guardians, hmm? Spirits who are always watching over you. Oh, you can't always trust them to know what's best. Remember that, Knock. But when you need help, they'll protect you from the worst things in the world.
+stories grandma told is a memory. It is triggered by the piece of jade. The description of stories grandma told is "There are dark spirits who roam the earth, little Knock. Grandma used to say that, holding you tight and stroking your hair. There are dark spirits who roam the earth, but you're not alone. Oh, no. I'm here. (She'd kiss your head and you'd squeeze her back.) But others are watching out for you too. You have three animal guardians, hmm? Spirits who are always watching over you. Oh, you can't always trust them to know what's best. Remember that, Knock. But when you need help, they'll protect you from the worst things in the world.
 
 Mom would yell at Grandma a lot for filling your head with that new-age bullshit. Grandma grew up white and midwestern and Baptist but had started wearing things with feathers and playing the pan flute by the time you were born. She seemed to really like having a son-in-law who was Native American or American Indian or Indigenous Peoples or whatever she'd decided the term was that week, and she was pretty pissed when Mom left him. Anyway. Her stories were mostly BS, you guessed, but some of them stuck with you. When it's dark you still wonder if your spirit animals are out there somewhere, and what the hell is taking them so long to find you."
 Understand "grandma's stories/grandmas stories/grandma stories/stories" as stories grandma told.
 
-The rusted key suggests a memory called meeting Ocean. The description of meeting Ocean is "She was buying a Fresca at Big Jimmy's when your shift ended. You had spent the day in the storage room taking inventory but just clocked out, and you stood behind her waiting to get some cigs almost too tired to notice how cute she was but still noticing, yeah, still noticing.
+The rusted key triggers a memory called meeting Ocean. The description of meeting Ocean is "She was buying a Fresca at Big Jimmy's when your shift ended. You had spent the day in the storage room taking inventory but just clocked out, and you stood behind her waiting to get some cigs almost too tired to notice how cute she was but still noticing, yeah, still noticing.
 
 She turned around and caught you noticing and you were pretty embarrassed and covered in sweat and grease from the garage, so you stepped up and bought some Camels and were pretty surprised she was still there when you turned around.
 
