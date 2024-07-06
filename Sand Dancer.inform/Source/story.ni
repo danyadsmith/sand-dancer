@@ -244,6 +244,8 @@ To decide what text is the generation of (P - a person):
 		decide on "Generation Alpha";		
 	decide on "a generation yet unnamed".  [Fallback in case none of the conditions are met]
 	
+Definition: a thing is detrital: if it is the player, no; if it is a window, no; if it is a door, no; if it is scenery, no; if it is enclosed by the player, no; yes.
+	
 Part 4 - Character Interactions
 
 Before showing something (called the item) to someone (called the viewer): try giving the item to the viewer instead.
@@ -2102,7 +2104,7 @@ To decide whether time for arrival: if the number of complete plans is 1 or the 
 
 Going outside is leaving the building. Going southwest is leaving the building. Entering a window is leaving the building.
 
-tried to leave is a truth state variable. Instead of leaving the building when time for arrival: say "[one of]You start to go out, but then you stop. Something's not right. Something's... weird.[or]The building's sinking into the sand! You've got to get out some other way![stopping]"; now tried to leave is true.
+tried to leave is a truth state variable. Instead of leaving the building when time for arrival: say "[one of]You start to go out, but then you stop. Something's not right. Something's... weird.[or]The building's sinking into the sand ! You've got to get out some other way![stopping]"; now tried to leave is true.
 
 Sand-dancer's Arrival begins when time for arrival and tried to leave is true.
 
@@ -2114,7 +2116,7 @@ The Sand-dancer room description body text rule is listed instead of the room de
 
 This is the Sand-dancer room description body text rule: if Sand-dancer's Arrival is happening and location is in Office Interior, describe sand-filled room; otherwise abide by the room description body text rule.
 
-To describe sand-filled room: say "[one of]Waves of sand flow like water through the room, filling it higher and higher[or]Knee-deep sand fills the room, rising at a terrifying rate[or]A deluge of sand thunders in from every side, filling the room[stopping]."
+To describe sand-filled room: say "[one of]Waves of sand flow like water through the room, filling it higher and higher[or]Knee-deep sand fills the room, rising at a terrifying rate[or]A deluge of sand thunders in from every side, filling the room[stopping]; [the random visible detrital thing] [one of]surfaces for a moment then gets buried[or]tumbles in the flow[or]vanishes under the sand[at random]."
 
 The Sand-dancer emergency exit rule is listed after the Sand-dancer room description body text rule in the carry out looking rules. This is the Sand-dancer emergency exit rule: if Sand-dancer's Arrival is happening and location is in Office Interior, say "You glance wildly at the exists [list of viable directions]."
 
