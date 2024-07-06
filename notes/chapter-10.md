@@ -34,16 +34,6 @@ This chapter introduces the syntax required to:
 * The `VERSION` command is an action out of world that displays bibliographic data and other information about the story format
 * Visible objects are `unmentioned` before the room description process and switch to `mentioned` when described
 
-### Quotes from the Text
-
-No. 1: 
-
-> Memorable quote
-
-### Interactive Fictions Mentioned in this Chapter
-
-* [Name of Game](url) 
-
 ### Extensions Mentioned in this Chapter
 
 #### From the Inform 7 Built-in Extensions Library
