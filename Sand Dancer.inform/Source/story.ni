@@ -2126,6 +2126,20 @@ Listing exits is an action out of world applying to nothing. Understand "exits" 
 
 Carry out listing exits (this is the count exits rule): now count of exits is the number of viable directions.
 
+Instead of throwing something at a window during Sand-dancer's Arrival: say "It's no good; the window shatters and sand rushes in through it."; now noun is off-stage.
+
+Doing something to the radio is wasting time. Doing something to cans of food is wasting time. Examining something is wasting time. Before wasting time during Sand-dancer's Arrival: say "There's no time, man! The room's filling up with sand!" instead.
+
+After going up during Sand-dancer's Arrival: say "Barely able to reach the ladder through sand up to your waist, you haul yourself u the rungs and pull free just in time."; try looking.
+
+Before going up during Sand-dancer's Arrival: 
+	now description of Roof is "Except it's more like a foundation now, the building's sunken almost entirely into the sand.";
+	now metal rungs are off-stage;
+	now huge metal barrel is off-stage;
+	change the up exit of Roof to nothing.
+
+Sand-dancer's Arrival ends when location is Roof.
+
 BOOK 3 - ENDING THE GAME
 
 Part 1 - Choosing Freedom
