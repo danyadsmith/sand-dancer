@@ -17,10 +17,17 @@ This chapter introduces the syntax required to:
   * `Use undo prevention`
 * Increase the game object limit:
   * `Use MAX_OBJECTS of 1000.`
-* Create and alter Activity Rulebooks
 * Supply a missing noun
 * Print banner text
 * Describe several objects simulaneously using `for writing a paragraph about`
+* Manage rulebooks:
+  * Unlist a rule from a specific rulebook
+  * Unlist a rule from any rulebook
+  * List a rule first in a specific rulebook
+  * List a rule before another rule in a specific rulebook
+  * List a rule instead of another rule in a specific rulebook
+  * Create a custom rule that is not attached to a rulebook
+  * Follow a custom rule or abide by an existing rule
 
 ### Lessons Learned
 
@@ -57,6 +64,11 @@ No. 1:
 * [Undo Output Control](https://github.com/i7/archive/blob/master/Erik%20Temple/Undo%20Output%20Control.i7x) by Erik Temple
 * [Default Messages](https://github.com/i7/archive/blob/master/David%20Fisher/Default%20Messages.i7x) by David Fisher
 * [Custom Library Messages](https://github.com/i7/archive/blob/master/David%20Fisher/Custom%20Library%20Messages.i7x) by David Fisher
+* [Simple CYOA](https://github.com/i7/archive/blob/master/Mark%20Tilford/Simple%20CYOA.i7x) by Mark Tilford
+* [Adventure Book](https://github.com/i7/archive/blob/master/Edward%20Griffiths/Adventure%20Book.i7x) by Edward Griffiths
+* [Interactive Poetry](https://github.com/i7/archive/blob/master/Michael%20Bacon/Interactive%20Poetry.i7x) by Michael Bacon
+* [Interactive Poetic Interludes](https://github.com/i7/archive/blob/master/Kazuki%20Mishima/Interactive%20Poetic%20Interludes.i7x) by Kazuki Mishima
+* [Questions](https://github.com/i7/archive/blob/master/Michael%20Callaghan/Questions.i7x) by Michael Callaghan
 
 #### Source Text Not Found
  

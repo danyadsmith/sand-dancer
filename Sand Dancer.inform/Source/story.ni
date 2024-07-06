@@ -378,11 +378,11 @@ Part 4 - Pickup Truck
 The pickup truck is an enterable openable transparent closed fixed in place container. 
 Understand "pickup truck/truck/pickup" as the pickup truck.
 
-The dashboard is part of the pickup truck. Instead of examining the dashboard: say "The dashboard reveals a vehicle out of time, a radio with round dials and five silver buttons that hold the memory of your favorite radio stations. Only two of them work now. [run paragraph on]"; try examining the glove box.
+The dashboard is part of the pickup truck. Instead of examining the dashboard: say "The dashboard reveals a vehicle out of time—an analog spedometer and fuel guage, no CD player or Sirius, a radio with round dials that move a tiny red indicator between stations and the five silver buttons that remember your favorites. Only two of them work now. [run paragraph on]"; try examining the glove box.
 
 A glove box is part of the pickup truck. Understand "glove compartment/box/compartment" as glove box.
 	It is an openable closed opaque box.
-	The description of the glove box is "You haven't been able to lock the glove box since some jerk broke into your truck when you were parked at Jimmy's for some late night drinks with a few friends after work. Whoever it was did a number on the surface, leaving deep scratches on the handle and surface around the lock. It makes your truck look ten times older than it is, but when you found out how much the repair would cost, you decided to live with the scratches."
+	The description of the glove box is "You haven't been able to lock the glove box since some jerk broke into your truck when you were parked at Jimmy's for late night drinks with friends after work. Whoever it was did a number on it, leaving deep scratches on the handle and surface around the lock. It makes your truck look ten times older than it is, but when you found out how much the repair would cost, you decided to live with the scratches."
 	The pack of smokes is in the glove box.
 	An owner's manual is inside the glove box. The description is "It has been useful when you've needed to replace a fuse, or jump the battery, but the strong smell of gasoline is telling you it's not going to help you tonight.". Understand "owners/manual/owner's manual" as the owner's manual.
 	A pack of gum is inside the glove box. The description is "Worthless purchase, and it tastes like ass. Ocean bought this pack of nicotine gum as a not-so-subtle nudge to get you to stop smoking. You open the pack and realize it's empty. You chewed every damned piece but each one only made you want to smoke more. There was no magic in it, at least none for you."
@@ -716,18 +716,23 @@ A wallet is a portable container.
 
 The wallet is openable and closed. A license and a receipt from Big Jimmy's is in the wallet.
 	
-The description of the wallet is "It's old and weathered brown leather, soft to the touch. It was your father's, and it's the only physical evidence you have that he ever lived, save yourself. You carry it because it meant something to your mother, and for that reason, it means something to you."
-	Understand "receipt" as the receipt from Big Jimmy's.
+The description of the wallet is "It's old and weathered brown leather, soft to the touch. It was your father's, and it's the only physical evidence you have that he ever lived, save yourself. You carry it because it meant something to your mother, and for that reason, it means something to you. Maybe it means something more tonight, something different. [if photo is closed]But for now, you need to figure out a plan[otherwise]Do you want some random thing Ocean passes along to be the only thing that ties you to your own kid?[end if]".
 	Instead of opening the wallet: now the wallet is open; try examining the wallet.
 
 The description of license is "When the highway patrol pulls you over they see your crazy uncombed hair, your brown name (Nakaibito Morales) and brown skin (actually more tan than brown), your D.O.B. (barely [age of the player in words] years ago, placing you squarely in [generation of the player]) and tribal affiliation card (expired) and assume you're either some native eco-terrorist, illegal drug-running border jumper, or delinquent high school dropout (all lies except for the last one which is kinda true). Unless it's Samuel Whitehouse who pulled you over since he usually wants to buy you a beer and talk about your dad, which is weird but better than getting a ticket."
 	Understand "driver's license" or "license" or "driver’s license" as the license.
+	
+Part 16 - Receipt
 
-Part 16 - Denim Jacket
+Understand "receipt" as the receipt from Big Jimmy's.
+
+The description of receipt from Big Jimmy's is "It's dated the first of May, just three months ago. You felt like a big spender that night. You'd never bought another man a drink before, but something about the way he slumped over his beer gave the impression he needed some relief. He told you more than you bargained for. A layoff at the plant, two mouths to feed, twins on the way, a busted truck. That conversation chilled you on the idea of having kids of your own in this dead end town."
+
+Part 17 - Denim Jacket
 
 A denim jacket is wearable.
 
-Part 17 - Emergency Radio
+Part 18 - Emergency Radio
 
 An emergency radio is a device. It is in Break Room.
 
@@ -760,7 +765,17 @@ Carry out tuning: now the frequency tuned to of the noun is the frequency unders
 
 Report tuning: say "You tune [the radio] to [the frequency tuned to of the radio][if the frequency tuned to of the radio is the emergency frequency], and the static resolves into a cleaar signal[otherwise if the frequency tuned to of the radio was the emergency frequency], and the voice dissolves into static [end if]."
 
-Part 18 - Piece of Jade
+After switching on the radio: say "You flip a bulky switch on the radio's side. A hiss of static pours from the speakers, like tons of sand sliding over metal[if frequency tuned to of radio is emergency frequency], then quickly resolves into nothing more than a quiet hum[end if]."
+		
+Check switching on radio when emergency lights are switched off: instead say "You flip the switch back and forth, but there doesn't seem to be any power. Damn."
+
+Understand "unplug [radio]" as a mistake ("[one of]You rip the cord out of the wall[if radio is switched on], but the speaker keeps buzzing and the lighted dial keeps flickering[end if].[or]Dammit, you already did![stopping]").
+
+Instead of attacking radio: say "[one of]You slam a fist into the top of the radio, but it just keeps hissing with static.[or]You kick the radio off the table and it clatters to the ground, but still keeps laughing with hisses and whines.[or]You smash the radio over and over again, until it lies in pieces on the ground, but the static still continues, and more and more it sounds like sand[or]The radio is destroyed, but the sound still plays, echoing and reverberating through the room.[stopping]".
+	
+Before saying hello to the emergency radio: if emergency radio is switched off, try switching on the emergency radio instead; otherwise say "You try to raise someone, but there's no response[if frequency tuned to of radio is not emergency frequency], at least on this frequency[end if]." instead.
+
+Part 19 - Piece of Jade
 
 A velvet drawstring bag is an opaque closed openable portable container. It is in the glove box. The description of the velvet drawstring bag is "The black velvet pouch is small enough to rest in the palm of your hand. [if the velvet drawstring bag is closed]The drawstrings are pulled tight[end if]." 
 
@@ -770,9 +785,36 @@ Before printing the name of piece of jade when player holds luck: say "lucky ".
 
 The description of a piece of jade is "The tumbled bright green stone is cool to the touch. It was your grandmother's, one of many stones she collected in a wooden bowl. Grandma said it will bring you luck, which hasn't really been working out."
 
-Part 19 - Easter Basket
+Part 20 - Easter Basket
 
 There is a thing called an easter basket filled with plastic green grass. Instead of doing anything to easter basket: say "You know it is not worth the effort. You have other matters to attend to."
+
+Part 21 - Photo
+
+There is a photo in the wallet. Understand "photograph/pic/picture/folded/unfolded" as photo.
+	The photo is a container.
+	The photo can be open. 
+	The photo can be openable.
+	The photo is closed and openable.
+	The printed name of photo is "[if photo is closed]folded[end if] photo".
+	The description of photo is "[if photo is closed]You just can't deal with that right now. Maybe after you've had some time to think. But at this moment, you don't need the distraction. You need to focus.[otherwise]It's[an ultrasound of Ocean's baby]. Your baby, too.[end if]".
+
+an ultrasound of Ocean's baby is in the photo.
+	Instead of opening photo when the number of retrieved memories is less than 4: try examining the photo.
+	Understand the command "unfold" as "open".
+	Understand the command "fold" as "close".
+	Rule for reaching inside photo: say "That's impossible. It's just a photo."; rule fails.
+	Instead of inserting anything into photo: say "That's impossible. It's just a photo.".
+	
+Part 22 - Safety Poster
+
+A faded safety poster is in Foreman's Office.  
+	The initial appearance is "Tacked to the wall is a peeling safety poster. Much of the text has faded away, but you can make out the section that mentions an emergency radio frequency."
+	The description  is "According to the poster, the emergency radio frequency is [the emergency frequency]." 
+	Understand "poster/safety poster" as the faded safety poster. 
+	
+	Instead of taking the poster: say "You would probably damage it beyond repair if you tried to remove it from the wall."
+
 
 BOOK 4 - CUSTOM COMMANDS
 
@@ -845,11 +887,11 @@ The verb suggest (he suggests, they suggest, he suggested, it is suggested, he i
 
 Part 3 - The Protagonist's Memories
 
-last day of high school is a memory. It is triggered by the pack of smokes. The description is "You didn't expect it was going to be your last day. But that morning you got called into the principal's office and fat bald Mr. Cox and pissy old Mrs. Borke were there, and they looked kind of like strong animals stalking weak animals, and you knew something bad was up.
+last day of high school is a memory. It is triggered by the pack of smokes. The description is "You didn't expect it was going to be your last day. But that morning you got called into the principal's office and fat bald Mr. Cox and pissy old Mrs. Burke were there, and they looked kind of like strong animals stalking a weak animal, and you knew something bad was up.
 
 Cox and I have here, Mr. Morales (a bad start since you hate that name) a test you took last week in Mrs. Burke's sophomore English class. Questions have been raised (he looked up at Mrs. Burke like he was trying to pass the buck) questions have been raised about the quality of your essay, and whether a student with your academic and behavioral record (he scratched his bloated nose meaningfully) could have plausibly produced such an essay, and you get the idea. They thought you cheated.
 
-No. They knew you cheated, deep in their smug empty hearts. They wanted you to admit it, say you were a cheater and a liar. But you weren't. You wrote that essay, every goddamn word because you really really liked the book for once and wanted to show Mrs. Burke that maybe if they gave people better books to read, kids would actually learn something. But they wanted a confession. They wanted a thieving example they could parade in front of the school. Someone of your academic and behavioral and economic and racial background and yeah, screw this shit. So you got up and left and never came back. Drop out, hell. You walked out, and you'd do it again."
+No. They knew you cheated, deep in their smug empty hearts. They wanted you to admit it, say you were a cheater and a liar. But you weren't. You wrote that essay, every goddamn word because you really really liked the book for once and wanted to show Mrs. Burke that maybe if they gave people better books to read, kids would actually learn something. But they wanted a confession. They wanted a thieving example they could parade in front of the school. Someone of your academic and behavioral and economic and racial background and yeah, screw this shit. So you got up and left and never came back. Drop out, hell. You walked out, straight to the bar, and you'd do it again."
 
 Your shit job is a memory. It is triggered by the receipt from Big Jimmy's. The description is "Juza straddles the 371 like a drunk at last call, smelly and without a plan for the future. Shiny cars whiz by at ninety once in a while, only stopping for gas or directions (hint: not this way). No one ever stops for the stalls selling food and jewelry and blankets and cheap t-shirts that cluster around the dirt turn-off onto the rez. At least, no one buying anything.
 
@@ -875,6 +917,14 @@ The handled canned oranges trigger a memory called Ocean's favorite hobby. The d
 The bunny's bow tie triggers a memory called her graduation night. Understand "Ocean's/Oceans" as her graduation night. Instead of doing anything to the bunny's bow tie: say "It's just a few lines on a silhouette." The description of her graduation night is "She grinned when you picked her up, and you drove on in to Mike's. Mike's was packed that night and everyone looked great but she was the most beautiful girl in the room. You danced a lot, drank a bit, and left early to go lie down under the stars. 
 
 And that was it. The first time she said she loved you, and you said it back cause it felt wrong to leave her hanging. But you didn't really know. You felt a bit caught off guard. You knew that you liked her a lot. You knew you were attracted. But there was so much you didn't know about her, or about yourself."
+
+The ultrasound triggers a memory called when you heard the news. Understand "i/baby/ocean's" as when you heard the news. The description of when you heard the news is "Four weeks ago now, a little colder and a little darker. On a night just like this one except you didn't drive off the road and crash into a cactus, you got off work and drove the state highway in the dark and crossed over the edge of the res to Ocean's dad's trailer and she told you that night while you were dead exhausted, 'Knock, I'm pregnant.'
+
+And all you could think was how totally not real it seemed, after an hour of blackness and Arizona night streaming by, bugs exploding in tiny tragedies on your windshield, you just felt like driving on, like this thing was some podunk town you could breeze by, no services, ranche exit only. And you thought of every movie they ever made you watch in school and every lecture and every living example, the drunken uncles and snaggle-toothed coworkers who knocked up their high school sweethearts and started families on minimum wage and no prospects and never went anywhere and never did anything and what did you do? How could this happen? Why were you both so stupid?
+	
+Ocean's aunt is paying for her medical care but it's been made clear the money stops after the baby is born. Ocean wants to keep it, she's always wanted to be a mommy. But you never thought you'd be a daddy. And when she pushed this into your hand last night she told you, Knock, it's time to decide. If you aren't with me on this, if you don't want this as much as I do, then this can't go on anymore and you should go. Fly. Head west. Visit Nakaibito. She smiled just a little and traced your ear.
+
+But decide soon, Knock. Decide soon."
 
 Part 4 - Emotional Baggage
 
@@ -1094,7 +1144,7 @@ how he knows so much about everything is held by the rabbit. After quizzing the 
 
 down to business is held by the rabbit. The printed name of down to business is "ask to get down to business". After quizzing the rabbit about down to business: clear all topics; say "'Anyway, look, man, we both know. you're in trouble. I just gotta ask you one question.' And he changes again into like a giant silhouette, and it's the Playboy Bunny, ears and bow tie and all. 'Do you love her?'[add yes-no-suggestion other suggestion]";move the bunny's bow tie to location.
 
-Part 2 - Normal Animals
+Part 3 - Normal Animals
 
 A normal animal is a kind of animal.
 
@@ -1125,6 +1175,29 @@ Every turn when a random chance of 1 in 4 succeeds:
 	if heading is a direction and direction is regionally in Around the Tower, try the desert hare going heading.
 	
 After the hare going a direction (called way): if the hare is visible or the hare was visible, say "The hare hops [way]wards."
+
+Part 4 - The Radio Voice
+
+The voice is an undescribed man.
+
+Every turn when radio is switched on and frequency tuned to of radio is emergency frequency and voice has not been visible:
+	move voice to location;
+	try quizzing voice about introduction;
+	set pronouns from voice.
+
+After quizzing voice about introduction: say "Not like you think anything's going to happen but what the hell. You grab the dusty old mike, press the call button, and ask is there anybody[paragraph break]'...out there?' the speaker blurts and holy crap, someone's responding, and they say 'Roger roger, tower station nineteen, read you now loud and clear, what's your forty?' and the voice is staticky and whirled through with weird rhythmic distortions but you can hear it just fine and now what?[add what that means ask suggestion][add being lost tell suggestion][add never mind tell suggestion]".
+	
+never mind is held by voice. After informing voice about never mind: say "[remove what that means ask suggestion]You mutter something about how you think you've made a mistake and you have to go but the voice interrupts. 'Hang on, hang on, son, there shouldn't be anybody out there. Not at all, especially this late. Why don't you tell me what's going on?'".
+	
+what that means is held by voice. After quizzing voice about what that means: say "You try to make some joke about not having forty of anything, but the voice cuts you off. 'Ten forty means situation report, son. Obviously you're not on duty. Ain't nobody on duty out there anymore, specially not this time of night. What's going on?'[remove what that means ask suggestion]".
+	
+being lost is held by voice. Understand "Im/I'm" or "I am" as being lost. After informing voice about being lost: say "[remove what that means ask suggestion][remove never mind tell suggestion]Feeling a little stupid, you come clean and tell the voice that you drove off the road and aren't sure exactly where you are.[paragraph break]'Copy that,' the voice says briskly after a moment. 'You're at tower station nineteen, son, about thirty-two miles southwest of Oro Oeste, fifteen milles or so from the state highway.' And if the mike wasn't attached to the radio you'd drop it on the floor. Fifteen miles? How in the [italic type]hell[roman type] could you have driven fifteen miles off the road and not remember. How is that even possible?[paragraph break]'Hello?' the radio says. 'Hello, son, do you copy?'[add yes-suggestion other suggestion][add switch-off-radio other suggestion]".
+
+After informing voice about yes-suggestion: say "You jabber something positive and sit back, still shaken.[paragraph break][voice explains choices]".
+
+switch-off-radio is a misc-suggestion held by voice with printed name "switch off the radio". Instead of switching off radio when current interlocutor is voice: say "You reach for the switch, but hesistate, hand hovering above it as the static whirls and roars.[paragraph break][voice explains choices]".
+
+To say voice explains choices: say "'Look, son,' the voice says, 'I don't know how you got out there but that's not important right now. Weather report's coming in and there's a cold front the size of Texas coming your way. I don't want to scare you but if you don't find a way home, or figure out some food and shelter for the night, you could freeze to death. You hear me? Now on account of the cutbacks I don't have anyone to send out there until morning. But there may be parts around that old tower you can use to patch up your truck and make it back to the highway. Or, there may be emergency supplies that would get you through the.night. This storm's gonna blow out all communication, so you're gonna be on your own. It's up to you. Over and out.'[paragraph break]You rub your face tiredly. Ocean was expecting you tonight after your shift, like usual. If you don't make it she'll be worried sick. Then on the other hand maybe you should worry about yourself first for a change. You feel like you need a cigarette[if pack of smokes is not held by player] and then you remember you quit[end if]. Hell, can't anything be easy?"; reset the interlocutor; now voice is off-stage.
 
 VOLUME 4 - THE STORY WORLD
 
@@ -1504,14 +1577,15 @@ Foreman's Office is north of Staging Area.
 
 Chapter 1 - Foreman's Office Description
 
-The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights illuminate every corner of[end if] the tiny office where the boss likely held court. You can almost picture him guarding whatever the [rusted old key] he left behind kept away from the working stiffs. You can barely see the metal infrastructure of the tower's base through an obscured [dust-covered window]."
+The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights illuminate every corner of[end if] the tiny office where the boss likely held court. 
+You can barely see the metal infrastructure of the tower's base through an obscured [dust-covered window]."
 
 Chapter 2 - Foreman's Office Props
 
 A withered cactus is a dead, flowering, annual, dull plant in Foreman's Office.
 
-A half-collapsed desk is a supporter in Foreman's Office. It is undescribed.
-A rusted old key is on the half-collapsed desk. It is undescribed.
+A half-collapsed desk is a supporter in Foreman's Office. 
+A rusted old key is on the half-collapsed desk. 
 
 A wastepaper basket is an open unopenable fixed in place container. 
 It is in Foreman's Office.
@@ -1793,7 +1867,8 @@ Pursuit is a recurring scene.
 Pursuit begins when
 	player holds flashlight and
 	emergency lights are switched on and
-	The Rabbit's Offer has not happened and
+	The Rabbit's Offer has not happened and 
+	voice has been visible and
 	the shadow appears.
 
 To decide whether the shadow appears:
@@ -1982,6 +2057,72 @@ Addicted begins when Control Center is unvisited and the turn count is greater t
 		say "[one of]Damn[or]Tonight sucks[cycling].".
 
 Addicted ends when Control Center is visited.
+
+Part 10 - Sinister Voices
+	
+Sinister Voices is a scene.
+	
+Sinister Voices begins when Rabbit's Offer ends.
+	
+Every turn when going and location is Break Room during Sinister Voices: now radio is switched on; now frequency tuned to of radio is emergency frequency; say "[one of][sinster-radio-1][or][sinister-radio-2][or][sinister-radio-3][stopping]."
+	
+To say sinster-radio-1: say "With a sudden growl of static the radio sprints to life and it freqks the hell out of you. The voice weaves in and out of crazy whirling distortion and shifting blasts of static. 'Hey... receiving? ...never told... you'll never, never--' A wail like an 8-bit banshee screams through the signal. '...waste of time... who do you think?...' Static, static. 'Very soon, now Nak... akabito... very...'[paragraph break]Uh. You're pretty sure you never told that dude your name. Maybe you're just hearing things[if radio was switched off]?[paragraph break]Come to think of it, you're [italic type]damn[roman type] sure you left that radio off, too[end if].".
+
+To say sinister-radio-2: say "The radio growls to life again, the voice distorted now under a constant barrage of electronic rain. 'Where do you think you're going?' it says. 'What are you trying to do? You can't...' A snap, some syncopated crakles. '...can see you, Na... know where.. never going to work. Never g...' And the voice cuts off, replaced by a low, tooth-rattling hum.[paragraph break]The voice sounds different than before. I mean it still kind of sounds like the first guy you talked to but it sounds like someone else now too, somoene you know, you've known for a long time. Someone you're afraid of.".
+	
+plan-threatened, memory-threatened, talent-threatened, and final-threatened are truth state variables. 
+	
+To say sinister-radio-3:
+	if plan-threatened is false:
+		if the player holds something required by a plan (called the item):
+			now plan-threatened is true;
+			say "Static squeals from the radio. 'Hey,' the speaker shouts, 'hey, do you really think that [item]'s going to help you with anything? You can't even--' and static reclaims it again";
+	otherwise if memory-threatened is false:
+		if emotional baggage contains a memory (called the selected memory):
+			now memory-threatened is true;
+			say "The static on the radio resolves into overlapping whispers. 'It makes for a nice story,' the whispers say, 'but you're remembering [the selected memory] all wrong. That's not really how it happened, was it? Was it, Knock? Was--' and they repeat and overlap and echo and fade back into the mutters of the static";
+	otherwise if talent-threatened is false:
+		if the player holds a talent:
+			now talent-threatened is true;
+			say "'You think just because you've got [a random talent held by player] now you're going to be anything other than a pathetic failure?' the radio squawks angrily, before dissolving into harsh buzzing distortions";
+	otherwise if final-threatened is false:
+		if the player holds a talent:
+			now final-threatened is true;
+			say "'You're nothing,' the radio spews, 'your [list of talents held by player] [are] worthless. You'll never amount to anything, and neither will your kid, just another half-breed loser destined to die in poverty and live in debt, isn't that right, Knock?' and with a sudden shock you realize why the voice sounds so familiar. It's your voice. It's your own god-damned voice";
+		otherwise:
+			say "[one of]The radio fizzles and growls through weird twists of distortion[or]Angry distortion bubbles and pops from the radio speaker, twisting in weird rhythmic patterns[stopping]".
+
+Sinister Voices ends when Sand-dancer's arrival begins.
+
+Part 11 - Sand-dancer's Arrival
+	
+Sand-dancer's Arrival is a dramatic scene. "There's like this faint tickle through the soles of your feet, some vibration, almost like whispers in the sand. You want to bend down, put your ear to the ground, listen forever.[paragraph break]And then the ground drops out from under you, heaves, and drops again. Struts groan and boards snap and then with a whooshing bang sand starts pouring in through the window and every crack, jets of sand, and already it's shin-deep and holy christ you've got to get out of here."
+
+To decide whether time for arrival: if the number of complete plans is 1 or the number of in progress plans is 2, decide yes.
+
+Going outside is leaving the building. Going southwest is leaving the building. Entering a window is leaving the building.
+
+tried to leave is a truth state variable. Instead of leaving the building when time for arrival: say "[one of]You start to go out, but then you stop. Something's not right. Something's... weird.[or]The building's sinking into the sand! You've got to get out some other way![stopping]"; now tried to leave is true.
+
+Sand-dancer's Arrival begins when time for arrival and tried to leave is true.
+
+Every turn during Sand-dancer's Arrival: say "The building shakes and groans as sand continues to pour in, rising higher and higher."
+
+Report going during Sand-dancer's Arrival: say "You wade through the sand, which is rising all the time."
+
+The Sand-dancer room description body text rule is listed instead of the room description body text rule in the carry out looking rules.
+
+This is the Sand-dancer room description body text rule: if Sand-dancer's Arrival is happening and location is in Office Interior, describe sand-filled room; otherwise abide by the room description body text rule.
+
+To describe sand-filled room: say "[one of]Waves of sand flow like water through the room, filling it higher and higher[or]Knee-deep sand fills the room, rising at a terrifying rate[or]A deluge of sand thunders in from every side, filling the room[stopping]."
+
+The Sand-dancer emergency exit rule is listed after the Sand-dancer room description body text rule in the carry out looking rules. This is the Sand-dancer emergency exit rule: if Sand-dancer's Arrival is happening and location is in Office Interior, say "You glance wildly at the exists [list of viable directions]."
+
+Definition: a direction is viable if the room it from the location is a room. 
+
+Listing exits is an action out of world applying to nothing. Understand "exits" as listing exits. The listing exits action has a number called the count of exits.
+
+Carry out listing exits (this is the count exits rule): now count of exits is the number of viable directions.
 
 BOOK 3 - ENDING THE GAME
 
