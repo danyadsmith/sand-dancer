@@ -166,7 +166,7 @@ Part 1 - Hints
 
 To decide which text is best course of action:
 	if player is in truck:
-		decide on "you should get out of this truck";
+		decide on "you should get out of this truck. Even the modest glow of the smoldering tip of your cigarette is not a great idea this close to the overpowering smell of gasoline. It would only take a spark to make all the decisions for you, and though the thought tempts you for a fleeting moment, you aren't going out like that. You will figure it out";
 	otherwise if Crumbling Concrete is unvisited:
 		decide on "you could look around the area to find a phone or something";
 	otherwise if pane of cracked glass is closed:
@@ -378,11 +378,15 @@ Part 4 - Pickup Truck
 The pickup truck is an enterable openable transparent closed fixed in place container. 
 Understand "pickup truck/truck/pickup" as the pickup truck.
 
+The dashboard is part of the pickup truck. Instead of examining the dashboard: say "The dashboard reveals a vehicle out of time, a radio with round dials and five silver buttons that hold the memory of your favorite radio stations. Only two of them work now. [run paragraph on]"; try examining the glove box.
+
 A glove box is part of the pickup truck. Understand "glove compartment/box/compartment" as glove box.
 	It is an openable closed opaque box.
+	The description of the glove box is "You haven't been able to lock the glove box since some jerk broke into your truck when you were parked at Jimmy's for some late night drinks with a few friends after work. Whoever it was did a number on the surface, leaving deep scratches on the handle and surface around the lock. It makes your truck look ten times older than it is, but when you found out how much the repair would cost, you decided to live with the scratches."
 	The pack of smokes is in the glove box.
-	An owner's manual is inside the glove box.
-	A pack of gum is inside the glove box.
+	An owner's manual is inside the glove box. The description is "It has been useful when you've needed to replace a fuse, or jump the battery, but the strong smell of gasoline is telling you it's not going to help you tonight.". Understand "owners/manual/owner's manual" as the owner's manual.
+	A pack of gum is inside the glove box. The description is "Worthless purchase, and it tastes like ass. Ocean bought this pack of nicotine gum as a not-so-subtle nudge to get you to stop smoking. You open the pack and realize it's empty. You chewed every damned piece but each one only made you want to smoke more. There was no magic in it, at least none for you."
+	Does the player mean taking the pack of smokes when the player is inside the truck: it is very likely.
 
 Some headlights are part of the pickup truck. 
 	The headlights are a device. 
@@ -802,7 +806,7 @@ Report smoking:
 	let hint be best course of action;
 	if best course of action is not "", say "Maybe [hint]. [run paragraph on]"
 	
-Last report smoking: say "[paragraph break][if player is in pickup truck]You extinguish the butt in one of the empty cups[otherwise]You crush the butt under your heel[end if] and wonder where to go next."
+Last report smoking: say "[paragraph break][if player is in pickup truck]You extinguish the butt in one of the empty cups[otherwise]You crush the butt under your heel[end if] and consider where to go next."
 
 Report smoking: say "[if location is lit brightly]You've finally lit the place up[otherwise if location is lit by headlights]It's dark outside the beam of your headlights[otherwise if location is lit by flashlight]Everything outside the beam of your flashlight is shrouded in shadows[otherwise]It's darker than a starless sky on a moonless night[end if]. [run paragraph on]"
 
@@ -853,7 +857,7 @@ Big Jimmy shook his head when he heard you lived in Oro Oeste. Hell of a drive, 
 
 Almost nothing. Yeah, exactly what you'd turn into on the cold day in hell you moved to Juza. But on the other hand, that was before you met Ocean. Now the road back to Oro Oeste seems longer and longer every night."
 
-stories grandma told is a memory. It is triggered by the piece of jade. The description of stories grandma told is "There are dark spirits who roam the earth, little Knock. Grandma used to say that, holding you tight and stroking your hair. There are dark spirits who roam the earth, but you're not alone. Oh, no. I'm here. (She'd kiss your head and you'd squeeze her back.) But others are watching out for you too. You have three animal guardians, hmm? Spirits who are always watching over you. Oh, you can't always trust them to know what's best. Remember that, Knock. But when you need help, they'll protect you from the worst things in the world.
+stories grandma told is a plural-named memory. It is triggered by the piece of jade. The description of stories grandma told is "There are dark spirits who roam the earth, little Knock. Grandma used to say that, holding you tight and stroking your hair. There are dark spirits who roam the earth, but you're not alone. Oh, no. I'm here. (She'd kiss your head and you'd squeeze her back.) But others are watching out for you too. You have three animal guardians, hmm? Spirits who are always watching over you. Oh, you can't always trust them to know what's best. Remember that, Knock. But when you need help, they'll protect you from the worst things in the world.
 
 Mom would yell at Grandma a lot for filling your head with that new-age bullshit. Grandma grew up white and midwestern and Baptist but had started wearing things with feathers and playing the pan flute by the time you were born. She seemed to really like having a son-in-law who was Native American or American Indian or Indigenous Peoples or whatever she'd decided the term was that week, and she was pretty pissed when Mom left him. Anyway. Her stories were mostly BS, you guessed, but some of them stuck with you. When it's dark you still wonder if your spirit animals are out there somewhere, and what the hell is taking them so long to find you."
 Understand "grandma's stories/grandmas stories/grandma stories/stories" as stories grandma told.
@@ -893,7 +897,7 @@ Check brooding when noun is not a memory: instead say "Eh. You can't really refl
 Carry out brooding: say "[description of noun][line break]"; now the noun is retrieved. 
 [We defined earlier that memories can either be buried (not yet brooded about) or retrieved.]
 
-Instead of doing anything other than brooding to a memory: say "As if. All you can really do is brood about or think about it."
+Instead of doing anything other than brooding to a memory: say "As if. All you can really do is think about or brood about [regarding the noun][them]."
 
 Instead of thinking: say "Most of the thinking you do nowadays comes from either smoking or brooding." [Thinking is a standard action which we'll use to hint the player towards better options.]
 
@@ -1195,7 +1199,7 @@ Middle of Nowhere is an earthbound room.
 
 Chapter 1 - Middle of Nowhere Description
 
-The description of Middle of Nowhere is "[if player is not in pickup truck]The [tire tracks] from the south stop abruptly here, but where the hell are you?  [end if]You've smashed your truck against [a tall saguaro]. The [desert sand] and clumps of pale [sagebrush] are all [if lit by headlights]your dimming [headlights] reveal in the path toward [otherwise if lit by flashlight]your flashlight reveals, other than the rough outline of [end if][the concrete building] to the north.[first time][paragraph break]Ocean keeps telling you this late night commute will kill you; maybe you should start listening.[only][if player is in pickup truck][paragraph break]The only good news is that the crash didn't deploy the air bag. You look around the cabin for something useful. There isn't much. Your sunglasses are within reach. The cup holders are filled with [empty cups] and [loose change]. A [state map of New Mexico] rests on the dashboard.[end if]"
+The description of Middle of Nowhere is "[if player is not in pickup truck]The [tire tracks] from the south stop abruptly here, but where the hell are you?  [end if]You've smashed your truck against [a tall saguaro]. The [desert sand] and clumps of pale [sagebrush] are all [if lit by headlights]your dimming [headlights] reveal in the path toward [otherwise if lit by flashlight]your flashlight reveals, other than the rough outline of [end if][the concrete building] to the north.[first time][paragraph break]Ocean keeps telling you this late night commute will kill you; maybe you should start listening.[only][if player is in pickup truck][paragraph break]The only good news is that the crash didn't deploy the air bag. You look around the cabin for something useful. There isn't much. Your sunglasses are within reach. The cup holders are filled with [empty cups] and [loose change]. A [state map of New Mexico] rests on the [dashboard].[end if]"
 
 Chapter 2 - Middle of Nowhere Props
 
@@ -1317,7 +1321,7 @@ Base of the Tower is north of Crumbling Concrete.
 Chapter 1 - Base of the Tower Description
 
 [The description below demonstrates the BENT (Bracket Every Notable Thing) method. This will trigger an error if the source text does not instantiate something bracketed. It also helps catch errors that may occur when objects are renamed.]
-The description of Base of the Tower is "Behind the building a [steel girder] rises from the sand[if lit by flashlight]; you shine your flashlight up towards the tower looming above you[otherwise if lit by headlights], one of three legs of the [huge electrical tower] looming like some gargantuan spider into blackness above you[otherwise]; far above you a [red warning light] blinks on and off[end if]. A [tumbleweed] drifts lazily against the rusted metal among [scrawny weeds], and [trash]. The desert stretches in all directions except back south towards the[if lit brightly] glow of the[end if] building."
+The description of Base of the Tower is "Behind the building a [steel girder] rises from the sand[if lit by flashlight]; you shine your flashlight up towards the tower looming above you[otherwise if lit by headlights], one of three legs of the [huge electrical tower] looming like some gargantuan spider into blackness above you[otherwise]; far above you a [red warning light] blinks on and off[end if]. A [tumbleweed] drifts lazily against the rusted metal among [scrawny weeds], and [bits of trash]. The desert stretches in all directions except back south towards the[if lit brightly] glow of the[end if] building."
 
 Chapter 2 - Base of the Tower Props
 
@@ -1331,7 +1335,9 @@ A tumbleweed is a dead, bloomless, dull plant in Base of the Tower.
 The tumbleweed is scenery.
 Instead of taking the tumbleweed: say "Let it blow on. Wherever it's going is bound to be better than here."
 
-A steel girder, some scrawny weeds, and some bits of trash are scenery in Base of the Tower. The description of bits of trash is "Worthless and forgotten, drifting against snags like non-biodegradeable snow."
+A steel girder and some scrawny weeds are backdrops in Base of the Tower. 
+
+The bits of trash are fixed in place scenery. Understand "trash/bits" as bits of trash. The description of bits of trash is "Worthless and forgotten, drifting against snags like non-biodegradeable snow."
 
 A red warning light is scenery in Base of the Tower.
 
@@ -1480,7 +1486,7 @@ The scent is in Staging Area.
 
 Chapter 3 - Staging Area Scenery
 
-Some shafts of light, some holes in the roof, and some patches of mold are scenery in Staging Area. 
+Some shafts of light, some holes in the roof, and some patches of mold are backdrops in Staging Area. 
 
 Chapter 4 - Staging Area Implementation
 
@@ -1498,14 +1504,14 @@ Foreman's Office is north of Staging Area.
 
 Chapter 1 - Foreman's Office Description
 
-The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights illuminate every corner of[end if] the tiny office where the boss likely held court. You can barely see the metal infrastructure of the tower's base through an obscured [dust-covered window]."
+The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights illuminate every corner of[end if] the tiny office where the boss likely held court. You can almost picture him guarding whatever the [rusted old key] he left behind kept away from the working stiffs. You can barely see the metal infrastructure of the tower's base through an obscured [dust-covered window]."
 
 Chapter 2 - Foreman's Office Props
 
 A withered cactus is a dead, flowering, annual, dull plant in Foreman's Office.
 
-A half-collapsed desk is a supporter in Foreman's Office. 
-On the desk is a rusted key.
+A half-collapsed desk is a supporter in Foreman's Office. It is undescribed.
+A rusted old key is on the half-collapsed desk. It is undescribed.
 
 A wastepaper basket is an open unopenable fixed in place container. 
 It is in Foreman's Office.
@@ -1546,7 +1552,7 @@ Some scattered newspapers are a backdrop in Break Room.
 
 Section 2 - Wire Mesh Cage
 
-A wire mesh cage is in Break Room. 
+A wire mesh cage is in Break Room. The description is "Someone mounted a cage to the wall to hold emergency supplies. You can see a navy blue blanket through the bars. The [emergency blanket] is folded neatly and fills most of the cage, but behind it you can see a small [scrap of paper] peeking out behind the folds.".
 
 Before printing the name of cage when player holds strength: say "flimsy-looking "
 
@@ -1564,9 +1570,13 @@ Instead of attacking open cage: say "You've already ripped it open. No point in 
 
 Rule for reaching inside the wire mesh cage when we are touching: allow access.
 
+A scrap of paper is in wire mesh cage. Rule for reaching inside cage when we are touching: allow access. rule for reaching inside cage when we are taking: if noun is scrap of paper, allow access. After taking scrap when scrap was inside cage: say "Reaching carefully through the mesh, you snag an end of the scrap and pull it out."
+
+The description of scrap of paper is "Someone scrawled a note on a piece of paper torn from a yellow legal pad. At some point the paper got wet then later dried, leaving behind soft blue watery blotches with a dark ring around the edges. Whatever was written here is no longer legible.".
+
 Section 3 - Emergency Blanket
 	
-An emergency blanket is in the wire mesh cage.
+An emergency blanket is in the wire mesh cage. Understand "blanket" as the emergency blanket.
 
 Instead of touching emergency blanket when blanket is in cage: say "You can feel the warm wool through the mesh, but you can't get it out."
 
