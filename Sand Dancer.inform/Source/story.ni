@@ -884,7 +884,7 @@ Every turn while a charged thing (called the item) is visible:
 
 Part 4 - Brooding
 
-Brooding is an action applying to one thing.
+Brooding is an action applying to one visible thing.
 
 Understand "brood about/on/over [something]" or "brood [something]" or "think about [something]" or "reflect on [something]" as brooding.
 
@@ -1562,9 +1562,13 @@ Instead of attacking closed cage: say "You try to get a grip on the mesh to rip 
 
 Instead of attacking open cage: say "You've already ripped it open. No point in going mental."
 
+Rule for reaching inside the wire mesh cage when we are touching: allow access.
+
 Section 3 - Emergency Blanket
 	
 An emergency blanket is in the wire mesh cage.
+
+Instead of touching emergency blanket when blanket is in cage: say "You can feel the warm wool through the mesh, but you can't get it out."
 
 Section 4 - Tiny Frosted Window
 
