@@ -271,6 +271,8 @@ Part 7 - Text Customizations
 
 To say bro: say "[one of]bro[or]man[or]dude[as decreasingly likely outcomes]".
 
+Every turn when a dramatic scene is not happening and a random chance of 1 in 40 succeeds and player is not in truck and player is in Around the Tower: say "[one of]You shiver in the cold air[or]The cold night air swirls around you, and you pull your jacket closer[or]The air is frigid, and turns your breath into visible white clouds[at random]."
+
 Part 8 - Customize Default Library Messages 
 
 Instead of dropping something not held: say "You don't have the [noun], man.";
@@ -377,7 +379,7 @@ A box can be fixed in place. A box is usually portable.
 
 Part 4 - Pickup Truck
 
-The pickup truck is an enterable openable transparent closed fixed in place container. 
+The pickup truck is an enterable openable transparent closed fixed in place container. The description of the pickup truck is "[if player is in truck]You can't tell what the damage is from in here[otherwise][first time]Getting down on your knees in the cold sand, you look at the undercarriage. Sure enough, you ripped up the fuel line and all your gas has drained away, sucked dry by the thirsty desert sand.[only]You'll need to find some way to patch up the line, plus some fuel, to have any hope of fixing this mess[end if]."
 Understand "pickup truck/truck/pickup" as the pickup truck.
 
 The dashboard is part of the pickup truck. Instead of examining the dashboard: say "The dashboard reveals a vehicle out of time—an analog spedometer and fuel guage, no CD player or Sirius, a radio with round dials that move a tiny red indicator between stations and the five silver buttons that remember your favorites. Only two of them work now. [run paragraph on]"; try examining the glove box.
@@ -417,8 +419,6 @@ The initial appearance of the truck is "Your poor old [pickup truck] ticks and g
 
 After opening the pickup truck: say "The door creaks open with difficulty rusted joints straining."
 
-The description of the pickup truck is "You can see [a list of things in truck] in the cabin. [if glove box is closed]There are scratches around the lock for the glove compartment. [end if]"
-
 After closing the truck: say "You slam the door shut."
 
 Before entering truck when truck is closed: try opening the truck.
@@ -426,6 +426,10 @@ Before entering truck when truck is closed: try opening the truck.
 Before exiting when player is in truck and truck is closed: try opening the truck.
 
 Understand "drive" or "drive [pickup]" or "start [pickup]" or "turn on [pickup]" or "turn key" or "switch on [pickup]" or "shift" or "steer" or "brake" as a mistake ("Your truck's not going anywhere in this condition.").
+
+Understand "fix [pickup]" or "repair [pickup]" or "use [duct tape]" or "tape [pickup]" or "fill [pickup]" or "put [gas can] in [pickup]" or "use [gas can]" as a mistake ("You should wait until you've got everything you need before you start making repairs.").
+
+Instead of switching on or switching off pickup truck: say "The engine just turns over. It won't start."
 
 Part 5 - Flashlight
 
@@ -2139,6 +2143,110 @@ Before going up during Sand-dancer's Arrival:
 	change the up exit of Roof to nothing.
 
 Sand-dancer's Arrival ends when location is Roof.
+
+Part 12 - Sand-dancer's Offer
+
+Sand-dancer's Offer is a scene. "The sand swirls and churns like something liquid or alive around you, and hten you look and see it is alive, thousands and [thousands of lizards], little sand-dancers, are burrowing up from somewhere underground, scattering and writhing in some complex pattern in a huge circle all around you.[paragraph break]Then, suddenly, everything stops.[paragraph break]And with a mighty heave, a huge lizard crests through the sand right in front of you."
+
+Sand-dancer's Offer begins when Sand-dancer's Arrival ends.
+
+When Sand-dancer's Offer begins: now Sand-dancer is in location; now thousands of lizards are in location; now Sand-dancer holds advice; Sand-dancer's conversation starts in 1 turn from now.
+
+Sand-dancer can be named. The initial appearance of Sand-dancer is "[if Sand-dancer is named]Sand-dancer[otherwise]The huge lizard[end if] sites before you, breathing, watching." Understand "lizard/huge/sand/dancer/" as Sand-dancer.
+
+The description of Sand-dancer is "His scales are thick, sand still spilling off them in rivulets and trickels, and they recede and collide in fractal complexities that make you dizzy. He rumbles somewhere inside him, and the sand jitters at his feet."
+
+The thousands of lizards are an animal. "Thousands of lizards writhe in the desert around you." The description is "They crawl over and under and around each other, restless, always moving."
+
+To say SD-business: say "[one of]and his voice shakes the earth and creaks the rusty joints of the tower[or]flicking his tongue in and out, slowly[or]his great slitted eye blinking slowly[or]sighing as the lizards in the desert writhe and twitch[cycling]".
+
+At the time when Sand-dancer's conversation starts: try quizzing Sand-dancer about introduction; try listing suggested topics.
+
+After quizzing Sand-dancer about introduction: say "The lizard's tongue snakes through the air, tasting it, tasting you. One slitted eye studies you intently. It pauses, as if waiting for you to say something.[add hello other suggestion][add Sand-dancer ask suggestion][add thousands of lizards ask suggestion]". 
+
+hello is held by Sand-dancer. The printed name is "say hello". Instead of hailing when Sand-dancer is visible: say "[remove hello other suggestion]The ground rumbles as the lizards shift. 'Hello,' he says, [SD-business]. 'Yes, hello, little one. Strange thing to say when I've always been with you, watching, waiting. But hello, hello at last, Nakaibito.'".
+
+Sand-dancer is familiar. After quizzing Sand-dancer about Sand-dancer: say "[remove hello other suggestion]'I am Sand-dancer, 'he breathes, [SD-business]. 'I am the desert and the dust and the rain and the wind. I was there the first time you made love and the last time you asked for help, but I could not help you then. But tonight, Nakaibito, tonight I can.'"; try quizzing Sand-dancer about final choice; now Sand-dancer is named.
+
+After quizzing Sand-dancer about thousands of lizards: say "[remove hello other suggestion]The lizards hiss and writhe as you ask, almost as if they are laughing. 'Little sand-dancers,' he says, [SD-business], 'they come with me wherever I go. They will not bother you.'".
+
+Instead of quizzing Sand-dancer about final choice when the number of complete plans is 0: try quizzing Sand-dancer about path selection.
+	
+path selection is held by Sand-dancer.
+	
+After quizzing Sand-dancer about path selection:
+	clear all topics;
+	say "Much has happened tonight. You've made bargains and plans. [Sand-dancer talent summary]But these things together do not help you. No, you still haven't decided.' The lizard stares at you with one eye, [SD-business]. 'But now is the time.'[paragraph break]";
+	let unclaimed things be the list of things required by a plan;
+	remove the list of held things from unclaimed things;
+	repeat with item running through unclaimed things:
+		now item is in location;
+	say "The ground shudders and shifts beneath you, and out of the sand rise [unclaimed things with indefinite articles].[paragraph break]'The tape and the gas can will return you to her. The blanket and the can of food will look out for you. Take one.'[add grab something other suggestion]".
+	
+grab something is held by Sand-dancer. The printed name is "take [the list of visible not held things required by a plan]".
+
+To say Sand-dancer talent summary:
+	if player holds strength, say "You carry strength that ripped warmth from walls.";
+	if player holds courage, say "You hold courage that earned you a tool for mending.";
+	if player holds luck, say "You wear luck that filled your belly.";
+	if player holds scent, say "You have scent that brought you liquid motion.".
+
+After taking something required by a plan during Sand-dancer's offer:
+	now noun is handled;
+	let unclaimed things be the list of things required by a plan;
+	remove the list of held things from unclaimed things;
+	repeat with item running through unclaimed things:
+		now item is off-stage;
+	say "As you take it, [unclaimed things with definite articles] sinks into the sand.[remove grab something other suggestion]";
+	try quizzing Sand-dancer about final choice.
+
+The final choice is a familiar thing held by Sand-dancer.
+
+After quizzing Sand-dancer about final choice: clear all topics; say "'By your actions and through your talents, you have chosen [a random complete plan],' he says, [SD–business]. 'You have looked into yourself and found your story, the path you will walk tomorrow.'[paragraph break]He breathes. 'And are you happy with your story?' he asks, and there's some dangerous undertone to the question and you don't know why. The lizards tense, quivering, twisting their little heads back and forth as they await your answer.[add yes–no–suggestion other suggestion][add not sure if I'm happy other suggestion]".
+
+instead of saying yes when yes–no–suggestion is familiar and Sand-dancer is visible: say "'Yes?' Sand-dancer says, and the lizards quiver anxiously. 'You're happy with the path you've chosen? [SD–tease].'"; try quizzing Sand-dancer about doing the trade.
+
+Instead of saying no when yes-no-suggestion is familiar and Sand-dancer is visible: say "'No?' Sand-dancer says, and the lizards quiver anxiously. 'You're not happy with the path you've chosen? [SD-tease].'"; try quizzing Sand-dancer about doing the trade.
+		
+To say SD-tease: say "[if a random complete plan is staying the night]A life on the run, alone, work time in one town, jail time in another, no job, no skills, no family?' [otherwise]Trying to build a family out of nothing, spin futures from government handouts and dusty trailer parks, raising another generation of hopeless dropouts and messed up losers?' [end if]The lizard scurry angrily, snapping and clawing at each other, with a sound like static and sand.[paragraph break]'It doean't matter,' he says more calmly, as the lizards subside, 'since you have already made your choice. You cannot take back your actions. You cannot unmake the past.' The lizards around him tilt their heads, edge forward cautiously, and he seems to grin. 'But I can.'".
+
+not sure if I'm happy is a misc-suggestion. It is held by Sand-dancer. The printed name is "tell him you're not sure if you're happy". Understand "you/your/I/I'm" as not sure if I'm happy. After informing Sand-dancer about not sure if I'm happy: say "The lizard turns his head sharply, and all the lizards in the desert around writhe angrily, clawing and biting at each other and agitation. 'And when will you know, Knock?' the lizard asks. 'When will you own your life? When will you become a man? Tonight. It must be tonight.'"; try quizzing Sand-dancer about doing the trade.
+
+spirit, honor and freedom are familiar.
+
+There is a thing called doing the trade. It is held by Sand-dancer. The printed name is "ask him about getting on with the trading". Understand "getting/on/with/trading" as doing the trade.
+
+After quizzing Sand-dancer about doing the trade:
+	clear all topics; 
+	if staying the night is complete, now spirit is in location; 
+	otherwise now honor is in location; 
+	now freedom is in location; 
+	now spirit is familiar; 
+	now honor is familiar; 
+	now freedom is familiar; 
+	say "A glistening egg rises from the sand, glowing with neon potential, and the lizard glances down at it almost dismissively. This is [if staying the night is complete]spirit [otherwise]honor[end if],' he says, 'the last talent you need to achieve your goal, and you can have it for three memories. But perhaps I have something else to trade.'[paragraph break] The lizards whisper in anticipation as a second egg rises. This one's bigger, and almost blinding with its intensity, and the lizards drawback, chittering in awe and amazement. 'This,' Sand-dancer says, 'is freedom. Pure, undiluted, and absolute. Many crave it and few get a chance to take it. I offer it to you, Nakaibito, bdut it does not come cheaply.' He grins. 'For freedom, you must give up everything. You must give me all your memories. '[paragraph break]The lizards begin to circle restlessly as they wait for you to choose. Sand-dancer merely watches, and waits.[If spirit is visible][add spirit ask suggestion][add trade-for-spirit other suggestion][otherwise][add honor ask suggestion][add trade-for-honor other suggestion][end if][add freedom ask suggestion][add trade-for-freedom other suggestion]".
+
+After quizzing Sand-dancer about spirit: say "'You have the warmth and energy you need to stay through the night', he says, 'but to continue looking out for yourself, you will need spirit.'".
+
+After quizzing Sand-dancer about honor: say "'You have the tools to fix your truck', he says, 'but to return to Ocean and stand by her side you will need honor.'".
+
+After quizzing Sand-dancer about freedom: say "'With freedom, Nakaibito, you can make your troubles vanish. True freedom is the power of on making the past, of undoing what's done and regretted. This power is great and terrible, but I promise you.' He flicks his tongue. 'It will set you free.'".
+
+Trade–for–honor is a misc-suggestion. It is held by Sand-dancer. The printed name is "trade something for honor". 
+
+Trade–for–spirit is a misc-suggestion. It is held by Sand-dancer. The printed name is "trade something for spirit".
+
+ Trade-for-freedom is a misc-suggestion. It is held by Sand-dancer. The printed name is "trade something for freedom".
+
+To decide whether (trader - Sand-dancer) needs more memories:
+	if the number of memories in emotional baggage is at least 2 and the second noun is freedom, decide yes;
+	let the projected total be the number of memories held by trader + 1;
+	if the projected total is less than the price of trader, decide yes;
+	decide no.
+	
+Check trading when the trader needs more memories during Sand-dancer's offer: move the noun to the trader; say "He flicks out his tongue and pulls [the noun] from [one of]your head[or]your heart[or]your gut[or]your palm[or]your core[or]your soul[in random order], swallowing it whole. '[one of]A good start,' he says, 'but you must trade more'[or]Yes,' he says, 'but more'[or]More,' he says[or]Still more,' he says[or]I must have more,' he says[or]Give me more,'he says[stopping]." instead.
+
+Report trading when Sand-dancer is visible: clear all topics; say "'The choice is made,' he rumbles, 'your path is set. Goodbye, Nakaibito.' And he turns and dives into the sand. The lizards twist and writhe and follow him.[paragraph break]And then, just as quiet settles, another huge rumble shakes the ground, and, almost like an afterthought, the building breaches the sand and rises to the surface."; now Sand-dancer is off-stage; now thousands of lizards are off-stage; reset the interlocutor; move player to Crumbling Concrete; stop the action.
 
 BOOK 3 - ENDING THE GAME
 

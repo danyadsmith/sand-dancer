@@ -43,7 +43,7 @@ highlighted passages for future reference.
 * [Chapter 08 - Time, Scenes, and Pacing](notes/chapter-08.md)
 * [Chapter 09 - Creating Characters](notes/chapter-09.md)
 * [Chapter 10 - Challenging Assumptions](notes/chapter-10.md)
-* Chapter 11 - Finishing
+* [Chapter 11 - Finishing](notes/chapter-11.md)
 * Chapter 12 - Further Pursuits
 * Appendix A - A Thought Experiment
 * Appendix B - Interactive Fictions Cited
