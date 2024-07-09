@@ -72,9 +72,13 @@ When play begins:
 	
 	At the top of the screen, you'll see a customized status bar that displays your current region and location. It includes a compass rose that displays the directions you can move. In addition to the cardinal directions, you may see U for up, D down, IN for inside, or OUT for outside.
 	
-	Directions for locations you have not visited display in bold text, while directions to locations you have already visited display in normal text.
+	Directions for locations you have not visited display in bold text, while directions to locations you have already visited display in standard text. 
 	
-	The last line in the status bar displays the number of locations you have visited (out of the total number in the story world)."
+	A direction will not appear on the compass if you cannot go that way.
+	
+	During gameplay:[line break]     Enter COMPASS OFF to hide the compass[line break]     Enter COMPASS ON to show the compass
+	
+	The last line in the status bar displays the number of locations you have visited (out of the total number in the story world). Other information may appear here as you progress through the story."
 
 Chapter 4 - Modified Exit (Installed)
 
@@ -100,13 +104,13 @@ Chapter 6 - Property Checking (Installed)
 
 Include Property Checking by Emily Short.
 
-Chapter 7 - Room Description Control (Installed)
+Chapter 7 - Room Description Control (Not Installed)
 
-Include Room Description Control by Emily Short.
+[Include Room Description Control by Emily Short.]
 
-Chapter 8 - Tailored Room Description (Installed)
+Chapter 8 - Tailored Room Description (Not Installed)
 
-Include Tailored Room Description by Emily Short.
+[Include Tailored Room Description by Emily Short.]
 
 Chapter 9 - Tutorial Mode (Not Installed)
 
@@ -155,18 +159,13 @@ BOOK 4 - SCORING
 
 Use no scoring.
 
-BOOK 5 - RULES
-
-The can't go through undescribed doors rule is not listed in the check going rulebook.
-The can't take off what's not worn rule is not listed in the check going rulebook.
-
 BOOK 5 - CUSTOMIZATIONS
 
 Part 1 - Hints
 
 To decide which text is best course of action:
 	if player is in truck:
-		decide on "you should get out of this truck. Even the modest glow of the smoldering tip of your cigarette is not a great idea this close to the overpowering smell of gasoline. It would only take a spark to make all the decisions for you, and though the thought tempts you for a fleeting moment, you aren't going out like that. You will figure it out";
+		decide on "you should get out of this truck. Even inside the truck, the modest glow of the smoldering tip of your cigarette is not a great idea this close to the smell of spilled gasoline. The windows are down. An errant spark in the breeze would make the decision for you. The thought tempts you for a fleeting moment, but you aren't going out like that";
 	otherwise if Crumbling Concrete is unvisited:
 		decide on "you could look around the area to find a phone or something";
 	otherwise if pane of cracked glass is closed:
@@ -179,6 +178,8 @@ To decide which text is best course of action:
 		decide on "you should switch on those emergency lights in the storage room so you can get a better look at things";
 	otherwise if Open Desert is unvisited:
 		decide on "you should see if the open desert has anything to offer";
+	otherwise if Pursuit is happening:
+		decide on "you should keep your eye out for any help on the horizon";
 	otherwise if strength is held and emergency blanket is not handled:
 		decide on "you're strong enough now to bust open that mesh cage with the blanket inside";
 	otherwise if courage is held and duct tape is not handled:
@@ -246,6 +247,12 @@ To decide what text is the generation of (P - a person):
 	
 Definition: a thing is detrital: if it is the player, no; if it is a window, no; if it is a door, no; if it is scenery, no; if it is enclosed by the player, no; yes.
 	
+Definition: a direction is viable if the room it from the location is a room. 
+
+Listing exits is an action out of world applying to nothing. Understand "exits" as listing exits. The listing exits action has a number called the count of exits.
+
+Carry out listing exits (this is the count exits rule): now count of exits is the number of viable directions.
+	
 Part 4 - Character Interactions
 
 Before showing something (called the item) to someone (called the viewer): try giving the item to the viewer instead.
@@ -253,13 +260,16 @@ Before showing something (called the item) to someone (called the viewer): try g
 [Exercise 9.1]
 [Understand the command "show" as something new. Understand "show [something] to [someone]" as giving it to.]
 
-Part 5 - Types of Rooms
+Part 5 - Rules
+
+The can't go through undescribed doors rule is not listed in the check going rulebook.
+The can't take off what's not worn rule is not listed in the check going rulebook.
+
+Part 6 - Types of Rooms
 
 A room can be earthbound, nautical, aeronautical, or astronautical.
 
-Part 6 - Text Descriptions
-
-Chapter 1 - Group Talents and Objects Required by a Plan in Inventory
+Part 7 - Inventory
 
 Before listing contents while taking inventory: group talents together.
 	
@@ -267,25 +277,25 @@ Before listing contents while taking inventory: group things required by a plan 
 	
 Before grouping together things required by a plan: say "useful stuff:".
 
-Part 7 - Text Customizations
+Part 8 - Text Customizations
 
 To say bro: say "[one of]bro[or]man[or]dude[as decreasingly likely outcomes]".
 
 Every turn when a dramatic scene is not happening and a random chance of 1 in 40 succeeds and player is not in truck and player is in Around the Tower: say "[one of]You shiver in the cold air[or]The cold night air swirls around you, and you pull your jacket closer[or]The air is frigid, and turns your breath into visible white clouds[at random]."
 
-Part 8 - Customize Default Library Messages 
+Part 9 - Custom Default Library Messages 
 
 Instead of dropping something not held: say "You don't have the [noun], man.";
 
-Part 9 - Testing
+Part 10 - Testing
 
 Chapter 1 - Flag Objects without Descriptions
 
-After printing the name of something (called item) while the description of item is "" and the item is not a backdrop and the item is not undescribed: say "***".
+[After printing the name of something (called item) while the description of item is "" and the item is not a backdrop and the item is not undescribed: say "***".]
 
 Chapter 2 - Flag Portable Objects
 
-Before printing the name of something (called item) while item is portable and item is not part of something: say "__".
+[Before printing the name of something (called item) while item is portable and item is not part of something: say "__".]
 
 Chapter 3 - Flag Default Messages
 
@@ -382,14 +392,18 @@ Part 4 - Pickup Truck
 The pickup truck is an enterable openable transparent closed fixed in place container. The description of the pickup truck is "[if player is in truck]You can't tell what the damage is from in here[otherwise][first time]Getting down on your knees in the cold sand, you look at the undercarriage. Sure enough, you ripped up the fuel line and all your gas has drained away, sucked dry by the thirsty desert sand.[only]You'll need to find some way to patch up the line, plus some fuel, to have any hope of fixing this mess[end if]."
 Understand "pickup truck/truck/pickup" as the pickup truck.
 
-The dashboard is part of the pickup truck. Instead of examining the dashboard: say "The dashboard reveals a vehicle out of time—an analog spedometer and fuel guage, no CD player or Sirius, a radio with round dials that move a tiny red indicator between stations and the five silver buttons that remember your favorites. Only two of them work now. [run paragraph on]"; try examining the glove box.
+The cabin is part of the pickup truck. Instead of examining the cabin: say "You hoped the cool breeze and loud music blaring from the radio would keep you awake on the drive home. It didn't work. Sitting here in the cold desert night chills you to your bones. Between the cold and the crash, you're wide awake now. This seat is the least abused or aged part of the cabin, the rest of it... the [dashboard], the [glove box], everything about it forecasts to the world that you're strapped for cash."
+
+The dashboard is part of the pickup truck. Instead of examining the dashboard: say "The dashboard reveals a vehicle out of time—an analog spedometer and fuel gauge, a radio with round dials that move a tiny red indicator between the numbered stations, and five silver buttons that remember your favorites (only two of them work now). And then there's the glove box..."
 
 A glove box is part of the pickup truck. Understand "glove compartment/box/compartment" as glove box.
 	It is an openable closed opaque box.
-	The description of the glove box is "You haven't been able to lock the glove box since some jerk broke into your truck when you were parked at Jimmy's for late night drinks with friends after work. Whoever it was did a number on it, leaving deep scratches on the handle and surface around the lock. It makes your truck look ten times older than it is, but when you found out how much the repair would cost, you decided to live with the scratches."
+	The description of the glove box is "You haven't been able to lock it since some jerk broke into your truck when you were parked at Last Call for late night drinks with friends after work. Whoever it was did a number on it, leaving deep scratches on the handle and surface around the lock. It makes your truck look ten times older than it is, but when you found out how much the repair would cost, you decided to live with the scratches."
 	The pack of smokes is in the glove box.
 	An owner's manual is inside the glove box. The description is "It has been useful when you've needed to replace a fuse, or jump the battery, but the strong smell of gasoline is telling you it's not going to help you tonight.". Understand "owners/manual/owner's manual" as the owner's manual.
-	A pack of gum is inside the glove box. The description is "Worthless purchase, and it tastes like ass. Ocean bought this pack of nicotine gum as a not-so-subtle nudge to get you to stop smoking. You open the pack and realize it's empty. You chewed every damned piece but each one only made you want to smoke more. There was no magic in it, at least none for you."
+	A pack of gum is inside the glove box. The description is "Ocean bought the nicotine gum as a not-so-subtle nudge to get you to stop smoking. You chewed every damned piece but each one only made you want to smoke more. Worthless purchase, and it tasted like garbage. There was no magic in it, at least none for you."
+	Instead of taking the pack of gum: say "You pick it up and realize it's empty. Best to leave it where it is. [run paragraph on]"; try examining the pack of gum.
+
 	Does the player mean taking the pack of smokes when the player is inside the truck: it is very likely.
 
 Some headlights are part of the pickup truck. 
@@ -415,7 +429,7 @@ Some loose change is inside the pickup truck. It is a backdrop.
 
 empty cups are inside the pickup truck. They are a backdrop.
 
-The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air. In the cabin, you can see [a list of things in truck]."
+The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air. In the [cabin], you can see [a list of things in truck]."
 
 After opening the pickup truck: say "The door creaks open with difficulty rusted joints straining."
 
@@ -431,9 +445,13 @@ Understand "fix [pickup]" or "repair [pickup]" or "use [duct tape]" or "tape [pi
 
 Instead of switching on or switching off pickup truck: say "The engine just turns over. It won't start."
 
+Instead of attacking pickup truck: say "You smack [if player is in truck]the wheel[otherwise]the hood[end if] in exasperation. How did you get into this mess?"
+
 Part 5 - Flashlight
 
-The flashlight is a portable device. The description of flashlight is "[if flashlight is switched on]Emitting a good, strong beam: thank god it works[otherwise]Cold blue metal, and hefty[end if]."
+The flashlight is a portable device. 
+
+The description of flashlight is "[if flashlight is switched on]Emitting a good, strong beam: thank god it works[otherwise]Cold blue metal, and hefty[end if]."
 
 Understand "flashlight/flash/light" as the flashlight.
 
@@ -443,17 +461,11 @@ Carry out switching off flashlight: now flashlight is unlit.
 Before switching on flashlight in dim Staging Area: 
 	now metal desk is described; 
 	now hole in the floor is described; 
+	now cobwebs are described;
 	now every handled visible thing is described;
 	now Staging Area is bright.
 
-After switching on flashlight: say "Your surroundings are no longer shrouded in total darkness."; try looking.
-
 After taking flashlight in dim Staging Area: say "Yeah, its a flashlight all right. You grip it in sudden relief, turning it in your hands till your finger finds the switch."
-
-Before switching on the flashlight when Staging Area is dim: 
-	now metal desk is described; 
-	now hole in the floor is described; 
-	now Staging Area is bright.
 
 After switching on the flashlight: say "The flashlight casts your surroundings into stark relief."; try looking.
 
@@ -537,10 +549,10 @@ Check wearing a pair of shoes when player is wearing a pair of shoes: say "You'l
 
 Instead of taking off a pair of socks when player is wearing a pair of shoes: say "You'll have to take off your shoes first."
 
-The pair of warm wooly socks are a pair of socks.
+[The pair of warm wooly socks are a pair of socks.
 The pair of tennis shoes is a pair of shoes. It is men's and small.
 The pair of ankle boots is a pair of shoes. It is women's and small.
-The pair of work boots is a pair of shoes. It is men's and large.
+The pair of work boots is a pair of shoes. It is men's and large.]
 
 Part 9 - Aspirin
 
@@ -694,6 +706,9 @@ Understand "pack of smokes/pack/pack of cigarettes/smokes" as the pack of smokes
 Instead of examining the pack of smokes:
 	now pack of smokes is open;
 	say  "You're kind of trying to quit, but man, [if number of cigarettes enclosed by player is at least 1]you could really go for one right now. It looks like you've only got [number of cigarettes enclosed by pack of smokes in words] left[otherwise]you could go for a cigarette right now[end if]."
+After taking the pack of smokes:
+	now pack of smokes is open;
+	say "You put it in your jacket pocket."
 The carrying capacity of the pack of smokes is 20.
 Seven cigarettes are in the pack of smokes.
 
@@ -707,9 +722,10 @@ Chapter 2 - Crumpled Box
 The crumpled box is a closed, opaque, portable openable container.
 Instead of examining the crumpled box:
 	now crumpled box is open;
-	say "An unusually high level of anxiety prompted you to fish it out from the trash, [if number of cigarettes enclosed by player is at least 1]and you hope it might bring some measure of calm. It looks like you've only got [number of cigarettes enclosed by crumpled box in words] left[otherwise]you could go for a cigarette right now[end if]."Understand "crumpled box" or "crumpled carton" or "crumpled pack" or "discarded pack" or "carton" as the crumpled box.
+	say "[if number of cigarettes enclosed by player is at least 1]You check the box and find [number of cigarettes enclosed by crumpled box in words] cigarettes[otherwise]You could go for a cigarette right now[end if]."Understand "crumpled box" or "crumpled carton" or "crumpled pack" or "discarded pack" or "carton" as the crumpled box.
 the carrying capacity of the crumpled box is 20.
 Five cigarettes are in the crumpled box.
+After taking the crumpled box: now crumpled box is open.
 
 Check inserting something into in the crumpled box:
 	if the noun is not a cigarette, say "There is nothing magical about the crumpled carton. You can't put that in there.".
@@ -720,9 +736,9 @@ Part 15 - Wallet
 
 A wallet is a portable container.
 
-The wallet is openable and closed. A license and a receipt from Big Jimmy's is in the wallet.
+The wallet is openable and closed. A license and a receipt from Last Call is in the wallet.
 	
-The description of the wallet is "It's old and weathered brown leather, soft to the touch. It was your father's, and it's the only physical evidence you have that he ever lived, save yourself. You carry it because it meant something to your mother, and for that reason, it means something to you. Maybe it means something more tonight, something different. [if photo is closed]But for now, you need to figure out a plan[otherwise]Do you want some random thing Ocean passes along to be the only thing that ties you to your own kid?[end if]".
+The description of the wallet is "It's old and weathered brown leather, soft to the touch. It was your father's, and it's the only physical evidence you have that he ever lived, save yourself. You carry it because it meant something to your mother, and for that reason, it means something to you. Maybe it means something more tonight, something different. [if photo is closed]But for now, you need to figure out a plan.[otherwise]Do you want some random thing Ocean passes along to be the only thing that ties you to your own kid?[end if]".
 	Instead of opening the wallet: now the wallet is open; try examining the wallet.
 
 The description of license is "When the highway patrol pulls you over they see your crazy uncombed hair, your brown name (Nakaibito Morales) and brown skin (actually more tan than brown), your D.O.B. (barely [age of the player in words] years ago, placing you squarely in [generation of the player]) and tribal affiliation card (expired) and assume you're either some native eco-terrorist, illegal drug-running border jumper, or delinquent high school dropout (all lies except for the last one which is kinda true). Unless it's Samuel Whitehouse who pulled you over since he usually wants to buy you a beer and talk about your dad, which is weird but better than getting a ticket."
@@ -730,9 +746,9 @@ The description of license is "When the highway patrol pulls you over they see y
 	
 Part 16 - Receipt
 
-Understand "receipt" as the receipt from Big Jimmy's.
+Understand "receipt" as the receipt from Last Call.
 
-The description of receipt from Big Jimmy's is "It's dated the first of May, just three months ago. You felt like a big spender that night. You'd never bought another man a drink before, but something about the way he slumped over his beer gave the impression he needed some relief. He told you more than you bargained for. A layoff at the plant, two mouths to feed, twins on the way, a busted truck. That conversation chilled you on the idea of having kids of your own in this dead end town."
+The description of receipt from Last Call is "It's dated the first of May, just three months ago. You felt like a big spender that night. You'd never bought another man a drink before, but something about the way he slumped over his beer gave the impression he needed some relief. He told you more than you wanted to know—his recent layoff at the plant, two mouths to feed, twins on the way, a busted truck, bills piling up, sick brother. That conversation chilled you on the idea of having kids of your own in this dead end town. It's hard enough getting by on your own."
 
 Part 17 - Denim Jacket
 
@@ -856,7 +872,7 @@ Report smoking:
 	
 Last report smoking: say "[paragraph break][if player is in pickup truck]You extinguish the butt in one of the empty cups[otherwise]You crush the butt under your heel[end if] and consider where to go next."
 
-Report smoking: say "[if location is lit brightly]You've finally lit the place up[otherwise if location is lit by headlights]It's dark outside the beam of your headlights[otherwise if location is lit by flashlight]Everything outside the beam of your flashlight is shrouded in shadows[otherwise]It's darker than a starless sky on a moonless night[end if]. [run paragraph on]"
+Report smoking: say "[paragraph break][if location is lit brightly]The emergency lights are holding up so far[otherwise if location is lit by headlights]It's dark outside the beam of your headlights[otherwise if location is lit by flashlight]Everything outside the beam of your flashlight is shrouded in shadows[otherwise]It's darker than a starless sky on a moonless night[end if]. [run paragraph on]"
 
 Report smoking: if the player holds a talent, say "Some weird shit went down in the desert, but you do feel like you have more [list of talents held by player]. [run paragraph on]".
 
@@ -899,18 +915,18 @@ Cox and I have here, Mr. Morales (a bad start since you hate that name) a test y
 
 No. They knew you cheated, deep in their smug empty hearts. They wanted you to admit it, say you were a cheater and a liar. But you weren't. You wrote that essay, every goddamn word because you really really liked the book for once and wanted to show Mrs. Burke that maybe if they gave people better books to read, kids would actually learn something. But they wanted a confession. They wanted a thieving example they could parade in front of the school. Someone of your academic and behavioral and economic and racial background and yeah, screw this shit. So you got up and left and never came back. Drop out, hell. You walked out, straight to the bar, and you'd do it again."
 
-Your shit job is a memory. It is triggered by the receipt from Big Jimmy's. The description is "Juza straddles the 371 like a drunk at last call, smelly and without a plan for the future. Shiny cars whiz by at ninety once in a while, only stopping for gas or directions (hint: not this way). No one ever stops for the stalls selling food and jewelry and blankets and cheap t-shirts that cluster around the dirt turn-off onto the rez. At least, no one buying anything.
+Your shit job is a memory. It is triggered by the receipt from Last Call. The description is "Juza straddles the 371 like a drunk at last call, smelly and without a plan for the future. Shiny cars whiz by at ninety once in a while, only stopping for gas or directions (hint: not this way). No one ever stops for the stalls selling food and jewelry and blankets and cheap t-shirts that cluster around the dirt turn-off onto the rez. At least, no one buying anything.
 
 Big Jimmy shook his head when he heard you lived in Oro Oeste. Hell of a drive, kid, he said, popping up his Lumberjacks cap to scratch the straw pate underneath. You should get a place in Hoo-zuh. Little Jimmy'll set you up in that trailer across the road for almost nothin['].
 
 Almost nothing. Yeah, exactly what you'd turn into on the cold day in hell you moved to Juza. But on the other hand, that was before you met Ocean. Now the road back to Oro Oeste seems longer and longer every night."
 
-stories grandma told is a plural-named memory. It is triggered by the piece of jade. The description of stories grandma told is "There are dark spirits who roam the earth, little Knock. Grandma used to say that, holding you tight and stroking your hair. There are dark spirits who roam the earth, but you're not alone. Oh, no. I'm here. (She'd kiss your head and you'd squeeze her back.) But others are watching out for you too. You have three animal guardians, hmm? Spirits who are always watching over you. Oh, you can't always trust them to know what's best. Remember that, Knock. But when you need help, they'll protect you from the worst things in the world.
+tales grandma told is a plural-named memory. It is triggered by the piece of jade. The description of tales grandma told is "There are dark spirits who roam the earth, little Knock. Grandma used to say that, holding you tight and stroking your hair. There are dark spirits who roam the earth, but you're not alone. Oh, no. I'm here. (She'd kiss your head and you'd squeeze her back.) But others are watching out for you too. You have three animal guardians, hmm? Spirits who are always watching over you. Oh, you can't always trust them to know what's best. Remember that, Knock. But when you need help, they'll protect you from the worst things in the world.
 
 Mom would yell at Grandma a lot for filling your head with that new-age bullshit. Grandma grew up white and midwestern and Baptist but had started wearing things with feathers and playing the pan flute by the time you were born. She seemed to really like having a son-in-law who was Native American or American Indian or Indigenous Peoples or whatever she'd decided the term was that week, and she was pretty pissed when Mom left him. Anyway. Her stories were mostly BS, you guessed, but some of them stuck with you. When it's dark you still wonder if your spirit animals are out there somewhere, and what the hell is taking them so long to find you."
-Understand "grandma's stories/grandmas stories/grandma stories/stories" as stories grandma told.
+Understand "grandma's tales/grandmas tales/grandma tales/tales" as tales grandma told.
 
-The rusted key triggers a memory called meeting Ocean. The description of meeting Ocean is "She was buying a Fresca at Big Jimmy's when your shift ended. You had spent the day in the storage room taking inventory but just clocked out, and you stood behind her waiting to get some cigs almost too tired to notice how cute she was but still noticing, yeah, still noticing.
+The rusted old key triggers a memory called meeting Ocean. The description of meeting Ocean is "She was buying a Fresca at Big Jimmy's when your shift ended. You had spent the day in the storage room taking inventory but just clocked out, and you stood behind her waiting to get some cigs almost too tired to notice how cute she was but still noticing, yeah, still noticing.
 
 She turned around and caught you noticing and you were pretty embarrassed and covered in sweat and grease from the garage, so you stepped up and bought some Camels and were pretty surprised she was still there when you turned around.
 
@@ -953,7 +969,7 @@ Check brooding when noun is not a memory: instead say "Eh. You can't really refl
 Carry out brooding: say "[description of noun][line break]"; now the noun is retrieved. 
 [We defined earlier that memories can either be buried (not yet brooded about) or retrieved.]
 
-Instead of doing anything other than brooding to a memory: say "As if. All you can really do is think about or brood about [regarding the noun][them]."
+Instead of doing anything other than brooding or trading to a memory: say "As if. All you can really do is think about or brood about [regarding the noun][them]."
 
 Instead of thinking: say "Most of the thinking you do nowadays comes from either smoking or brooding." [Thinking is a standard action which we'll use to hint the player towards better options.]
 
@@ -988,8 +1004,7 @@ To decide whether (trader - a person) needs more memories:
 
 Carry out trading:
 	move the second noun to the player;
-	repeat with item running through visible not held talents:
-		now item is off-stage.
+	now the noun is off-stage.
 
 Report trading: say "[The trader] nods. 'Yes,' he says, 'a fair trade.' And something happens inside you as he says it. [The noun] shifts and wriggles and fades. It has shifted. And yeah, it kinda does feel like you could call it [the second noun]. Cool."
 	
@@ -1128,7 +1143,7 @@ trade-for-scent is a misc-suggestion. It is held by Coyote. The printed name is 
 
 Report trading when Coyote is visible: clear all topics; now more coming is familiar; try quizzing Coyote about more coming; stop the action.
 
-After quizzing Coyote about more coming: say "He tucks the other talent back in his pocket, and without its faint glow it seems darker than ever, the pulsing red tip of his cigarette all you can see.[paragraph break]'The last of us is coming,' Coyote's voice says out of the black, 'las and most powerful, and most dangerous, and most afraid. Sand-dancer. Be careful of him, Knock. [if player holds strength]Stay strong[otherwise]Stay brave[end if]. [if player holds luck]Stay lucky[otherwise]Keep your nose to the wind[end if]. Remember the shadows.'[paragraph break]And it seems like he's growing, larger and larger, the red tip of his cigarette pulsing and glowing now high up in the sky, and you stumble back, shivering, and suddenly remember your flashlight in your hand and switch it on..."; reset the interlocutor; now flashlight is switched on; move player to Base of the Tower.
+After quizzing Coyote about more coming: say "He tucks the other talent back in his pocket, and without its faint glow it seems darker than ever, the pulsing red tip of his cigarette all you can see.[paragraph break]'The last of us is coming,' Coyote's voice says out of the black, 'last and most powerful, and most dangerous, and most afraid. Sand-dancer. Be careful of him, Knock. [if player holds strength]Stay strong[otherwise]Stay brave[end if]. [if player holds luck]Stay lucky[otherwise]Keep your nose to the wind[end if]. Remember the shadows.'[paragraph break]And it seems like he's growing, larger and larger, the red tip of his cigarette pulsing and glowing now high up in the sky, and you stumble back, shivering, and suddenly remember your flashlight in your hand and switch it on..."; reset the interlocutor; now flashlight is switched on; move player to Base of the Tower.
 
 Chapter 2 - The Rabbit
 
@@ -1203,7 +1218,7 @@ After informing voice about yes-suggestion: say "You jabber something positive a
 
 switch-off-radio is a misc-suggestion held by voice with printed name "switch off the radio". Instead of switching off radio when current interlocutor is voice: say "You reach for the switch, but hesistate, hand hovering above it as the static whirls and roars.[paragraph break][voice explains choices]".
 
-To say voice explains choices: say "'Look, son,' the voice says, 'I don't know how you got out there but that's not important right now. Weather report's coming in and there's a cold front the size of Texas coming your way. I don't want to scare you but if you don't find a way home, or figure out some food and shelter for the night, you could freeze to death. You hear me? Now on account of the cutbacks I don't have anyone to send out there until morning. But there may be parts around that old tower you can use to patch up your truck and make it back to the highway. Or, there may be emergency supplies that would get you through the.night. This storm's gonna blow out all communication, so you're gonna be on your own. It's up to you. Over and out.'[paragraph break]You rub your face tiredly. Ocean was expecting you tonight after your shift, like usual. If you don't make it she'll be worried sick. Then on the other hand maybe you should worry about yourself first for a change. You feel like you need a cigarette[if pack of smokes is not held by player] and then you remember you quit[end if]. Hell, can't anything be easy?"; reset the interlocutor; now voice is off-stage.
+To say voice explains choices: say "'Look, son,' the voice says, 'I don't know how you got out there but that's not important right now. Weather report's coming in and there's a cold front the size of Texas coming your way. I don't want to scare you but if you don't find a way home, or figure out some food and shelter for the night, you could freeze to death. You hear me? Now on account of the cutbacks I don't have anyone to send out there until morning. But there may be parts around that old tower you can use to patch up your truck and make it back to the highway. Or, there may be emergency supplies that would get you through the night. This storm's gonna blow out all communication, so you're gonna be on your own. It's up to you. Over and out.'[paragraph break]You rub your face tiredly. Ocean was expecting you tonight after your shift, like usual. If you don't make it she'll be worried sick. Then on the other hand maybe you should worry about yourself first for a change. You feel like you need a cigarette[if pack of smokes is not held by player] and then you remember you quit[end if]. Hell, can't anything be easy?"; reset the interlocutor; now voice is off-stage.
 
 VOLUME 4 - THE STORY WORLD
 
@@ -1256,6 +1271,8 @@ Part 2 - Desert Sand
 
 The desert sand is a backdrop in Around the Tower. 
 
+Instead of taking the desert sand: say "[if Rainstorm is happening]More like moud right now.[otherwise]You kneel down and let some run through your fingers like vague memories of better times. But the ground is freezing and you get back to your feet.[end if]".
+
 Part 3 - Sagebrush
 
 The sagebrush is a backdrop in Around the Tower. 
@@ -1278,12 +1295,12 @@ Middle of Nowhere is an earthbound room.
 
 Chapter 1 - Middle of Nowhere Description
 
-The description of Middle of Nowhere is "[if player is not in pickup truck]The [tire tracks] from the south stop abruptly here, but where the hell are you?  [end if]You've smashed your truck against [a tall saguaro]. The [desert sand] and clumps of pale [sagebrush] are all [if lit by headlights]your dimming [headlights] reveal in the path toward [otherwise if lit by flashlight]your flashlight reveals, other than the rough outline of [end if][the concrete building] to the north.[first time][paragraph break]Ocean keeps telling you this late night commute will kill you; maybe you should start listening.[only][if player is in pickup truck][paragraph break]The only good news is that the crash didn't deploy the air bag. You look around the cabin for something useful. There isn't much. Your sunglasses are within reach. The cup holders are filled with [empty cups] and [loose change]. A [state map of New Mexico] rests on the [dashboard].[end if]"
+The description of Middle of Nowhere is "[if player is not in pickup truck]The [tire tracks] from the south stop abruptly here, but where the hell are you?  [end if]You've smashed your truck against [a tall saguaro]. The [desert sand] and clumps of pale [sagebrush] are all [if lit by headlights]your dimming [headlights] reveal in the path toward [otherwise if lit by flashlight]your flashlight reveals, other than the rough outline of [end if][the concrete building] to the north.[first time][paragraph break]Ocean keeps telling you this late night commute will kill you; maybe you should start listening.[only][if player is in pickup truck][paragraph break]The crash didn't leave you with any serious injuries. You look around the cabin for something useful. There isn't much. Your sunglasses are within reach. The cup holders are filled with [empty cups] and [loose change]. A [state map of New Mexico] rests on the [dashboard].[end if]"
 
 Chapter 2 - Middle of Nowhere Props
 
 A tall Saguaro is a flowering, perennial plant in Middle of Nowhere. 
-	The tall Saguaro is undescribed.
+	The description of the tall Saguaro is "The cactus seems totally undamaged. Go figure."
 [Saguaros are large, tree-like columnar cacti that develop branches (or arms) as they age. They grow slowly but can reach a height of between 40-60 feet. A fully-hydrated saguaro can weigh between 3200 and 4800 pounds and may have upwards of 25 arms. The saguaro is the tallest cactus in the United States.]
 
 Instead of touching the Saguaro: say "Yeah, you did that once as a kid, on accident. Not happening again." Instead of taking the Saguaro: try touching the Saguaro.
@@ -1303,7 +1320,7 @@ Crumbling Concrete is north of Middle of Nowhere.
 
 Chapter 1 - Crumbling Concrete Description
 
-The description of Crumbling Concrete is "This building must have been a utility structure for [the huge electrical tower] to the north. Now abandoned, [if lit by headlights][fragments of glass] sparkle faintly in the beam of your headlights[otherwise if lit by flashlight]: it seems dead and alone in the dusty beam of your flashlight[end if]. Tendrils of [sand] have piled up against the boarded-up doorframe next to a tall picture window that frames a [if lit brightly]brightly lit[otherwise]dark[end if] interior. The building might offer some refuge; you could also walk around to the east or head south back to your truck."
+The description of Crumbling Concrete is "This building must have been a utility structure for [the huge electrical tower] to the north. Now abandoned, [if lit by headlights][fragments of glass] sparkle faintly in the beam of your headlights[otherwise if lit by flashlight]: it seems dead and alone in the dusty beam of your flashlight[end if]. Tendrils of [sand] have piled up against the boarded-up doorframe next to a tall picture window that frames a [if lit brightly]brightly lit[otherwise]dark[end if] interior. [first time]The building might offer some refuge; you could also walk around to the east or head south back to your truck.[only]"
 
 Chapter 2 - Crumbling Concrete Props
 
@@ -1404,14 +1421,14 @@ The description of Base of the Tower is "Behind the building a [steel girder] ri
 
 Chapter 2 - Base of the Tower Props
 
-A rusty tin can is in Base of the Tower. The initial appearance of a rusty tin can is "A medium-sized can captures your attention as you scan through the refuse. It is missing a label, and the ridges around the can are flecked with rust. It might not be the best choice for food, but it's as solid as a rock."
+A rusty tin can is in Base of the Tower. The initial appearance of a rusty tin can is "A medium-sized can makes you think of food as you scan through the refuse. You haven't eaten since breakfast, and it is almost time for another. The can is missing a label, and the ridges around it are flecked with rust. It might not be the best choice for food, but it's as solid as a rock."
 
 A huge electrical tower is in Base of the Tower. It is undescribed and fixed in place. The description of the huge electrical tower is "The base of the tower has a thick steel frame connected by thinner support beams that travel up the structure, creating a web of triangular shapes. It appears almost sculptural until your eyes reach the top where several thick electrical lines hang suspended like tightropes.".
 
 Chapter 3 - Base of the Tower Scenery
 
 A tumbleweed is a dead, bloomless, dull plant in Base of the Tower.
-The tumbleweed is scenery.
+The tumbleweed is scenery. It is undescribed.
 Instead of taking the tumbleweed: say "Let it blow on. Wherever it's going is bound to be better than here."
 
 A steel girder and some scrawny weeds are backdrops in Base of the Tower. 
@@ -1454,7 +1471,7 @@ The description of Backtracking is "The black desert night bleeds into this quie
 
 Chapter 2 - Backtracking Implementation
 
-Before going south in Backtracking: say "[first time]You trace the path of your tire tracks uneasily. Here the path clearly runs north toward that unfortunate Saguaro, but further south the tracks blend and vanish into a maze of ATV tracks, coyote trails, rocky outcrops, and shadows before being swallowed by the blackness on the horizon. There is no distant sweep of headlights, no sound of trucks shifting through gears. Nothing. [only]You're way off the road, and there's no chance of finding it again in this demon dark.." instead.
+Before going south in Backtracking: say "[first time]You trace the path of your tire tracks uneasily. Here the path clearly runs north toward that unfortunate Saguaro, but further south the tracks blend and vanish into a maze of ATV tracks, coyote trails, rocky outcrops, and shadows before being swallowed by the blackness on the horizon. There is no distant sweep of headlights, no sound of trucks shifting through gears. Nothing. [only]You're way off the road, and there's no chance of finding it again in this demon dark." instead.
 
 Part 7 - Against the Fence
 
@@ -1494,8 +1511,6 @@ BOOK 2 - OFFICE INTERIOR
 
 Part 1 - Staging Area
 
-A boarded-up door is a closed unopenable undescribed door. It is northeast of Crumbling Concrete and southwest of Staging Area.
-
 Chapter 1 - Staging Area Description
 
 The description of Staging Area is "[if location is not lit by flashlight and location is not lit brightly]Faint [shafts of light] from your dimming headlights seep through a [pane of cracked glass], but you can barely make out anything of the interior[otherwise]It's obvious this place has been abandoned for years. Cold night air breathes through [holes in the roof], and everything is strewn with [sand] and [patches of mold]. Other rooms lie north and east[end if]."
@@ -1512,7 +1527,8 @@ A boarded-up door is a closed unopenable undescribed door. It is  northeast of C
 	Understand "remove [something]" or "take off [something]" as removing.
 	Check removing when noun is worn: instead try taking off the noun.
 	Check removing when noun is a closed door: instead say "You try to pry the boards from the door with no success.".
-	Check removing when a tall window is open and noun is not wearable: instead say "Seems redundant. You've found another way into the building.".
+	Check removing when noun is some cobwebs: instead try taking some cobwebs.
+	Check removing when a tall window is open and noun is a door: instead say "Seems redundant. You've found another way into the building.".
 	Check removing when noun is carried: instead say "You are not wearing [the noun]."
 	
 Section 2 - Window
@@ -1523,17 +1539,16 @@ A  pane of cracked glass is a tall window. It is inside from Crumbling Concrete 
 
 Section 3 - Hole in the Floor
 
-A hole in the floor is a fixed in place open unopenable container in Staging Area. The hole in the floor is undescribed. "The floor has half-collapsed near one corner[if duct tape is in the hole], revealing a hole crisscrossed with [cobwebs][end if]."
-
-Instead of taking something enclosed by the hole when player does not hold courage: say "[one of]You reach your hand towards the hole, then pull back with a start as a thick nest of cobwebs clings to your fingers. Nightmare visions of fat black spiders shudder through your imagination. No way you are reaching in there.[or]Yeah, sorry, but you aren't putting your hand in there.[stopping]".
-
-Instead of inserting anything into the hole: say "Sounds like a good way to lose something forever."
+A hole in the floor is a fixed in place open unopenable container in Staging Area. 
+	The hole in the floor is undescribed. 
+	Instead of taking something enclosed by the hole when player does not hold courage: say "[one of]You reach your hand towards the hole, then pull back with a start as a thick nest of cobwebs clings to your fingers. Nightmare visions of fat black spiders shudder through your imagination. No way you are reaching in there.[or]Yeah, sorry, but you aren't putting your hand in there.[stopping]".
+	Instead of inserting anything into the hole: say "Sounds like a good way to lose something forever."
 
 Section 4 - Cobwebs
 
-Some cobwebs are in the hole.
+Some cobwebs are in the hole. 	The cobwebs are undescribed.
 
-Instead of taking cobwebs when player holds courage: say "You impatiently brush the cobwebs away."; now cobwebs are off-stage.
+Instead of taking cobwebs when player holds courage: say "You impatiently brush the cobwebs away."; now cobwebs are off-stage; now roll of duct tape is described;
 
 Before printing the name of cobwebs when player holds courage: say "hardly noticeable ".
 
@@ -1558,10 +1573,10 @@ Instead of opening desk: try opening drawer.
 After opening drawer in dim Staging Area: say "You slide the drawer open and feel around inside the dark interior. Something large and solid rolls around inside. As you grasp for it, you're almost certain it is a flashlight."
 
 [For testing purposes only]
-The courage is in Staging Area.
+[The courage is in Staging Area.
 The strength is in Staging Area.
 The luck is in Staging Area.
-The scent is in Staging Area.
+The scent is in Staging Area.]
 
 Chapter 3 - Staging Area Scenery
 
@@ -1583,27 +1598,28 @@ Foreman's Office is north of Staging Area.
 
 Chapter 1 - Foreman's Office Description
 
-The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights illuminate every corner of[end if] the tiny office where the boss likely held court. 
-You can barely see the metal infrastructure of the tower's base through an obscured [dust-covered window]."
+The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights illuminate every corner of[end if] the tiny office where the boss likely held court. There's not much here, a [half-collapsed desk] wobbles next to a [wastepaper basket].  A [rusted old key] is one of the only things on the desk next to a [withered cactus]. You can barely see the metal infrastructure of the tower's base through an obscured [dust-covered window]."
 
 Chapter 2 - Foreman's Office Props
 
-A withered cactus is a dead, flowering, annual, dull plant in Foreman's Office.
+A withered cactus is a dead, flowering, annual, dull plant. It is on the half-collapsed desk. It is undescribed.
 
-A half-collapsed desk is a supporter in Foreman's Office. 
-A rusted old key is on the half-collapsed desk. 
+A half-collapsed desk is a supporter in Foreman's Office. It is undescribed.
+A rusted old key is on the half-collapsed desk. It is undescribed.
 
 A wastepaper basket is an open unopenable fixed in place container. 
-It is in Foreman's Office.
-Discarded papers are scenery in Foreman's Office.
-Discarded food containers are scenery in Foreman's Office.
+	It is in Foreman's Office.
+	It is undescribed.
+	Some discarded papers are in the wastepaper basket.
+	Some food containers are in the wastepaper basket.
+
 Instead of examining the wastepaper basket: 
 	now the crumpled box is in the wastepaper basket;
-	say "No one bothered to take the trash out before they boarded up the building. You can see [discarded papers] and [discarded food containers] filled to the brim, and there appears to be an old [crumpled box] of cigarettes.".
+	say "No one bothered to take the trash out before they boarded up the building. It is filled to the brim with [discarded papers] and [food containers], and there appears to be an old [crumpled box] of cigarettes amidst the refuse.".
 
 A rusted filing cabinet is a container in Foreman's Office. It is fixed in place. The description is "The rusted old metal filing cabinet is one of the tall, three-drawered varieties common to many office spaces. It has a [top drawer], a [middle drawer], and a [bottom drawer]."
 	A top drawer, a middle drawer, and a bottom drawer are in the rusted filing cabinet. The top drawer, middle drawer, and bottom drawer are undescribed openable closed fixed in place containers.
-	The warm wooly socks are in the middle drawer.
+	[The warm wooly socks are in the middle drawer.]
 	There is an unmarked folder in the bottom drawer.
 		The unmarked folder is closed and openable.
 		The unmarked folder contains several papers. 
@@ -1612,7 +1628,7 @@ A rusted filing cabinet is a container in Foreman's Office. It is fixed in place
 		
 A dust-covered window is a small window in Foreman's Office. The initial appearance of a dust-covered window is "A dust-covered window casts a mottled, fractured reflection of [the random thing in Foreman's Office]."
 
-The ankle boots are in Foreman's Office.
+[The ankle boots are in Foreman's Office.]
 
 Part 3 - Break Room
 
@@ -1664,7 +1680,7 @@ Section 4 - Tiny Frosted Window
 
 A tiny frosted window is a small window in Break Room.
 
-The tennis shoes and work boots are in Break Room.
+[The tennis shoes and work boots are in Break Room.]
 
 Chapter 3 - Break Room Scenery
 
@@ -1787,10 +1803,11 @@ Before going to The Open Desert when The Open Desert is unvisited:
 
 Before going from Around the Tower to Open Desert:
 	if flashlight is not held, instead say "[if headlights are switched on]Outside the wavering glow of your headlights, i[otherwise]I[end if]t's pitch black. A storm must have rolled in; there are no stars above, and nothing but darkness surrounds you. The darkness seems to thicken at every turn. Only the smell of the desert tells you it is still out there.";
-	if emergency lights are switched off [or voice has not been visible], instead say "You heft your flashlight, but decide not to head out into the desert just yet. [if headlights are switched on]Your truck lights are already starting to dim, and with[otherwise]With[end if]how dark it is, you're not sure you could find your way back."[;
+	if flashlight is not switched on, try switching on flashlight;
+	if emergency lights are switched off or voice has not been visible, instead say "You heft your flashlight, but decide not to head out into the desert just yet. [if headlights are switched on]Your truck lights are already starting to dim, and with[otherwise]With[end if]how dark it is, you're not sure you could find your way back.";
 	if Rainstorm is happening, instead say "In a storm like this? No way.";
 	if Coyote's Offer has ended, instead say "You have some feeling that when the last spirit animal decides to make an appearance, it will find you.";
-	if Pursuit is not happening and Temptation is not happening, instead say "On a night as freakishly dark as this, that's insane."].
+	if Pursuit is not happening and Temptation is not happening, instead say "On a night as freakishly dark as this, that's insane.".
 
 Report going to The Open Desert when The Open Desert is unvisited: say "You walk for a long time, thoughts turning over like the sand under your work boots. You think about [a random thing in emotional baggage]. You think about Ocean and how pissed she's gonna be that you're not home. You tell her not to wait up for you but she always does.
 
@@ -1846,7 +1863,32 @@ BOOK 2 - SCENES
 
 A scene can be dramatic. Instead of smoking during a dramatic scene: say "Time is ticking. You might appreciate the distraction, but you really need to focus."
 
-Part 1 - Rainstorm
+Part 1 - Jonesing
+
+Jonesing is a scene. 
+
+Jonesing begins when Foreman's Office is unvisited and the turn count is greater than 20.
+
+Every turn when a dramatic scene is not happening and we are not smoking and a random chance of 1 in 25 succeeds during Jonesing: say "[one of]Hey, you could really go for a smoke right now[or]Man, you really need a cigarette[or]You'd kill for a smoke right now[or]You're really jonesing for a smoke right now[cycling]."  
+
+Jonesing ends when Foreman's Office is visited.
+
+Part 2 - Addicted
+
+Addicted is a scene.
+
+Addicted begins when Control Center is unvisited and the turn count is greater than 30. 
+
+ Every turn when a dramatic scene is not happening and we are not smoking and a random chance of 1 in 10 succeeds during Addicted:
+	if the player encloses a cigarette (called the chosen one):
+		say "[one of]You can't help it. You need another cigarette[or]What the hell, another cigarette won't kill you[or]You really need another smoke[cycling].";
+		try smoking the chosen one;
+	otherwise:
+		say "[one of]Damn[or]Tonight sucks[cycling].".
+
+Addicted ends when Control Center is visited.
+
+Part 3 - Rainstorm
 
 Rainstorm is a scene. "Rain starts to come down, pattering on the desert sand. Soon it's gonna be a muddy deathtrap out here."
 
@@ -1856,9 +1898,9 @@ The rain is a backdrop. "Rain batters down on the desert."
 
 When Ranstorm begins: now the rain is in Around the Tower.
 
-Rainstorm ends when at least one thing required by a plan has been carried and Control Center is visited and location is not Roof and a random chance of 1 in 4 succeeds.
+Rainstorm ends when at least one thing required by a plan has been carried and location is not Roof and a random chance of 1 in 4 succeeds.
 
-When Rainstorm ends: now the rain is off-stage; say "The rain's dying down, th sounds of the storm fading, water sinking into the thirsty sand leaving only the smell of sage behind."
+When Rainstorm ends: now the rain is off-stage; say "The rain's dying down, the sounds of the storm fading, water sinking into the thirsty sand leaving only the smell of sage behind."
 
 Instead of going to The Open Desert during Rainstorm: say "That's not the best idea in a storm like this."
 
@@ -1866,7 +1908,7 @@ Instead of listening during Rainstorm: say "You can't hear anything at all above
 
 Report going from Crumbling Concrete to Staging Area during rainstorm: say "Gratefully, you slip inside the building, out of the storm."
 
-Part 2 - Pursuit
+Part 4 - Pursuit
 
 Pursuit is a recurring scene.
 
@@ -1878,7 +1920,7 @@ Pursuit begins when
 	the shadow appears.
 
 To decide whether the shadow appears:
-	if location is The Open Desert for at least six turns, decide on whether or not a random chance of 1 in 3 succeeds;
+	if location is The Open Desert for at least two turns, decide on whether or not a random chance of 1 in 2 succeeds;
 	if location is Roof, decide no;
 	if location is in Around the Tower, decide on whether or not a random chance of 1 in 3 succeeds;
 	decide no.
@@ -1923,7 +1965,7 @@ now darting shadow is off-stage.
 Pursuit ends when darting shadow is not visible. 
 When Pursuit ends: now times followed of darting shadow is 0.
 
-Part 3 - Rabbit's Offer
+Part 5 - Rabbit's Offer
 
 Rabbit's Offer is a dramatic scene.
 
@@ -1974,13 +2016,13 @@ Instead of examining up when lookup-suggestion is familiar: say "Stupidly, you t
 
 Rabbit's Offer ends when location is not Burrow.
 	
-Part 4 - Temptation
+Part 6 - Temptation
 
 Temptation is a scene.
 
 Temptation begins when
 	Rainstorm has ended and
-	Control Center is visible and
+	Control Center is visited and
 	location is not regionally in Office Interior and
 	location is not Roof and
 	location is not Control Center.
@@ -1995,7 +2037,7 @@ Every turn during Temptation: if a random chance of 1 in 4 succeeds and location
 
 Temptation ends when location is The Open Desert. When Temptation ends: now the distant figure is off-stage.
 
-Part 5 - Chase
+Part 7 - Chase
 
 Chase is a dramatic scene. Chase begins when Temptation ends. Chase ends when Chase is happening for six turns.
 
@@ -2005,7 +2047,7 @@ Every turn during Chase: say "[one of]Something snarls off in the distance, a wa
 
 The snarling shadows are an undescribed animal. When Chase begins: move snarling shadows to Open Desert. When Chase ends: now snarling shadows are off-stage. Understand "moving/shadow/animal/form/forms/snarl/growl/howl/coyote/sound/sounds/coyotes/wolf/call/feral/wild/shifting/pack/snarls/teeth/mangy/fur" as snarling shadows. Instead of doing anything to snarling shadows: say "All you can do is run."
 
-Part 6 - Fight
+Part 8 - Fight
 
 Fight is a dramatic scene. Fight begins when Chase ends.
 
@@ -2021,7 +2063,7 @@ But then one of them flicks his head and bears his teeth, and the others pull ba
 
 Fight ends in bravery when we are attacking. Instead of attacking during Fight: say "It's over. The coyotes dive in for the kill, jaws snapping, [if player holds strength]and without realizing what you're doing you make a fist and slam it into the one that's closest.
 
-The coyote squeals, flung sideways by the strength of your blow, blood dripping from its nose, and the rest of the pack pulls back in sudden caution. Another coyote makes to lunge and you whirl towards it in fury, pulling back for another blow, but the pack breaks in some collective decision and scatters [otherwise if player holds courage]and suddenly this bold of courage runs through you and without even thinking about it you leap towards the biggest coyote with a terrible scream.
+The coyote squeals, flung sideways by the strength of your blow, blood dripping from its nose, and the rest of the pack pulls back in sudden caution. Another coyote makes to lunge and you whirl towards it in fury, pulling back for another blow, but the pack breaks in some collective decision and scatters [otherwise if player holds courage]and suddenly a jolt of courage runs through you and without even thinking about it you leap towards the biggest coyote with a terrible scream.
 
 It flinches back, suddenly unsure, and you charge at it full speed, still screaming, arms outstretched, until it turns tail and bolts away. The other coyotes circle uncertainly, but you turn your snarling furious rage on them too and then they're all scattering[end if], mangy shadows slinking away into the desert. Except for one last coyote who stands his ground."
 
@@ -2029,7 +2071,7 @@ Instead of throwing anything at circle of snarling coyotes during Fight: say "Ma
 
 When Fight ends: now circle of snarling coyotes is off-stage.
 
-Part 7 - Coyote's Offer
+Part 9 - Coyote's Offer
 
 Coyote's Offer is a scene. "And then you blink, and realize he's not a coyote after all. Just... just a guy." 
 
@@ -2039,31 +2081,6 @@ When Coyote's Offer begins: move the Coyote to Open Desert; Coyote's conversatio
 
 Coyote's Offer ends when location is not Open Desert.
 
-Part 8 - Jonesing
-
-Jonesing is a scene. 
-
-Jonesing begins when Foreman's Office is unvisited and the turn count is greater than 20.
-
-Every turn when a dramatic scene is not happening and we are not smoking and a random chance of 1 in 25 succeeds during Jonesing: say "[one of]Hey, you could really go for a smoke right now[or]Man, you really need a cigarette[or]You'd kill for a smoke right now[or]You're really jonesing for a smoke right now[cycling]."  
-
-Jonesing ends when Foreman's Office is visited.
-
-Part 9 - Addicted
-
-Addicted is a scene.
-
-Addicted begins when Control Center is unvisited and the turn count is greater than 30. 
-
- Every turn when a dramatic scene is not happening and we are not smoking and a random chance of 1 in 10 succeeds during Addicted:
-	if the player encloses a cigarette (called the chosen one):
-		say "[one of]You can't help it. You need another cigarette[or]What the hell, another cigarette won't kill you[or]You really need another smoke[cycling].";
-		try smoking the chosen one;
-	otherwise:
-		say "[one of]Damn[or]Tonight sucks[cycling].".
-
-Addicted ends when Control Center is visited.
-
 Part 10 - Sinister Voices
 	
 Sinister Voices is a scene.
@@ -2072,7 +2089,7 @@ Sinister Voices begins when Rabbit's Offer ends.
 	
 Every turn when going and location is Break Room during Sinister Voices: now radio is switched on; now frequency tuned to of radio is emergency frequency; say "[one of][sinster-radio-1][or][sinister-radio-2][or][sinister-radio-3][stopping]."
 	
-To say sinster-radio-1: say "With a sudden growl of static the radio sprints to life and it freqks the hell out of you. The voice weaves in and out of crazy whirling distortion and shifting blasts of static. 'Hey... receiving? ...never told... you'll never, never--' A wail like an 8-bit banshee screams through the signal. '...waste of time... who do you think?...' Static, static. 'Very soon, now Nak... akabito... very...'[paragraph break]Uh. You're pretty sure you never told that dude your name. Maybe you're just hearing things[if radio was switched off]?[paragraph break]Come to think of it, you're [italic type]damn[roman type] sure you left that radio off, too[end if].".
+To say sinster-radio-1: say "With a sudden growl of static the radio sprints to life and it freaks the hell out of you. The voice weaves in and out of crazy whirling distortion and shifting blasts of static. 'Hey... receiving? ...never told... you'll never, never--' A wail like an 8-bit banshee screams through the signal. '...waste of time... who do you think?...' Static, static. 'Very soon, now Nak... akabito... very...'[paragraph break]Uh. You're pretty sure you never told that dude your name. Maybe you're just hearing things[if radio was switched off]?[paragraph break]Come to think of it, you're [italic type]damn[roman type] sure you turned that radio off, too[end if].".
 
 To say sinister-radio-2: say "The radio growls to life again, the voice distorted now under a constant barrage of electronic rain. 'Where do you think you're going?' it says. 'What are you trying to do? You can't...' A snap, some syncopated crakles. '...can see you, Na... know where.. never going to work. Never g...' And the voice cuts off, replaced by a low, tooth-rattling hum.[paragraph break]The voice sounds different than before. I mean it still kind of sounds like the first guy you talked to but it sounds like someone else now too, somoene you know, you've known for a long time. Someone you're afraid of.".
 	
@@ -2108,7 +2125,7 @@ To decide whether time for arrival: if the number of complete plans is 1 or the 
 
 Going outside is leaving the building. Going southwest is leaving the building. Entering a window is leaving the building.
 
-tried to leave is a truth state variable. Instead of leaving the building when time for arrival: say "[one of]You start to go out, but then you stop. Something's not right. Something's... weird.[or]The building's sinking into the sand ! You've got to get out some other way![stopping]"; now tried to leave is true.
+tried to leave is a truth state variable. Instead of leaving the building when time for arrival: say "[one of]You start to go out, but then you stop. Something's not right. Something's... weird.[or]The building's sinking into the sand! You've got to get out some other way![stopping]"; now tried to leave is true.
 
 Sand-dancer's Arrival begins when time for arrival and tried to leave is true.
 
@@ -2124,17 +2141,11 @@ To describe sand-filled room: say "[one of]Waves of sand flow like water through
 
 The Sand-dancer emergency exit rule is listed after the Sand-dancer room description body text rule in the carry out looking rules. This is the Sand-dancer emergency exit rule: if Sand-dancer's Arrival is happening and location is in Office Interior, say "You glance wildly at the exists [list of viable directions]."
 
-Definition: a direction is viable if the room it from the location is a room. 
-
-Listing exits is an action out of world applying to nothing. Understand "exits" as listing exits. The listing exits action has a number called the count of exits.
-
-Carry out listing exits (this is the count exits rule): now count of exits is the number of viable directions.
-
 Instead of throwing something at a window during Sand-dancer's Arrival: say "It's no good; the window shatters and sand rushes in through it."; now noun is off-stage.
 
 Doing something to the radio is wasting time. Doing something to cans of food is wasting time. Examining something is wasting time. Before wasting time during Sand-dancer's Arrival: say "There's no time, man! The room's filling up with sand!" instead.
 
-After going up during Sand-dancer's Arrival: say "Barely able to reach the ladder through sand up to your waist, you haul yourself u the rungs and pull free just in time."; try looking.
+After going up during Sand-dancer's Arrival: say "Barely able to reach the ladder through sand up to your waist, you haul yourself up the rungs and pull free just in time."; try looking.
 
 Before going up during Sand-dancer's Arrival: 
 	now description of Roof is "Except it's more like a foundation now, the building's sunken almost entirely into the sand.";
@@ -2292,6 +2303,14 @@ When play begins:
 	say "[story description]";
 	say monospaced;
 	leave space;
+	say "During gameplay:[line break]     Enter COMPASS OFF to hide the compass[line break]     Enter COMPASS ON to show the compass[paragraph break]When the compass is on, directions to locations you have visited appear in normal text, while directions to locations you have not visited appear in bold text. A direction will not appear on the compass if you cannot go that way.";
+	say paragraph break;
+	say "Would you like to see which directions you can go in the status bar?";
+	follow the immediately prompt rule;
+	if the player consents:
+		now compass choice is Table of Fancy Status;
+	leave space;
+	say "If you have never played interactive fiction, enter HELP for guidance.";
 	say paragraph break;
 	say "Press SPACE to begin.";
 	wait for the SPACE key;
@@ -2396,13 +2415,6 @@ To say bottom rose:
 	say "[rose down][rose southwest][rose south][rose southeast][rose outside]  ".
 	
 The compass choice is a table name that varies. The compass choice is Table of Normal Status.
-
-When play begins:
-	say "During game play:[line break]     You can type HELP for guidance.[line break]     You can disable the map by entering COMPASS OFF.[line break]     You can enable the map using COMPASS ON.[paragraph break]When the compass is on, directions to locations you have visited appear in normal text, while directions to locations you have not visited appear in bold text. If you cannot move in a direction, it does not appear on the compass.[paragraph break]Would you like to see which directions you can go in the status bar?";
-	follow the immediately prompt rule;
-	if the player consents:
-		now compass choice is Table of Fancy Status;
-	clear the screen.
 		
 Rule for constructing the status line:
 	fill status bar with compass choice;	
@@ -2441,29 +2453,29 @@ BOOK 1 - TEST SCRIPTS
 
 Part 1 - Testing Chapter 3 (Creating the Story World)
 
-Chapter 1 - Navigation
+Chapter 1 - Navigation (from Middle of Nowhere)
 
 Test map with "south / north / north / east / northwest / north / north / south / south / south / south / test tour".
 
-Chapter 2 - Enter Building
+Chapter 2 - Enter Building (from Middle of Nowhere)
 
 Test enter with "north / north / take can / south / throw can at window /  in ".
 
-Chapter 3 - Flashlight
+Chapter 3 - Flashlight (from Staging Area)
 
-Test flashlight with "test enter / touch desk / open drawer / take flashlight / switch on flashlight".
+Test flashlight with "touch desk / open drawer / take flashlight / switch on flashlight".
 
-Chapter 4 - Explore the Building
+Chapter 4 - Explore the Building (from Staging Area)
 
-Test explore with "test flashlight / north / south / east / north / up / north / down / south / west / out".
+Test explore with "north / south / east / north / up / north / down / south / west / out".
 
 Chapter 5 - Tour the Building
 
 Test tour with " test flashlight / test explore".
 
-Chapter 6 - Filing Cabinet
+Chapter 6 - Filing Cabinet (from Foreman's Office)
 
-Test cabinet with "test flashlight / north / x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / take socks / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
+Test cabinet with "x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
 
 Chapter 7 - Tin Can
 
@@ -2471,13 +2483,13 @@ Test can with "north / north / take tin can / south / drop can / look / examine 
 
 Part 2 - Testing Chapter 5 (Making Things Happen)
 
-Chapter 1 - Shoes and Socks
+Chapter 1 - Shoes and Socks (from Foreman's Office)
 
-Test shoes with "test flashlight / north / x filing cabinet / open middle drawer / x socks / take socks / wear socks / south / east / wear tennis shoes / wear boots / inventory / drop tennis shoes / inventory / take off socks / take off boots / take off socks".
+[Test shoes with "x filing cabinet / open middle drawer / x socks / take socks / wear socks / south / east / wear tennis shoes / wear boots / inventory / drop tennis shoes / inventory / take off socks / take off boots / take off socks / west / north".]
 
-Chapter 2 - First Aid Kit
+Chapter 2 - First Aid Kit (from Break Room)
 
-Test kit with "test flashlight/ east / take first aid kit / open kit / x kit / open pills / inventory / take aspirin / inventory / eat aspirin / inventory / take aspirin / inventory / open box of bandaids / wear fingertip bandaid / open bottle of alcohol / drink rubbing alcohol / put aspirin in bottle of alcohol / close box of bandaids / put aspirin in bottle of pills / close bottle of pills / inventory / take aspirin / inventory / take aspirin / inventory / swallow aspirin / inventory / eat aspirin / inventory /eat aspirin / inventory"
+Test kit with "take first aid kit / open kit / x kit / open pills / inventory / take aspirin / inventory / eat aspirin / inventory / take aspirin / inventory / open box of bandaids / wear fingertip bandaid / open bottle of alcohol / drink rubbing alcohol / put aspirin in bottle of alcohol / close box of bandaids / put aspirin in bottle of pills / close bottle of pills / inventory / take aspirin / inventory / take aspirin / inventory / swallow aspirin / inventory / eat aspirin / inventory /eat aspirin / inventory"
 
 Chapter 3 - Investigate Actions
 
@@ -2489,11 +2501,11 @@ Chapter 1 - Flashlight
 
 Test synonyms with "test flashlight / x flash / x light / x flashlight".
 
-Chapter 2 - Gas Can
+Chapter 2 - Gas Can (from Storage Room)
 
-Test emergency with "test flashlight / east / north / turn on emergency lights / turn off emergency lights".
+Test emergency with "turn on emergency lights / turn off emergency lights".
 
-Test gasoline with "test cigarettes / test flashlight / test box / east / north / turn on emergency lights / ABSTRACT scent to me / ABSTRACT strength to me / up / move barrel / up / look under metal / take gas can / inventory"
+Test gasoline with "ABSTRACT scent to me / ABSTRACT strength to me / up / move barrel / up / look under metal / take gas can / inventory"
 
 Part 4 - Testing Chapter 7 (Logic and Control)
 
@@ -2505,11 +2517,21 @@ Chapter 2 - Jacket
 
 Test jacket with  "north / remove boards / remove jacket / north / take can / south / throw can at window / remove boards / remove jacket / in ".
 
-Test wallet with "open wallet / examine license / examine receipt".
+Test wallet with "open wallet / examine license / examine receipt / open photo".
 
 Part 7 - Testing Chapter 10 (Challenging Assumptions)
 
-Test cigarettes with "examine truck / open glove box / take pack of smokes / smoke cigarette /  smoke cigarette / smoke cigarette / inventory / examine pack of smokes"
+Test cigarettes with "examine dashboard / open glove box / take pack of smokes / smoke cigarette /  smoke cigarette / smoke cigarette / inventory / examine pack of smokes"
 
-Test box with "test flashlight / north / examine wastepaper basket / take crumpled box / inventory / examine crumpled box / south"
+Test box with "examine wastepaper basket / take crumpled box / inventory / examine crumpled box / examine key / south"
+
+Part 8 - Testing Chapter 11 (Finishing)
+
+test jade with "take bag / examine bag / open bag / examine jade "
+
+test cage with "east / examine cage / take paper / examine paper "
+
+Test memories with "test cigarettes / test jade / test enter / test flashlight / test wallet / north / test box / test cage / north / test emergency / test gasoline / down / down / south / west / think about meeting ocean / think about shit job / think about stories / think about school"
+
+
  
