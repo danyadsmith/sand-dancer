@@ -9,7 +9,7 @@ The story title is "Sand Dancer".
 The story author is "Aaron Reed, Alexei Othenin-Girard, and Danya D. Smith".
 The story headline is "A Desert Fable". 
 The story genre is "young adult fantasy". 
-The story creation year is 2024.
+The story creation year is 2026.
 The release number is 1. 
 
 BOOK 2 - SETTINGS
@@ -18,6 +18,10 @@ Part 1 - Style
 
 Use serial comma.
 Use American dialect.
+
+Part 2 - Cover art
+
+Release along with cover art ("Lightning strikes the desert").
 
 BOOK 3 - EXTENSIONS  BY AUTHOR (with state)
 
@@ -135,20 +139,26 @@ Chapter 1 - Disambiguation Control  (Incompatible)
 [TODO: Create or find an upgraded version. Disambiguation Control does not compile in Inform 10.1.2]
 [Include Disambiguation Control by Jon Ingold.]
 
-Part 6 - Mark Tilford
+Part 6 - Juhana Leinonen
+
+Chapter 1 - Object Response Tests (Installed)
+
+Include Object Response Tests by Juhana Leinonen.
+
+Part 7 - Mark Tilford
 
 Chapter 1 - Automap (Not Installed)
 
 [Include Automap by Mark Tilford.]
 [There isn't a version of Automap that works in version 10 of Inform using Glulx story format. The version I downloaded and tested requires the Z-code story format (configured in Settings).]
 
-Part 7 - Matthew Fletcher
+Part 8 - Matthew Fletcher
 
 Chapter 1 - Exit Descriptions (Not Installed)
 
 [Include Exit Descriptions by Matthew Fletcher.]
 
-Part 8 - Nathanael Nerode
+Part 9 - Nathanael Nerode
 
 Chapter 1 - Neutral Standard Responses (Not Installed)
 
@@ -184,7 +194,7 @@ To decide which text is best course of action:
 		decide on "you're strong enough now to bust open that mesh cage with the blanket inside";
 	otherwise if courage is held and duct tape is not handled:
 		decide on "you're brave enough to reach for that duct tape in the floor now";
-	otherwise if duct tape is not handled:
+	otherwise if courage is held:
 		decide on "you should investigate that hole in the floor of the staging area";
 	otherwise if luck is held and canned oranges are not handled:
 		decide on "you just might be lucky enough to find something to eat in the storage room";
@@ -439,6 +449,8 @@ Before entering truck when truck is closed: try opening the truck.
 	
 Before exiting when player is in truck and truck is closed: try opening the truck.
 
+After exiting when player is in truck: say "You get out of the truck."
+
 Understand "drive" or "drive [pickup]" or "start [pickup]" or "turn on [pickup]" or "turn key" or "switch on [pickup]" or "shift" or "steer" or "brake" as a mistake ("Your truck's not going anywhere in this condition.").
 
 Understand "fix [pickup]" or "repair [pickup]" or "use [duct tape]" or "tape [pickup]" or "fill [pickup]" or "put [gas can] in [pickup]" or "use [gas can]" as a mistake ("You should wait until you've got everything you need before you start making repairs.").
@@ -679,7 +691,7 @@ The bottle of pills is a transparent openable container.
 	The carrying capacity of the bottle of pills is 50.
 	Ten aspirin are in the bottle of pills.
  
-The rubbing alcohol is a fluid container. The printed name is "bottle of rubbing alcohol". The current volume is 4.0 fl oz.  The liquid of the rubbing alcohol is isopropyl alcohol. 
+The rubbing alcohol is a fluid container. The printed name is "bottle". The current volume is 4.0 fl oz.  The liquid of the rubbing alcohol is isopropyl alcohol. 
 
 Instead of drinking rubbing alcohol: say "It's not the kind of alcohol you want and you know it."
 
@@ -703,12 +715,12 @@ Chapter 1 - Pack of Smokes
 
 The pack of smokes is a closed, opaque, portable openable container.
 Understand "pack of smokes/pack/pack of cigarettes/smokes" as the pack of smokes. 
-Instead of examining the pack of smokes:
-	now pack of smokes is open;
-	say  "You're kind of trying to quit, but man, [if number of cigarettes enclosed by player is at least 1]you could really go for one right now. It looks like you've only got [number of cigarettes enclosed by pack of smokes in words] left[otherwise]you could go for a cigarette right now[end if]."
+The description of pack of smokes is  "You're kind of trying to quit, but man, [if number of cigarettes enclosed by player is at least 1]you could really go for one right now. It looks like you've only got [number of cigarettes enclosed by pack of smokes in words] left[otherwise]you could go for a cigarette right now[end if]."
 After taking the pack of smokes:
 	now pack of smokes is open;
 	say "You put it in your jacket pocket."
+After examining the pack of smokes:
+	now pack of smokes is open.
 The carrying capacity of the pack of smokes is 20.
 Seven cigarettes are in the pack of smokes.
 
@@ -954,7 +966,7 @@ The player carries an open transparent unopenable container called emotional bag
 
 Instead of doing anything other than examining when noun is emotional baggage or second noun is emotional baggage: say "It's not real, bro."
 		
-Every turn while a charged thing (called the item) is visible: 
+Every turn while a charged thing (called the item) is examined: 
 	move the triggered memory of the item to emotional baggage; 
 	say "Something about [the item] [one of]triggers a distant memory of [or]reminds you of [or]makes you think about [at random][triggered memory of the item].".
 
@@ -1004,8 +1016,10 @@ To decide whether (trader - a person) needs more memories:
 
 Carry out trading:
 	move the second noun to the player;
-	now the noun is off-stage.
-
+	now the noun is held by the trader;
+	repeat with item running through  not held talents:
+		now item is off-stage.
+	
 Report trading: say "[The trader] nods. 'Yes,' he says, 'a fair trade.' And something happens inside you as he says it. [The noun] shifts and wriggles and fades. It has shifted. And yeah, it kinda does feel like you could call it [the second noun]. Cool."
 	
 Instead of taking a not held talent when a spirit animal(called the potential trader) is visible: say "'You can't just have it,' [the potential trader] says. 'That's not how it works. You have to TRADE something for it.'".
@@ -1163,7 +1177,14 @@ rabbit's judgement is held by rabbit. After quizzing the rabbit about rabbit's j
 
 how he knows so much about everything is held by the rabbit. After quizzing the rabbit about how he knows so much about everything: say "'Hey, back off man,' he says, 'it's my ****in['] job.' And there's actually like a bleep, too, and now thaht you think of it you only ever saw 8 Mile on TV.";try quizzing rabbit about down to business.
 
-down to business is held by the rabbit. The printed name of down to business is "ask to get down to business". After quizzing the rabbit about down to business: clear all topics; say "'Anyway, look, man, we both know. you're in trouble. I just gotta ask you one question.' And he changes again into like a giant silhouette, and it's the Playboy Bunny, ears and bow tie and all. 'Do you love her?'[add yes-no-suggestion other suggestion]";move the bunny's bow tie to location.
+down to business is held by the rabbit. The printed name of down to business is "ask to get down to business". 
+
+After quizzing the rabbit about down to business: 
+	clear all topics; 
+	say "'Anyway, look, man, we both know. you're in trouble. I just gotta ask you one question.' And he changes again into like a giant silhouette, and it's the Playboy Bunny, ears and bow tie and all. 'Do you love her?'[add yes-no-suggestion other suggestion]";
+	move the bunny's bow tie to location;
+	move strength to location; now strength is familiar;
+	move courage to location; now courage is familiar.
 
 Part 3 - Normal Animals
 
@@ -1250,15 +1271,9 @@ Around the Tower and Office Interior are in Tower Vicinity.
 
 Part 5 - Surrounding Desert
 
-Desolate Desert, Flowering Desert, Vacant Desert, Cool Desert, Stark Desert, Sandy Desert, Cactus-filled Desert, Gloomy Desert, and Desert Expanse are in Surrounding Desert.
-
 Instead of going to a room regionally in Surrounding Desert when location is lit by headlights and flashlight is not held and flashlight is not switched on: say "Outside the wavering glow of your headlights, it's pitch black. A storm must have rolled in; there are no stars above, and nothing but darkness surrounds you. The darkness seems to thicken at every turn. Only the smell of the desert tells you it is still out there."
 
 Instead of going to a room regionally in Surrounding Desert when flashlight is held and flashlight is switched on and emergency lights are switched off: say "You heft your flashlight, but decide not to head out into the desert just yet. [if headlights are switched on]Your truck lights are already starting to dim, and with[otherwise]With[end if]how dark it is, you're not sure you could find your way back."
-
-Part 6 - Endless Desert Region
-
-Endless Desert is a region.
 
 BOOK 2 - BACKDROPS
 
@@ -1439,7 +1454,7 @@ A red warning light is scenery in Base of the Tower.
 
 Part 5 - Weed-strewn Rust
 
-An earthbound room called Weed-strewn Rust is east of Crumbling Concrete and southeast of Base of the Tower and west of Desert Expanse.
+An earthbound room called Weed-strewn Rust is east of Crumbling Concrete and southeast of Base of the Tower.
 
 Chapter 1 - Weed-strewn Rust Description
 
@@ -1463,7 +1478,7 @@ The leaking pipe is scenery in Weed-strewn Rust.
 
 Part 6 - Backtraking
 
-Backtracking is south of Middle of Nowhere and west of Cactus-filled Desert.
+Backtracking is south of Middle of Nowhere.
 
 Chapter 1 - Backtracking Description
 
@@ -1479,9 +1494,7 @@ Against the Fence is north of Base of the Tower.
 
 Chapter 1 - Against the Fence Description
 
-The description of Against the Fence is "In its prime, the building was enclosed and secured by a fifteen-foot [chain-link fence] topped with [coils of barbed wire]. What remains is a stretch to the north, which is mostly intact. You walk alongside it, noticing several bent [fence poles] and [assorted boxes] stacked nearby, including a [rusted metal crate], a [locked trunk], and a [cardboard box]. A solitary desert primrose adds a splash of yellow to the otherwise dismal surroundings.
-
-You pause to examine a [gap in the fence]. Someone cut an egress to mitigate the lack of a gate. The opening is approximately four feet tall and has been stretched open to accommodate a person of modest size." [You might have to crouch but could pass through it safely."]
+The description of Against the Fence is "In its prime, the building was enclosed and secured by a fifteen-foot [chain-link fence] topped with [coils of barbed wire]. What remains is a stretch to the north, which is mostly intact. You walk alongside it, noticing several bent [fence poles] and [assorted boxes] stacked nearby, including a [rusted metal crate], a [locked trunk], and a [cardboard box]. A solitary desert primrose adds a splash of yellow to the otherwise dismal surroundings."
 
 Chapter 2 - Against the Fence Props
 
@@ -1493,10 +1506,6 @@ The description  of the locked trunk is "A trunk appears to be airtight and wate
 
 A cardboard box is a box in Against the Fence.
 The description of the cardboard box is "The logo for Shiftman Industrial Supplies is faded but still readable on one side of the cardboard box. You have seen the logo many times, most notably on your father's uniforms. He worked for the company for most of his life."
-
-The gap in the fence is north of Against the Fence and south of Desolate Desert. 
-	The gap in the fence is a door. The description is "Someone appears to have cut open an entryway through the gate. The gap is approximately five feet tall. It has been stretched open to accommodate a person of modest size. You might have to crouch but could pass through it safely."
-	Understand "gap in the fence" as the gap.
 
 Chapter 3 - Against the Fence Scenery
 
@@ -1720,87 +1729,18 @@ Part 5 - Roof
 
 Roof is an earthbound room above Storage Room. 
 
-BOOK 3 - SURROUNDING DESERT
-
-Flowering Desert, Desolate Desert, Vacant Desert, Cool Desert, Gloomy Desert, Stark Desert, Sandy Desert, Cactus-filled Desert, and Desert Expanse are regionally in Surrounding Desert.
-
-Part 1 - Flowering Desert
-
-The Flowering Desert is an earthbound room. The Flowering Desert is east of Middle of Nowhere, southeast of Crumbling Concrete, south of Weed-strewn Rust, and northeast of Backtracking.
-
-The description of Flowering Desert is "You can't see the vivid colors of the desert flowers in this blackness, but you can smell them. Most of them are strangely sweet but subtle, like a well-worn perfume."
-
-Part 2 - Desolate Desert
-
-Desolate Desert is an earthbound room.
-
-The description of Desolate Desert is "The blackness adds a heaviness around your shoulders, causing them to sink as your thoughts turn more desolate and desperate."
-	
-Part 3 - Vacant Desert
-
-Vacant Desert is an earthbound room. Vacant Desert is west of Middle of Nowhere, southwest of Crumbling Concrete,  and northwest of Backtracking.
-
-The description of Vacant Desert is "In daylight, the desert is a landscape of immense beauty. At night, without the grace of a full moon, everything is shrouded in darkness."
-	
-Part 4 - Cool Desert
-
-Cool Desert is an earthbound room. Cool Desert is  north of Vacant Desert, west of Crumbling Concrete, northwest of Middle of Nowhere, and southwest of Base of the Tower.
-
-The description of Cool Desert is "You stumble through the cool desert night air, mindful of your direction so you can retrace your steps in the darkness."
-	
-Part 5 - Gloomy Desert
-
-Gloomy Desert is an earthbound room. Gloomy Desert is north of Cool Desert, west of Base of the Tower, northwest of Crumbling Concrete, and southwest of Against the Fence.
-
-The description of Gloomy Desert is "Alone in the dark, the night sky casts a fraught and gloomy mood over everything it touches. It matches your mood tonight. You have important matters to attend to and nothing is helped by being stuck out here."
-	
-Part 6 - Stark Desert
-
-Stark Desert is an earthbound room. Stark Desert is north of Gloomy Desert, west of Against the Fence, southwest of Desolate Desert, and northwest of Base of the Tower.
-
-The description of Stark Desert is "As you walk through the night air, with the sliver of a moon above you and the sounds of insects chirping and flapping about, you realize how good it is to have moments like this; moments away from work and other distractions when you can be alone with your thoughts."
-	
-Part 7 - Sandy Desert
-
-Sandy Desert is an earthbound room. Sandy Desert is east of Against the Fence, southeast of Desolate Desert, and northeast of Base of the Tower.
-
-The description of Sandy Desert is "You are grateful for your sturdy work boots in this sandy desert."
-	
-Part 8 - Cactus-filled Desert
-
-Cactus-filled Desert is an earthbound room east of Base of the Tower, south of Sandy Desert, north of Weed-strewn Rust, and southeast of Against the Fence.
-
-The description of Cactus-filled Desert is "Despite the soundtrack of nature that surrounds you, there is a deep quiet in this place that brings about a meditative pause in a rather hectic and long day."
-	
-Part 9 - Desert Expanse
-
-Desert Expanse is an earthbound room east of Weed-strewn Rust, northeast of Flowering Desert, and southeast of Cactus-filled Desert.
-
-The description of Desert Expanse is "You've walked far enough to realize there is nothing around for miles. There are no city lights in the distance, no sounds of vehicles traversing a nearby highway. You'd best turn back. There is no help for you here."
-
-BOOK 4 - ENDLESS DESERT
+BOOK 4 - SURROUNDING  DESERT
 
 Part 1 - Open Desert
 
-Open Desert is regionally in Endless Desert.
-
-The Open Desert is  north of Stark Desert and northwest of Stark Desert and west of Stark Desert and southwest of Stark Desert.
-The Open Desert is northwest of Gloomy Desert and west of Gloomy Desert and southwest of Gloomy Desert.
-The Open Desert is northwest of Cool Desert and west of Cool Desert and southwest of Cool Desert.
-The Open Desert is northwest of Vacant Desert and west of Vacant Desert and southwest of Vacant Desert and south of Vacant Desert.
-The Open Desert is west of Backtracking and southwest of Backtracking and south of Backtracking and southeast of Backtracking and east of Backtracking.
-The Open Desert is south of Desert Expanse and southeast of Desert Expanse and east of Desert Expanse and northeast of Desert Expanse and north of Desert Expanse.
-The Open Desert is east of Cactus-filled Desert and northeast of Cactus-filled Desert.
-The Open Desert is southeast of Sandy Desert and east of Sandy Desert and northeast of Sandy Desert and north of Sandy Desert.
-The Open Desert is north of Desolate Desert and northeast of Desolate Desert and east of Desolate Desert and northwest of Desolate Desert and west of Desolate Desert.
-The Open Desert is southeast of Middle of Nowhere and southwest of Middle of Nowhere.
+The Open Desert is a room. The Open Desert is west of Base of the Tower, east of Base of the Tower, west of Crumbling Concrete, west of Middle of Nowhere, east of Middle of Nowhere, west of Backtracking, south of Backtracking, east of Backtracking, north of Weed-strewn Rust, east of Weed-strewn Rust, and south of Weed-strewn Rust.
 
 Definition: A direction is cardinal if it is not up and it is not down and it is not outside and it is not inside.
 
 Before going to The Open Desert when The Open Desert is unvisited:
 	repeat with heading running through cardinal directions:
 		change the heading exit of The Open Desert to The Open Desert.
-
+		
 Before going from Around the Tower to Open Desert:
 	if flashlight is not held, instead say "[if headlights are switched on]Outside the wavering glow of your headlights, i[otherwise]I[end if]t's pitch black. A storm must have rolled in; there are no stars above, and nothing but darkness surrounds you. The darkness seems to thicken at every turn. Only the smell of the desert tells you it is still out there.";
 	if flashlight is not switched on, try switching on flashlight;
@@ -1879,7 +1819,7 @@ Addicted is a scene.
 
 Addicted begins when Control Center is unvisited and the turn count is greater than 30. 
 
- Every turn when a dramatic scene is not happening and we are not smoking and a random chance of 1 in 10 succeeds during Addicted:
+ Every turn when a dramatic scene is not happening and we are not smoking and a random chance of 1 in 30 succeeds during Addicted:
 	if the player encloses a cigarette (called the chosen one):
 		say "[one of]You can't help it. You need another cigarette[or]What the hell, another cigarette won't kill you[or]You really need another smoke[cycling].";
 		try smoking the chosen one;
@@ -2290,7 +2230,7 @@ BOOK 1 - IMPROVED STATUS LINE
 [TODO: To view the output from the Property Checking extension, comment this section before the definition of Table of Fancy Status]
 
 When play begins:
-	clear the screen;
+	[clear the screen;]
 	clear only the status line;
 	leave space;
 	say "[story title]";
@@ -2305,7 +2245,7 @@ When play begins:
 	leave space;
 	say "During gameplay:[line break]     Enter COMPASS OFF to hide the compass[line break]     Enter COMPASS ON to show the compass[paragraph break]When the compass is on, directions to locations you have visited appear in normal text, while directions to locations you have not visited appear in bold text. A direction will not appear on the compass if you cannot go that way.";
 	say paragraph break;
-	say "Would you like to see which directions you can go in the status bar?";
+	say "Would you like to turn on the compass?";
 	follow the immediately prompt rule;
 	if the player consents:
 		now compass choice is Table of Fancy Status;
@@ -2382,9 +2322,7 @@ To say regional area:
 	if in darkness, rule succeeds;
 	if location is in Around the Tower, say "Around the Tower";
 	if location is in Office Interior, say "Office Interior";
-	if location is in Surrounding Desert, say "Surrounding Desert";
-	if location is in Endless Desert, say "Endless Desert";
-	
+	if location is in Surrounding Desert, say "Surrounding Desert".	
 To say talent listing:
 	say "[if player holds at least one talent]Talents: [the list of held talents][end if]".
 	
