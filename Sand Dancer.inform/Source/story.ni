@@ -70,15 +70,17 @@ Include Basic Help Menu by Emily Short.
 
 When play begins:
 	choose row 1 in Table of Basic Help Options;
-	now description entry is "Sand Dancer is a [story genre] story designed to teach aspiring authors how to create interactive fiction using Inform 7. Aaron Reed's book [italic type]Creating Interactive Fiction with Inform 7[roman type] largely consists of exercises that guide an author through creating a personal copy of this game. Danya D. Smith authored this version.
+	now description entry is "Sand Dancer is a [story genre] story designed to teach aspiring authors how to create interactive fiction using Inform 7. Aaron Reed's book [italic type]Creating Interactive Fiction with Inform 7[roman type] largely consists of exercises that guide an author through creating a personal copy of this game. Aaron Reed and Alexei Othenin-Girard authored the original source text. Danya D. Smith authored this version.
 	
 	The scenario: [story description]
 	
 	At the top of the screen, you'll see a customized status bar that displays your current region and location. It includes a compass rose that displays the directions you can move. In addition to the cardinal directions, you may see U for up, D down, IN for inside, or OUT for outside.
 	
-	Directions for locations you have not visited display in bold text, while directions to locations you have already visited display in standard text. 
+	Directions for locations you have not visited display in bold text.
 	
-	A direction will not appear on the compass if you cannot go that way.
+	Directions to locations you have already visited display in normal, standard text. 
+	
+	A marker will not appear on the compass if you cannot move in that direction.
 	
 	During gameplay:[line break]     Enter COMPASS OFF to hide the compass[line break]     Enter COMPASS ON to show the compass
 	
@@ -179,7 +181,7 @@ To decide which text is best course of action:
 	otherwise if Crumbling Concrete is unvisited:
 		decide on "you could look around the area to find a phone or something";
 	otherwise if pane of cracked glass is closed:
-		decide on "you could break open an window to get inside that building";
+		decide on "you could break open a window to get inside that building";
 	otherwise if flashlight is not handled:
 		decide on "you could explore the building using the sense of touch, since it's so dark";
 	otherwise if Storage Room is unvisited:
@@ -265,10 +267,10 @@ Carry out listing exits (this is the count exits rule): now count of exits is th
 	
 Part 4 - Character Interactions
 
-Before showing something (called the item) to someone (called the viewer): try giving the item to the viewer instead.
-
 [Exercise 9.1]
-[Understand the command "show" as something new. Understand "show [something] to [someone]" as giving it to.]
+[Before showing something (called the item) to someone (called the viewer): try giving the item to the viewer instead.
+
+Understand the command "show" as something new. Understand "show [something] to [someone]" as giving it to.]
 
 Part 5 - Rules
 
@@ -297,22 +299,14 @@ Part 9 - Custom Default Library Messages
 
 Instead of dropping something not held: say "You don't have the [noun], man.";
 
-Part 10 - Testing
+Part 10 - Commands
 
-Chapter 1 - Flag Objects without Descriptions
+Chapter 1 - Verbs to Remove
 
-[After printing the name of something (called item) while the description of item is "" and the item is not a backdrop and the item is not undescribed: say "***".]
+Understand the command "rub" as something new.
 
-Chapter 2 - Flag Portable Objects
-
-[Before printing the name of something (called item) while item is portable and item is not part of something: say "__".]
-
-Chapter 3 - Flag Default Messages
-
-[NOTE: Introduced in Chapter 10 - This does not work]
-[When play begins: change library message debug to dbg_on.]
 		
-VOLUME 2 - MECHANICS
+VOLUME 2 - WORLD MECHANICS
 
 BOOK 1 - LIGHTING CONDITIONS	
 
@@ -343,53 +337,11 @@ Part 2 - Unfamiliar Locations
 
 Definition: a room is unfamiliar if it is adjacent to location and it is not visited.
 
-BOOK 3 - CUSTOM KINDS
+VOLUME 3 - CUSTOM OBJECTS
 
-Part 1 - Windows
+BOOK 1 - CUSTOM KINDS
 
-A small window is a kind of thing.
-A tall window is a kind of door.
-A tall window is usually closed, unopenable and undescribed.
-Understand "small/tall/window" as a window.
-Understand the open property as describing a tall window.
-The description of a tall window is usually "[if noun is open]Just an empty frame.[otherwise]Dusty glass panes."
-
-Instead of opening or closing a closed tall window: say "[if noun is open]It's already busted open.[otherwise]It looks like these windows have been rusted shut for years."
-
-Instead of throwing something (called the missile) at a closed tall window (called the targeted window):
-	now missile is in the other side of the targeted window;
-	if other side of targeted window is Staging Area:
-		now missile is undescribed;
-	now the targeted window is open;
-	say "[The missile] smashes through [the targeted window], shattering it."
-
-Instead of throwing something at an open tall window (called the broken window): 
-	say "[The broken window] is already broken."
-
-Instead of attacking a tall window: say "Nice thought, but the last thing you need is a sliced open hand. Maybe if you could get a little distance."
-
-Instead of attacking an open tall window: say "You've already busted it open."
-
-Understand "climb in/into/through [a door]" as entering. 
-Understand "look through/in/inside/into [a closed window]" as a mistake ("The glass is too filthy for you to see anything on the other side.").
-
-Report going through a tall window: say "You [first time]brush away remnants of broken glass and [only]wriggle through the window."
-
-Instead of going through a small window: say "It's too small for you to wriggle through."
-
-Part 2 - Plants
-
-A plant is a kind of thing.
-A plant can be dead or living. A plant is usually living.
-Understand "plant" as a plant.
-Understand the dead property as describing a plant.
-A plant can be portable or fixed in place. A plant is usually fixed in place.
-A plant can be flowering or bloomless. A plant is usually flowering.
-A plant can be annual or perennial. A plant is usually annual.
-A plant can be poisonous or curative. A plant is usually curative.
-A plant can be decorative or dull. A plant is usually decorative.
-
-Part 3 - Boxes
+Chapter 1 - Boxes
 
 A box is a kind of container. 
 A box can be open. A box is usually closed.
@@ -397,197 +349,7 @@ A box can be openable. A box is usually openable.
 A box can be transparent. A box is usually opaque.
 A box can be fixed in place. A box is usually portable.
 
-Part 4 - Pickup Truck
-
-The pickup truck is an enterable openable transparent closed fixed in place container. The description of the pickup truck is "[if player is in truck]You can't tell what the damage is from in here[otherwise][first time]Getting down on your knees in the cold sand, you look at the undercarriage. Sure enough, you ripped up the fuel line and all your gas has drained away, sucked dry by the thirsty desert sand.[only]You'll need to find some way to patch up the line, plus some fuel, to have any hope of fixing this mess[end if]."
-Understand "pickup truck/truck/pickup" as the pickup truck.
-
-The cabin is part of the pickup truck. Instead of examining the cabin: say "You hoped the cool breeze and loud music blaring from the radio would keep you awake on the drive home. It didn't work. Sitting here in the cold desert night chills you to your bones. Between the cold and the crash, you're wide awake now. This seat is the least abused or aged part of the cabin, the rest of it... the [dashboard], the [glove box], everything about it forecasts to the world that you're strapped for cash."
-
-The dashboard is part of the pickup truck. Instead of examining the dashboard: say "The dashboard reveals a vehicle out of time—an analog spedometer and fuel gauge, a radio with round dials that move a tiny red indicator between the numbered stations, and five silver buttons that remember your favorites (only two of them work now). And then there's the glove box..."
-
-A glove box is part of the pickup truck. Understand "glove compartment/box/compartment" as glove box.
-	It is an openable closed opaque box.
-	The description of the glove box is "You haven't been able to lock it since some jerk broke into your truck when you were parked at Last Call for late night drinks with friends after work. Whoever it was did a number on it, leaving deep scratches on the handle and surface around the lock. It makes your truck look ten times older than it is, but when you found out how much the repair would cost, you decided to live with the scratches."
-	The pack of smokes is in the glove box.
-	An owner's manual is inside the glove box. The description is "It has been useful when you've needed to replace a fuse, or jump the battery, but the strong smell of gasoline is telling you it's not going to help you tonight.". Understand "owners/manual/owner's manual" as the owner's manual.
-	A pack of gum is inside the glove box. The description is "Ocean bought the nicotine gum as a not-so-subtle nudge to get you to stop smoking. You chewed every damned piece but each one only made you want to smoke more. Worthless purchase, and it tasted like garbage. There was no magic in it, at least none for you."
-	Instead of taking the pack of gum: say "You pick it up and realize it's empty. Best to leave it where it is. [run paragraph on]"; try examining the pack of gum.
-
-	Does the player mean taking the pack of smokes when the player is inside the truck: it is very likely.
-
-Some headlights are part of the pickup truck. 
-	The headlights are a device. 
-	They are switched on.
-	The headlights are undescribed.
-
-A gas tank is part of the pickup truck. The gas tank has a liquid level. The gas tank is mostly empty.
-
-Some scratches around the lock are part of the pickup truck.
-
-After switching on the headlights: now every within range of headlights room is lighted; say "The desert shadows dissolve in the glow of your headlights."
-
-	After switching off the headlights: if emergency lights are switched off, now every within range of headlights room is dark; say "You click the headlights off[if emergency lights are switched off and flashlight is switched off]and blackness swallows you up.[otherwise if emergency lights are switched off and flashlight is switched on and flashlight is visible], leaving only the ghostly beam of your flashlight[end if]."
-
-A state map of New Mexico is inside the pickup truck. The state map is a backdrop.
-Understand "map/state map" as state map of New Mexico.
-
-A pair of aviator sunglasses is inside the pickup truck. It is undescribed.
-The pair of aviator sunglasses is wearable.
-
-Some loose change is inside the pickup truck. It is a backdrop.
-
-empty cups are inside the pickup truck. They are a backdrop.
-
-The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air. In the [cabin], you can see [a list of things in truck]."
-
-After opening the pickup truck: say "The door creaks open with difficulty rusted joints straining."
-
-After closing the truck: say "You slam the door shut."
-
-Before entering truck when truck is closed: try opening the truck.
-	
-Before exiting when player is in truck and truck is closed: try opening the truck.
-
-After exiting when player is in truck: say "You get out of the truck."
-
-Understand "drive" or "drive [pickup]" or "start [pickup]" or "turn on [pickup]" or "turn key" or "switch on [pickup]" or "shift" or "steer" or "brake" as a mistake ("Your truck's not going anywhere in this condition.").
-
-Understand "fix [pickup]" or "repair [pickup]" or "use [duct tape]" or "tape [pickup]" or "fill [pickup]" or "put [gas can] in [pickup]" or "use [gas can]" as a mistake ("You should wait until you've got everything you need before you start making repairs.").
-
-Instead of switching on or switching off pickup truck: say "The engine just turns over. It won't start."
-
-Instead of attacking pickup truck: say "You smack [if player is in truck]the wheel[otherwise]the hood[end if] in exasperation. How did you get into this mess?"
-
-Part 5 - Flashlight
-
-The flashlight is a portable device. 
-
-The description of flashlight is "[if flashlight is switched on]Emitting a good, strong beam: thank god it works[otherwise]Cold blue metal, and hefty[end if]."
-
-Understand "flashlight/flash/light" as the flashlight.
-
-Carry out switching on flashlight: now flashlight is lit.
-Carry out switching off flashlight: now flashlight is unlit.
-
-Before switching on flashlight in dim Staging Area: 
-	now metal desk is described; 
-	now hole in the floor is described; 
-	now cobwebs are described;
-	now every handled visible thing is described;
-	now Staging Area is bright.
-
-After taking flashlight in dim Staging Area: say "Yeah, its a flashlight all right. You grip it in sudden relief, turning it in your hands till your finger finds the switch."
-
-After switching on the flashlight: say "The flashlight casts your surroundings into stark relief."; try looking.
-
-Instead of attacking the flashlight: say "You're really in a mood, aren't you? Go take your frustrations out on something else."
-
-Part 6 - Emergency Lights
-
-The emergency lights are a plural-named fixed in place device. 
-
-Understand "control/panel/control panel/emergency/lights" as the emergency lights.
-
-For writing a paragraph about the emergency lights: say "Near some [rows of crumbling shelving] supporting hundreds of dusty [cans of food][if emergency lights are switched off] you spot a dark[otherwise] is the[end if] control panel for the building's emergency lights."; now cans of food are mentioned.
-
-[The initial appearance of the emergency lights is "Mounted to the wall is a control panel for the building's emergency lights. They are switched [if emergency lights are switched on]on[otherwise]off[end if]."]
-
-After switching on the emergency lights: 
-	now every room regionally in Tower Vicinity is lighted; 
-	say "With a sharp buzz, a whiff of static, and an electrical groan, bare light bulbs flicker on throughout the building."
-
-After switching off the emergency lights: 
-	now every room regionally in Tower Vicinity is dark; 
-	if headlights are switched on: 
-		now every within range of headlights room is lighted; 
-		say "The lights die out except for a ghostly glow from outside that must be your headlights.";
-	otherwise if flashlight is switched on and flashlight is visible:
-		say "The lights die out, leaving only the beam of your flashlight.";
-	otherwise:
-		say "The lights flicker and die out";
-		if player holds courage:
-			say ", but you are not afraid";
-		say ".";
-	say "[line break]The generator whines as it powers off, slowly falling silent."
-	
-Instead of attacking the emergency lights: 
-	say "You're frustrated and feel like lashing out at something, but you know that would only make things worse."
-
-Part 7 - Guidebook
-
-A weather-worn guidebook is a thing. 
-
-The description of guidebook is "Most of the pages are faded beyond readability, but you can see that it once served as a comprehensive guide to local fauna. You haven't seen much out here besides that solidary lizard swinging from the Saguaro, but if curiousity overtakes you you could try to look up an animal in the book."
-
-Understand "guide/book/page/pages" as the guidebook.
-
-Consulting is an action applying to one carried thing. Understand "consult [something]" or "consult about [something]"  or "read about [something]" as consulting.
-
-Check consulting when noun is not the weather-worn guidebook: instead say "Eh. You can't really consult that about anything."
-
-Instead of consulting the guidebook about "sand-dancer/sand/dancer/lizard/lizards": say "You look for the brown-colored lizard in the guidebook. The entry says it's a 'rare subspecies of the common desert lizard found only in the outskirts of Oro Oeste, and known to native peoples as [italic type]sand-dancer[roman type]. In legends, the sand-dancer was a clever triskster and twister or words who created night by tricking the sun into spending half the day underground.' Interesting."
-
-Instead of consulting the guidebook about "spider/spiders": say "The picture of the wingspan of a great horned owl catches your attention. You note that this particular species can carry prey that exceeds its weight. While it seems partial to racoons, rabbits, and squirrels, you wonder if it might dispose of a particularly large spider. Well, probably not, but one can hope. You continue to flip through the book until you find the entry for tarantulas. [if cobwebs are in Staging Area]You think about those cobwebs as you read on.[end if]
-
-'Tarantulas are the largest spiders in the world. They adapt in the desert by building an underground burrow lined with silk webbing. They are active during the monsoons and into early fall. They are nocturnal hunters preying on a variety of insects and small lizards. They catch their victims by ambushing them and killing them with a venomous bite with their fangs.'"
-
-Instead of consulting the guidebook about "snake/snakes/rattlesnake": say "The western diamondback rattlesnake (Crotalus atrox) is a venomous species of the diamondback rattlesnake native to the United States and Mexico. It is also known as the Arizona diamond rattlesnake or desert diamondback. The western diamondback is responsible for a majority of snakebite deaths in Mexico every year. On an average, it can grow up to 4 ft in length; though specimen measuring up to 5 ft have also been reported. It is generally grayish brown in color and has around 20 to 25 irregular spots on its dusty body. It is an ambush predator, which hunts at dawn or during the night. It hides in the sand and waits for the prey. When the prey is within reach, it pounces on it and injects its deadly venom to kill it. The western diamondback feeds on prairie dogs, kangaroos, rats, whiptail lizards, Texas banded geckos, birds and even on small snakes."
-
-Instead of burning the weather-worn guidebook: say "It may seem useless right now, but it won't cast much warmth, and there are other things around you can use for kindling."
-
-Part 8 - Shoes and Socks
-
-[Exercise 5.1]
-A pair of shoes is a kind of thing. A pair of shoes is wearable and inedible.
-A pair of socks is a kind of thing. A pair of socks is wearable and inedible.
-
-A pair of shoes is either men's or women's.
-A pair of shoes is either small or large.
-
-A person is either small-footed or large-footed.
-
-Instead of wearing a small pair of shoes when player is large-footed: say "It doesn't matter how long you try to cram your foot into that shoe. It is too small. It will not fit."
-
-Instead of wearing a large pair of shoes when player is small-footed : say "You can slide your foot into that shoe but don't expect to walk around. It is too big. Your foot will slide right out."
-
-Instead of wearing a women's pair of shoes when the player is male: say "A women's shoe will not conform to the shape of your feet."
-
-Instead of wearing a men's pair of shoes when the player is female: say "A men's shoe will not conform to the shape of your feet."
-
-Instead of wearing a pair of shoes when player is not wearing a pair of socks: say "You'll want to put on your socks first."
-
-Check wearing a pair of shoes when player is wearing a pair of shoes: say "You'll have to take off your shoes first."
-
-Instead of taking off a pair of socks when player is wearing a pair of shoes: say "You'll have to take off your shoes first."
-
-[The pair of warm wooly socks are a pair of socks.
-The pair of tennis shoes is a pair of shoes. It is men's and small.
-The pair of ankle boots is a pair of shoes. It is women's and small.
-The pair of work boots is a pair of shoes. It is men's and large.]
-
-Part 9 - Aspirin
-
-An aspirin is a kind of thing. The plural of aspirin is aspirin.
-An aspirin is always edible. 
-
-Instead of drinking an aspirin: 
-	try eating a random aspirin.
-
-After taking an aspirin:
-	say "You tip the bottle and shake an aspirin into your hand."
-
-After eating an aspirin: 
-	say "You swallow it with a grimace. It leaves a chalky taste in your mouth.". 
-
-Part 10 - Bandaids
-
-A bandaid is a kind of thing. The plural of bandaid is bandaids.
-A bandaid is always wearable.
-
-After wearing a bandaid: say "You peel open the wrapper and remove the bandaid. You carefully peel away the protective seals covering the adhesive, then apply it to your skin."
-
-Part 11 - Fluid Containers
+Chapter 2 - Fluid Containers
 
 [See §15.19. Arithmetic with units]
 [Most of this section was pulled from the Example titled Lemonade]
@@ -673,54 +435,89 @@ Report pouring it into:
     say "[if the noun is empty][The noun] is now empty;[otherwise][The noun] now contains [current volume of the noun in rough terms] of [liquid of the noun]; [end if]"; 
     say "[the second noun] contains [current volume of the second noun in rough terms] of [liquid of the second noun][if the second noun is full], and is now full[end if]."
 
-Part 11 - First Aid Kit
+BOOK 2 - ARCHITECTURE & BUILDING FEATURES
 
-An expired first aid kit is a box.
-	In it is a bottle of pills, an ace bandage, a box of bandaids, and a bottle of rubbing alcohol.
+Part 1 - Windows
 
-The box of bandaids is a box. 
-	flesh-colored bandaid is a bandaid.
-	The flesh-colored bandaid is in the box of bandaids.
-	large square bandaid is a bandaid.
-	The large square bandaid is in the box of bandaids.
-	fingertip bandaid is a bandaid.
-	The fingertip bandaid is in the box of bandaids. 
+A small window is a kind of thing.
+A tall window is a kind of door.
+A tall window is usually closed, unopenable and undescribed.
+Understand "small/tall/window" as a window.
+Understand the open property as describing a tall window.
+The description of a tall window is usually "[if noun is open]Just an empty frame.[otherwise]Dusty glass panes."
 
-The bottle of pills is a transparent openable container.
-	The bottle of pills is closed.
-	The carrying capacity of the bottle of pills is 50.
-	Ten aspirin are in the bottle of pills.
- 
-The rubbing alcohol is a fluid container. The printed name is "bottle". The current volume is 4.0 fl oz.  The liquid of the rubbing alcohol is isopropyl alcohol. 
+Instead of opening or closing a closed tall window: say "[if noun is open]It's already busted open.[otherwise]It looks like these windows have been rusted shut for years."
 
-Instead of drinking rubbing alcohol: say "It's not the kind of alcohol you want and you know it."
+Instead of throwing something (called the missile) at a closed tall window (called the targeted window):
+	now missile is in the other side of the targeted window;
+	if other side of targeted window is Staging Area:
+		now missile is undescribed;
+	now the targeted window is open;
+	say "[The missile] smashes through [the targeted window], shattering it."
 
-Part 12 - Can Opener
+Instead of throwing something at an open tall window (called the broken window): 
+	say "[The broken window] is already broken."
 
-A can opener is in Control Center. 
+Instead of attacking a tall window: say "Nice thought, but the last thing you need is a sliced open hand. Maybe if you could get a little distance."
 
-The can opener is privately-named. Understand "opener/can opener" as the can opener.
+Instead of attacking an open tall window: say "You've already busted it open."
 
-Part 13 - Cigarettes
+Understand "climb in/into/through [a door]" as entering. 
+Understand "look through/in/inside/into [a closed window]" as a mistake ("The glass is too filthy for you to see anything on the other side.").
+
+Report going through a tall window: say "You [first time]brush away remnants of broken glass and [only]wriggle through the window."
+
+Instead of going through a small window: say "It's too small for you to wriggle through."
+	
+BOOK 3 - ENVIRONMENTAL OBJECTS
+
+Part 1 - Plants
+
+A plant is a kind of thing.
+A plant can be dead or living. A plant is usually living.
+Understand "plant" as a plant.
+Understand the dead property as describing a plant.
+A plant can be portable or fixed in place. A plant is usually fixed in place.
+A plant can be flowering or bloomless. A plant is usually flowering.
+A plant can be annual or perennial. A plant is usually annual.
+A plant can be poisonous or curative. A plant is usually curative.
+A plant can be decorative or dull. A plant is usually decorative.
+
+BOOK 4 -  CONSUMABLES
+
+Part 1 - Aspirin
+
+An aspirin is a kind of thing. The plural of aspirin is aspirin.
+An aspirin is always edible. 
+
+Instead of drinking an aspirin: 
+	try eating a random aspirin.
+
+After taking an aspirin:
+	say "You tip the bottle and shake an aspirin into your hand."
+
+After eating an aspirin: 
+	say "You swallow it with a grimace. It leaves a chalky taste in your mouth.". 
+
+Part 2 - Cigarettes
+
+Chapter 1 - Individual Cigarettes
 
 A cigarette is a kind of thing.
+A cigarette is not plural-named.
 A cigarette is inedible.
 A cigarette is undescribed.
 
 There is a number variable called original cigarette count. Original cigarette count is 7.
 
-Part 14 - Packs of Cigarettes
+Chapter 2 - Packs of Cigarettes
 
-Chapter 1 - Pack of Smokes
+Section 1 - Pack of Smokes
 
-The pack of smokes is a closed, opaque, portable openable container.
+The pack of smokes is an open, opaque, portable openable container.
 Understand "pack of smokes/pack/pack of cigarettes/smokes" as the pack of smokes. 
-The description of pack of smokes is  "You're kind of trying to quit, but man, [if number of cigarettes enclosed by player is at least 1]you could really go for one right now. It looks like you've only got [number of cigarettes enclosed by pack of smokes in words] left[otherwise]you could go for a cigarette right now[end if]."
-After taking the pack of smokes:
-	now pack of smokes is open;
-	say "You put it in your jacket pocket."
-After examining the pack of smokes:
-	now pack of smokes is open.
+Instead of examining the pack of smokes:
+	say  "You're kind of trying to quit, but man, [if number of cigarettes enclosed by player is at least 1]you could really go for one right now. It looks like you've only got [number of cigarettes enclosed by pack of smokes in words] left[otherwise]you could go for a cigarette right now[end if]."
 The carrying capacity of the pack of smokes is 20.
 Seven cigarettes are in the pack of smokes.
 
@@ -729,44 +526,85 @@ Check inserting something into in the pack of smokes:
 	
 After printing the name of the pack of smokes while taking inventory: say " you should have given up months ago".
 
-Chapter 2 - Crumpled Box
+Section 2 - Crumpled Pack
 
-The crumpled box is a closed, opaque, portable openable container.
-Instead of examining the crumpled box:
-	now crumpled box is open;
-	say "[if number of cigarettes enclosed by player is at least 1]You check the box and find [number of cigarettes enclosed by crumpled box in words] cigarettes[otherwise]You could go for a cigarette right now[end if]."Understand "crumpled box" or "crumpled carton" or "crumpled pack" or "discarded pack" or "carton" as the crumpled box.
-the carrying capacity of the crumpled box is 20.
-Five cigarettes are in the crumpled box.
-After taking the crumpled box: now crumpled box is open.
+The crumpled pack is an open, opaque, portable openable container.
+Instead of examining the crumpled pack:
+	say "An unusually high level of anxiety prompted you to fish it out from the trash, [if number of cigarettes enclosed by player is at least 1]and you hope it might bring some measure of calm. It looks like you've only got [number of cigarettes enclosed by crumpled pack in words] left[otherwise]you could go for a cigarette right now[end if]."Understand "crumpled pack" or "crumpled carton" or "crumpled box" or "discarded pack" or "carton" as the crumpled pack.
+the carrying capacity of the crumpled pack is 20.
+Five cigarettes are in the crumpled pack.
 
-Check inserting something into in the crumpled box:
+Check inserting something into in the crumpled pack:
 	if the noun is not a cigarette, say "There is nothing magical about the crumpled carton. You can't put that in there.".
 	
-After printing the name of the crumpled box while taking inventory: say " you pilfered from the trash".
+After printing the name of the crumpled pack while taking inventory: say " you pilfered from the trash".
 
-Part 15 - Wallet
+BOOK 5 - OFFICE SUPPLIES & EQUIPMENT
 
-A wallet is a portable container.
+Part 1 - Equipment
 
-The wallet is openable and closed. A license and a receipt from Last Call is in the wallet.
+Chapter 1 - Flashlight
+
+The flashlight is a portable device. 
+
+The description of flashlight is "[if flashlight is switched on]Emitting a good, strong beam: thank god it works[otherwise]Cold blue metal, and hefty[end if]."
+
+Understand "flashlight" or "flash" or "light" as the flashlight.
+
+Carry out switching on flashlight: now flashlight is lit.
+Carry out switching off flashlight: now flashlight is unlit.
+
+Before switching on flashlight in dim Staging Area: 
+	now metal desk is described; 
+	now hole in the floor is described; 
+	now cobwebs are described;
+	now every handled visible thing is described;
+	now Staging Area is bright.
+
+After taking flashlight in dim Staging Area: say "Yeah, its a flashlight all right. You grip it in sudden relief, turning it in your hands till your finger finds the switch."
+
+After switching on the flashlight: say "The flashlight casts your surroundings into stark relief."; try looking.
+
+Instead of attacking the flashlight: say "You're really in a mood, aren't you? Go take your frustrations out on something else."
+
+Chapter 2 - Can Opener
+
+A can opener is in Control Center. 
+
+The can opener is privately-named. Understand "opener/can opener" as the can opener.
+		
+Chapter 3 - Emergency Lights
+
+The emergency lights are a plural-named fixed in place device. 
+
+Understand "control/panel/control panel/emergency/lights" as the emergency lights.
+
+For writing a paragraph about the emergency lights: say "Near some [rows of crumbling shelving] supporting hundreds of dusty [cans of food][if emergency lights are switched off] you spot a dark[otherwise] is the[end if] control panel for the building's emergency lights."; now cans of food are mentioned.
+
+[The initial appearance of the emergency lights is "Mounted to the wall is a control panel for the building's emergency lights. They are switched [if emergency lights are switched on]on[otherwise]off[end if]."]
+
+After switching on the emergency lights: 
+	now every room regionally in Tower Vicinity is lighted; 
+	say "With a sharp buzz, a whiff of static, and an electrical groan, bare light bulbs flicker on throughout the building."
+
+After switching off the emergency lights: 
+	now every room regionally in Tower Vicinity is dark; 
+	if headlights are switched on: 
+		now every within range of headlights room is lighted; 
+		say "The lights die out except for a ghostly glow from outside that must be your headlights.";
+	otherwise if flashlight is switched on and flashlight is visible:
+		say "The lights die out, leaving only the beam of your flashlight.";
+	otherwise:
+		say "The lights flicker and die out";
+		if player holds courage:
+			say ", but you are not afraid";
+		say ".";
+	say "[line break]The generator whines as it powers off, slowly falling silent."
 	
-The description of the wallet is "It's old and weathered brown leather, soft to the touch. It was your father's, and it's the only physical evidence you have that he ever lived, save yourself. You carry it because it meant something to your mother, and for that reason, it means something to you. Maybe it means something more tonight, something different. [if photo is closed]But for now, you need to figure out a plan.[otherwise]Do you want some random thing Ocean passes along to be the only thing that ties you to your own kid?[end if]".
-	Instead of opening the wallet: now the wallet is open; try examining the wallet.
+Instead of attacking the emergency lights: 
+	say "You're frustrated and feel like lashing out at something, but you know that would only make things worse."		
 
-The description of license is "When the highway patrol pulls you over they see your crazy uncombed hair, your brown name (Nakaibito Morales) and brown skin (actually more tan than brown), your D.O.B. (barely [age of the player in words] years ago, placing you squarely in [generation of the player]) and tribal affiliation card (expired) and assume you're either some native eco-terrorist, illegal drug-running border jumper, or delinquent high school dropout (all lies except for the last one which is kinda true). Unless it's Samuel Whitehouse who pulled you over since he usually wants to buy you a beer and talk about your dad, which is weird but better than getting a ticket."
-	Understand "driver's license" or "license" or "driver’s license" as the license.
-	
-Part 16 - Receipt
-
-Understand "receipt" as the receipt from Last Call.
-
-The description of receipt from Last Call is "It's dated the first of May, just three months ago. You felt like a big spender that night. You'd never bought another man a drink before, but something about the way he slumped over his beer gave the impression he needed some relief. He told you more than you wanted to know—his recent layoff at the plant, two mouths to feed, twins on the way, a busted truck, bills piling up, sick brother. That conversation chilled you on the idea of having kids of your own in this dead end town. It's hard enough getting by on your own."
-
-Part 17 - Denim Jacket
-
-A denim jacket is wearable.
-
-Part 18 - Emergency Radio
+Chapter 4 - Emergency Radio
 
 An emergency radio is a device. It is in Break Room.
 
@@ -809,21 +647,149 @@ Instead of attacking radio: say "[one of]You slam a fist into the top of the rad
 	
 Before saying hello to the emergency radio: if emergency radio is switched off, try switching on the emergency radio instead; otherwise say "You try to raise someone, but there's no response[if frequency tuned to of radio is not emergency frequency], at least on this frequency[end if]." instead.
 
-Part 19 - Piece of Jade
+Part 2 - Medical Supplies
 
-A velvet drawstring bag is an opaque closed openable portable container. It is in the glove box. The description of the velvet drawstring bag is "The black velvet pouch is small enough to rest in the palm of your hand. [if the velvet drawstring bag is closed]The drawstrings are pulled tight[end if]." 
+Chapter 1 - Bandaids
+
+A bandaid is a kind of thing. The plural of bandaid is bandaids.
+A bandaid is always wearable.
+
+After wearing a bandaid: say "You peel open the wrapper and remove the bandaid. You carefully peel away the protective seals covering the adhesive, then apply it to your skin."
+
+Chapter 2 - First Aid Kit
+
+The pack of bandaids is a kind of box. 
+	flesh-colored bandaid is a bandaid.
+	The flesh-colored bandaid is in the pack of bandaids.
+	large square bandaid is a bandaid.
+	The large square bandaid is in the pack of bandaids.
+	fingertip bandaid is a bandaid.
+	The fingertip bandaid is in the pack of bandaids. 
+
+The bottle of pills is a transparent openable container.
+	The bottle of pills is closed.
+	The carrying capacity of the bottle of pills is 50.
+	Ten aspirin are in the bottle of pills.
+ 
+The rubbing alcohol is a fluid container. The printed name is "bottle". The current volume is 4.0 fl oz.  The liquid of the rubbing alcohol is isopropyl alcohol. 
+
+Instead of drinking rubbing alcohol: say "It's not the kind of alcohol you want and you know it."
+
+An expired first aid kit is a box.
+	In it is a bottle of pills, an ace bandage, a pack of bandaids, and a bottle of rubbing alcohol.
+
+Part 3 - Documents and Clues
+
+Chapter 1 - Velvet Bag
+
+The velvet drawstring bag is an opaque closed openable portable container. The description of the velvet drawstring bag is "The black velvet pouch is small enough to rest in the palm of your hand. [if the velvet drawstring bag is closed]The drawstrings are pulled tight[end if]." 
+
+Chapter 2 - Piece of Jade
 
 A piece of jade is in the velvet drawstring bag.
 
 Before printing the name of piece of jade when player holds luck: say "lucky ".
 
 The description of a piece of jade is "The tumbled bright green stone is cool to the touch. It was your grandmother's, one of many stones she collected in a wooden bowl. Grandma said it will bring you luck, which hasn't really been working out."
+	
+Chapter 3 - Safety Poster
 
-Part 20 - Easter Basket
+A faded safety poster is in Foreman's Office.  
+	The initial appearance is "Tacked to the wall is a peeling safety poster. Much of the text has faded away, but you can make out the section that mentions an emergency radio frequency."
+	The description  is "According to the poster, the emergency radio frequency is [the emergency frequency]." 
+	Understand "poster/safety poster" as the faded safety poster. 
+	
+	Instead of taking the poster: say "You would probably damage it beyond repair if you tried to remove it from the wall."
+
+Chapter 4 - Guidebook
+
+A weather-worn guidebook is a thing. 
+
+The description of guidebook is "Most of the pages are faded beyond readability, but you can see that it once served as a comprehensive guide to local fauna. You haven't seen much out here besides that solidary lizard swinging from the Saguaro, but if curiousity overtakes you you could try to look up an animal in the book."
+
+Understand "guide/book/page/pages" as the guidebook.
+
+Consulting is an action applying to one carried thing. Understand "consult [something]" or "consult about [something]"  or "read about [something]" as consulting.
+
+Check consulting when noun is not the weather-worn guidebook: instead say "Eh. You can't really consult that about anything."
+
+Instead of consulting the guidebook about "sand-dancer/sand/dancer/lizard/lizards": say "You look for the brown-colored lizard in the guidebook. The entry says it's a 'rare subspecies of the common desert lizard found only in the outskirts of Oro Oeste, and known to native peoples as [italic type]sand-dancer[roman type]. In legends, the sand-dancer was a clever triskster and twister or words who created night by tricking the sun into spending half the day underground.' Interesting."
+
+Instead of consulting the guidebook about "spider/spiders": say "The picture of the wingspan of a great horned owl catches your attention. You note that this particular species can carry prey that exceeds its weight. While it seems partial to racoons, rabbits, and squirrels, you wonder if it might dispose of a particularly large spider. Well, probably not, but one can hope. You continue to flip through the book until you find the entry for tarantulas. [if cobwebs are in Staging Area]You think about those cobwebs as you read on.[end if]
+
+'Tarantulas are the largest spiders in the world. They adapt in the desert by building an underground burrow lined with silk webbing. They are active during the monsoons and into early fall. They are nocturnal hunters preying on a variety of insects and small lizards. They catch their victims by ambushing them and killing them with a venomous bite with their fangs.'"
+
+Instead of consulting the guidebook about "snake/snakes/rattlesnake": say "The western diamondback rattlesnake (Crotalus atrox) is a venomous species of the diamondback rattlesnake native to the United States and Mexico. It is also known as the Arizona diamond rattlesnake or desert diamondback. The western diamondback is responsible for a majority of snakebite deaths in Mexico every year. On an average, it can grow up to 4 ft in length; though specimen measuring up to 5 ft have also been reported. It is generally grayish brown in color and has around 20 to 25 irregular spots on its dusty body. It is an ambush predator, which hunts at dawn or during the night. It hides in the sand and waits for the prey. When the prey is within reach, it pounces on it and injects its deadly venom to kill it. The western diamondback feeds on prairie dogs, kangaroos, rats, whiptail lizards, Texas banded geckos, birds and even on small snakes."
+
+Instead of burning the weather-worn guidebook: say "It may seem useless right now, but it won't cast much warmth, and there are other things around you can use for kindling."
+
+
+
+BOOK 6 - OTHER PROPS
+	
+Part 1 - Easter Basket
 
 There is a thing called an easter basket filled with plastic green grass. Instead of doing anything to easter basket: say "You know it is not worth the effort. You have other matters to attend to."
+	
 
-Part 21 - Photo
+	
+BOOK 7 - WEARABLE ITEMS
+
+Part 1 - Shoes and Socks
+
+[Exercise 5.1]
+A pair of shoes is a kind of thing. A pair of shoes is wearable and inedible.
+A pair of socks is a kind of thing. A pair of socks is wearable and inedible.
+
+A pair of shoes is either men's or women's.
+A pair of shoes is either small-sized or large-sized.
+
+A person is either small-footed or large-footed.
+
+Instead of wearing a small-sized pair of shoes when player is large-footed: say "It doesn't matter how long you try to cram your foot into that shoe. It is too small. It will not fit."
+
+Instead of wearing a large-sized pair of shoes when player is small-footed : say "You can slide your foot into that shoe but don't expect to walk around. It is too big. Your foot will slide right out."
+
+Instead of wearing a women's pair of shoes when the player is male: say "A women's shoe will not conform to the shape of your feet."
+
+Instead of wearing a men's pair of shoes when the player is female: say "A men's shoe will not conform to the shape of your feet."
+
+Instead of wearing a pair of shoes when player is not wearing a pair of socks: say "You'll want to put on your socks first."
+
+Check wearing a pair of shoes when player is wearing a pair of shoes: say "You'll have to take off your shoes first."
+
+Instead of taking off a pair of socks when player is wearing a pair of shoes: say "You'll have to take off your shoes first."
+
+[The pair of warm wooly socks are a pair of socks.
+The pair of tennis shoes is a pair of shoes. It is men's and small.
+The pair of ankle boots is a pair of shoes. It is women's and small.
+The pair of work boots is a pair of shoes. It is men's and large.]
+
+Part 2 - Denim Jacket
+
+A denim jacket is wearable.
+	
+BOOK 8 - PLAYER INVENTORY
+		
+Part 1 - Wallet
+
+A wallet is a portable container.
+
+The wallet is openable and closed. A license and a receipt from Last Call is in the wallet.
+	
+The description of the wallet is "It's old and weathered brown leather, soft to the touch. It was your father's, and it's the only physical evidence you have that he ever lived, save yourself. You carry it because it meant something to your mother, and for that reason, it means something to you. Maybe it means something more tonight, something different. [if photo is closed]But for now, you need to figure out a plan.[otherwise]Do you want some random thing Ocean passes along to be the only thing that ties you to your own kid?[end if]".
+	Instead of opening the wallet: now the wallet is open; try examining the wallet.
+
+The description of license is "When the highway patrol pulls you over they see your crazy uncombed hair, your brown name (Nakaibito Morales) and brown skin (actually more tan than brown), your D.O.B. (barely [age of the player in words] years ago, placing you squarely in [generation of the player]) and tribal affiliation card (expired) and assume you're either some native eco-terrorist, illegal drug-running border jumper, or delinquent high school dropout (all lies except for the last one which is kinda true). Unless it's Samuel Whitehouse who pulled you over since he usually wants to buy you a beer and talk about your dad, which is weird but better than getting a ticket."
+	Understand "driver's license" or "license" or "driver’s license" as the license.
+	
+Part 2 - Receipt
+
+Understand "receipt" as the receipt from Last Call.
+
+The description of receipt from Last Call is "It's dated the first of May, just three months ago. You felt like a big spender that night. You'd never bought another man a drink before, but something about the way he slumped over his beer gave the impression he needed some relief. He told you more than you wanted to know—his recent layoff at the plant, two mouths to feed, twins on the way, a busted truck, bills piling up, sick brother. That conversation chilled you on the idea of having kids of your own in this dead end town. It's hard enough getting by on your own."
+
+Part 3 - Photo
 
 There is a photo in the wallet. Understand "photograph/pic/picture/folded/unfolded" as photo.
 	The photo is a container.
@@ -840,59 +806,96 @@ an ultrasound of Ocean's baby is in the photo.
 	Rule for reaching inside photo: say "That's impossible. It's just a photo."; rule fails.
 	Instead of inserting anything into photo: say "That's impossible. It's just a photo.".
 	
-Part 22 - Safety Poster
+Part 4 - Lighter
 
-A faded safety poster is in Foreman's Office.  
-	The initial appearance is "Tacked to the wall is a peeling safety poster. Much of the text has faded away, but you can make out the section that mentions an emergency radio frequency."
-	The description  is "According to the poster, the emergency radio frequency is [the emergency frequency]." 
-	Understand "poster/safety poster" as the faded safety poster. 
+A lighter is a portable thing. The description of lighter is "You pat your pockets in search of your lighter [if number of unfamiliar rooms > 0]but you know that you need to figure out how to leave this deserted place or find enough supplies to survive the night[otherwise] and find it in your right pocket[end if]."
+
 	
-	Instead of taking the poster: say "You would probably damage it beyond repair if you tried to remove it from the wall."
 
+BOOK 9 - VEHICLES
+				
+Part 1 - Pickup Truck
 
-BOOK 4 - CUSTOM COMMANDS
+The pickup truck is an enterable openable transparent closed fixed in place container. The description of the pickup truck is "[if player is in truck]You can't tell what the damage is from in here[otherwise][first time]Getting down on your knees in the cold sand, you look at the undercarriage. Sure enough, you ripped up the fuel line and all your gas has drained away, sucked dry by the thirsty desert sand.[only]You'll need to find some way to patch up the line, plus some fuel, to have any hope of fixing this mess[end if]."
+Understand "pickup truck" or "truck" or "pickup" as the pickup truck.
 
-Part 1 - Verbs to Remove
+Chapter 1 - The Cabin
 
-Understand the command "rub" as something new.
+The cabin is part of the pickup truck. Instead of examining the cabin: say "You hoped the cool breeze and loud music blaring from the radio would keep you awake on the drive home. It didn't work. Sitting here in the cold desert night chills you to your bones. Between the cold and the crash, you're wide awake now. This seat is the least abused or aged part of the cabin, the rest of it... the [dashboard], the [glove compartment], everything about it forecasts to the world that you're strapped for cash."
 
-Part 2 - Smoking
+Chapter 2 - The Dashboard
 
-Smoking is an action applying to one thing.
+The dashboard is part of the pickup truck. Instead of examining the dashboard: say "The dashboard reveals a vehicle out of time—an analog spedometer and fuel gauge, a radio with round dials that move a tiny red indicator between the numbered stations and five silver buttons that remember your favorites (only two of them work now). The cassette player is busted. The glove compartment has seen better days."
 
-Understand "smoke [something]" as smoking.
+Chapter 3 - The Glove Compartment
 
-Check smoking when noun is not cigarette: instead say "Sounds like something your high school buddies would try."
+The glove compartment is an openable closed opaque container.
+	It is part of the pickup truck. 
+	Understand "glove compartment" or "glovebox" or "compartment" or "glove box" or "jockey box" or "cubby hole" or "cubbyhole" or "dashboard compartment" as the glove compartment.
+The description of the glove compartment is "You haven't been able to lock it since some jerk broke into your truck when you were parked at Last Call for late night drinks with friends after work. Whoever it was did a number on it, leaving deep scratches on the handle and surface around the lock. It makes your truck look ten times older than it is, but when you found out how much the repair would cost, you decided to live with the scratches.".
 
-Check smoking when lighter is not held: instead say "You pat your pockets, but can't seem to find your lighter."
+	The pack of smokes is inside the glove compartment.
+	The velvet drawstring bag is inside the glove compartment.
 
-Before smoking when lighter is not held and lighter is visible: say "(first taking the lighter)"; try silently taking lighter. 
+	An owner's manual is inside the glove compartment. The description is "It has been useful when you've needed to replace a fuse, or jump the battery, but the strong smell of gasoline is telling you it's not going to help you tonight.". Understand "owners/manual/owner's manual" as the owner's manual.
+	A pack of gum is inside the glove compartment. The description is "Ocean bought the nicotine gum as a not-so-subtle nudge to get you to stop smoking. You chewed every damned piece but each one only made you want to smoke more. Worthless purchase, and it tasted like garbage. There was no magic in it, at least none for you."
+	Instead of taking the pack of gum: say "You pick it up and realize it's empty. Best to leave it where it is. [run paragraph on]"; try examining the pack of gum.
 
-Before smoking when pack of smokes is not held and pack of smokes is visible: say "(first taking the pack of smokes)"; try silently taking pack of smokes.
+Chapter 4 - Headlights
 
-Before smoking when pack of smokes is not held and pack of smokes is visible: say "(first taking the pack of smokes)"; try silently taking pack of smokes.
-
-Before smoking when crumpled box is not held and crumpled box is visible: say "(first taking the crumpled box)"; try silently taking crumpled box.
-
-First report smoking: say "You pull out a cigarette and light the tip. The familiar smell of lighted tobacco calms you."
-
-Instead of smoking for at least two turns: say "There's something about the ritual that grounds you, but too many in a row make you jittery, dizzy, and nauseous. You slide the cigarette back into the pack and think about what to do next."; now the noun is in pack of smokes.
-
-Report smoking: 
-	let hint be best course of action;
-	if best course of action is not "", say "Maybe [hint]. [run paragraph on]"
+Some headlights are part of the pickup truck. 
+	The headlights are a device. 
+	They are switched on.
+	The headlights are undescribed.
 	
-Last report smoking: say "[paragraph break][if player is in pickup truck]You extinguish the butt in one of the empty cups[otherwise]You crush the butt under your heel[end if] and consider where to go next."
+After switching on the headlights: now every within range of headlights room is lighted; say "The desert shadows dissolve in the glow of your headlights."
 
-Report smoking: say "[paragraph break][if location is lit brightly]The emergency lights are holding up so far[otherwise if location is lit by headlights]It's dark outside the beam of your headlights[otherwise if location is lit by flashlight]Everything outside the beam of your flashlight is shrouded in shadows[otherwise]It's darker than a starless sky on a moonless night[end if]. [run paragraph on]"
+	After switching off the headlights: if emergency lights are switched off, now every within range of headlights room is dark; say "You click the headlights off[if emergency lights are switched off and flashlight is switched off]and blackness swallows you up.[otherwise if emergency lights are switched off and flashlight is switched on and flashlight is visible], leaving only the ghostly beam of your flashlight[end if]."
+	
+Chapter 5 - Gas Tank	
 
-Report smoking: if the player holds a talent, say "Some weird shit went down in the desert, but you do feel like you have more [list of talents held by player]. [run paragraph on]".
+A gas tank is part of the pickup truck. The gas tank has a liquid level. The gas tank is mostly empty.
 
-Report smoking: if there is an in progress plan, say "You've found the [list of handled things which are required by a plan], but [if the number of in progress plans is 2]you can't see how they're going to be helpful together[otherwise]you still need something else if you're going to finish [a random in progress plan][end if]. [run paragraph on]".
+Some scratches around the lock are part of the pickup truck.
 
-Carry out smoking: now the noun is nowhere.
+Chapter 6 - Items in the Truck
 
-BOOK 5 - MEMORIES
+A state map of New Mexico is inside the pickup truck. The state map is a backdrop.
+Understand "map/state map" as state map of New Mexico.
+
+A pair of aviator sunglasses is inside the pickup truck. It is undescribed.
+The pair of aviator sunglasses is wearable.
+
+Some loose change is inside the pickup truck. It is a backdrop.
+
+empty cups are inside the pickup truck. They are a backdrop.
+	
+	
+Chapter 7 - Mechanics
+	
+The initial appearance of the truck is "Your poor old [pickup truck] ticks and groans, smashed gracelessly against [a tall Saguaro]; [whiffs of evaporating gasoline] linger in the chill air. In the [cabin], you can see [a list of things in truck]."
+
+After opening the pickup truck: say "The door creaks open with difficulty rusted joints straining."
+
+After closing the truck: say "You slam the door shut."
+
+Before entering truck when truck is closed: try opening the truck.
+	
+Before exiting when player is in truck and truck is closed: try opening the truck.
+
+After exiting when player is in truck: say "You get out of the truck."
+
+Understand "drive" or "drive [pickup]" or "start [pickup]" or "turn on [pickup]" or "turn key" or "switch on [pickup]" or "shift" or "steer" or "brake" as a mistake ("Your truck's not going anywhere in this condition.").
+
+Understand "fix [pickup]" or "repair [pickup]" or "use [duct tape]" or "tape [pickup]" or "fill [pickup]" or "put [gas can] in [pickup]" or "use [gas can]" as a mistake ("You should wait until you've got everything you need before you start making repairs.").
+
+Instead of switching on or switching off pickup truck: say "The engine just turns over. It won't start."
+
+Instead of attacking pickup truck: say "You smack [if player is in truck]the steering wheel[otherwise]the hood[end if] in exasperation. How did you get into this mess?"
+
+VOLUME 4 - CORE GAME MECHANICS
+
+BOOK 1 - MEMORIES
 
 Part 1 - Memory
 
@@ -905,6 +908,7 @@ Trigger relates various things to one memory (called the triggered memory).
 The verb to trigger (he triggers, they trigger, he triggered, it is triggered, he is triggering) implies the trigger relation.
 
 Definition: a thing is charged if it triggers a forgotten memory.
+Definition: a thing is neutral if it does not trigger a forgotten memory.
 Definition: a memory is forgotten if it is not in emotional baggage.
 
 A thing can be examined or unexamined. A thing is usually unexamined.
@@ -966,11 +970,12 @@ The player carries an open transparent unopenable container called emotional bag
 
 Instead of doing anything other than examining when noun is emotional baggage or second noun is emotional baggage: say "It's not real, bro."
 		
-Every turn while a charged thing (called the item) is examined: 
+Every turn when a charged thing (called the item) is examined: 
 	move the triggered memory of the item to emotional baggage; 
 	say "Something about [the item] [one of]triggers a distant memory of [or]reminds you of [or]makes you think about [at random][triggered memory of the item].".
 
-Part 4 - Brooding
+
+Part 5 - Brooding
 
 Brooding is an action applying to one visible thing.
 
@@ -985,13 +990,47 @@ Instead of doing anything other than brooding or trading to a memory: say "As if
 
 Instead of thinking: say "Most of the thinking you do nowadays comes from either smoking or brooding." [Thinking is a standard action which we'll use to hint the player towards better options.]
 
-BOOK 6 - TALENTS
+BOOK 2 - SMOKING
+
+Smoking is an action applying to one thing.
+
+Understand "smoke [something]" as smoking.
+
+Check smoking when noun is not cigarette: instead say "Sounds like something your high school buddies would try."
+
+Check smoking when lighter is not held: instead say "You pat your pockets, but can't seem to find your lighter."
+
+Before smoking when lighter is not held and lighter is visible: say "(first taking the lighter)"; try silently taking lighter. 
+
+Before smoking when pack of smokes is not held and pack of smokes is visible: say "(first taking the pack of smokes)"; try silently taking the pack of smokes.
+
+Before smoking when pack of smokes is not held and pack of smokes is visible: say "(first taking the pack of smokes)"; try silently taking the pack of smokes.
+
+First report smoking: say "You pull out a cigarette and light the tip. The familiar smell of lighted tobacco calms you."
+
+Instead of smoking for at least two turns: say "There's something about the ritual that grounds you, but too many in a row make you jittery, dizzy, and nauseous. You slide the cigarette back into the pack and think about what to do next."; now the noun is in pack of smokes.
+
+Report smoking: 
+	let hint be best course of action;
+	if best course of action is not "", say "Maybe [hint]. [run paragraph on]"
+	
+Last report smoking: say "[paragraph break][if player is in pickup truck]You extinguish the butt in one of the empty cups[otherwise]You crush the butt under your heel[end if] and consider where to go next."
+
+Report smoking: say "[paragraph break][if location is lit brightly]The emergency lights are holding up so far[otherwise if location is lit by headlights]It's dark outside the beam of your headlights[otherwise if location is lit by flashlight]Everything outside the beam of your flashlight is shrouded in shadows[otherwise]It's darker than a starless sky on a moonless night[end if]. [run paragraph on]"
+
+Report smoking: if the player holds a talent, say "Some weird shit went down in the desert, but you do feel like you have more [list of talents held by player]. [run paragraph on]".
+
+Report smoking: if there is an in progress plan, say "You've found the [list of handled things which are required by a plan], but [if the number of in progress plans is 2]you can't see how they're going to be helpful together[otherwise]you still need something else if you're going to finish [a random in progress plan][end if]. [run paragraph on]".
+
+Carry out smoking: now the noun is nowhere.
+
+BOOK 3 - TALENTS
 
 A talent is a kind of thing.
 strength, courage, luck, scent, honor, spirit, and freedom are talents.
 [Note the uncapitalized "strength": we don't want the talents to have articles, but we also don't want them to be capitalized like proper nouns.]
 
-BOOK 7 - TRADING
+BOOK 4 - TRADING
 
 Trading is an action applying to two things. Understand "trade [something preferably held] for [something]" as trading.
 
@@ -1017,6 +1056,7 @@ To decide whether (trader - a person) needs more memories:
 Carry out trading:
 	move the second noun to the player;
 	now the noun is held by the trader;
+	now everything does not trigger the noun;
 	repeat with item running through  not held talents:
 		now item is off-stage.
 	
@@ -1028,7 +1068,7 @@ Instead of giving something to a spirit animal(called the potential trader): say
 
 Instead of doing anything other than quizzing, implicit-quizzing or trading to a not held talent: say "It's just potential, or something."
 
-BOOK 8 - PLANS
+BOOK 5 - PLANS
 
 Part 1 - Plan
 
@@ -1063,22 +1103,25 @@ The roll of duct tape and the gas can are required by a plan called fixing the t
 
 The printed name of fixing the truck is "fixing your truck and getting out of here". 
 
-VOLUME 3 - CHARACTERS
+VOLUME 5 - CHARACTERS
 
 BOOK 1 - THE PROTAGONIST 
 
-Part 1 - Inventory
+Part 1 - Description
 
 The player is a person.
 The player is male.
 The player is called Knock.
 The age of the player is 18.
 The player is large-footed.
-The player wears a denim jacket. 
 
 The description of the player is "You don't really want to think about what you look like right now, especially when there's a totally legit likeness on the driver's license inside your wallet."
 
-The player carries a lighter. The description of lighter is "You pat your pockets in search of your lighter [if number of unfamiliar rooms > 0]but you know that darkness is falling and you only have so much time to figure out how to leave this deserted place or find enough supplies to survive the night[otherwise] and find it in your right pocket. You light a cigarette and take a long slow drag[end if]."
+Part 2 - Initial Inventory
+
+The player wears a denim jacket. 
+
+The player carries a lighter. 
 
 The player carries a wallet. 
 
@@ -1097,14 +1140,7 @@ Part 3 - Actions
 
 Instead of sleeping: say "You're tired. There's no denying that. But you have to deal with the matter at hand. There will be time to sleep later."
 
-BOOK 2 - THE SUPPORTING CAST
-
-Part 1 - Grandmother
-
-Annamarie is a person.
-The age of Annamarie is 89.
-
-Part 2 - Spirit Animals
+BOOK 2 - SPIRIT ANIMALS
 
 A spirit animal is a kind of person.
 
@@ -1115,7 +1151,7 @@ The price of the rabbit is 1.
 The price of the Coyote is 2.
 The price of Sand-dancer is 3.
 
-Chapter 1 - The Coyote
+Part 1 - The Coyote
 
 The initial appearance of Coyote is "The Coyote watches you intently." Understand "guy/man" as the Coyote.
 
@@ -1159,7 +1195,7 @@ Report trading when Coyote is visible: clear all topics; now more coming is fami
 
 After quizzing Coyote about more coming: say "He tucks the other talent back in his pocket, and without its faint glow it seems darker than ever, the pulsing red tip of his cigarette all you can see.[paragraph break]'The last of us is coming,' Coyote's voice says out of the black, 'last and most powerful, and most dangerous, and most afraid. Sand-dancer. Be careful of him, Knock. [if player holds strength]Stay strong[otherwise]Stay brave[end if]. [if player holds luck]Stay lucky[otherwise]Keep your nose to the wind[end if]. Remember the shadows.'[paragraph break]And it seems like he's growing, larger and larger, the red tip of his cigarette pulsing and glowing now high up in the sky, and you stumble back, shivering, and suddenly remember your flashlight in your hand and switch it on..."; reset the interlocutor; now flashlight is switched on; move player to Base of the Tower.
 
-Chapter 2 - The Rabbit
+Part 2 - The Rabbit
 
 At the time when Rabbit's conversation starts: try quizzing the rabbit about introduction; try listing suggested topics.
 
@@ -1186,7 +1222,38 @@ After quizzing the rabbit about down to business:
 	move strength to location; now strength is familiar;
 	move courage to location; now courage is familiar.
 
-Part 3 - Normal Animals
+BOOK 3 - THE RADIO VOICE
+
+
+The voice is an undescribed man.
+
+Every turn when radio is switched on and frequency tuned to of radio is emergency frequency and voice has not been visible:
+	move voice to location;
+	try quizzing voice about introduction;
+	set pronouns from voice.
+
+After quizzing voice about introduction: say "Not like you think anything's going to happen but what the hell. You grab the dusty old mike, press the call button, and ask is there anybody[paragraph break]'...out there?' the speaker blurts and holy crap, someone's responding, and they say 'Roger roger, tower station nineteen, read you now loud and clear, what's your forty?' and the voice is staticky and whirled through with weird rhythmic distortions but you can hear it just fine and now what?[add what that means ask suggestion][add being lost tell suggestion][add never mind tell suggestion]".
+	
+never mind is held by voice. After informing voice about never mind: say "[remove what that means ask suggestion]You mutter something about how you think you've made a mistake and you have to go but the voice interrupts. 'Hang on, hang on, son, there shouldn't be anybody out there. Not at all, especially this late. Why don't you tell me what's going on?'".
+	
+what that means is held by voice. After quizzing voice about what that means: say "You try to make some joke about not having forty of anything, but the voice cuts you off. 'Ten forty means situation report, son. Obviously you're not on duty. Ain't nobody on duty out there anymore, specially not this time of night. What's going on?'[remove what that means ask suggestion]".
+	
+being lost is held by voice. Understand "Im/I'm" or "I am" as being lost. After informing voice about being lost: say "[remove what that means ask suggestion][remove never mind tell suggestion]Feeling a little stupid, you come clean and tell the voice that you drove off the road and aren't sure exactly where you are.[paragraph break]'Copy that,' the voice says briskly after a moment. 'You're at tower station nineteen, son, about thirty-two miles southwest of Oro Oeste, fifteen milles or so from the state highway.' And if the mike wasn't attached to the radio you'd drop it on the floor. Fifteen miles? How in the [italic type]hell[roman type] could you have driven fifteen miles off the road and not remember. How is that even possible?[paragraph break]'Hello?' the radio says. 'Hello, son, do you copy?'[add yes-suggestion other suggestion][add switch-off-radio other suggestion]".
+
+After informing voice about yes-suggestion: say "You jabber something positive and sit back, still shaken.[paragraph break][voice explains choices]".
+
+switch-off-radio is a misc-suggestion held by voice with printed name "switch off the radio". Instead of switching off radio when current interlocutor is voice: say "You reach for the switch, but hesistate, hand hovering above it as the static whirls and roars.[paragraph break][voice explains choices]".
+
+To say voice explains choices: say "'Look, son,' the voice says, 'I don't know how you got out there but that's not important right now. Weather report's coming in and there's a cold front the size of Texas coming your way. I don't want to scare you but if you don't find a way home, or figure out some food and shelter for the night, you could freeze to death. You hear me? Now on account of the cutbacks I don't have anyone to send out there until morning. But there may be parts around that old tower you can use to patch up your truck and make it back to the highway. Or, there may be emergency supplies that would get you through the night. This storm's gonna blow out all communication, so you're gonna be on your own. It's up to you. Over and out.'[paragraph break]You rub your face tiredly. Ocean was expecting you tonight after your shift, like usual. If you don't make it she'll be worried sick. Then on the other hand maybe you should worry about yourself first for a change. You feel like you need a cigarette[if pack of smokes is not held by player] and then you remember you quit[end if]. Hell, can't anything be easy?"; reset the interlocutor; now voice is off-stage.		
+		
+BOOK 4 - THE SUPPORTING CAST 
+
+Part 1 - Grandmother
+
+Annamarie is a person.
+The age of Annamarie is 89.
+
+Part 2 - Other Animals
 
 A normal animal is a kind of animal.
 
@@ -1218,28 +1285,7 @@ Every turn when a random chance of 1 in 4 succeeds:
 	
 After the hare going a direction (called way): if the hare is visible or the hare was visible, say "The hare hops [way]wards."
 
-Part 4 - The Radio Voice
 
-The voice is an undescribed man.
-
-Every turn when radio is switched on and frequency tuned to of radio is emergency frequency and voice has not been visible:
-	move voice to location;
-	try quizzing voice about introduction;
-	set pronouns from voice.
-
-After quizzing voice about introduction: say "Not like you think anything's going to happen but what the hell. You grab the dusty old mike, press the call button, and ask is there anybody[paragraph break]'...out there?' the speaker blurts and holy crap, someone's responding, and they say 'Roger roger, tower station nineteen, read you now loud and clear, what's your forty?' and the voice is staticky and whirled through with weird rhythmic distortions but you can hear it just fine and now what?[add what that means ask suggestion][add being lost tell suggestion][add never mind tell suggestion]".
-	
-never mind is held by voice. After informing voice about never mind: say "[remove what that means ask suggestion]You mutter something about how you think you've made a mistake and you have to go but the voice interrupts. 'Hang on, hang on, son, there shouldn't be anybody out there. Not at all, especially this late. Why don't you tell me what's going on?'".
-	
-what that means is held by voice. After quizzing voice about what that means: say "You try to make some joke about not having forty of anything, but the voice cuts you off. 'Ten forty means situation report, son. Obviously you're not on duty. Ain't nobody on duty out there anymore, specially not this time of night. What's going on?'[remove what that means ask suggestion]".
-	
-being lost is held by voice. Understand "Im/I'm" or "I am" as being lost. After informing voice about being lost: say "[remove what that means ask suggestion][remove never mind tell suggestion]Feeling a little stupid, you come clean and tell the voice that you drove off the road and aren't sure exactly where you are.[paragraph break]'Copy that,' the voice says briskly after a moment. 'You're at tower station nineteen, son, about thirty-two miles southwest of Oro Oeste, fifteen milles or so from the state highway.' And if the mike wasn't attached to the radio you'd drop it on the floor. Fifteen miles? How in the [italic type]hell[roman type] could you have driven fifteen miles off the road and not remember. How is that even possible?[paragraph break]'Hello?' the radio says. 'Hello, son, do you copy?'[add yes-suggestion other suggestion][add switch-off-radio other suggestion]".
-
-After informing voice about yes-suggestion: say "You jabber something positive and sit back, still shaken.[paragraph break][voice explains choices]".
-
-switch-off-radio is a misc-suggestion held by voice with printed name "switch off the radio". Instead of switching off radio when current interlocutor is voice: say "You reach for the switch, but hesistate, hand hovering above it as the static whirls and roars.[paragraph break][voice explains choices]".
-
-To say voice explains choices: say "'Look, son,' the voice says, 'I don't know how you got out there but that's not important right now. Weather report's coming in and there's a cold front the size of Texas coming your way. I don't want to scare you but if you don't find a way home, or figure out some food and shelter for the night, you could freeze to death. You hear me? Now on account of the cutbacks I don't have anyone to send out there until morning. But there may be parts around that old tower you can use to patch up your truck and make it back to the highway. Or, there may be emergency supplies that would get you through the night. This storm's gonna blow out all communication, so you're gonna be on your own. It's up to you. Over and out.'[paragraph break]You rub your face tiredly. Ocean was expecting you tonight after your shift, like usual. If you don't make it she'll be worried sick. Then on the other hand maybe you should worry about yourself first for a change. You feel like you need a cigarette[if pack of smokes is not held by player] and then you remember you quit[end if]. Hell, can't anything be easy?"; reset the interlocutor; now voice is off-stage.
 
 VOLUME 4 - THE STORY WORLD
 
@@ -1286,7 +1332,7 @@ Part 2 - Desert Sand
 
 The desert sand is a backdrop in Around the Tower. 
 
-Instead of taking the desert sand: say "[if Rainstorm is happening]More like moud right now.[otherwise]You kneel down and let some run through your fingers like vague memories of better times. But the ground is freezing and you get back to your feet.[end if]".
+Instead of taking the desert sand: say "[if Rainstorm is happening]More like mud right now.[otherwise]You kneel down and let some run through your fingers like vague memories of better times. But the ground is freezing and you get back to your feet.[end if]".
 
 Part 3 - Sagebrush
 
@@ -1623,8 +1669,8 @@ A wastepaper basket is an open unopenable fixed in place container.
 	Some food containers are in the wastepaper basket.
 
 Instead of examining the wastepaper basket: 
-	now the crumpled box is in the wastepaper basket;
-	say "No one bothered to take the trash out before they boarded up the building. It is filled to the brim with [discarded papers] and [food containers], and there appears to be an old [crumpled box] of cigarettes amidst the refuse.".
+	now the crumpled pack is in the wastepaper basket;
+	say "No one bothered to take the trash out before they boarded up the building. It is filled to the brim with [discarded papers] and [food containers], and there appears to be a discarded pack of cigarettes amidst the refuse.".
 
 A rusted filing cabinet is a container in Foreman's Office. It is fixed in place. The description is "The rusted old metal filing cabinet is one of the tall, three-drawered varieties common to many office spaces. It has a [top drawer], a [middle drawer], and a [bottom drawer]."
 	A top drawer, a middle drawer, and a bottom drawer are in the rusted filing cabinet. The top drawer, middle drawer, and bottom drawer are undescribed openable closed fixed in place containers.
@@ -1819,7 +1865,7 @@ Addicted is a scene.
 
 Addicted begins when Control Center is unvisited and the turn count is greater than 30. 
 
- Every turn when a dramatic scene is not happening and we are not smoking and a random chance of 1 in 30 succeeds during Addicted:
+ Every turn when a dramatic scene is not happening and we are not smoking and a random chance of 1 in 15 succeeds during Addicted:
 	if the player encloses a cigarette (called the chosen one):
 		say "[one of]You can't help it. You need another cigarette[or]What the hell, another cigarette won't kill you[or]You really need another smoke[cycling].";
 		try smoking the chosen one;
@@ -2387,37 +2433,52 @@ Carry out enabling the compass:
 	
 VOLUME 7 - TESTING
 
-BOOK 1 - TEST SCRIPTS
+BOOK 1 - TESTING FEATURES
+
+Part 1 - Flag Objects without Descriptions
+
+[After printing the name of something (called item) while the description of item is "" and the item is not a backdrop and the item is not undescribed: say "***".]
+
+Part 2 - Flag Portable Objects
+
+[Before printing the name of something (called item) while item is portable and item is not part of something: say "__".]
+
+Part 3 - Flag Default Messages
+
+[NOTE: Introduced in Chapter 10 - This does not work]
+[When play begins: change library message debug to dbg_on.]
+
+BOOK 2 - TEST SCRIPTS
 
 Part 1 - Testing Chapter 3 (Creating the Story World)
 
 Chapter 1 - Navigation (from Middle of Nowhere)
 
-Test map with "south / north / north / east / northwest / north / north / south / south / south / south / test tour".
+test map with "south / north / north / east / northwest / north / north / south / south / south / south / test tour".
 
 Chapter 2 - Enter Building (from Middle of Nowhere)
 
-Test enter with "north / north / take can / south / throw can at window /  in ".
+test enter with "north / north / take can / south / throw can at window /  in ".
 
 Chapter 3 - Flashlight (from Staging Area)
 
-Test flashlight with "touch desk / open drawer / take flashlight / switch on flashlight".
+test flashlight with "touch desk / open drawer / take flashlight / switch on flashlight".
 
 Chapter 4 - Explore the Building (from Staging Area)
 
-Test explore with "north / south / east / north / up / north / down / south / west / out".
+test explore with "north / examine rusted key / read safety poster / test box / south / east / north / turn on emergency lights / up / north / down / south / turn on emergency radio / tune radio to 102.3kHz / ask him about what that means / tell him about being lost / say yes / west / out / south".
 
 Chapter 5 - Tour the Building
 
-Test tour with " test flashlight / test explore".
+test tour with " test flashlight / test explore".
 
 Chapter 6 - Filing Cabinet (from Foreman's Office)
 
-Test cabinet with "x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
+test cabinet with "x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
 
 Chapter 7 - Tin Can
 
-Test can with "north / north / take tin can / south / drop can / look / examine can".
+test can with "north / north / take tin can / south / drop can / look / examine can".
 
 Part 2 - Testing Chapter 5 (Making Things Happen)
 
@@ -2427,7 +2488,7 @@ Chapter 1 - Shoes and Socks (from Foreman's Office)
 
 Chapter 2 - First Aid Kit (from Break Room)
 
-Test kit with "take first aid kit / open kit / x kit / open pills / inventory / take aspirin / inventory / eat aspirin / inventory / take aspirin / inventory / open box of bandaids / wear fingertip bandaid / open bottle of alcohol / drink rubbing alcohol / put aspirin in bottle of alcohol / close box of bandaids / put aspirin in bottle of pills / close bottle of pills / inventory / take aspirin / inventory / take aspirin / inventory / swallow aspirin / inventory / eat aspirin / inventory /eat aspirin / inventory"
+test kit with "take first aid kit / open kit / x kit / open pills / inventory / take aspirin / inventory / eat aspirin / inventory / take aspirin / inventory / open box of bandaids / wear fingertip bandaid / open bottle of alcohol / drink rubbing alcohol / put aspirin in bottle of alcohol / close box of bandaids / put aspirin in bottle of pills / close bottle of pills / inventory / take aspirin / inventory / take aspirin / inventory / swallow aspirin / inventory / eat aspirin / inventory /eat aspirin / inventory"
 
 Chapter 3 - Investigate Actions
 
@@ -2449,19 +2510,21 @@ Part 4 - Testing Chapter 7 (Logic and Control)
 
 Chapter 1 - Boarded-Up Door
 
-Test boards with "north / remove boards / north / take can / south / throw can at window / remove boards / in ".
+test boards with "north / remove boards / north / take can / south / throw can at window / remove boards / in ".
 
 Chapter 2 - Jacket
 
-Test jacket with  "north / remove boards / remove jacket / north / take can / south / throw can at window / remove boards / remove jacket / in ".
+test jacket with  "north / remove boards / remove jacket / north / take can / south / throw can at window / remove boards / remove jacket / in ".
 
-Test wallet with "open wallet / examine license / examine receipt / open photo".
+test wallet with "open wallet / examine license / examine receipt / open photo".
 
 Part 7 - Testing Chapter 10 (Challenging Assumptions)
 
-Test cigarettes with "examine dashboard / open glove box / take pack of smokes / smoke cigarette /  smoke cigarette / smoke cigarette / inventory / examine pack of smokes"
+test cigarettes with "examine dashboard / open glove box / take pack of smokes / inventory / examine pack of smokes"
 
-Test box with "examine wastepaper basket / take crumpled box / inventory / examine crumpled box / examine key / south"
+test smoke with "smoke cigarette"
+
+test box with "examine wastepaper basket / take crumpled box / inventory / examine crumpled box / examine key / south"
 
 Part 8 - Testing Chapter 11 (Finishing)
 
@@ -2469,7 +2532,15 @@ test jade with "take bag / examine bag / open bag / examine jade "
 
 test cage with "east / examine cage / take paper / examine paper "
 
-Test memories with "test cigarettes / test jade / test enter / test flashlight / test wallet / north / test box / test cage / north / test emergency / test gasoline / down / down / south / west / think about meeting ocean / think about shit job / think about stories / think about school"
+test memories with "test cigarettes / test jade / test enter / test flashlight / test wallet / north / test box / test cage / north / test emergency / test gasoline / down / down / south / west / think about meeting ocean / think about shit job / think about stories / think about school"
+
+test inventory with "inventory / examine me / examine wallet / open wallet / examine license / examine receipt / examine photo / open photo / examine jacket"
+
+test start with "test inventory / test cigarettes / test jade / test enter / test flashlight / test explore / test smoke"
+
+test rabbit-courage with "examine rabbit / ask him about himself / ask about stories / ask about how he knows so much / yes / trade cigarette for courage / trade tales grandma told for courage"
+
+test rabbit-strength with "examine rabbit / ask him about himself / ask about stories / ask about how he knows so much / yes / trade cigarette for courage / trade tales grandma told for courage"
 
 
  
