@@ -70,21 +70,8 @@ Include Basic Help Menu by Emily Short.
 
 When play begins:
 	choose row 1 in Table of Basic Help Options;
-	now description entry is "Sand Dancer is a [story genre] story designed to teach aspiring authors how to create interactive fiction using Inform 7. Aaron Reed's book [italic type]Creating Interactive Fiction with Inform 7[roman type] largely consists of exercises that guide an author through creating a personal copy of this game. Aaron Reed and Alexei Othenin-Girard authored the original source text. Danya D. Smith authored this version.
-	
-	The scenario: [story description]
-	
-	At the top of the screen, you'll see a customized status bar that displays your current region and location. It includes a compass rose that displays the directions you can move. In addition to the cardinal directions, you may see U for up, D down, IN for inside, or OUT for outside.
-	
-	Directions for locations you have not visited display in bold text.
-	
-	Directions to locations you have already visited display in normal, standard text. 
-	
-	A marker will not appear on the compass if you cannot move in that direction.
-	
-	During gameplay:[line break]     Enter COMPASS OFF to hide the compass[line break]     Enter COMPASS ON to show the compass
-	
-	The last line in the status bar displays the number of locations you have visited (out of the total number in the story world). Other information may appear here as you progress through the story."
+	now description entry is "Sand Dancer is a [story genre] story designed to teach aspiring authors how to create interactive fiction using Inform 7. Aaron Reed's book [italic type]Creating Interactive Fiction with Inform 7[roman type] largely consists of exercises that guide an author through creating a personal copy of this game. Aaron Reed and Alexei Othenin-Girard authored the original source text. Danya D. Smith authored this version.[paragraph break]At the top of the screen, you'll see a customized status bar that displays your current region and location. It includes a compass rose that displays the directions you can move. In addition to the cardinal directions, you may see U for up, D down, IN for inside, or OUT for outside.[paragraph break]Directions for locations you have not visited display in bold text.[paragraph break]Directions to locations you have already visited display in normal, standard text.[paragraph break]A marker will not appear on the compass if you cannot move in that direction.[paragraph break]During gameplay:[line break]     Enter COMPASS OFF to hide the compass[line break]     Enter COMPASS ON to show the compass[paragraph break]The last line in the status bar displays the number of locations you have visited (out of the total number in the story world). Other information may appear as you progress  through the story.[paragraph break]There are several custom features and commands in Sand Dancer.[paragraph break][bold type]Custom Features:[roman type][paragraph break]• EMOTIONAL BAGGAGE - When you list the player's inventory you will see it includes something called emotional baggage. During game play, things that impact the player's psyche will be listed in this container.[paragraph break][bold type]Special Commands:[roman type][paragraph break]• THINK ABOUT or BROOD ABOUT [bracket]topic[close bracket] - Reflect on a particular subject"
+		
 
 Chapter 4 - Modified Exit (Installed)
 
@@ -94,10 +81,12 @@ Chapter 5 - Plurality (Deprecated)
 
 [The Plurality extension is now deprecated.]
 
-[According to a few posts on the Interactive Fiction Community Forum:	
-Chapter 14: Adaptive Text and Responses 
-Discusses all of the built-in phrases that now cover what Plurality did (and quite a bit more). 
+[Chapter 14: Adaptive Text and Responses required this extension]
 
+[According to a few posts on the Interactive Fiction Community Forum:
+
+Built-in phrases now cover what Plurality did (and quite a bit more). 
+	
 PLURALITY EXAMPLE:
 Instead of eating something inedible, say “[The noun] do[es]n’t seem likely to agree with you at all. You’d be wiser to leave [it-them] alone.”
 Instead of touching something: say “[That-those of noun] [is-are] all prickly.”
@@ -109,6 +98,8 @@ Instead of touching something: say “[regarding the noun][Those] [are] all pric
 Chapter 6 - Property Checking (Installed)
 
 Include Property Checking by Emily Short.
+
+[Generates a list of all of the things and rooms in your story world without a description property]
 
 Chapter 7 - Room Description Control (Not Installed)
 
@@ -177,7 +168,7 @@ Part 1 - Hints
 
 To decide which text is best course of action:
 	if player is in truck:
-		decide on "you should get out of this truck. Even inside the truck, the modest glow of the smoldering tip of your cigarette is not a great idea this close to the smell of spilled gasoline. The windows are down. An errant spark in the breeze would make the decision for you. The thought tempts you for a fleeting moment, but you aren't going out like that";
+		decide on "you should get out of this truck. Even inside the truck, the modest glow of the smoldering tip of your cigarette is not a great idea this close to the smell of spilled gasoline. The windows are down. An errant spark in the breeze would make the decision for you. The thought tempts you for a fleeting moment, but you aren't going out like that.";
 	otherwise if Crumbling Concrete is unvisited:
 		decide on "you could look around the area to find a phone or something";
 	otherwise if pane of cracked glass is closed:
@@ -194,10 +185,10 @@ To decide which text is best course of action:
 		decide on "you should keep your eye out for any help on the horizon";
 	otherwise if strength is held and emergency blanket is not handled:
 		decide on "you're strong enough now to bust open that mesh cage with the blanket inside";
+	otherwise if courage is held and the cobwebs are on-stage:
+		decide on "you should investigate that hole in the floor of the staging area";
 	otherwise if courage is held and duct tape is not handled:
 		decide on "you're brave enough to reach for that duct tape in the floor now";
-	otherwise if courage is held:
-		decide on "you should investigate that hole in the floor of the staging area";
 	otherwise if luck is held and canned oranges are not handled:
 		decide on "you just might be lucky enough to find something to eat in the storage room";
 	otherwise if scent is held and Control Center is unvisited:
@@ -287,7 +278,7 @@ Before listing contents while taking inventory: group talents together.
 	
 Before listing contents while taking inventory: group things required by a plan together.
 	
-Before grouping together things required by a plan: say "useful stuff:".
+Before grouping together things required by a plan: say "useful stuff: ".
 
 Part 8 - Text Customizations
 
@@ -301,9 +292,20 @@ Instead of dropping something not held: say "You don't have the [noun], man.";
 
 Part 10 - Commands
 
-Chapter 1 - Verbs to Remove
+Chapter 1 - Removed Verbs
 
 Understand the command "rub" as something new.
+
+Chapter 2 - Custom Verbs
+
+Understand the command "remove" as something new.
+	Removing is an action applying to one thing.
+	Understand "remove [something]" or "take off [something]" as removing.
+	Check removing when noun is worn: instead try taking off the noun.
+	Check removing when noun is a closed door: instead say "You try to pry the boards from the door with no success.".
+	Check removing when noun is some cobwebs: instead try taking some cobwebs.
+	Check removing when a tall window is open and noun is a door: instead say "Seems redundant. You've found another way into the building.".
+	Check removing when noun is carried: instead say "You are not wearing [the noun]."
 
 		
 VOLUME 2 - WORLD MECHANICS
@@ -337,7 +339,66 @@ Part 2 - Unfamiliar Locations
 
 Definition: a room is unfamiliar if it is adjacent to location and it is not visited.
 
-VOLUME 3 - CUSTOM OBJECTS
+VOLUME 3 - THE STORY WORLD
+
+BOOK 1 - REGIONS
+
+Tower Vicinity is a region.
+ 
+Around the Tower is a region. 
+
+Office Interior is a region.
+
+Surrounding Desert is a region.
+
+Part 2 - Around the Tower
+
+Middle of Nowhere, Backtracking, Crumbling Concrete, Base of the Tower, Against the Fence, and Weed-strewn Rust are in Around the Tower.
+
+Roof is regionally in Around the Tower.
+
+Part 3 - Office Interior
+
+Staging Area, Foreman's Office, Break Room, and Storage Room are in Office Interior.
+
+ Part 4 - Tower Vicinity
+
+Around the Tower and Office Interior are in Tower Vicinity.
+
+Part 5 - Surrounding Desert
+
+Open Desert and Burrow are in Surrounding Desert.
+
+Instead of going to a room regionally in Surrounding Desert when location is lit by headlights and flashlight is not held and flashlight is not switched on: say "Outside the wavering glow of your headlights, it's pitch black. A storm must have rolled in; there are no stars above, and nothing but darkness surrounds you. The darkness seems to thicken at every turn. Only the smell of the desert tells you it is still out there."
+
+Instead of going to a room regionally in Surrounding Desert when flashlight is held and flashlight is switched on and emergency lights are switched off: say "You heft your flashlight, but decide not to head out into the desert just yet. [if headlights are switched on]Your truck lights are already starting to dim, and with[otherwise]With[end if]how dark it is, you're not sure you could find your way back."
+
+BOOK 2 - BACKDROPS
+
+Part 1 - Tire Tracks
+
+Some tire tracks are a backdrop. 
+They are in Middle of Nowhere and Backtracking. 
+
+Part 2 - Desert Sand
+
+The desert sand is a backdrop in Around the Tower. 
+
+Instead of taking the desert sand: say "[if Rainstorm is happening]More like mud right now.[otherwise]You kneel down and let some run through your fingers like vague memories of better times. But the ground is freezing and you get back to your feet.[end if]".
+
+Part 3 - Sagebrush
+
+The sagebrush is a backdrop in Around the Tower. 
+
+Part 4 - Concrete Building
+
+The concrete building is a backdrop in Around the Tower.
+
+Part 5 - Layers of Sand
+
+Some layers of sand are a backdrop. They are in Office Interior.
+
+VOLUME 4 - CUSTOM OBJECTS
 
 BOOK 1 - CUSTOM KINDS
 
@@ -356,7 +417,7 @@ Chapter 2 - Fluid Containers
 
 A fluid container is a kind of container. A fluid container has a volume called a fluid capacity. A fluid container has a volume called current volume. A fluid container is openable. A fluid container is usually closed. A fluid container is inedible.
 
-The liquids are water, gasoline, and isopropyl alcohol.
+The liquids are water, gasoline, beer, and isopropyl alcohol.
 
 A fluid container has a liquid.
 
@@ -539,6 +600,18 @@ Check inserting something into in the crumpled pack:
 	
 After printing the name of the crumpled pack while taking inventory: say " you pilfered from the trash".
 
+Chapter 3 - Beer Bottle
+
+The beer bottle is a fluid container. The printed name is "glass bottle". The current volume is 16.0 fl oz.  The liquid of the beer bottle is beer. 
+
+Instead of opening beer bottle when the can opener is not held: say "You don't have anything to open it with. Maybe you'll find something lying around."
+
+After opening beer bottle: say "You take the can opener out of your pocket and open the beer with the bottle opener."; now beer bottle  is open.
+
+The description of beer bottle is "Who would abandon a bottle of beer in this place? You almost wish you didn't see it. You don't drink much, but a cold one would be really nice right now. And it's a Blue Moon, not the cheap swill your uncle keeps around. It might take the edge off and help you relax enough to think clearly."
+
+After drinking beer bottle: say "You turn the bottle up and take a drink. You don't stop gulping until it is gone."; now the current volume of the beer bottle is 0.0 fl oz.
+
 BOOK 5 - OFFICE SUPPLIES & EQUIPMENT
 
 Part 1 - Equipment
@@ -602,7 +675,7 @@ After switching off the emergency lights:
 	say "[line break]The generator whines as it powers off, slowly falling silent."
 	
 Instead of attacking the emergency lights: 
-	say "You're frustrated and feel like lashing out at something, but you know that would only make things worse."		
+	say "You're frustrated and feel like lashing out at something, but you know that would only make things worse."
 
 Chapter 4 - Emergency Radio
 
@@ -647,6 +720,12 @@ Instead of attacking radio: say "[one of]You slam a fist into the top of the rad
 	
 Before saying hello to the emergency radio: if emergency radio is switched off, try switching on the emergency radio instead; otherwise say "You try to raise someone, but there's no response[if frequency tuned to of radio is not emergency frequency], at least on this frequency[end if]." instead.
 
+Chapter 5 - Mini Fridge
+
+The mini fridge is a openable, opaque, fixed in place container in Foreman's Office. The mini fridge is closed. It is undescribed.
+
+The bottle of Blue Moon is in the mini fridge. 
+
 Part 2 - Medical Supplies
 
 Chapter 1 - Bandaids
@@ -671,12 +750,16 @@ The bottle of pills is a transparent openable container.
 	The carrying capacity of the bottle of pills is 50.
 	Ten aspirin are in the bottle of pills.
  
-The rubbing alcohol is a fluid container. The printed name is "bottle". The current volume is 4.0 fl oz.  The liquid of the rubbing alcohol is isopropyl alcohol. 
+The rubbing alcohol is a fluid container. The printed name is "plastic bottle". The current volume is 4.0 fl oz.  The liquid of the rubbing alcohol is isopropyl alcohol. 
 
 Instead of drinking rubbing alcohol: say "It's not the kind of alcohol you want and you know it."
 
-An expired first aid kit is a box.
-	In it is a bottle of pills, an ace bandage, a pack of bandaids, and a bottle of rubbing alcohol.
+The hand sanitizer is a transparent openable container.
+	The hand sanitizer is closed.
+	The description of the hand sanitizer is "The label says it is orange-scented hand-sanitizer. You remove the cap on the spray bottle and spray some on your hands. The scent of freshly peeled oranges makes your stomach growl."
+
+The first aid kit is a box. 
+	In it is the bottle of pills, an ace bandage, the pack of bandaids, the hand sanitizer, and the rubbing alcohol.
 
 Part 3 - Documents and Clues
 
@@ -722,8 +805,6 @@ Instead of consulting the guidebook about "spider/spiders": say "The picture of 
 Instead of consulting the guidebook about "snake/snakes/rattlesnake": say "The western diamondback rattlesnake (Crotalus atrox) is a venomous species of the diamondback rattlesnake native to the United States and Mexico. It is also known as the Arizona diamond rattlesnake or desert diamondback. The western diamondback is responsible for a majority of snakebite deaths in Mexico every year. On an average, it can grow up to 4 ft in length; though specimen measuring up to 5 ft have also been reported. It is generally grayish brown in color and has around 20 to 25 irregular spots on its dusty body. It is an ambush predator, which hunts at dawn or during the night. It hides in the sand and waits for the prey. When the prey is within reach, it pounces on it and injects its deadly venom to kill it. The western diamondback feeds on prairie dogs, kangaroos, rats, whiptail lizards, Texas banded geckos, birds and even on small snakes."
 
 Instead of burning the weather-worn guidebook: say "It may seem useless right now, but it won't cast much warmth, and there are other things around you can use for kindling."
-
-
 
 BOOK 6 - OTHER PROPS
 	
@@ -805,6 +886,7 @@ an ultrasound of Ocean's baby is in the photo.
 	Understand the command "fold" as "close".
 	Rule for reaching inside photo: say "That's impossible. It's just a photo."; rule fails.
 	Instead of inserting anything into photo: say "That's impossible. It's just a photo.".
+	The description of ultrasound is "She says its yours and you believe her. Since that first night, you haven't been able to stay away from each other. But several weeks ago, something changed. She wasn't as passionate. She grew quiet. Reserved. You thought she was losing interest. Now you know. She's been carrying this on her own, and she needs to know if you will carry it with her."
 	
 Part 4 - Lighter
 
@@ -892,459 +974,6 @@ Understand "fix [pickup]" or "repair [pickup]" or "use [duct tape]" or "tape [pi
 Instead of switching on or switching off pickup truck: say "The engine just turns over. It won't start."
 
 Instead of attacking pickup truck: say "You smack [if player is in truck]the steering wheel[otherwise]the hood[end if] in exasperation. How did you get into this mess?"
-
-VOLUME 4 - CORE GAME MECHANICS
-
-BOOK 1 - MEMORIES
-
-Part 1 - Memory
-
-A memory is a kind of thing.
-A memory can be retrieved or buried. A memory is usually buried.
-A memory can be forgotten or remembered. A memory is usually forgotten.
-Understand "memory/memories" as a memory.
-
-Trigger relates various things to one memory (called the triggered memory).
-The verb to trigger (he triggers, they trigger, he triggered, it is triggered, he is triggering) implies the trigger relation.
-
-Definition: a thing is charged if it triggers a forgotten memory.
-Definition: a thing is neutral if it does not trigger a forgotten memory.
-Definition: a memory is forgotten if it is not in emotional baggage.
-
-A thing can be examined or unexamined. A thing is usually unexamined.
-Carry out examining something: now the noun is examined.
-
-Does the player mean doing something to a memory: it is unlikely.
-
-Instead of waiting: let selection be a random thing in emotional baggage; if nothing is in emotional baggage, now selection is a random memory; say "Nah, man, better keep busy or else you'll continue to brood about [the selection]."
-
-Part 2 - Suggestion
-
-Suggestion relates various things to one memory.
-The verb suggest (he suggests, they suggest, he suggested, it is suggested, he is suggesting) implies the suggestion relation.
-
-Part 3 - The Protagonist's Memories
-
-last day of high school is a memory. It is triggered by the pack of smokes. The description is "You didn't expect it was going to be your last day. But that morning you got called into the principal's office and fat bald Mr. Cox and pissy old Mrs. Burke were there, and they looked kind of like strong animals stalking a weak animal, and you knew something bad was up.
-
-Cox and I have here, Mr. Morales (a bad start since you hate that name) a test you took last week in Mrs. Burke's sophomore English class. Questions have been raised (he looked up at Mrs. Burke like he was trying to pass the buck) questions have been raised about the quality of your essay, and whether a student with your academic and behavioral record (he scratched his bloated nose meaningfully) could have plausibly produced such an essay, and you get the idea. They thought you cheated.
-
-No. They knew you cheated, deep in their smug empty hearts. They wanted you to admit it, say you were a cheater and a liar. But you weren't. You wrote that essay, every goddamn word because you really really liked the book for once and wanted to show Mrs. Burke that maybe if they gave people better books to read, kids would actually learn something. But they wanted a confession. They wanted a thieving example they could parade in front of the school. Someone of your academic and behavioral and economic and racial background and yeah, screw this shit. So you got up and left and never came back. Drop out, hell. You walked out, straight to the bar, and you'd do it again."
-
-Your shit job is a memory. It is triggered by the receipt from Last Call. The description is "Juza straddles the 371 like a drunk at last call, smelly and without a plan for the future. Shiny cars whiz by at ninety once in a while, only stopping for gas or directions (hint: not this way). No one ever stops for the stalls selling food and jewelry and blankets and cheap t-shirts that cluster around the dirt turn-off onto the rez. At least, no one buying anything.
-
-Big Jimmy shook his head when he heard you lived in Oro Oeste. Hell of a drive, kid, he said, popping up his Lumberjacks cap to scratch the straw pate underneath. You should get a place in Hoo-zuh. Little Jimmy'll set you up in that trailer across the road for almost nothin['].
-
-Almost nothing. Yeah, exactly what you'd turn into on the cold day in hell you moved to Juza. But on the other hand, that was before you met Ocean. Now the road back to Oro Oeste seems longer and longer every night."
-
-tales grandma told is a plural-named memory. It is triggered by the piece of jade. The description of tales grandma told is "There are dark spirits who roam the earth, little Knock. Grandma used to say that, holding you tight and stroking your hair. There are dark spirits who roam the earth, but you're not alone. Oh, no. I'm here. (She'd kiss your head and you'd squeeze her back.) But others are watching out for you too. You have three animal guardians, hmm? Spirits who are always watching over you. Oh, you can't always trust them to know what's best. Remember that, Knock. But when you need help, they'll protect you from the worst things in the world.
-
-Mom would yell at Grandma a lot for filling your head with that new-age bullshit. Grandma grew up white and midwestern and Baptist but had started wearing things with feathers and playing the pan flute by the time you were born. She seemed to really like having a son-in-law who was Native American or American Indian or Indigenous Peoples or whatever she'd decided the term was that week, and she was pretty pissed when Mom left him. Anyway. Her stories were mostly BS, you guessed, but some of them stuck with you. When it's dark you still wonder if your spirit animals are out there somewhere, and what the hell is taking them so long to find you."
-Understand "grandma's tales/grandmas tales/grandma tales/tales" as tales grandma told.
-
-The rusted old key triggers a memory called meeting Ocean. The description of meeting Ocean is "She was buying a Fresca at Big Jimmy's when your shift ended. You had spent the day in the storage room taking inventory but just clocked out, and you stood behind her waiting to get some cigs almost too tired to notice how cute she was but still noticing, yeah, still noticing.
-
-She turned around and caught you noticing and you were pretty embarrassed and covered in sweat and grease from the garage, so you stepped up and bought some Camels and were pretty surprised she was still there when you turned around.
-
-She told you her name was Ocean Running Deer, and she lived on the rez, and you told her your name was Nakaibito Morales, and you lived in Oro Oeste. She said isn't Nakaibito the name of a town way off west and you told her your mom had picked it off a map because it sounded like a good Indian name. You never tell anyone that story, but for some reason, you told her. She laughed, sweetly though, and said maybe the two of you should go there sometime and see what it was like. Somehow, two weeks later, you were dating, although you never ended up going to Nakaibito.
-
-And now... no, you can't think about that yet."
-
-The handled canned oranges trigger a memory called Ocean's favorite hobby. The description of Ocean's favorite hobby is "It was the first indication you had that while Ocean lived simply, she had expensive taste. You thought about cutting your losses then. It was before your first kiss, before she let you see her naked that night under the light of the full moon, the night she said yes for the first time. You were sitting in her trailer and noticed how sweet and crisp the air seemed. It wasn't her shampoo or the soap she used. Those had a creamy scent that reminded you of sweetened milk. No, this came from a tiny device that sent puffs of air into the room on timed intervals. When you asked her about it, she said something like, [quotation mark]Oh, that's just aromatherapy. When I feel stressed, I reach for the citrus scents, like oranges.[quotation mark] When you asked what she was so stressed out about, she looked down and fixed her gaze on nothing at all, staring into a physical void where a million thoughts were present, all kept secret from you. That's when you knew that she would always retain some aspects of herself, her life, her past, and keep them from you. You wondered if there would ever be a time when there were no secrets left between you. It made you feel frustrated and somewhat sad, because in the space of several months you had told her everything there was to tell. You left her that day feeling empty for the first time. It wasn't the last time."
-
-The bunny's bow tie triggers a memory called her graduation night. Understand "Ocean's/Oceans" as her graduation night. Instead of doing anything to the bunny's bow tie: say "It's just a few lines on a silhouette." The description of her graduation night is "She grinned when you picked her up, and you drove on in to Mike's. Mike's was packed that night and everyone looked great but she was the most beautiful girl in the room. You danced a lot, drank a bit, and left early to go lie down under the stars. 
-
-And that was it. The first time she said she loved you, and you said it back cause it felt wrong to leave her hanging. But you didn't really know. You felt a bit caught off guard. You knew that you liked her a lot. You knew you were attracted. But there was so much you didn't know about her, or about yourself."
-
-The ultrasound triggers a memory called when you heard the news. Understand "i/baby/ocean's" as when you heard the news. The description of when you heard the news is "Four weeks ago now, a little colder and a little darker. On a night just like this one except you didn't drive off the road and crash into a cactus, you got off work and drove the state highway in the dark and crossed over the edge of the res to Ocean's dad's trailer and she told you that night while you were dead exhausted, 'Knock, I'm pregnant.'
-
-And all you could think was how totally not real it seemed, after an hour of blackness and Arizona night streaming by, bugs exploding in tiny tragedies on your windshield, you just felt like driving on, like this thing was some podunk town you could breeze by, no services, ranche exit only. And you thought of every movie they ever made you watch in school and every lecture and every living example, the drunken uncles and snaggle-toothed coworkers who knocked up their high school sweethearts and started families on minimum wage and no prospects and never went anywhere and never did anything and what did you do? How could this happen? Why were you both so stupid?
-	
-Ocean's aunt is paying for her medical care but it's been made clear the money stops after the baby is born. Ocean wants to keep it, she's always wanted to be a mommy. But you never thought you'd be a daddy. And when she pushed this into your hand last night she told you, Knock, it's time to decide. If you aren't with me on this, if you don't want this as much as I do, then this can't go on anymore and you should go. Fly. Head west. Visit Nakaibito. She smiled just a little and traced your ear.
-
-But decide soon, Knock. Decide soon."
-
-Part 4 - Emotional Baggage
-
-The player carries an open transparent unopenable container called emotional baggage. The description of emotional baggage is "Your guidance counselor used to say you're always carrying it with you, and that memories associated with intense feelings (from euphoric to downright traumatic) have more weight than others. [if emotional baggage contains nothing]Lately, you've been working so much you barely have time to think.[end if]"
-
-Instead of doing anything other than examining when noun is emotional baggage or second noun is emotional baggage: say "It's not real, bro."
-		
-Every turn when a charged thing (called the item) is examined: 
-	move the triggered memory of the item to emotional baggage; 
-	say "Something about [the item] [one of]triggers a distant memory of [or]reminds you of [or]makes you think about [at random][triggered memory of the item].".
-
-
-Part 5 - Brooding
-
-Brooding is an action applying to one visible thing.
-
-Understand "brood about/on/over [something]" or "brood [something]" or "think about [something]" or "reflect on [something]" as brooding.
-
-Check brooding when noun is not a memory: instead say "Eh. You can't really reflect on that when it's this damn cold."
-
-Carry out brooding: say "[description of noun][line break]"; now the noun is retrieved. 
-[We defined earlier that memories can either be buried (not yet brooded about) or retrieved.]
-
-Instead of doing anything other than brooding or trading to a memory: say "As if. All you can really do is think about or brood about [regarding the noun][them]."
-
-Instead of thinking: say "Most of the thinking you do nowadays comes from either smoking or brooding." [Thinking is a standard action which we'll use to hint the player towards better options.]
-
-BOOK 2 - SMOKING
-
-Smoking is an action applying to one thing.
-
-Understand "smoke [something]" as smoking.
-
-Check smoking when noun is not cigarette: instead say "Sounds like something your high school buddies would try."
-
-Check smoking when lighter is not held: instead say "You pat your pockets, but can't seem to find your lighter."
-
-Before smoking when lighter is not held and lighter is visible: say "(first taking the lighter)"; try silently taking lighter. 
-
-Before smoking when pack of smokes is not held and pack of smokes is visible: say "(first taking the pack of smokes)"; try silently taking the pack of smokes.
-
-Before smoking when pack of smokes is not held and pack of smokes is visible: say "(first taking the pack of smokes)"; try silently taking the pack of smokes.
-
-First report smoking: say "You pull out a cigarette and light the tip. The familiar smell of lighted tobacco calms you."
-
-Instead of smoking for at least two turns: say "There's something about the ritual that grounds you, but too many in a row make you jittery, dizzy, and nauseous. You slide the cigarette back into the pack and think about what to do next."; now the noun is in pack of smokes.
-
-Report smoking: 
-	let hint be best course of action;
-	if best course of action is not "", say "Maybe [hint]. [run paragraph on]"
-	
-Last report smoking: say "[paragraph break][if player is in pickup truck]You extinguish the butt in one of the empty cups[otherwise]You crush the butt under your heel[end if] and consider where to go next."
-
-Report smoking: say "[paragraph break][if location is lit brightly]The emergency lights are holding up so far[otherwise if location is lit by headlights]It's dark outside the beam of your headlights[otherwise if location is lit by flashlight]Everything outside the beam of your flashlight is shrouded in shadows[otherwise]It's darker than a starless sky on a moonless night[end if]. [run paragraph on]"
-
-Report smoking: if the player holds a talent, say "Some weird shit went down in the desert, but you do feel like you have more [list of talents held by player]. [run paragraph on]".
-
-Report smoking: if there is an in progress plan, say "You've found the [list of handled things which are required by a plan], but [if the number of in progress plans is 2]you can't see how they're going to be helpful together[otherwise]you still need something else if you're going to finish [a random in progress plan][end if]. [run paragraph on]".
-
-Carry out smoking: now the noun is nowhere.
-
-BOOK 3 - TALENTS
-
-A talent is a kind of thing.
-strength, courage, luck, scent, honor, spirit, and freedom are talents.
-[Note the uncapitalized "strength": we don't want the talents to have articles, but we also don't want them to be capitalized like proper nouns.]
-
-BOOK 4 - TRADING
-
-Trading is an action applying to two things. Understand "trade [something preferably held] for [something]" as trading.
-
-The trading action has a person called the trader. Rule for setting action variables for trading: now the trader is a random visible spirit animal.
-
-Check trading when the trader is not a spirit animal: instead say "There's no one here to trade with."
-
-Check trading when the noun is not a memory: instead say "'I'm only interested in trading memories,' [the trader] says."
-
-Check trading when the second noun is not a talent: instead say "'I only have talents to offer you,' says [the trader], '[list of visible not held talents].'"
-
-Check trading when the second noun is held: instead say "You've already got the talent of [second noun]."
-
-Check trading when the noun is not in emotional baggage: instead say "You've already traded away that memory."
-
-Check trading when trader needs more memories: move the noun to the trader; instead say "[The trader] touches your fingertips and pulls [the noun] through your nerve endings. 'Good,' he says, 'I'll take that, although it's not enough to complete the trade.'[paragraph break]Somewhere inside you, things are shifting, moving, growing."
-
-To decide whether (trader - a person) needs more memories:
-	let the projected total be the number of memories held by trader + 1;
-	if the projected total is less than the price of trader, decide yes;
-	decide no.
-
-Carry out trading:
-	move the second noun to the player;
-	now the noun is held by the trader;
-	now everything does not trigger the noun;
-	repeat with item running through  not held talents:
-		now item is off-stage.
-	
-Report trading: say "[The trader] nods. 'Yes,' he says, 'a fair trade.' And something happens inside you as he says it. [The noun] shifts and wriggles and fades. It has shifted. And yeah, it kinda does feel like you could call it [the second noun]. Cool."
-	
-Instead of taking a not held talent when a spirit animal(called the potential trader) is visible: say "'You can't just have it,' [the potential trader] says. 'That's not how it works. You have to TRADE something for it.'".
-
-Instead of giving something to a spirit animal(called the potential trader): say "'No, not like that,' [the potential trader] says. 'You have to TRADE something for it.'".
-
-Instead of doing anything other than quizzing, implicit-quizzing or trading to a not held talent: say "It's just potential, or something."
-
-BOOK 5 - PLANS
-
-Part 1 - Plan
-
-A plan is a kind of thing. A plan is fixed in place.
-
-Definition: a plan is in progress if a handled thing is required by it.
-
-Definition: a plan is complete if two handled things are required by it.
-
-A thing can be noted as useful. Every turn when noun is a thing and noun is required by a plan and noun is not noted as useful: note noun as useful.
-
-To note (item - a thing) as useful: now item is noted as useful; say "Hey, that [item] might be useful if you decide on [objective of item]."
-
-Part 2 - Requirement
-
-Requirement relates one plan (called the objective) to various things.
-The verb to require (he requires, they require, he required, it is required, he is requiring) implies the requirement relation.
-
-Part 3 - The Protagonist's Plans
-
-Chapter 1 - Staying the Night
-
-Staying the night is a plan.
-
-The printed name of staying the night is "spending the night here".
-
-Staying the night requires the emergency blanket and the canned oranges.
-
-Chapter 2 - Fixing the Truck
-
-The roll of duct tape and the gas can are required by a plan called fixing the truck.
-
-The printed name of fixing the truck is "fixing your truck and getting out of here". 
-
-VOLUME 5 - CHARACTERS
-
-BOOK 1 - THE PROTAGONIST 
-
-Part 1 - Description
-
-The player is a person.
-The player is male.
-The player is called Knock.
-The age of the player is 18.
-The player is large-footed.
-
-The description of the player is "You don't really want to think about what you look like right now, especially when there's a totally legit likeness on the driver's license inside your wallet."
-
-Part 2 - Initial Inventory
-
-The player wears a denim jacket. 
-
-The player carries a lighter. 
-
-The player carries a wallet. 
-
-[Exercise 7.2 Attempt]
-[Friends is a list of people variable.
-Sean is a kind of person.
-Todd is a kind of person.
-Roy is a kind of person.
-Friends is {Sean, Todd, Roy}.]
-
-Part 2 - Location
-
-The player is in the pickup truck.
-
-Part 3 - Actions
-
-Instead of sleeping: say "You're tired. There's no denying that. But you have to deal with the matter at hand. There will be time to sleep later."
-
-BOOK 2 - SPIRIT ANIMALS
-
-A spirit animal is a kind of person.
-
-The rabbit, the Coyote, and Sand-dancer are a male spirit animal.
-
-A spirit animal has a number called price. 
-The price of the rabbit is 1.
-The price of the Coyote is 2.
-The price of Sand-dancer is 3.
-
-Part 1 - The Coyote
-
-The initial appearance of Coyote is "The Coyote watches you intently." Understand "guy/man" as the Coyote.
-
-The description of the Coyote is "You can barely see him in the darkness, can't tell whether he's old or how old, what color his [dusty hoodie] is, and with those [plastic-framed sunglasses] you can't even tell whether he's smirking at you or just twitching his mouth. There's a weird smell coming off him, sweat and dirt and a little wet dog and something deeper, earth, desert, rain, all mixed with cigarette smoke."
-
-The Coyote holds a cigarette. He wears some plastic-framed sunglasses and a dusty hoodie.
-
-At the time when Coyote's conversation starts: try quizzing the Coyote about introduction; now Coyote holds down to business; try listing suggested topics.
-
-After quizzing Coyote about introduction: say "He wears a couple days of stubble, a [dusty hoodie], and, ridiculously in the darkness, a pair of cheap [plastic-framed sunglasses]. He lights a cigarette, then holds up a hand in annoyance to block the beam of your flashlight. 'Turn that thing off,' he says, and either you do it or it goes off by itself, because the next thing you know it's darker and he's closer and the only light comes from the red glow of the cigarette.[paragraph break]'That's better,' he says. He takes a drag on the cigarette, then pulls another from behind his ear and offers it to you. 'Smoke?'[add yes-no-suggestion other suggestion]".
-
-When Coyote's Offer begins: now flashlight is switched off; now Coyote is lit. Instead of switching on flashlight during Coyote's Offer: say "You think you'd rather keep him on your side."
-
-Instead of taking cigarette: move a random cigarette held by The Coyote to player; try saying yes. Instead of dropping cigarette: now a random cigarette held by player is off-stage; say "You drop it to the ground and stub it out with your foot." Instead of smoking when player holds cigarette during Coyote's Offer: say "You take a drag, thoughts and adrenaline whirring through your head." Instead of smoking during Coyote's Offer: try saying yes.
-
-Instead of saying yes when yes-no-suggestion is familiar and Coyote is visible: say "You pull out your pack and [if the number of cigarettes enclosed by player is 0]see that it's empty, but Coyote grins and hands you his last one[otherwise]he grins, like he knew you'd say yes[end if], and leans forward for you to light up off him. His sunglasses reflect back nothing but your own face weirdly lit by the glow from the cig, and for a moment it's like the blackness behind them is deep, deeper than the sky, deeper than the universe..."; if the number of cigarettes enclosed by the player > 0, now a random cigarette enclosed by the player is nowhere; say Coyote-talks.
-
-Instead of saying no when yes-no-suggestion is familiar and Coyote is visible: say "He shrugs, takes a puff on his, and exhales the smoke into the desert night. Wind whips it away and he stares towards the horizon, forehead wrinkling in something (annoyance, maybe contemplation) you can't read through the sunglasses."; say Coyote-talks.
-	
-To say Coyote-talks: clear all topics; say "[line break]'Gotta keep an eye on the horizon,' he says in a scratchy, slow voice[if we are saying yes] as you step back, inhaling the dry smoke[end if]. 'Always someone hunting Border Patrol, National Guard, INS, Minute-men. You want to help people get where they're going out here, you need more than [if player holds strength]strength[otherwise]courage[end if]. You need to learn how to hide.'[paragraph break]'I'm the Coyote,' he says. 'And we've been hiding from each other for a long time.'[make rabbit known][add rabbit ask suggestion][add Coyote ask suggestion][add advice ask suggestion][add business other suggestion]".
-	
-To say Coyote-business: say "[one of]smoke gusting from his lungs in clouds[or]scratching his stubble with the hand that holds the cigarette[or]itching underneath his jacket, slowly[or]the red tip of the cigarette glowing as he takes another drag[cycling]".
-	
-advice is held by the Coyote. After quizzing the Coyote about advice: say "He laughs, [Coyote-business]. 'Kid,' he says, 'you don't want my advice. I could tell you some stories and you'll smile and be sure they'll never happen to you. I could tell you some stories and you'll yawn and think you know them already. I could tell you some stories and you'll think they're wise and not realize you don't understand them until you make the same mistakes yourself an try to turn your failure into advice and fail at that, too. I could tell you some stories.' He looks off towards the horizon, [Coyote-business]. 'But it's not my stories that will help you'".
-
-After quizzing the Coyote about Coyote: say "'You know who I am,' he says, [Coyote-business]I'm the one who runs both sides of the fence. I'm the one who scouts ahead. I'm the one with songs in my blood and dirt under my nails and people owe me money in every trailer park from here to Yuma, or maybe I owe them money but anyway they don't want to see me. You know who I am, Knock.'".
-
-After quizzing the Coyote about the rabbit: say "He grins, not unkindly but not exactly kindly either. 'That cute little jackalope?' he says, [Coyote-business] 'He's got upsides, I guess. [if player holds strength]Strength[otherwise]Bravery[end if] has it's place. But if you're always in the spotlight, you'll never learn how to live in the shadows. And most of us spend a lot of time in the shadows.'".
-
-After quizzing the Coyote about business: say "He presses his hands together, still clutching the cigarette with thumb and index finger, and smoke rises past his hidden eyes as he slowly rubs his palms together. He mutters something rhythmic to himself and you realize it's a song, and you can't quite make out the lyrics but the melody is simple and makes you think of Johnny Cash and the end of the world. And then he stops, and pulls his hands apart, and in each he holds a talent.[paragraph break]'Here we have luck,' he says, bobbing the left, 'and scent. And look, I'll be straight with you. These are precious things and I can't afford whatever blue light special deal the bunny gave you. I need double his price. I need two memories to part with one of these. Oh, they're worth it, believe me. Both have saved my ass more times than you'd believe. Both could save yours. But it's up to you. Which'll it be?'[add luck ask suggestion][add scent ask suggestion][add trade-for-luck other suggestion][add trade-for-scent other suggestion][add take-inventory other suggestion]"; clear all topics; move luck to location; now luck is familiar; move scent to location; now scent is familiar.
-	.
-After quizzing the Coyote about luck: say "[if player holds strength]'Looks like you're already pretty tough,' he says appraisingly, looking you over. 'With a little luck, you ought to make it through the night and get on with the rest of your life.'[otherwise]'You found some cojones, kid,' he says, looking you over appraisingly, 'which'll be good for fixing your truck and getting back to your girl. I don't know if luck'll help you out much there, though.'".
-		
-After quizzing the Coyote about scent: say "[if player holds courage]'You found some cojones, kid,' he says, 'If you can just sniff out the right finds, you can probably get back to that little lady you're so fond of, if that's what you want.'[otherwise]'You're pretty tough,' he says, 'but I don't know that a good nose is going to help you make it through the night an get on with the rest of your life, if that's what you're trying to do.'".
-
-trade-for-luck is a misc-suggestion. It is held by Coyote. The printed name is "trade something for luck".
-
-trade-for-scent is a misc-suggestion. It is held by Coyote. The printed name is "trade something for scent".
-
-Report trading when Coyote is visible: clear all topics; now more coming is familiar; try quizzing Coyote about more coming; stop the action.
-
-After quizzing Coyote about more coming: say "He tucks the other talent back in his pocket, and without its faint glow it seems darker than ever, the pulsing red tip of his cigarette all you can see.[paragraph break]'The last of us is coming,' Coyote's voice says out of the black, 'last and most powerful, and most dangerous, and most afraid. Sand-dancer. Be careful of him, Knock. [if player holds strength]Stay strong[otherwise]Stay brave[end if]. [if player holds luck]Stay lucky[otherwise]Keep your nose to the wind[end if]. Remember the shadows.'[paragraph break]And it seems like he's growing, larger and larger, the red tip of his cigarette pulsing and glowing now high up in the sky, and you stumble back, shivering, and suddenly remember your flashlight in your hand and switch it on..."; reset the interlocutor; now flashlight is switched on; move player to Base of the Tower.
-
-Part 2 - The Rabbit
-
-At the time when Rabbit's conversation starts: try quizzing the rabbit about introduction; try listing suggested topics.
-
-introduction is a familiar thing. After quizzing the rabbit about introduction: say "The rabbit breathes and stares. You wonder if it's going to start talking like in some crap Disney movie and then Jesus Christ it does...[paragraph break]'So what'd you expect from an animal guardian?' it says, but like not with its lips, somewhere in your head instead. 'Were you thinking big, nasty, sharp, pointy teeth? Waitcoat and pocket watch? Nah. Tricks are for kids. What's up Knock?' It's whiskers twitch.[add rabbit ask suggestion][add go insane other suggestion]".
-
-go insane is a misc-suggestion. It is held by the rabbit. The printed name is "just, you know, go insane." Understand "go insane" as a mistake ("I know, right? Looks like it's too late though.") when location is Burrow.
-
-After quizzing the rabbit about the rabbit: say "[remove go insane other suggestion]'Oh come on, pal, you know me,' he says with this kind of stupid cheerful tone, and suddenly he looks more like Buster from Arthur, scrawny and poorly animated. 'I've been keeping an eye on you from the TV all these years. Your grandma asked me to, remember?' He grins, buck teeth protruding.[add grandma's wild stories ask suggestion][add how he's not real tell suggestion]".
-
-grandma's wild stories is held by the rabbit. After quizzing the rabbit about grandma's wild stories: say "'She was wrong about lots of stuff,' Buster says, scratching himself with a hind paw thoughtfully, 'but right about lots too. Oh, lots.'"; try quizzing the rabbit about rabbit's judgement.
-
-how he's not real is held by the rabbit. After informing the rabbit about how he's not real: say "'Oh, don't say that!' the rabbit says, animated eyes going round like saucers. 'Then it'd be just you here all alone, and wouldn't that be boring. It's much more interesting if I'm really around.'"; try quizzing the rabbit about rabbit's judgement.
-
-rabbit's judgement is held by rabbit. After quizzing the rabbit about rabbit's judgement: clear all topics; say "[one of][if player encloses at most 8 cigarettes]'Yo, you started smokin['] again?' Buster asks, sniffing distainfully, except he's not Buster anymore, more like Eminem. 'I thought you quit that shit dawg. It's cool, I won't tell your grandma, but it makes Thumper cry a little, you know what I'm sayin[']?'[otherwise if at least 1 tall window is open]'Yo, nice work breakin['] the window, Buster says, except he's not Buster anymore, more like Eminem. 'Way to stick it to the man. You hella bad, dawg. Maybe you can tag some shit when you get back to town too.'[otherwise]'Hey yo, you been hella good about keepin['] off those cancer sticks,' Buster says,  except he's not Buster anymore, more like Eminem. 'Don't think I ain[']t watchin['] ya.'[end if](Oh hey, Rabbit Smith,  you get it.)[or]The rabbit just scratches his ear with a hind paw, smirking.[stopping][add how he knows so much about everything ask suggestion]".
-
-how he knows so much about everything is held by the rabbit. After quizzing the rabbit about how he knows so much about everything: say "'Hey, back off man,' he says, 'it's my ****in['] job.' And there's actually like a bleep, too, and now thaht you think of it you only ever saw 8 Mile on TV.";try quizzing rabbit about down to business.
-
-down to business is held by the rabbit. The printed name of down to business is "ask to get down to business". 
-
-After quizzing the rabbit about down to business: 
-	clear all topics; 
-	say "'Anyway, look, man, we both know. you're in trouble. I just gotta ask you one question.' And he changes again into like a giant silhouette, and it's the Playboy Bunny, ears and bow tie and all. 'Do you love her?'[add yes-no-suggestion other suggestion]";
-	move the bunny's bow tie to location;
-	move strength to location; now strength is familiar;
-	move courage to location; now courage is familiar.
-
-BOOK 3 - THE RADIO VOICE
-
-
-The voice is an undescribed man.
-
-Every turn when radio is switched on and frequency tuned to of radio is emergency frequency and voice has not been visible:
-	move voice to location;
-	try quizzing voice about introduction;
-	set pronouns from voice.
-
-After quizzing voice about introduction: say "Not like you think anything's going to happen but what the hell. You grab the dusty old mike, press the call button, and ask is there anybody[paragraph break]'...out there?' the speaker blurts and holy crap, someone's responding, and they say 'Roger roger, tower station nineteen, read you now loud and clear, what's your forty?' and the voice is staticky and whirled through with weird rhythmic distortions but you can hear it just fine and now what?[add what that means ask suggestion][add being lost tell suggestion][add never mind tell suggestion]".
-	
-never mind is held by voice. After informing voice about never mind: say "[remove what that means ask suggestion]You mutter something about how you think you've made a mistake and you have to go but the voice interrupts. 'Hang on, hang on, son, there shouldn't be anybody out there. Not at all, especially this late. Why don't you tell me what's going on?'".
-	
-what that means is held by voice. After quizzing voice about what that means: say "You try to make some joke about not having forty of anything, but the voice cuts you off. 'Ten forty means situation report, son. Obviously you're not on duty. Ain't nobody on duty out there anymore, specially not this time of night. What's going on?'[remove what that means ask suggestion]".
-	
-being lost is held by voice. Understand "Im/I'm" or "I am" as being lost. After informing voice about being lost: say "[remove what that means ask suggestion][remove never mind tell suggestion]Feeling a little stupid, you come clean and tell the voice that you drove off the road and aren't sure exactly where you are.[paragraph break]'Copy that,' the voice says briskly after a moment. 'You're at tower station nineteen, son, about thirty-two miles southwest of Oro Oeste, fifteen milles or so from the state highway.' And if the mike wasn't attached to the radio you'd drop it on the floor. Fifteen miles? How in the [italic type]hell[roman type] could you have driven fifteen miles off the road and not remember. How is that even possible?[paragraph break]'Hello?' the radio says. 'Hello, son, do you copy?'[add yes-suggestion other suggestion][add switch-off-radio other suggestion]".
-
-After informing voice about yes-suggestion: say "You jabber something positive and sit back, still shaken.[paragraph break][voice explains choices]".
-
-switch-off-radio is a misc-suggestion held by voice with printed name "switch off the radio". Instead of switching off radio when current interlocutor is voice: say "You reach for the switch, but hesistate, hand hovering above it as the static whirls and roars.[paragraph break][voice explains choices]".
-
-To say voice explains choices: say "'Look, son,' the voice says, 'I don't know how you got out there but that's not important right now. Weather report's coming in and there's a cold front the size of Texas coming your way. I don't want to scare you but if you don't find a way home, or figure out some food and shelter for the night, you could freeze to death. You hear me? Now on account of the cutbacks I don't have anyone to send out there until morning. But there may be parts around that old tower you can use to patch up your truck and make it back to the highway. Or, there may be emergency supplies that would get you through the night. This storm's gonna blow out all communication, so you're gonna be on your own. It's up to you. Over and out.'[paragraph break]You rub your face tiredly. Ocean was expecting you tonight after your shift, like usual. If you don't make it she'll be worried sick. Then on the other hand maybe you should worry about yourself first for a change. You feel like you need a cigarette[if pack of smokes is not held by player] and then you remember you quit[end if]. Hell, can't anything be easy?"; reset the interlocutor; now voice is off-stage.		
-		
-BOOK 4 - THE SUPPORTING CAST 
-
-Part 1 - Grandmother
-
-Annamarie is a person.
-The age of Annamarie is 89.
-
-Part 2 - Other Animals
-
-A normal animal is a kind of animal.
-
-A desert hare and a brown lizard are normal animals.
-
-Chapter 1 - The Brown Lizard
-
-The brown lizard is in Middle of Nowhere. "[if player is in pickup truck]You see a little lizard clinging frantically to the [Saguaro] through the windshield[otherwise]A brown-colored lizard clings to the cactus[end if]."
-
-Understand "brown-colored/colored/sand-dancer/dancer" or "sand dancer" as brown lizard.
-
-The description is "[one of]He looks pretty pissed that you crashed into his cactus. What did grandma used to call those little dudes? You can't remember[or]Oh yeah, you remember, she called them sand-dancers. This little sand dancer still looks pissed [or] The little sand-dancer lizard stares at you with one slitte eye[stopping]."
-
-Instead of giving anything to the lizard: say "You dangle [the noun] in front of it, but it just flicks its tongue in and out a little faster, staying put." 
-
-Instead of attacking or taking or pushing or touching the lizard: say "You reach out to grab it, but in a flash it scurries around to the other side of the cactus and disappears."; now lizard is off-stage.
-
-Instead of kissing the lizard: say "Someone in elementary school dared you to do that once and you beat him up."
-
-Chapter 2 - Desert Hare
-
-The desert hare is in Base of the Tower.
-
-Every turn when a random chance of 1 in 4 succeeds:
-	let starting point be the location of the desert hare;
-	let destination be a random room which is adjacent to starting point;
-	let heading be the best route from starting point to destination;
-	if heading is a direction and direction is regionally in Around the Tower, try the desert hare going heading.
-	
-After the hare going a direction (called way): if the hare is visible or the hare was visible, say "The hare hops [way]wards."
-
-
-
-VOLUME 4 - THE STORY WORLD
-
-BOOK 1 - REGIONS
-
-Tower Vicinity is a region.
- 
-Around the Tower is a region. 
-
-Office Interior is a region.
-
-Surrounding Desert is a region.
-
-Vast Desert is a region.
-
-Part 2 - Around the Tower
-
-Middle of Nowhere, Backtracking, Crumbling Concrete, Base of the Tower, Against the Fence, and Weed-strewn Rust are in Around the Tower.
-
-Roof is regionally in Around the Tower.
-
-Part 3 - Office Interior
-
-Staging Area, Foreman's Office, Break Room, and Storage Room are in Office Interior.
-
- Part 4 - Tower Vicinity
-
-Around the Tower and Office Interior are in Tower Vicinity.
-
-Part 5 - Surrounding Desert
-
-Instead of going to a room regionally in Surrounding Desert when location is lit by headlights and flashlight is not held and flashlight is not switched on: say "Outside the wavering glow of your headlights, it's pitch black. A storm must have rolled in; there are no stars above, and nothing but darkness surrounds you. The darkness seems to thicken at every turn. Only the smell of the desert tells you it is still out there."
-
-Instead of going to a room regionally in Surrounding Desert when flashlight is held and flashlight is switched on and emergency lights are switched off: say "You heft your flashlight, but decide not to head out into the desert just yet. [if headlights are switched on]Your truck lights are already starting to dim, and with[otherwise]With[end if]how dark it is, you're not sure you could find your way back."
-
-BOOK 2 - BACKDROPS
-
-Part 1 - Tire Tracks
-
-Some tire tracks are a backdrop. 
-They are in Middle of Nowhere and Backtracking. 
-
-Part 2 - Desert Sand
-
-The desert sand is a backdrop in Around the Tower. 
-
-Instead of taking the desert sand: say "[if Rainstorm is happening]More like mud right now.[otherwise]You kneel down and let some run through your fingers like vague memories of better times. But the ground is freezing and you get back to your feet.[end if]".
-
-Part 3 - Sagebrush
-
-The sagebrush is a backdrop in Around the Tower. 
-
-Part 4 - Concrete Building
-
-The concrete building is a backdrop in Around the Tower.
-
-Part 5 - Layers of Sand
-
-Some layers of sand are a backdrop. They are in Office Interior.
 
 VOLUME 5 - SETTING
 
@@ -1574,17 +1203,12 @@ Chapter 2 - Staging Area Props
 
 Section 1 - Door
 
-A boarded-up door is a closed unopenable undescribed door. It is  northeast of Crumbling Concrete and southwest of Staging Area.
+A boarded-up door is a closed unopenable undescribed door. 
+	It is northeast of Crumbling Concrete and southwest of Staging Area.
 	Understand "board/boards/boarded" as boarded-up door.
-	Instead of opening, entering, or attacking boarded-up door: say "The door won't budge. You slam your hands against the boards in frustration[if pane of cracked glass is closed], causing a nearby window to quiver in the reflected light[end if]."
-	Understand the command "remove" as something new.
-	Removing is an action applying to one thing.
-	Understand "remove [something]" or "take off [something]" as removing.
-	Check removing when noun is worn: instead try taking off the noun.
-	Check removing when noun is a closed door: instead say "You try to pry the boards from the door with no success.".
-	Check removing when noun is some cobwebs: instead try taking some cobwebs.
-	Check removing when a tall window is open and noun is a door: instead say "Seems redundant. You've found another way into the building.".
-	Check removing when noun is carried: instead say "You are not wearing [the noun]."
+	Instead of opening or entering or attacking the boarded-up door: say "The door won't budge. You slam your hands against the boards in frustration[if pane of cracked glass is closed], causing a nearby window to quiver in the reflected light[end if]."
+	Instead of attacking the boarded-up door when player holds strength: now the boarded-up door is openable; say "You push the boards with all your might. They yield and crack under pressure."
+	
 	
 Section 2 - Window
 
@@ -1653,14 +1277,20 @@ Foreman's Office is north of Staging Area.
 
 Chapter 1 - Foreman's Office Description
 
-The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights illuminate every corner of[end if] the tiny office where the boss likely held court. There's not much here, a [half-collapsed desk] wobbles next to a [wastepaper basket].  A [rusted old key] is one of the only things on the desk next to a [withered cactus]. You can barely see the metal infrastructure of the tower's base through an obscured [dust-covered window]."
+The description of Foreman's Office is "[if location is lit by flashlight]You sweep the beam of your flashlight around[otherwise]The stark emergency lights illuminate every corner of[end if] the tiny office where the boss likely held court. There's not much here, a [half-collapsed desk] wobbles next to a [wastepaper basket].  A [rusted old key] is one of the only things on the desk next to a [withered cactus]. A mini fridge stands in a corner near the desk. You can barely see the metal infrastructure of the tower's base through an obscured [dust-covered window]."
 
 Chapter 2 - Foreman's Office Props
 
+Section 1 - Withered Cactus
+
 A withered cactus is a dead, flowering, annual, dull plant. It is on the half-collapsed desk. It is undescribed.
+
+Section 2 - Half-Collapsed Desk
 
 A half-collapsed desk is a supporter in Foreman's Office. It is undescribed.
 A rusted old key is on the half-collapsed desk. It is undescribed.
+
+Section 3 - Wastepaper Basket
 
 A wastepaper basket is an open unopenable fixed in place container. 
 	It is in Foreman's Office.
@@ -1670,16 +1300,27 @@ A wastepaper basket is an open unopenable fixed in place container.
 
 Instead of examining the wastepaper basket: 
 	now the crumpled pack is in the wastepaper basket;
-	say "No one bothered to take the trash out before they boarded up the building. It is filled to the brim with [discarded papers] and [food containers], and there appears to be a discarded pack of cigarettes amidst the refuse.".
+	say "No one bothered to take the trash out before they boarded up the building. It is filled to the brim with [discarded papers] and [food containers]. There appears to be a discarded pack of cigarettes amidst the refuse.".
+
+Section 4 - Rusted Filing Cabinet
 
 A rusted filing cabinet is a container in Foreman's Office. It is fixed in place. The description is "The rusted old metal filing cabinet is one of the tall, three-drawered varieties common to many office spaces. It has a [top drawer], a [middle drawer], and a [bottom drawer]."
 	A top drawer, a middle drawer, and a bottom drawer are in the rusted filing cabinet. The top drawer, middle drawer, and bottom drawer are undescribed openable closed fixed in place containers.
 	[The warm wooly socks are in the middle drawer.]
 	There is an unmarked folder in the bottom drawer.
 		The unmarked folder is closed and openable.
-		The unmarked folder contains several papers. 
 		The unmarked folder contains a job application. 
-		The unmarked folder contains a note.
+		The unmarked folder contains a handwritten note.
+	
+Instead of opening the top drawer, say "The top drawer is rusted shut."
+	
+Instead of opening the middle drawer, say "The middle door is rusted shut."
+	
+The description of a job application is "Some guy named Bill from Oro Oeste wanted to work here. The application is dated two years ago."
+
+The description of a handwritten note is "The handwriting is illegible. Worse than yours."
+	
+Section 5 - Dust-Covered Window	
 		
 A dust-covered window is a small window in Foreman's Office. The initial appearance of a dust-covered window is "A dust-covered window casts a mottled, fractured reflection of [the random thing in Foreman's Office]."
 
@@ -1691,11 +1332,9 @@ Break Room is east of Staging Area.
 
 Chapter 1 - Break Room Description
 
-The description of Break Room is "It was never designed for comfort. A few utilitarian picnic tables and basic supplies provided a cramped space for workers to take a lunch break or tend to an injury before returning to work. The [tiny frosted window] provided no scenic escape. Perhaps that was a kindness. All anyone could see beyond that window was a weed-strewn wasteland."
+The description of Break Room is "It was never designed for comfort. A few utilitarian picnic tables and basic supplies provided a cramped space for workers to take a lunch break or tend to an injury before returning to work. There is a [first aid kit] on one of the tables. The [tiny frosted window] provided no scenic escape. Perhaps that was a kindness. All anyone could see beyond that window was a weed-strewn wasteland."
 
 Chapter 2 - Break Room Props
-
-The expired first aid kit is in Break Room.
 
 Section 1 - Scattered Newspapers
 
@@ -1731,7 +1370,11 @@ An emergency blanket is in the wire mesh cage. Understand "blanket" as the emerg
 
 Instead of touching emergency blanket when blanket is in cage: say "You can feel the warm wool through the mesh, but you can't get it out."
 
-Section 4 - Tiny Frosted Window
+Section 4 - First Aid Kit
+
+The first aid kit is in Break Room.
+
+Section 5 - Tiny Frosted Window
 
 A tiny frosted window is a small window in Break Room.
 
@@ -1839,7 +1482,407 @@ The rabbit is in Burrow. The initial appearance of the rabbit is "[one of]It's h
 
 The description of the rabbit is "The closer you look the weirder it gets, like it doesn't start or end in any one place or something all new-agey like that."
 
-VOLUME 6 - PLOT
+VOLUME 6 - CORE GAME MECHANICS
+
+BOOK 1 - MEMORIES
+
+Part 1 - Memory
+
+A memory is a kind of thing.
+A memory can be retrieved or buried. A memory is usually buried.
+A memory can be forgotten or remembered. A memory is usually forgotten.
+Understand "memory/memories" as a memory.
+
+Trigger relates various things to one memory (called the triggered memory).
+The verb to trigger (he triggers, they trigger, he triggered, it is triggered, he is triggering) implies the trigger relation.
+
+Definition: a thing is charged if it triggers a forgotten memory.
+Definition: a thing is neutral if it does not trigger a forgotten memory.
+Definition: a memory is forgotten if it is not in emotional baggage.
+
+A thing can be examined or unexamined. A thing is usually unexamined.
+Carry out examining something: now the noun is examined.
+
+Does the player mean doing something to a memory: it is unlikely.
+
+Instead of waiting: let selection be a random thing in emotional baggage; if nothing is in emotional baggage, now selection is a random memory; say "Nah, man, better keep busy or else you'll continue to brood about [the selection]."
+
+Part 2 - Suggestion
+
+Suggestion relates various things to one memory.
+The verb suggest (he suggests, they suggest, he suggested, it is suggested, he is suggesting) implies the suggestion relation.
+
+
+
+Part 4 - Emotional Baggage
+
+The player carries an open transparent unopenable container called emotional baggage. The description of emotional baggage is "Your guidance counselor used to say you're always carrying it with you, and that memories associated with intense feelings (from euphoric to downright traumatic) have more weight than others. [if emotional baggage contains nothing]Lately, you've been working so much you barely have time to think.[end if]"
+
+Instead of doing anything other than examining when noun is emotional baggage or second noun is emotional baggage: say "It's not real, bro."
+		
+Every turn when a charged thing (called the item) is examined: 
+	move the triggered memory of the item to emotional baggage; 
+	say "Something about [the item] [one of]triggers a distant memory of [or]reminds you of [or]makes you think about [at random][triggered memory of the item].".
+
+
+Part 5 - Brooding
+
+Brooding is an action applying to one visible thing.
+
+Understand "brood about/on/over [something]" or "brood [something]" or "think about [something]" or "reflect on [something]" as brooding.
+
+Check brooding when noun is not a memory: instead say "Eh. You can't really reflect on that when it's this damn cold."
+
+Carry out brooding: say "[description of noun][line break]"; now the noun is retrieved. 
+[We defined earlier that memories can either be buried (not yet brooded about) or retrieved.]
+
+Instead of doing anything other than brooding or trading to a memory: say "As if. All you can really do is think about or brood about [regarding the noun][them]."
+
+Instead of thinking: say "Most of the thinking you do nowadays comes from either smoking or brooding." [Thinking is a standard action which we'll use to hint the player towards better options.]
+
+BOOK 2 - SMOKING
+
+Smoking is an action applying to one thing.
+
+Understand "smoke [something]" as smoking.
+
+Check smoking when noun is not cigarette: instead say "Sounds like something your high school buddies would try."
+
+Check smoking when lighter is not held: instead say "You pat your pockets, but can't seem to find your lighter."
+
+Before smoking when lighter is not held and lighter is visible: say "(first taking the lighter)"; try silently taking lighter. 
+
+Before smoking when pack of smokes is not held and pack of smokes is visible: say "(first taking the pack of smokes)"; try silently taking the pack of smokes.
+
+Before smoking when pack of smokes is not held and pack of smokes is visible: say "(first taking the pack of smokes)"; try silently taking the pack of smokes.
+
+First report smoking: say "You pull out a cigarette and light the tip. The familiar smell of lighted tobacco calms you."
+
+Instead of smoking for at least two turns: say "There's something about the ritual that grounds you, but too many in a row make you jittery, dizzy, and nauseous. You slide the cigarette back into the pack and think about what to do next."; now the noun is in pack of smokes.
+
+Report smoking: 
+	let hint be best course of action;
+	if best course of action is not "", say "Maybe [hint]. [run paragraph on]"
+	
+Last report smoking: say "[paragraph break][if player is in pickup truck]You extinguish the butt in one of the empty cups[otherwise]You crush the butt under your heel[end if] and consider where to go next."
+
+Report smoking: say "[paragraph break][if location is lit brightly]The emergency lights are holding up so far[otherwise if location is lit by headlights]It's dark outside the beam of your headlights[otherwise if location is lit by flashlight]Everything outside the beam of your flashlight is shrouded in shadows[otherwise]It's darker than a starless sky on a moonless night[end if]. [run paragraph on]"
+
+Report smoking: if the player holds a talent, say "Some weird shit went down in the desert, but you do feel like you have more [list of talents held by player]. [run paragraph on]".
+
+Report smoking: if there is an in progress plan, say "You've found the [list of handled things which are required by a plan], but [if the number of in progress plans is 2]you can't see how they're going to be helpful together[otherwise]you still need something else if you're going to finish [a random in progress plan][end if]. [run paragraph on]".
+
+Carry out smoking: now the noun is nowhere.
+
+BOOK 3 - TALENTS
+
+A talent is a kind of thing.
+strength, courage, luck, scent, honor, spirit, and freedom are talents.
+[Note the uncapitalized "strength": we don't want the talents to have articles, but we also don't want them to be capitalized like proper nouns.]
+
+BOOK 4 - TRADING
+
+Trading is an action applying to two things. Understand "trade [something preferably held] for [something]" as trading.
+
+The trading action has a person called the trader. Rule for setting action variables for trading: now the trader is a random visible spirit animal.
+
+Check trading when the trader is not a spirit animal: instead say "There's no one here to trade with."
+
+Check trading when the noun is not a memory: instead say "'I'm only interested in trading memories,' [the trader] says."
+
+Check trading when the second noun is not a talent: instead say "'I only have talents to offer you,' says [the trader], '[list of visible not held talents].'"
+
+Check trading when the second noun is held: instead say "You've already got the talent of [second noun]."
+
+Check trading when the noun is not in emotional baggage: instead say "You've already traded away that memory."
+
+Check trading when trader needs more memories: 
+    move the noun to the trader; 
+    now everything does not trigger the noun;
+    instead say "[The trader] touches your fingertips and pulls [the noun] through your nerve endings. 'Good,' he says, 'I'll take that, although it's not enough to complete the trade.'[paragraph break]Somewhere inside you, things are shifting, moving, growing."
+
+To decide whether (trader - a person) needs more memories:
+	let the projected total be the number of memories held by trader + 1;
+	if the projected total is less than the price of trader, decide yes;
+	decide no.
+
+Carry out trading:
+	move the second noun to the player;
+	now the noun is held by the trader;
+	now everything does not trigger the noun;
+	repeat with item running through  not held talents:
+		now item is off-stage.
+	
+Report trading: say "[The trader] nods. 'Yes,' he says, 'a fair trade.' And something happens inside you as he says it. [The noun] shifts and wriggles and fades. It has shifted. And yeah, it kinda does feel like you could call it [the second noun]. Cool."
+	
+Instead of taking a not held talent when a spirit animal(called the potential trader) is visible: say "'You can't just have it,' [the potential trader] says. 'That's not how it works. You have to TRADE something for it.'".
+
+Instead of giving something to a spirit animal(called the potential trader): say "'No, not like that,' [the potential trader] says. 'You have to TRADE something for it.'".
+
+Instead of doing anything other than quizzing, implicit-quizzing or trading to a not held talent: say "It's just potential, or something."
+
+BOOK 5 - PLANS
+
+Part 1 - Plan
+
+A plan is a kind of thing. A plan is fixed in place.
+
+Definition: a plan is in progress if a handled thing is required by it.
+
+Definition: a plan is complete if two handled things are required by it.
+
+A thing can be noted as useful. Every turn when noun is a thing and noun is required by a plan and noun is not noted as useful: note noun as useful.
+
+To note (item - a thing) as useful: now item is noted as useful; say "Hey, that [item] might be useful if you decide on [objective of item]."
+
+Part 2 - Requirement
+
+Requirement relates one plan (called the objective) to various things.
+The verb to require (he requires, they require, he required, it is required, he is requiring) implies the requirement relation.
+
+Part 3 - The Protagonist's Plans
+
+Chapter 1 - Staying the Night
+
+Staying the night is a plan.
+
+The printed name of staying the night is "spending the night here".
+
+Staying the night requires the emergency blanket and the canned oranges.
+
+Chapter 2 - Fixing the Truck
+
+The roll of duct tape and the gas can are required by a plan called fixing the truck.
+
+The printed name of fixing the truck is "fixing your truck and getting out of here". 
+
+VOLUME 7 - CHARACTERS
+
+BOOK 1 - THE PROTAGONIST 
+
+Part 1 - Description
+
+The player is a person.
+The player is male.
+The player is called Knock.
+The age of the player is 18.
+The player is large-footed.
+
+The description of the player is "You don't really want to think about what you look like right now, especially when there's a totally legit likeness on the driver's license inside your wallet."
+
+Part 2 - Initial Inventory
+
+The player wears a denim jacket. 
+
+The player carries a lighter. 
+
+The player carries a wallet. 
+
+[Exercise 7.2 Attempt]
+[Friends is a list of people variable.
+Sean is a kind of person.
+Todd is a kind of person.
+Roy is a kind of person.
+Friends is {Sean, Todd, Roy}.]
+
+Part 2 - Location
+
+The player is in the pickup truck.
+
+Part 3 - Actions
+
+Instead of sleeping: say "You're tired. There's no denying that. But you have to deal with the matter at hand. There will be time to sleep later."
+
+Part 4 - Memories
+
+last day of high school is a memory. It is triggered by the license. The description is "You didn't expect it was going to be your last day. But that morning you got called into the principal's office and fat bald Mr. Cox and pissy old Mrs. Burke were there, and they looked kind of like strong animals stalking a weak animal, and you knew something bad was up.
+
+Cox and I have here, Mr. Morales (a bad start since you hate that name) a test you took last week in Mrs. Burke's sophomore English class. Questions have been raised (he looked up at Mrs. Burke like he was trying to pass the buck) questions have been raised about the quality of your essay, and whether a student with your academic and behavioral record (he scratched his bloated nose meaningfully) could have plausibly produced such an essay, and you get the idea. They thought you cheated.
+
+No. They knew you cheated, deep in their smug empty hearts. They wanted you to admit it, say you were a cheater and a liar. But you weren't. You wrote that essay, every goddamn word because you really really liked the book for once and wanted to show Mrs. Burke that maybe if they gave people better books to read, kids would actually learn something. But they wanted a confession. They wanted a thieving example they could parade in front of the school. Someone of your academic and behavioral and economic and racial background and yeah, screw this shit. So you got up and left and never came back. Drop out, hell. You walked out, straight to the bar, and you'd do it again."
+
+Your shit job is a memory. It is triggered by the receipt from Last Call. The description is "Juza straddles the 371 like a drunk at last call, smelly and without a plan for the future. Shiny cars whiz by at ninety once in a while, only stopping for gas or directions (hint: not this way). No one ever stops for the stalls selling food and jewelry and blankets and cheap t-shirts that cluster around the dirt turn-off onto the rez. At least, no one buying anything.
+
+Big Jimmy shook his head when he heard you lived in Oro Oeste. Hell of a drive, kid, he said, popping up his Lumberjacks cap to scratch the straw pate underneath. You should get a place in Hoo-zuh. Little Jimmy'll set you up in that trailer across the road for almost nothin['].
+
+Almost nothing. Yeah, exactly what you'd turn into on the cold day in hell you moved to Juza. But on the other hand, that was before you met Ocean. Now the road back to Oro Oeste seems longer and longer every night."
+
+tales grandma told is a plural-named memory. It is triggered by the piece of jade. The description of tales grandma told is "There are dark spirits who roam the earth, little Knock. Grandma used to say that, holding you tight and stroking your hair. There are dark spirits who roam the earth, but you're not alone. Oh, no. I'm here. (She'd kiss your head and you'd squeeze her back.) But others are watching out for you too. You have three animal guardians, hmm? Spirits who are always watching over you. Oh, you can't always trust them to know what's best. Remember that, Knock. But when you need help, they'll protect you from the worst things in the world.
+
+Mom would yell at Grandma a lot for filling your head with that new-age bullshit. Grandma grew up white and midwestern and Baptist but had started wearing things with feathers and playing the pan flute by the time you were born. She seemed to really like having a son-in-law who was Native American or American Indian or Indigenous Peoples or whatever she'd decided the term was that week, and she was pretty pissed when Mom left him. Anyway. Her stories were mostly BS, you guessed, but some of them stuck with you. When it's dark you still wonder if your spirit animals are out there somewhere, and what the hell is taking them so long to find you."
+Understand "grandma's tales/grandmas tales/grandma tales/tales" as tales grandma told.
+
+The job application triggers a memory called meeting Ocean. The description of meeting Ocean is "She was buying a Fresca at Big Jimmy's when your shift ended. You had spent the day in the storage room taking inventory but just clocked out, and you stood behind her waiting to get some cigs almost too tired to notice how cute she was but still noticing, yeah, still noticing.
+
+She turned around and caught you noticing and you were pretty embarrassed and covered in sweat and grease from the garage, so you stepped up and bought some Camels and were pretty surprised she was still there when you turned around.
+
+She told you her name was Ocean Running Deer, and she lived on the rez, and you told her your name was Nakaibito Morales, and you lived in Oro Oeste. She said isn't Nakaibito the name of a town way off west and you told her your mom had picked it off a map because it sounded like a good Indian name. You never tell anyone that story, but for some reason, you told her. She laughed, sweetly though, and said maybe the two of you should go there sometime and see what it was like. Somehow, two weeks later, you were dating, although you never ended up going to Nakaibito.
+
+And now... no, you can't think about that yet."
+
+The hand sanitizer triggers a memory called Ocean's favorite hobby. The description of Ocean's favorite hobby is "It was the first indication you had that while Ocean lived simply, she had expensive taste. You thought about cutting your losses then. It was before your first kiss, before she let you see her naked that night under the light of the full moon, the night she said yes for the first time. You were sitting in her trailer and noticed how sweet and crisp the air seemed. It wasn't her shampoo or the soap she used. Those had a creamy scent that reminded you of sweetened milk. No, this came from a tiny device that sent puffs of air into the room. When you asked her about it, she said something like, [quotation mark]Oh, that's just aromatherapy. When I feel stressed, I reach for the citrus scents, like oranges.[quotation mark] When you asked what she was so stressed out about, she looked down and fixed her gaze on nothing at all, staring into a physical void where a million thoughts were present, all kept secret from you. That's when you knew that she would always retain some aspects of herself, her life, her past, and keep them from you. You wondered if there would ever be a time when there were no secrets left between you. It made you feel frustrated and somewhat sad, because in the space of several months you had told her everything there was to tell. You left her that day feeling empty for the first time. It wasn't the last time."
+
+The bottle of Blue Moon triggers a memory called her graduation night. Understand "Ocean's/Oceans" as her graduation night. The description of her graduation night is "She grinned when you picked her up, and you drove to Mike's Tavern. Mike's was packed that night and everyone looked great but she was the most beautiful girl in the room. You danced a lot, drank a bit, and left early to go lie down under the stars. 
+
+And that was it. The first time she said she loved you, and you said it back cause it felt wrong to leave her hanging. But you didn't really know. You felt a bit caught off guard. You knew that you liked her a lot. You knew you were attracted. But there was so much you didn't know about her, or about yourself."
+
+The ultrasound triggers a memory called when you heard the news. The description of when you heard the news is "Two nights ago on a night just like this one you got off work and drove the state highway in the dark and crossed over the edge of the res to Ocean's dad's trailer and she told you that night while you were dead exhausted, 'Knock, I'm pregnant.'
+
+And all you could think was how unreal it seemed, after an hour of blackness and Arizona night streaming by, bugs exploding in tiny tragedies on your windshield. And you thought of every movie they ever made you watch in school and every lecture and every living example, the drunken uncles and snaggle-toothed coworkers who knocked up their high school sweethearts and started families on minimum wage and no prospects and never went anywhere and never did anything and what did you do? How could this happen? How were you both so stupid?
+	
+Ocean's aunt is paying for her medical care but it's been made clear the money stops after the baby is born. Ocean wants to keep it, she's always wanted to be a mommy. But you never thought you'd be a daddy. And when she pushed this into your hand last night she told you, [quotation mark][italic text]Knock, it's time to decide. If you aren't with me on this, if you don't want this as much as I do, then this can't go on anymore and you should go. Fly. Head west. Visit Nakaibito.[normal text][quotation mark] She smiled just a little and traced your ear.
+
+[quotation mark][italic text]But decide soon, Knock. Decide soon.[normal text][quotation mark]"
+
+BOOK 2 - SPIRIT ANIMALS
+
+A spirit animal is a kind of person.
+
+The rabbit, the Coyote, and Sand-dancer are a male spirit animal.
+
+A spirit animal has a number called price. 
+The price of the rabbit is 1.
+The price of the Coyote is 2.
+The price of Sand-dancer is 3.
+
+Part 1 - The Coyote
+
+The initial appearance of Coyote is "The Coyote watches you intently." Understand "guy/man" as the Coyote.
+
+The description of the Coyote is "You can barely see him in the darkness, can't tell whether he's old or how old, what color his [dusty hoodie] is, and with those [plastic-framed sunglasses] you can't even tell whether he's smirking at you or just twitching his mouth. There's a weird smell coming off him, sweat and dirt and a little wet dog and something deeper, earth, desert, rain, all mixed with cigarette smoke."
+
+The Coyote holds a cigarette. He wears some plastic-framed sunglasses and a dusty hoodie.
+
+At the time when Coyote's conversation starts: try quizzing the Coyote about introduction; now Coyote holds what he wants; try listing suggested topics.
+
+After quizzing Coyote about introduction: say "He wears a couple days of stubble, a [dusty hoodie], and, ridiculously in the darkness, a pair of cheap [plastic-framed sunglasses]. He lights a cigarette, then holds up a hand in annoyance to block the beam of your flashlight. 'Turn that thing off,' he says, and either you do it or it goes off by itself, because the next thing you know it's darker and he's closer and the only light comes from the red glow of the cigarette.[paragraph break]'That's better,' he says. He takes a drag on the cigarette, then pulls another from behind his ear and offers it to you. 'Smoke?'[add yes-no-suggestion other suggestion]".
+
+When Coyote's Offer begins: now flashlight is switched off; now Coyote is lit. Instead of switching on flashlight during Coyote's Offer: say "You think you'd rather keep him on your side."
+
+Instead of taking cigarette: move a random cigarette held by The Coyote to player; try saying yes. Instead of dropping cigarette: now a random cigarette held by player is off-stage; say "You drop it to the ground and stub it out with your foot." Instead of smoking when player holds cigarette during Coyote's Offer: say "You take a drag, thoughts and adrenaline whirring through your head." Instead of smoking during Coyote's Offer: try saying yes.
+
+Instead of saying yes when yes-no-suggestion is familiar and Coyote is visible: say "You pull out your pack and [if the number of cigarettes enclosed by player is 0]see that it's empty, but Coyote grins and hands you his last one[otherwise]he grins, like he knew you'd say yes[end if], and leans forward for you to light up off him. His sunglasses reflect back nothing but your own face weirdly lit by the glow from the cig, and for a moment it's like the blackness behind them is deep, deeper than the sky, deeper than the universe..."; if the number of cigarettes enclosed by the player > 0, now a random cigarette enclosed by the player is nowhere; say Coyote-talks.
+
+Instead of saying no when yes-no-suggestion is familiar and Coyote is visible: say "He shrugs, takes a puff on his, and exhales the smoke into the desert night. Wind whips it away and he stares towards the horizon, forehead wrinkling in something (annoyance, maybe contemplation) you can't read through the sunglasses."; say Coyote-talks.
+	
+To say Coyote-talks: clear all topics; say "[line break]'Gotta keep an eye on the horizon,' he says in a scratchy, slow voice[if we are saying yes] as you step back, inhaling the dry smoke[end if]. 'Always someone hunting Border Patrol, National Guard, INS, Minute-men. You want to help people get where they're going out here, you need more than [if player holds strength]strength[otherwise]courage[end if]. You need to learn how to hide.'[paragraph break]'I'm the Coyote,' he says. 'And we've been hiding from each other for a long time.'[make rabbit known][add rabbit ask suggestion][add Coyote ask suggestion][add what he wants ask suggestion][add advice ask suggestion]".
+	
+To say Coyote-business: say "[one of]smoke gusting from his lungs in clouds[or]scratching his stubble with the hand that holds the cigarette[or]itching underneath his jacket, slowly[or]the red tip of the cigarette glowing as he takes another drag[cycling]".
+	
+advice is held by the Coyote. After quizzing the Coyote about advice: say "He laughs, [Coyote-business]. 'Kid,' he says, 'you don't want my advice. I could tell you some stories and you'll smile and be sure they'll never happen to you. I could tell you some stories and you'll yawn and think you know them already. I could tell you some stories and you'll think they're wise and not realize you don't understand them until you make the same mistakes yourself an try to turn your failure into advice and fail at that, too. I could tell you some stories.' He looks off towards the horizon, [Coyote-business]. 'But it's not my stories that will help you'".
+
+After quizzing the Coyote about Coyote: say "'You know who I am,' he says, [Coyote-business]I'm the one who runs both sides of the fence. I'm the one who scouts ahead. I'm the one with songs in my blood and dirt under my nails and people owe me money in every trailer park from here to Yuma, or maybe I owe them money but anyway they don't want to see me. You know who I am, Knock.'".
+
+After quizzing the Coyote about the rabbit: say "He grins, not unkindly but not exactly kindly either. 'That cute little jackalope?' he says, [Coyote-business] 'He's got upsides, I guess. [if player holds strength]Strength[otherwise]Bravery[end if] has it's place. But if you're always in the spotlight, you'll never learn how to live in the shadows. And most of us spend a lot of time in the shadows.'".
+
+After quizzing the Coyote about what he wants: say "He presses his hands together, still clutching the cigarette with thumb and index finger, and smoke rises past his hidden eyes as he slowly rubs his palms together. He mutters something rhythmic to himself and you realize it's a song, and you can't quite make out the lyrics but the melody is simple and makes you think of Johnny Cash and the end of the world. And then he stops, and pulls his hands apart, and in each he holds a talent.[paragraph break]'Here we have luck,' he says, bobbing the left, 'and scent. And look, I'll be straight with you. These are precious things and I can't afford whatever blue light special deal the bunny gave you. I need double his price. I need two memories to part with one of these. Oh, they're worth it, believe me. Both have saved my ass more times than you'd believe. Both could save yours. But it's up to you. Which'll it be?'[add luck ask suggestion][add scent ask suggestion][add trade-for-luck other suggestion][add trade-for-scent other suggestion][add take-inventory other suggestion]"; clear all topics; move luck to location; now luck is familiar; move scent to location; now scent is familiar.
+	.
+After quizzing the Coyote about luck: say "[if player holds strength]'Looks like you're already pretty tough,' he says appraisingly, looking you over. 'With a little luck, you ought to make it through the night and get on with the rest of your life.'[otherwise]'You found some cojones, kid,' he says, looking you over appraisingly, 'which'll be good for fixing your truck and getting back to your girl. I don't know if luck'll help you out much there, though.'".
+		
+After quizzing the Coyote about scent: say "[if player holds courage]'You found some cojones, kid,' he says, 'If you can just sniff out the right finds, you can probably get back to that little lady you're so fond of, if that's what you want.'[otherwise]'You're pretty tough,' he says, 'but I don't know that a good nose is going to help you make it through the night an get on with the rest of your life, if that's what you're trying to do.'".
+
+trade-for-luck is a misc-suggestion. It is held by Coyote. The printed name is "trade something for luck".
+
+trade-for-scent is a misc-suggestion. It is held by Coyote. The printed name is "trade something for scent".
+
+Report trading when Coyote is visible: clear all topics; now more coming is familiar; try quizzing Coyote about more coming; stop the action.
+
+After quizzing Coyote about more coming: say "He tucks the other talent back in his pocket, and without its faint glow it seems darker than ever, the pulsing red tip of his cigarette all you can see.[paragraph break]'The last of us is coming,' Coyote's voice says out of the black, 'last and most powerful, and most dangerous, and most afraid. Sand-dancer. Be careful of him, Knock. [if player holds strength]Stay strong[otherwise]Stay brave[end if]. [if player holds luck]Stay lucky[otherwise]Keep your nose to the wind[end if]. Remember the shadows.'[paragraph break]And it seems like he's growing, larger and larger, the red tip of his cigarette pulsing and glowing now high up in the sky, and you stumble back, shivering, and suddenly remember your flashlight in your hand and switch it on..."; reset the interlocutor; now flashlight is switched on; move player to Base of the Tower.
+
+Part 2 - The Rabbit
+
+At the time when Rabbit's conversation starts: try quizzing the rabbit about introduction; try listing suggested topics.
+
+introduction is a familiar thing. After quizzing the rabbit about introduction: say "The rabbit breathes and stares. You wonder if it's going to start talking like in some crap Disney movie and then Jesus Christ it does...[paragraph break]'So what'd you expect from an animal guardian?' it says, but like not with its lips, somewhere in your head instead. 'Were you thinking big, nasty, sharp, pointy teeth? Waitcoat and pocket watch? Nah. Tricks are for kids. What's up Knock?' It's whiskers twitch.[add rabbit ask suggestion][add go insane other suggestion]".
+
+go insane is a misc-suggestion. It is held by the rabbit. The printed name is "just, you know, go insane." Understand "go insane" as a mistake ("I know, right? Looks like it's too late though.") when location is Burrow.
+
+After quizzing the rabbit about the rabbit: say "[remove go insane other suggestion]'Oh come on, pal, you know me,' he says with this kind of stupid cheerful tone, and suddenly he looks more like Buster from Arthur, scrawny and poorly animated. 'I've been keeping an eye on you from the TV all these years. Your grandma asked me to, remember?' He grins, buck teeth protruding.[add grandma's wild stories ask suggestion][add how he's not real tell suggestion]".
+
+grandma's wild stories is held by the rabbit. After quizzing the rabbit about grandma's wild stories: say "'She was wrong about lots of stuff,' Buster says, scratching himself with a hind paw thoughtfully, 'but right about lots too. Oh, lots.'"; try quizzing the rabbit about rabbit's judgement.
+
+how he's not real is held by the rabbit. After informing the rabbit about how he's not real: say "'Oh, don't say that!' the rabbit says, animated eyes going round like saucers. 'Then it'd be just you here all alone, and wouldn't that be boring. It's much more interesting if I'm really around.'"; try quizzing the rabbit about rabbit's judgement.
+
+rabbit's judgement is held by rabbit. After quizzing the rabbit about rabbit's judgement: clear all topics; say "[one of][if player encloses at most 8 cigarettes]'Yo, you started smokin['] again?' Buster asks, sniffing distainfully, except he's not Buster anymore, more like Eminem. 'I thought you quit that shit dawg. It's cool, I won't tell your grandma, but it makes Thumper cry a little, you know what I'm sayin[']?'[otherwise if at least 1 tall window is open]'Yo, nice work breakin['] the window, Buster says, except he's not Buster anymore, more like Eminem. 'Way to stick it to the man. You hella bad, dawg. Maybe you can tag some shit when you get back to town too.'[otherwise]'Hey yo, you been hella good about keepin['] off those cancer sticks,' Buster says,  except he's not Buster anymore, more like Eminem. 'Don't think I ain[']t watchin['] ya.'[end if](Oh hey, Rabbit Smith,  you get it.)[or]The rabbit just scratches his ear with a hind paw, smirking.[stopping][add how he knows so much about everything ask suggestion]".
+
+how he knows so much about everything is held by the rabbit. After quizzing the rabbit about how he knows so much about everything: say "'Hey, back off man,' he says, 'it's my ****in['] job.' And there's actually like a bleep, too, and now thaht you think of it you only ever saw 8 Mile on TV.";try quizzing rabbit about what he wants.
+
+what he wants is held by the rabbit. The printed name of what he wants is "ask what he wants". 
+
+After quizzing the rabbit about what he wants: 
+	clear all topics; 
+	say "'Anyway, look, man, we both know. you're in trouble. I just gotta ask you one question.' And he changes again into like a giant silhouette, and it's the Playboy Bunny, ears and bow tie and all. 'Do you love her?'[add yes-no-suggestion other suggestion]";	
+	move strength to location; now strength is familiar;
+	move courage to location; now courage is familiar.
+
+BOOK 3 - THE RADIO VOICE
+
+
+The voice is an undescribed man.
+
+Every turn when radio is switched on and frequency tuned to of radio is emergency frequency and voice has not been visible:
+	move voice to location;
+	try quizzing voice about introduction;
+	set pronouns from voice.
+
+After quizzing voice about introduction: say "Not like you think anything's going to happen but what the hell. You grab the dusty old mike, press the call button, and ask is there anybody[paragraph break]'...out there?' the speaker blurts and holy crap, someone's responding, and they say 'Roger roger, tower station nineteen, read you now loud and clear, what's your forty?' and the voice is staticky and whirled through with weird rhythmic distortions but you can hear it just fine and now what?[add what that means ask suggestion][add being lost tell suggestion][add never mind tell suggestion]".
+	
+never mind is held by voice. After informing voice about never mind: say "[remove what that means ask suggestion]You mutter something about how you think you've made a mistake and you have to go but the voice interrupts. 'Hang on, hang on, son, there shouldn't be anybody out there. Not at all, especially this late. Why don't you tell me what's going on?'".
+	
+what that means is held by voice. After quizzing voice about what that means: say "You try to make some joke about not having forty of anything, but the voice cuts you off. 'Ten forty means situation report, son. Obviously you're not on duty. Ain't nobody on duty out there anymore, specially not this time of night. What's going on?'[remove what that means ask suggestion]".
+	
+being lost is held by voice. Understand "Im/I'm" or "I am" as being lost. After informing voice about being lost: say "[remove what that means ask suggestion][remove never mind tell suggestion]Feeling a little stupid, you come clean and tell the voice that you drove off the road and aren't sure exactly where you are.[paragraph break]'Copy that,' the voice says briskly after a moment. 'You're at tower station nineteen, son, about thirty-two miles southwest of Oro Oeste, fifteen milles or so from the state highway.' And if the mike wasn't attached to the radio you'd drop it on the floor. Fifteen miles? How in the [italic type]hell[roman type] could you have driven fifteen miles off the road and not remember. How is that even possible?[paragraph break]'Hello?' the radio says. 'Hello, son, do you copy?'[add yes-suggestion other suggestion][add switch-off-radio other suggestion]".
+
+After informing voice about yes-suggestion: say "You jabber something positive and sit back, still shaken.[paragraph break][voice explains choices]".
+
+switch-off-radio is a misc-suggestion held by voice with printed name "switch off the radio". Instead of switching off radio when current interlocutor is voice: say "You reach for the switch, but hesistate, hand hovering above it as the static whirls and roars.[paragraph break][voice explains choices]".
+
+To say voice explains choices: say "'Look, son,' the voice says, 'I don't know how you got out there but that's not important right now. Weather report's coming in and there's a cold front the size of Texas coming your way. I don't want to scare you but if you don't find a way home, or figure out some food and shelter for the night, you could freeze to death. You hear me? Now on account of the cutbacks I don't have anyone to send out there until morning. But there may be parts around that old tower you can use to patch up your truck and make it back to the highway. Or, there may be emergency supplies that would get you through the night. This storm's gonna blow out all communication, so you're gonna be on your own. It's up to you. Over and out.'[paragraph break]You rub your face tiredly. Ocean was expecting you tonight after your shift, like usual. If you don't make it she'll be worried sick. Then on the other hand maybe you should worry about yourself first for a change. You feel like you need a cigarette[if pack of smokes is not held by player] and then you remember you quit[end if]. Hell, can't anything be easy?"; reset the interlocutor; now voice is off-stage.		
+		
+BOOK 4 - THE SUPPORTING CAST 
+
+Part 1 - Grandmother
+
+Annamarie is a person.
+The age of Annamarie is 89.
+
+Part 2 - Other Animals
+
+A normal animal is a kind of animal.
+
+A desert hare and a brown lizard are normal animals.
+
+Chapter 1 - The Brown Lizard
+
+The brown lizard is in Middle of Nowhere. "[if player is in pickup truck]You see a little lizard clinging frantically to the [Saguaro] through the windshield[otherwise]A brown-colored lizard clings to the cactus[end if]."
+
+Understand "brown-colored/colored/sand-dancer/dancer" or "sand dancer" as brown lizard.
+
+The description is "[one of]He looks pretty pissed that you crashed into his cactus. What did grandma used to call those little dudes? You can't remember[or]Oh yeah, you remember, she called them sand-dancers. This little sand dancer still looks pissed [or] The little sand-dancer lizard stares at you with one slitte eye[stopping]."
+
+Instead of giving anything to the lizard: say "You dangle [the noun] in front of it, but it just flicks its tongue in and out a little faster, staying put." 
+
+Instead of attacking or taking or pushing or touching the lizard: say "You reach out to grab it, but in a flash it scurries around to the other side of the cactus and disappears."; now lizard is off-stage.
+
+Instead of kissing the lizard: say "Someone in elementary school dared you to do that once and you beat him up."
+
+Chapter 2 - Desert Hare
+
+The desert hare is in Base of the Tower.
+
+Every turn when a random chance of 1 in 4 succeeds:
+	let starting point be the location of the desert hare;
+	let destination be a random room which is adjacent to starting point;
+	let heading be the best route from starting point to destination;
+	if heading is a direction and direction is regionally in Around the Tower, try the desert hare going heading.
+	
+After the hare going a direction (called way): if the hare is visible or the hare was visible, say "The hare hops [way]wards."
+
+
+
+
+
+VOLUME 8 - PLOT
 
 BOOK 1 - BEGINNING THE GAME
 
@@ -1965,7 +2008,6 @@ Instead of saying no when yes-no-suggestion is familiar and location is The Burr
 
 To introduce rabbit's choices:
 	clear all topics;
-	now bow tie is off-stage;
 	move strength to location;
 	now strength is familiar;
 	move courage to location;
@@ -2241,7 +2283,7 @@ To decide whether (trader - Sand-dancer) needs more memories:
 	if the projected total is less than the price of trader, decide yes;
 	decide no.
 	
-Check trading when the trader needs more memories during Sand-dancer's offer: move the noun to the trader; say "He flicks out his tongue and pulls [the noun] from [one of]your head[or]your heart[or]your gut[or]your palm[or]your core[or]your soul[in random order], swallowing it whole. '[one of]A good start,' he says, 'but you must trade more'[or]Yes,' he says, 'but more'[or]More,' he says[or]Still more,' he says[or]I must have more,' he says[or]Give me more,'he says[stopping]." instead.
+Check trading when the trader needs more memories and the noun is a memory during Sand-dancer's offer: move the noun to the trader; now everything does not trigger the noun; instead say "He flicks out his tongue and pulls [the noun] from [one of]your head[or]your heart[or]your gut[or]your palm[or]your core[or]your soul[in random order], swallowing it whole. '[one of]A good start,' he says, 'but you must trade more'[or]Yes,' he says, 'but more'[or]More,' he says[or]Still more,' he says[or]I must have more,' he says[or]Give me more,'he says[stopping]."
 
 Report trading when Sand-dancer is visible: clear all topics; say "'The choice is made,' he rumbles, 'your path is set. Goodbye, Nakaibito.' And he turns and dives into the sand. The lizards twist and writhe and follow him.[paragraph break]And then, just as quiet settles, another huge rumble shakes the ground, and, almost like an afterthought, the building breaches the sand and rises to the surface."; now Sand-dancer is off-stage; now thousands of lizards are off-stage; reset the interlocutor; move player to Crumbling Concrete; stop the action.
 
@@ -2269,7 +2311,7 @@ In the morning some highway patrol dude shakes you awake with a lecture and a ri
 
 When you hit the Pacific you roll up your jeans and wade into the surf for the first time in your life. And it's warm on the top and cool underneath and this is all you want, this moment, this here and now. You'll find work and you'll find love but you'll never find home and that's okay. It's okay. You wade deeper and the waves lap higher and then a big one rolls in, blue and white, and you feel [if player holds strength] strong, strong[otherwise]crazy brave[end if] as it crests and smashes into you with the force of all the water in the world, and you laugh and try to stay on your feet but it's too late, you're crashing, you're crashing, you crash..."; end the story.
 
-VOLUME 7 - UI ENHANCEMENTS
+VOLUME 9 - UI ENHANCEMENTS
 
 BOOK 1 - IMPROVED STATUS LINE
 
@@ -2287,16 +2329,9 @@ When play begins:
 	leave space;
 	say italic text;
 	say "[story description]";
-	say monospaced;
+	now compass choice is Table of Fancy Status;
 	leave space;
-	say "During gameplay:[line break]     Enter COMPASS OFF to hide the compass[line break]     Enter COMPASS ON to show the compass[paragraph break]When the compass is on, directions to locations you have visited appear in normal text, while directions to locations you have not visited appear in bold text. A direction will not appear on the compass if you cannot go that way.";
-	say paragraph break;
-	say "Would you like to turn on the compass?";
-	follow the immediately prompt rule;
-	if the player consents:
-		now compass choice is Table of Fancy Status;
-	leave space;
-	say "If you have never played interactive fiction, enter HELP for guidance.";
+	say "If you have never played interactive fiction, type HELP for guidance.";
 	say paragraph break;
 	say "Press SPACE to begin.";
 	wait for the SPACE key;
@@ -2431,7 +2466,7 @@ Understand "COMPASS ON" as enabling the compass.
 Carry out enabling the compass:
 	follow the immediately prompt rule.
 	
-VOLUME 7 - TESTING
+VOLUME 10 - TESTING
 
 BOOK 1 - TESTING FEATURES
 
@@ -2448,99 +2483,94 @@ Part 3 - Flag Default Messages
 [NOTE: Introduced in Chapter 10 - This does not work]
 [When play begins: change library message debug to dbg_on.]
 
+Part 4 - Investigate Actions
+
+Test investigate-actions with "ACTIONS / put down cigarettes / go to truck / north / in / out / in"
+
 BOOK 2 - TEST SCRIPTS
 
-Part 1 - Testing Chapter 3 (Creating the Story World)
+Part 1 - Location-Based Tests
 
-Chapter 1 - Navigation (from Middle of Nowhere)
+Chapter 1 - Tests from Middle of Nowhere
 
-test map with "south / north / north / east / northwest / north / north / south / south / south / south / test tour".
-
-Chapter 2 - Enter Building (from Middle of Nowhere)
-
-test enter with "north / north / take can / south / throw can at window /  in ".
-
-Chapter 3 - Flashlight (from Staging Area)
-
-test flashlight with "touch desk / open drawer / take flashlight / switch on flashlight".
-
-Chapter 4 - Explore the Building (from Staging Area)
-
-test explore with "north / examine rusted key / read safety poster / test box / south / east / north / turn on emergency lights / up / north / down / south / turn on emergency radio / tune radio to 102.3kHz / ask him about what that means / tell him about being lost / say yes / west / out / south".
-
-Chapter 5 - Tour the Building
-
-test tour with " test flashlight / test explore".
-
-Chapter 6 - Filing Cabinet (from Foreman's Office)
-
-test cabinet with "x filing cabinet / open top drawer / look in top drawer / take top drawer / close top drawer / open middle drawer / look in middle drawer / take middle drawer / close middle drawer / open bottom drawer / look in bottom drawer / take bottom drawer / take unmarked folder / close bottom drawer / inventory / open unmarked folder / inventory".
-
-Chapter 7 - Tin Can
-
-test can with "north / north / take tin can / south / drop can / look / examine can".
-
-Part 2 - Testing Chapter 5 (Making Things Happen)
-
-Chapter 1 - Shoes and Socks (from Foreman's Office)
-
-[Test shoes with "x filing cabinet / open middle drawer / x socks / take socks / wear socks / south / east / wear tennis shoes / wear boots / inventory / drop tennis shoes / inventory / take off socks / take off boots / take off socks / west / north".]
-
-Chapter 2 - First Aid Kit (from Break Room)
-
-test kit with "take first aid kit / open kit / x kit / open pills / inventory / take aspirin / inventory / eat aspirin / inventory / take aspirin / inventory / open box of bandaids / wear fingertip bandaid / open bottle of alcohol / drink rubbing alcohol / put aspirin in bottle of alcohol / close box of bandaids / put aspirin in bottle of pills / close bottle of pills / inventory / take aspirin / inventory / take aspirin / inventory / swallow aspirin / inventory / eat aspirin / inventory /eat aspirin / inventory"
-
-Chapter 3 - Investigate Actions
-
-Test investigate-actions with "ACTIONS / put down cigarettes / go to truck / north / in / out / i"
-
-Part 3 - Testing Chapter 6 (Understanding the Player)
-
-Chapter 1 - Flashlight
-
-Test synonyms with "test flashlight / x flash / x light / x flashlight".
-
-Chapter 2 - Gas Can (from Storage Room)
-
-Test emergency with "turn on emergency lights / turn off emergency lights".
-
-Test gasoline with "ABSTRACT scent to me / ABSTRACT strength to me / up / move barrel / up / look under metal / take gas can / inventory"
-
-Part 4 - Testing Chapter 7 (Logic and Control)
-
-Chapter 1 - Boarded-Up Door
-
-test boards with "north / remove boards / north / take can / south / throw can at window / remove boards / in ".
-
-Chapter 2 - Jacket
-
-test jacket with  "north / remove boards / remove jacket / north / take can / south / throw can at window / remove boards / remove jacket / in ".
-
-test wallet with "open wallet / examine license / examine receipt / open photo".
-
-Part 7 - Testing Chapter 10 (Challenging Assumptions)
-
-test cigarettes with "examine dashboard / open glove box / take pack of smokes / inventory / examine pack of smokes"
-
-test smoke with "smoke cigarette"
-
-test box with "examine wastepaper basket / take crumpled box / inventory / examine crumpled box / examine key / south"
-
-Part 8 - Testing Chapter 11 (Finishing)
-
-test jade with "take bag / examine bag / open bag / examine jade "
-
-test cage with "east / examine cage / take paper / examine paper "
-
-test memories with "test cigarettes / test jade / test enter / test flashlight / test wallet / north / test box / test cage / north / test emergency / test gasoline / down / down / south / west / think about meeting ocean / think about shit job / think about stories / think about school"
+Section 1 - Starting Location Tests
 
 test inventory with "inventory / examine me / examine wallet / open wallet / examine license / examine receipt / examine photo / open photo / examine jacket"
 
-test start with "test inventory / test cigarettes / test jade / test enter / test flashlight / test explore / test smoke"
+test wallet with "open wallet / examine license / examine receipt / open photo".
+
+Section 2 - Truck Interior Tests
+
+test cigarettes with "examine dashboard / open glove box / take pack of smokes / inventory / examine pack of smokes / test smoke"
+
+test jade with "take bag / examine bag / open bag / examine jade"
+
+Section 3 - Navigation from Middle of Nowhere
+
+test map with "south / north / north / east / northwest / north / north / south / south / south / south / test tour".
+
+test enter with "north / north / take can / south / throw can at window / in"
+
+test can with "north / north / take tin can / south / drop can / look / examine can".
+
+test boards with "remove boards / attack boards / ABSTRACT strength to me / attack boards".
+
+Section 2 - Tests from Staging Area
+
+test flashlight with "touch desk / open drawer / take flashlight / switch on flashlight".
+
+test synonyms with "test flashlight / x flash / x light / x flashlight".
+
+Section 3 - Tests from Foreman's Office
+
+test pack with "examine wastepaper basket / take crumpled pack / inventory / examine crumpled pack"
+
+test fridge with "examine mini fridge / open mini fridge / examine bottle / take bottle / drink beer"
+
+test cabinet with "examine filing cabinet / open top drawer / open middle drawer / open bottom drawer / take folder / close bottom drawer / inventory / open unmarked folder / examine job application / examine handwritten note / put folder in wastepaper basket".
+
+Section 4 - Tests from Break Room
+
+test kit with "take first aid kit / open kit / x kit / open pills / inventory / take aspirin / eat aspirin / take aspirin / inventory / open pack of bandaids / wear fingertip bandaid / open bottle of alcohol / drink rubbing alcohol / put aspirin in bottle of alcohol / close box of bandaids / put aspirin in bottle of pills / close bottle of pills / take aspirin / take aspirin / swallow aspirin / eat aspirin / inventory / eat aspirin / inventory / examine hand sanitizer"
+
+test cage with "east / examine cage / take paper / examine paper"
+
+Section 5 - Tests from Storage Room
+
+test emergency with "turn on emergency lights / turn off emergency lights".
+
+Section 6 - Tests from Control Center
+
+test gasoline with "ABSTRACT scent to me / ABSTRACT strength to me / up / move barrel / up / look under metal / take gas can / inventory"
+
+Section 7 - Tests from Weed-strewn Rust
+
+test guidebook with "take guidebook / read guidebook / look up lizard in guidebook / look up coyote in guidebook / look up spider in guidebook / burn guidebook"
+
+Chapter 2 - Location-Independent Tests
+
+Section 1 - Player Actions
+
+test smoke with "smoke cigarette / inventory"
+
+test jacket with "examine jacket / remove jacket / wear jacket"
+
+test photo with "open photo / examine ultrasound"
+
+test memories with "think about meeting ocean / think about shit job / think about tales / think about school / think about graduation / think about hobby / think about news"
+
+Section 2 - Conversation Tests (Desert encounters)
 
 test rabbit-courage with "examine rabbit / ask him about himself / ask about stories / ask about how he knows so much / yes / trade cigarette for courage / trade tales grandma told for courage"
 
-test rabbit-strength with "examine rabbit / ask him about himself / ask about stories / ask about how he knows so much / yes / trade cigarette for courage / trade tales grandma told for courage"
+test rabbit-strength with "examine rabbit / ask him about himself / ask about stories / ask about how he knows so much / yes / trade cigarette for strength / trade tales grandma told for strength"
 
+Chapter 3 - Comprehensive Test Suites
 
- 
+test explore with "north / examine rusted key / test cabinet / test fridge / read safety poster / test pack / south / east / north / turn on emergency lights / up / north / down / south / west / out / east / test guidebook / west / in / open photo / examine photo / east / test kit / test cage / turn on emergency radio / tune radio to 102.3kHz / ask him about what that means / tell him about being lost / say yes / west / out / ".
+
+test tour with "test flashlight / test explore".
+
+test start with "test inventory / test cigarettes / test jade / test enter / test flashlight / test explore / test memories / test photo / test smoke"
+
+test return with "look up / north / north / in"
